@@ -1,0 +1,225 @@
+Overview As screen:
+    BackgroundImage: =
+    Fill: =RGBA(0, 0, 0, 0)
+    ImagePosition: =ImagePosition.Fill
+
+    BackgroundImage As image:
+        Height: =1136
+        Image: ='Anders+Nord_Post+Norway_Brand+Identity_17'
+        ImagePosition: =ImagePosition.Fill
+        Transparency: =0.9
+        Width: =640
+        ZIndex: =1
+
+    BackdropShadowHist As htmlViewer:
+        Height: =167
+        HtmlText: |-
+            ="<div 
+                style='
+                    margin:10px;
+                    width:560px;
+                    height:132px;
+                    background-color:#;
+                    box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                    </div>"
+        Visible: =If(Office365Users.MyProfile().DisplayName in ["Lysaker Robin"],true,false)
+        Width: =594
+        X: =25
+        Y: =935
+        ZIndex: =2
+
+    BackdropShadowOVer As htmlViewer:
+        Height: =167
+        HtmlText: |-
+            ="<div 
+                style='
+                    margin:10px;
+                    width:270px;
+                    height:132px;
+                    background-color:#;
+                    box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                    </div>"
+        Width: =304
+        X: =315
+        Y: =785
+        ZIndex: =3
+
+    BackdropHTML As htmlViewer:
+        Height: =222
+        HtmlText: |-
+            ="<div 
+                style='
+                    margin:10px;
+                    height:190px;
+                    background-color:rgba(255,255,255,0.7);
+                    box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                    </div>"
+        Width: =441
+        X: =108
+        Y: =210
+        ZIndex: =4
+
+    TtteilPartOne As label:
+        Align: =Align.Center
+        Height: =70
+        Size: =21
+        Text: ="Velkommen til"
+        Width: =560
+        X: =40
+        Y: =228
+        ZIndex: =5
+
+    TittelPartTwo As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =40
+        Text: ="LSO"
+        Width: =560
+        X: =40
+        Y: =280
+        ZIndex: =6
+
+    TittelPartThree As label:
+        Align: =Align.Center
+        Height: =70
+        Size: =21
+        Text: ="sitt Raporterings-system"
+        Width: =560
+        X: =40
+        Y: =332
+        ZIndex: =7
+
+    HospitalBtn As button:
+        Fill: =RGBA(0, 100, 58, 1)
+        Height: =132
+        HoverFill: =RGBA(123, 193, 68, 1)
+        OnSelect: |-
+            =Set(
+                CurrentUser,
+                Office365Users.MyProfileV2().department
+            );
+            Set(
+                ButtonDep,
+                "032916"
+            );
+            If(
+                Or(
+                    IsMatch(
+                        CurrentUser,
+                        "032916",
+                        Contains & IgnoreCase
+                    ),
+                    IsMatch(
+                        CurrentUser,
+                        "032917",
+                        Contains & IgnoreCase
+                    )
+                ),
+                Navigate(
+                    HospitalRapport,
+                    Cover
+                ),
+                Navigate(
+                    AccessScreen,
+                    Cover
+                )
+            )
+        Size: =24
+        Text: ="Hospital Area"
+        Width: =270
+        X: =40
+        Y: =502
+        ZIndex: =8
+
+    VelgTittel As label:
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Velg Gruppe:"
+        Width: =560
+        X: =40
+        Y: =432
+        ZIndex: =9
+
+    HovedBtn As button:
+        Fill: =RGBA(230, 230, 230, 1)
+        Height: =132
+        HoverFill: =ColorFade(RGBA(230, 230, 230, 1), -20%)
+        Size: =24
+        Text: |-
+            ="Hovedpost-
+            gang"
+        Width: =270
+        X: =330
+        Y: =502
+        ZIndex: =10
+
+    InngåendeBtn As button:
+        Fill: =HospitalBtn.Fill
+        Height: =132
+        HoverColor: =HospitalBtn.HoverColor
+        HoverFill: =HospitalBtn.HoverFill
+        OnSelect: =Navigate(InngåendeRapport, Cover); Set(cornerVar, 10)
+        Size: =24
+        Text: ="Inngående"
+        Width: =270
+        X: =40
+        Y: =652
+        ZIndex: =11
+
+    LokalBtn As button:
+        Fill: =RGBA(230, 230, 230, 1)
+        Height: =132
+        HoverFill: =ColorFade(RGBA(230, 230, 230, 1), -20%)
+        Size: =24
+        Text: |-
+            ="Lokalpost-
+            gang"
+        Width: =270
+        X: =330
+        Y: =652
+        ZIndex: =12
+
+    ManuellBtn As button:
+        Fill: =RGBA(230, 230, 230, 1)
+        Height: =132
+        HoverFill: =ColorFade(RGBA(230, 230, 230, 1), -20%)
+        Size: =24
+        Text: ="Manuell NC"
+        Width: =270
+        X: =40
+        Y: =804
+        ZIndex: =13
+
+    OvervåkerBtn As button:
+        Fill: =HospitalBtn.Fill
+        Height: =132
+        HoverFill: =RGBA(123, 193, 68, 1)
+        OnSelect: =Navigate(OvervåkerRapport, CoverRight)
+        Size: =24
+        Text: ="Overvåker"
+        Width: =270
+        X: =330
+        Y: =804
+        ZIndex: =14
+
+    HistorikkBtn As button:
+        Fill: =HospitalBtn.Fill
+        Height: =132
+        HoverFill: =RGBA(123, 193, 68, 1)
+        Size: =24
+        Text: ="Historikk"
+        Visible: =If(Office365Users.MyProfile().DisplayName in ["Lysaker Robin"],true,false)
+        Width: =560
+        X: =40
+        Y: =954
+        ZIndex: =15
+
+    LogoApp As image:
+        Height: =234
+        Image: =Bring
+        Width: =320
+        X: =162
+        ZIndex: =16
+
