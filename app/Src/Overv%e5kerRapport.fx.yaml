@@ -317,14 +317,6 @@ OvervåkerRapport As screen:
             HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
             OnSelect: |-
                 =Set(
-                    Recipients,
-                    "jihad.eldor@posten.no; nighat.ali@posten.no; thomas.svaeren@bring.com; Ahmet.Incesoy@posten.no; zulifqar.haider@posten.no;terje.aas@posten.no; christopher.andersen@posten.no; Wisam.Abuafifeh@posten.no; kristine.myrhagen@posten.no; tom.inge.kvaernstuen@posten.no; maawya.hussein@posten.no; glenn.hegstad@posten.no; elin.oldemark@posten.no; gard.nordsveen@posten.no; heidi.aldal@posten.no;Logistikk.Norge.ROAO.LSO.Oslo.Overvakere@posten.no"
-                );
-                Set(
-                    TestRecip,
-                    "robin.lysaker@posten.no"
-                );
-                Set(
                     HeaderRapport,
                     Label1.Text
                 );
@@ -369,111 +361,31 @@ OvervåkerRapport As screen:
                     DivBody,
                     DiverseText.Text
                 );
-                Set(
-                    Body,
-                    Concatenate(
-                        "<!DOCTYPE html>",
-                        "<html lang='en'>",
-                        "<head>",
-                        "<meta charset='UTF-8'>",
-                        "<meta http-equiv='X-UA-Compatible' content='IE=edge'>",
-                        "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
-                        "<title>RAPPORT</title>",
-                        "<style>",
-                        "   body {background-color: #f1f7e9;} ",
-                        "   table {",
-                        "       table-layout: fixed;",
-                        "       width: 100%;",
-                        "       height: 100%;",
-                        "       font-family: Verdana, Geneva, Tahoma, sans-serif;",
-                        "       border-collapse: collapse;}",
-                        "       caption {padding: 10px; font-weight: bolder; font-size: 20px;}",
-                        "       thead {height: 50px;}",
-                        "       tr {border-bottom: 2px solid rgb(237, 157, 157);}",
-                        "       th, td {text-align: start; width: 30%;}",
-                        "       th {padding: 10px;}",
-                        "</style>",
-                        "</head>",
-                        "<body>",
-                        "   <table>",
-                        "       <caption>",
-                        HeaderRapport,
-                        "       </caption>",
-                        "       <thead>",
-                        "           <tr>",
-                        "               <th scope='col'></th>",
-                        "               <th style='text-align: start' scope='col'></th>",
-                        "               <th style='text-align: start' scope='col'></th>",
-                        "           </tr>",
-                        "       </thead>",
-                        "       <tbody>",
-                        "           <tr style='background-color: white;'>",
-                        "               <th scope='row'>Generell Flyt:</th>",
-                        "               <td colspan='2'>",
-                        FlytBody,
-                        "               </td>",
-                        "           </tr>",
-                        "           <tr>",
-                        "               <th scope='row'>Utfordringer:</th>",
-                        "               <td colspan='2'>",
-                        UtfordringBody,
-                        "               </td>",
-                        "           </tr>",
-                        "           <tr style='background-color: white;'>",
-                        "               <th scope='row'>B2:</th>",
-                        "               <td colspan='2'>",
-                        B2Body,
-                        "               </td>",
-                        "           </tr>",
-                        "           <tr>",
-                        "               <th scope='row'>B3:</th>",
-                        "               <td colspan='2'>",
-                        B3Body,
-                        "               </td>",
-                        "           </tr>",
-                        "           <tr style='background-color: white;'>",
-                        "               <th scope='row'>Diverse:</th>",
-                        "               <td colspan='2'>",
-                        DivBody,
-                        "               </td>",
-                        "           </tr>",
-                        "       </tbody>",
-                        "       <tfoot>",
-                        "           <th scope='row'>Sendt by:</th>",
-                        "           <td colspan='2'>",
-                        ThisUser,
-                        "           </td>",
-                        "       </tfoot>",
-                        "   </table>",
-                        "</body>",
-                        "</html>"
-                    )
-                );
                 Patch(
                     Table1,
                     Defaults(Table1),
                     {
-                        'Generell Flyt': FlytText.Text,
-                        Utfordringer: UtfordringerText.Text,
-                        'Diverse - OV': DiverseText.Text,
-                        B2: B2Text.Text,
-                        B3: B3Text.Text,
+                        'Generell Flyt': "",
+                        Utfordringer: "",
+                        'Diverse - OV': "",
+                        B2: "",
+                        B3: "",
                         Name: Navn,
                         Timestamp: Tid,
                         Group: Gruppe,
-                        Topic: "Overvåker Overlevering",
+                        Topic: "",
                         Shift: Shift
                     }
                 );
                 Office365Outlook.SendEmailV2(
-                    "",
+                    RecipientsLedere,
                     "",
                     "",
                     {
                         Importance: Normal,
                         IsHtml: true,
                         ReplyTo: "Logistikk.Norge.ROAO.LSO.Oslo.Overvakere@posten.no",
-                        Cc: "robin.lysaker@posten.no",
+                        Cc: TestRecipients,
                         Attachments: AddColumns(
                             RenameColumns(
                                 OvervåkerAttachment.Attachments,

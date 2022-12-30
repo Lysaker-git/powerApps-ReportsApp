@@ -3013,17 +3013,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.Recipients"
+                  "fullyQualifiedName": "App.HeaderRapport"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.Recipients",
+                  "fullyQualifiedName": "App.HeaderRapport",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Recipients",
+                "member": "HeaderRapport",
                 "module": "App",
                 "type": "App"
               }
@@ -3073,6 +3073,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.FlytBody"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.FlytBody",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FlytBody",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.UtfordringsHeader"
                 }
               ],
@@ -3084,6 +3114,36 @@
               },
               "properties": {
                 "member": "UtfordringsHeader",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.UtfordringBody"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.UtfordringBody",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "UtfordringBody",
                 "module": "App",
                 "type": "App"
               }
@@ -3133,6 +3193,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.B2Body"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.B2Body",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "B2Body",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.B3Header"
                 }
               ],
@@ -3163,6 +3253,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.B3Body"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.B3Body",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "B3Body",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.DivHeader"
                 }
               ],
@@ -3174,6 +3294,36 @@
               },
               "properties": {
                 "member": "DivHeader",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.DivBody"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.DivBody",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DivBody",
                 "module": "App",
                 "type": "App"
               }
