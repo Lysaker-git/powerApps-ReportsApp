@@ -4586,22 +4586,7 @@
                 //Header of the mail
                 Set(
                     headerContent,
-                    $"<tr>
-                            <td height='8' style='background-color: #171a1b'>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table width='100%'>
-                                    <tr>
-                                        <td class='column'>
-                                            <img src='https://upload.wikimedia.org/wikipedia/commons/5/53/Posten-Norge-Logo.svg' alt='Posten Logo'>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr class='header'>
+                    $"<tr class='header'>
                             <td>
                                 <h1 style='color: white; font-weight: bolder;'>Inngående {Skift}</h1>
                             </td>
@@ -4609,75 +4594,7 @@
                 "
                 );
                 //All non-inline CSS rules are stored here
-                Set(
-                    cssStyles,
-                    "<style type='text/css'>
-                        body {
-                            margin: 0;
-                            background-color: #cccccc;
-                        }
-                        table {
-                            border-spacing: 0;
-                        }
-                        td {
-                            padding: 0;
-                        }
-                        img {
-                            border: 0;
-                        }
-                        .main {
-                            width: 100%;
-                            border-spacing: 0;
-                            text-align: center;
-                            max-width: 600px;
-                            background-color: #ffffff;
-                            font-family: sans-serif;
-                        }
-                        .column {
-                            display: inline-block;
-                            margin: 20px;
-                        }
-                        .header {
-                            height: 200px;
-                            font-size: 30px;
-                            background-position: center;
-                            background-image: url(https://www.bring.no/tjenester/post/endret-utleveringsfrekvens-post/_/image/588a61a5-fd67-46db-8fbf-d81267679e8a:52db7b79e4c237e6165280dda196f0e576d1f296/block-768-324/posten-og-bringbud_sammen_1024x682px.jpg);
-                        }
-                        .rColumn .content
-                        {
-                            width: 180px;
-                            max-width: 200px;
-                            display: inline-block;
-                            margin: 5px;
-                            padding: 10px;
-                            vertical-align: top;
-                            text-align: start;
-                        }
-                        .padding {
-                            margin: 10px;
-                        }
-                        .two-Column .content {
-                            color: #ffffff;
-                            width: 200px;
-                            max-width: 300px;
-                            display: inline-block;
-                            margin: 5px;
-                            padding: 10px;
-                            vertical-align: top;
-                            text-align: start;
-                        }
-                        .oColumn {
-                            color: #ffffff;
-                            padding: 5px;
-                            background-color: #3a3f41;
-                        }
-                        	h4, h3, p {
-                		    padding-left: 20px;
-                		    text-align: start;
-                		    margin: 10px;
-                	    }
-                    </style>"
-                );
+                
                 Set(
                     FullBody,
                     $"<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
@@ -4687,12 +4604,13 @@
                         <meta http-equiv='X-UA-Compatible' content='IE=edge' />
                         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
                         <title>Rapport | Group</title>
-                        {cssStyles}
+                        {CSS}
                         </head>
                         <body>
                         <center>
                             <table class='main'>
                                 <!-- TOP BORDER -->
+                                {genericHeader}
                                 {headerContent}
                                 <tr>
                                     <td>

@@ -458,39 +458,17 @@ OvervåkerRapport As screen:
                         'Diverse - OV': DiverseText.Text,
                         B2: B2Text.Text,
                         B3: B3Text.Text,
-                        Name: Office365Users.MyProfile().DisplayName,
-                        Timestamp: Text(
-                            Now(),
-                            ShortDateTime24
-                        ),
-                        Group: Left(
-                            Office365Users.MyProfile().Department,
-                            6
-                        ),
+                        Name: Navn,
+                        Timestamp: Tid,
+                        Group: Gruppe,
                         Topic: "Overvåker Overlevering",
-                        Shift: If(
-                            Int(
-                                Left(
-                                    Label2,
-                                    2
-                                )
-                            ) <= 7,
-                            "Early Shift",
-                            Int(
-                                Left(
-                                    Label2,
-                                    2
-                                )
-                            ) >= 20,
-                            "Evening Shift",
-                            "Day Shift"
-                        )
+                        Shift: Shift
                     }
                 );
                 Office365Outlook.SendEmailV2(
-                    Recipients,
-                    HeaderRapport,
-                    Body,
+                    "",
+                    "",
+                    "",
                     {
                         Importance: Normal,
                         IsHtml: true,
