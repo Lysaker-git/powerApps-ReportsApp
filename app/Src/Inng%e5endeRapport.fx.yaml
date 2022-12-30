@@ -4087,7 +4087,7 @@
             OnSelect: |-
                 =// Set Variables for all fields
                 ClearCollect(
-                    ValuesForMail,
+                    ArrivalSortCollection,
                     {
                         Title: LøsPriLabel.Text,
                         Content: LøsPriContent.Text
@@ -4305,9 +4305,9 @@
                         Content: DriftContent.Text
                     }
                 );
-                /*This will initiate the FinalValues as an Collection*/
+                /*This will initiate the ArrivalFinalCollection as an Collection*/
                 ClearCollect(
-                    FinalValues,
+                    ArrivalFinalCollection,
                     {
                         Title: Blank(),
                         Content: Blank(),
@@ -4318,18 +4318,19 @@
                     varCollection,
                     {var: false}
                 );
-                /*This will clear the FinalValues Collection*/
-                Clear(FinalValues);
-                /*Loops through the ValuesForMail collection and appends Title, Content and if present Checkbox*/
+                /*This will clear the ArrivalFinalCollection Collection*/
+                Clear(ArrivalFinalCollection);
+                
+                /*Loops through the ArrivalSortCollection collection and appends Title, Content and if present Checkbox*/
                 ForAll(
-                    ValuesForMail,
+                    ArrivalSortCollection,
                     If(
                         And(
                             Not(ThisRecord.Content = ""),
                             Not(ThisRecord.Checkbox)
                         ),//IF Content IS NOT empty AND IF checkbox IS NOT false
                         Collect(
-                            FinalValues,
+                            ArrivalFinalCollection,
                             {
                                 Title: ThisRecord.Title,
                                 Content: ThisRecord.Content
@@ -4340,7 +4341,7 @@
                             ThisRecord.Checkbox
                         ),//IF content IS NOT empty OR IF checkbox IS true
                         Collect(
-                            FinalValues,
+                            ArrivalFinalCollection,
                             {
                                 Title: ThisRecord.Title,
                                 Content: ThisRecord.Content,
@@ -4360,7 +4361,7 @@
                     )
                 );
                 ForAll(
-                    FinalValues,
+                    ArrivalFinalCollection,
                     If(
                         And(
                             Not(ThisRecord.Content = ""),
@@ -4394,9 +4395,9 @@
                         )
                     )
                 );
-                /*Checking if there is input on FinalValues Collection - and makes the mailMainBody*/
+                /*Checking if there is input on ArrivalFinalCollection Collection - and makes the arrivalsBodyHTML*/
                 If(
-                    Not(IsEmpty(FinalValues)), //IF FinalValues IS NOT empty then..
+                    Not(IsEmpty(ArrivalFinalCollection)), //IF ArrivalFinalCollection IS NOT empty then..
                     If(
                         Boolean(
                             Concat(
@@ -4405,11 +4406,11 @@
                             )
                         ) = true,
                         Set(
-                            mailMainBody,
+                            arrivalsBodyHTML,
                             Concatenate(
                                genericTitles,
                                 Concat(
-                                    FinalValues,
+                                    ArrivalFinalCollection,
                                     Concatenate(
                                         $"<tbody style='background-color: rgba(23, 26, 27, 0.02);'>
                                 <tr>
@@ -4430,18 +4431,11 @@
                             )
                         ),
                         Set(
-                            mailMainBody,
+                            arrivalsBodyHTML,
                             Concatenate(
-                                $"<thead>
-                                    <th width='30%'>
-                                        <h3>Område:</h3>
-                                    </th>
-                                    <th width='70%'>
-                                        <h3>Info:</h3>
-                                    </th>
-                                </thead>",
+                                genericTitles,
                                 Concat(
-                                    FinalValues,
+                                    ArrivalFinalCollection,
                                     Concatenate(
                                         $"<tbody style='background-color: rgba(23, 26, 27, 0.02);'>
                                             <tr>
@@ -4462,18 +4456,18 @@
                         )
                     ),
                     Set(
-                        mailMainBody,
+                        arrivalsBodyHTML,
                         ""
                     )
                 );
                 If(
                     IsEmpty(OverliggItems),//If OverliggItems IS empty then...
                     Set(
-                        overliggContent,
+                        overliggHTML,
                         ""
                     ),
                     Set(
-                        overliggContent,
+                        overliggHTML,
                         Concatenate(
                             $"<tr style='background-color: #171a1b;'>
                             <td>
@@ -4532,11 +4526,11 @@
                 If(
                     IsEmpty(ManglerBilerCollection),// IF ManglerBilderBollection IS empty then..
                     Set(
-                        manglerBilContent,
+                        missingCarHTML,
                         ""
                     ),
                     Set(
-                        manglerBilContent,
+                        missingCarHTML,
                         Concatenate(
                             $"<tr style='background-color: #171a1b;'>
                                 <td>
@@ -4583,7 +4577,7 @@
                 );
                 //Header of the mail
                 Set(
-                    headerContent,
+                    arrivalsHeader,
                     $"<tr class='header'>
                             <td>
                                 <h1 style='color: white; font-weight: bolder;'>Inngående {Shift}</h1>
@@ -4592,7 +4586,7 @@
                 "
                 );
                 Set(
-                    FullBody,
+                    arrivalsBody,
                     $"<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
                         <html xmlns='http://www.w3.org/1999/xhtml'>
                         <head>
@@ -4607,7 +4601,7 @@
                             <table class='main'>
                                 <!-- TOP BORDER -->
                                 {genericHeader}
-                                {headerContent}
+                                {arrivalsHeader}
                                 <tr>
                                     <td>
                                         <table width='100%'>
@@ -4618,7 +4612,7 @@
                                                         <tr>
                                                             <td class='padding'>
                                                                 <table width='100%'>
-                                                                    {mailMainBody}
+                                                                    {arrivalsBodyHTML}
                                                                 </table>
                                                             </td>
                                                         </tr>
@@ -4629,9 +4623,9 @@
                                     </td>
                                 </tr>
                                 <!-- Repeatable table Overlap-->
-                                {overliggContent}
+                                {overliggHTML}
                                 <!-- Repeatable table Missing vehicle-->
-                                {manglerBilContent}
+                                {missingCarHTML}
                             </table>
                         </center>
                     </body>
@@ -4640,7 +4634,7 @@
                 Office365Outlook.SendEmailV2(
                     TestRecipients,
                     "Overlevering",
-                    FullBody, {
+                    arrivalsBody, {
                         Attachments: AddColumns( RenameColumns(AttachmentContent.Attachments,"Value","ContentBytes"), "@odata.type", "")
                     }
                 );

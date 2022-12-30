@@ -56,9 +56,6 @@
           "Table1": {
             "tableName": "{00000000-000C-0000-FFFF-FFFF00000000}"
           },
-          "Table2": {
-            "tableName": "{588A7C9D-608B-40A5-9608-91C1D72FC934}"
-          },
           "Table3": {
             "tableName": "{CA9A44A0-4E05-4F19-9F32-D94047D28B69}"
           },
@@ -70,7 +67,6 @@
     },
     "dataSources": [
       "Table1",
-      "Table2",
       "Table3",
       "Table4",
       "InngåendeDB"
@@ -118,5 +114,30 @@
     "dependencies": {},
     "dependents": [],
     "id": "dcd8bcdc-a6db-476d-9d02-0f0309143c2c"
+  },
+  "e12db647-012a-4cae-beab-932835474128": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1600/1.0.1600.3026/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
+    },
+    "datasets": {
+      "me,b%2521V5t0zszLXkq1_LPpVoAK6Is4L1woQ5lFjSejudidproujLsadxwDTLGkmnzFcA8C,016UNDJCSZ6DAPQ2C5BRDYAJOSXS4FF6Q7": {
+        "dataSources": {
+          "hospitalDB": {
+            "tableName": "{CA9A44A0-4E05-4F19-9F32-D94047D28B69}"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "hospitalDB"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "e12db647-012a-4cae-beab-932835474128"
   }
 }
