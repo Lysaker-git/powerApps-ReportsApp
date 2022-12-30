@@ -4641,14 +4641,8 @@
                     </body>
                 </html>"
                 );
-                Set(
-                    TestRecip,
-                    "
-                robin.lysaker@posten.no
-                "
-                );
                 Office365Outlook.SendEmailV2(
-                    TestRecip,
+                    TestRecipients,
                     "Overlevering",
                     FullBody, {
                         Attachments: AddColumns( RenameColumns(AttachmentContent.Attachments,"Value","ContentBytes"), "@odata.type", "")

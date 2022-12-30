@@ -316,69 +316,39 @@ OvervåkerRapport As screen:
             Height: =70
             HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
             OnSelect: |-
-                =Set(
-                    HeaderRapport,
-                    Label1.Text
+                =ClearCollect(OvervakerCollection, 
+                    {
+                        FlytHeader: "Genrell Flyt",
+                        FlytContent: FlytText.Text,
+                        UtfordringsHeader: "Utfordringer",
+                        UtfordringsContent: UtfordringerText.Text,
+                        DiverseHeader: "Diverse - OV",
+                        DiverseContent: DiverseText.Text,
+                        B2Header: "B2",
+                        B2Content: B2Text.Text,
+                        B3Header: "B3",
+                        B3Content: B3Text.Text
+                    }
                 );
-                //Setting some variables
-                Set(
-                    FlytHeader,
-                    FlytLabel.Text
-                );
-                Set(
-                    FlytBody,
-                    FlytText.Text
-                );
-                Set(
-                    UtfordringsHeader,
-                    UtfordringerLabel.Text
-                );
-                Set(
-                    UtfordringBody,
-                    UtfordringerText.Text
-                );
-                Set(
-                    B2Header,
-                    B2Label.Text
-                );
-                Set(
-                    B2Body,
-                    B2Text.Text
-                );
-                Set(
-                    B3Header,
-                    B3Label.Text
-                );
-                Set(
-                    B3Body,
-                    B3Text.Text
-                );
-                Set(
-                    DivHeader,
-                    DiverseLabel.Text
-                );
-                Set(
-                    DivBody,
-                    DiverseText.Text
-                );
+                ForAll(OvervakerCollection,
                 Patch(
                     Table1,
                     Defaults(Table1),
                     {
-                        'Generell Flyt': "",
-                        Utfordringer: "",
-                        'Diverse - OV': "",
-                        B2: "",
-                        B3: "",
+                        'Generell Flyt': FlytContent,
+                        Utfordringer: UtfordringsContent,
+                        'Diverse - OV': DiverseContent,
+                        B2: B2Content,
+                        B3: B3Content,
                         Name: Navn,
                         Timestamp: Tid,
                         Group: Gruppe,
                         Topic: "",
                         Shift: Shift
                     }
-                );
+                ));
                 Office365Outlook.SendEmailV2(
-                    RecipientsLedere,
+                    TestRecipients,
                     "",
                     "",
                     {
@@ -410,7 +380,7 @@ OvervåkerRapport As screen:
             Visible: =vPopUp
             Width: =250
             X: =40
-            Y: =711
+            Y: =719
             ZIndex: =25
 
         OvervåkerCancelBtn As button:
@@ -440,6 +410,7 @@ OvervåkerRapport As screen:
         Height: =126
         IsInDataCard: =true
         Items: =
+        NoAttachmentsText: =""
         PaddingBottom: =5
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         PaddingRight: =5
