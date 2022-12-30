@@ -84,8 +84,7 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =70
                 Size: =21
-                Text: |-
-                    ="Manglende:"
+                Text: ="Manglende"
                 Width: =169
                 X: =40
                 Y: =408
@@ -107,8 +106,7 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =70
                 Size: =21
-                Text: |-
-                    ="Skriving:"
+                Text: ="Skriving"
                 Width: =169
                 X: =235
                 Y: =408
@@ -130,8 +128,7 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =70
                 Size: =21
-                Text: |-
-                    ="Utleverte:"
+                Text: ="Utleverte"
                 Width: =169
                 X: =431
                 Y: =408
@@ -220,17 +217,6 @@
                 Y: =618
                 ZIndex: =18
 
-            CheckLabelHA_1 As label:
-                FontWeight: =FontWeight.Semibold
-                Height: =70
-                Size: =21
-                Text: |-
-                    ="Kryss av det som er gjort:"
-                Width: =560
-                X: =60
-                Y: =60
-                ZIndex: =19
-
     Icon1_1 As icon.BackArrow:
         Color: =RGBA(0, 0, 0, 1)
         Icon: =Icon.BackArrow
@@ -312,19 +298,19 @@
                     CheckListCollection,
                     {
                         Title: TommeCheckHA.Text,
-                        Content: TommeCheckHA.Value
+                        Content: If(TommeCheckHA.Value,"Ja","Nei")
                     },
                     {
                         Title: BurCheckHA.Text,
-                        Content: BurCheckHA.Value
+                        Content: If(BurCheckHA.Value,"Ja","Nei")
                     },
                     {
                         Title: HeisCheckHA.Text,
-                        Content: HeisCheckHA.Value
+                        Content: If(HeisCheckHA.Value,"Ja","Nei")
                     },
                     {
                         Title: BaljeCheckHA.Text,
-                        Content: BaljeCheckHA.Value
+                        Content: If(BaljeCheckHA.Value,"Ja","Nei")
                     }
                 );
                 ClearCollect(
@@ -366,12 +352,12 @@
                         Skriving: SkrivingInputHA.Text,
                         Numbers: Concat(
                             HANumbersCollection,
-                            Concatenate($"{ThisRecord.Title}: {ThisRecord.Content}"),
+                            Concatenate($"{ThisRecord.Title} {ThisRecord.Content}"),
                             " - "
                         ),
                         Checklist: Concat(
                             CheckListCollection,
-                            Concatenate($"{ThisRecord.Title}: {ThisRecord.Content}"),
+                            Concatenate($"{ThisRecord.Title} {ThisRecord.Content}"),
                             " - "
                         ),
                         Navn: Navn,
