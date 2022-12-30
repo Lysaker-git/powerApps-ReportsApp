@@ -4372,14 +4372,7 @@
                         Set(
                             mailMainBody,
                             Concatenate(
-                                $"<thead>
-                                    <th width='30%'>
-                                        <h3>Område:</h3>
-                                    </th>
-                                    <th width='70%'>
-                                        <h3>Info:</h3>
-                                    </th>
-                                </thead>",
+                               genericTitles,
                                 Concat(
                                     FinalValues,
                                     Concatenate(
@@ -4553,42 +4546,12 @@
                         )
                     )
                 );
-                With(
-                    {
-                        num: Value(
-                            Left(
-                                TimeLabel.Text,
-                                2
-                            )
-                        )
-                    },//With TimeLabel.text check shift based on first two digits
-                    If(
-                        num >= 18,
-                        Set(
-                            Skift,
-                            "Kveld"
-                        ),
-                        And(
-                            num >= 11,
-                            num <= 17
-                        ),
-                        Set(
-                            Skift,
-                            "Dag"
-                        ),
-                        num <= 10,
-                        Set(
-                            Skift,
-                            "Natt"
-                        )
-                    )
-                );
                 //Header of the mail
                 Set(
                     headerContent,
                     $"<tr class='header'>
                             <td>
-                                <h1 style='color: white; font-weight: bolder;'>Inngående {Skift}</h1>
+                                <h1 style='color: white; font-weight: bolder;'>Inngående {Shift}</h1>
                             </td>
                         </tr>
                 "

@@ -143,7 +143,7 @@ OvervåkerRapport As screen:
         Y: =195
         ZIndex: =9
 
-    Label1 As label:
+    OvervåkerHeader As label:
         Align: =Align.Center
         FontWeight: =Bold
         Height: =62
@@ -267,7 +267,7 @@ OvervåkerRapport As screen:
 
     Label2 As label:
         Align: =Align.Right
-        Height: =Label1.Height
+        Height: =OvervåkerHeader.Height
         Size: =21
         Text: =Text(Now(),ShortTime24)
         Visible: =false
@@ -343,7 +343,7 @@ OvervåkerRapport As screen:
                         Name: Navn,
                         Timestamp: Tid,
                         Group: Gruppe,
-                        Topic: "",
+                        Topic: OvervåkerHeader.Text,
                         Shift: Shift
                     }
                 ));
@@ -354,6 +354,7 @@ OvervåkerRapport As screen:
                         Content: Blank()
                     }
                 );
+                Clear(FinalValuesSupervisor);
                 //Collects All Input Boxes - Skips Empty
                 ForAll(OvervakerCollection,
                     If(Not(FlytContent = ""),
@@ -389,10 +390,88 @@ OvervåkerRapport As screen:
                         )
                     )
                 );
+                Set(
+                    supervisorHeader,
+                    $"<tr class='header'>
+                            <td>
+                                <h1 style='color: white; font-weight: bolder;'>Overvåker {Shift}</h1>
+                            </td>
+                        </tr>
+                "
+                );
+                If(
+                    Not(IsEmpty(FinalValuesSupervisor)),
+                        Set(
+                        supervisorMailBody,
+                        Concatenate(
+                            genericTitles,
+                            Concat(
+                                FinalValuesSupervisor,
+                                Concatenate(
+                                    $"<tbody style='background-color: rgba(23, 26, 27, 0.02);'>
+                                        <tr>
+                                            <td>
+                                                <h4>{Title}</h4>
+                                            </td>
+                                            <td>
+                                                <p>{Content}</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan='2' height='5' style='background-color: #ffffff'></td>
+                                        </tr>
+                                    </tbody>"
+                                )
+                            )
+                        )
+                    )
+                );
+                Set(
+                    FullBodySupervisor,
+                    $"<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+                        <html xmlns='http://www.w3.org/1999/xhtml'>
+                        <head>
+                        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+                        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+                        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                        <title>Rapport | Group</title>
+                        {CSS}
+                        </head>
+                        <body>
+                        <center>
+                            <table class='main'>
+                                <!-- TOP BORDER -->
+                                {genericHeader}
+                                {supervisorHeader}
+                                <tr>
+                                    <td>
+                                        <table width='100%'>
+                                            <tr>
+                                                <td class='reports-content'>
+                                                    <!-- Repeatable content sections -->
+                                                    <table width='100%' class='rColumn'>
+                                                        <tr>
+                                                            <td class='padding'>
+                                                                <table width='100%'>
+                                                                    {supervisorMailBody}
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </center>
+                    </body>
+                </html>"
+                );
                 Office365Outlook.SendEmailV2(
                     TestRecipients,
-                    "",
-                    "",
+                    "Overvåker Overlevering",
+                    FullBodySupervisor,
                     {
                         Importance: Normal,
                         IsHtml: true,
@@ -422,7 +501,7 @@ OvervåkerRapport As screen:
             Visible: =vPopUp
             Width: =250
             X: =40
-            Y: =719
+            Y: =711
             ZIndex: =25
 
         OvervåkerCancelBtn As button:

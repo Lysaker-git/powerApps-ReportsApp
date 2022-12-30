@@ -111,5 +111,13 @@ App As appinfo:
                 </table>
             </td>
         </tr>";
+        genericTitles = $"<thead>
+                        <th width='30%'>
+                            <h3>Område:</h3>
+                        </th>
+                        <th width='70%'>
+                            <h3>Info:</h3>
+                        </th>
+                    </thead>";
     OnStart: =Set(CurrentTime, Now())
 
