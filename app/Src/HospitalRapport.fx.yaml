@@ -445,7 +445,7 @@
                 </html>"
                 );
                 Office365Outlook.SendEmailV2(
-                    TestRecipients,
+                    HARecipients,
                     "Hospital Overlevering",
                     FullBodyHostpial,
                     {

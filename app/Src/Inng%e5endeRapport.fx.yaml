@@ -4632,7 +4632,7 @@
                 </html>"
                 );
                 Office365Outlook.SendEmailV2(
-                    TestRecipients,
+                    Concatenate(RecipientsLedere,RecipientsInngående),
                     "Overlevering",
                     arrivalsBody, {
                         Attachments: AddColumns( RenameColumns(AttachmentContent.Attachments,"Value","ContentBytes"), "@odata.type", "")
