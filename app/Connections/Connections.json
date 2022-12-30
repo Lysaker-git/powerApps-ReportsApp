@@ -16,9 +16,6 @@
         "dataSources": {
           "Documents": {
             "tableName": "9908f26d-6492-491f-a951-8d4729bc99fb"
-          },
-          "Ledige Stillinger": {
-            "tableName": "a042776a-0d8a-4a79-acbc-e3e1a0e708e9"
           }
         }
       },
@@ -26,18 +23,13 @@
         "dataSources": {
           "Fellesområde": {
             "tableName": "79f4a960-5ed2-4ad3-9ac6-37eca69fa87e"
-          },
-          "Tester List": {
-            "tableName": "d9a10349-c7e0-4aaa-ac3e-16ca3b9b317d"
           }
         }
       }
     },
     "dataSources": [
       "Fellesområde",
-      "Ledige Stillinger",
-      "Documents",
-      "Tester List"
+      "Documents"
     ],
     "dependencies": {},
     "dependents": [],
@@ -58,6 +50,9 @@
     "datasets": {
       "me,b%2521V5t0zszLXkq1_LPpVoAK6Is4L1woQ5lFjSejudidproujLsadxwDTLGkmnzFcA8C,016UNDJCSZ6DAPQ2C5BRDYAJOSXS4FF6Q7": {
         "dataSources": {
+          "InngåendeDB": {
+            "tableName": "{94085B1E-7171-42EB-8FB1-B1EFCF417AB2}"
+          },
           "Table1": {
             "tableName": "{00000000-000C-0000-FFFF-FFFF00000000}"
           },
@@ -77,7 +72,8 @@
       "Table1",
       "Table2",
       "Table3",
-      "Table4"
+      "Table4",
+      "InngåendeDB"
     ],
     "dependencies": {},
     "dependents": [],

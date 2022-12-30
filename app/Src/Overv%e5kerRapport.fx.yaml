@@ -10,6 +10,39 @@ OvervåkerRapport As screen:
         Width: =640
         ZIndex: =1
 
+    HtmlText1_4 As htmlViewer:
+        Height: =154
+        HtmlText: |-
+            ="<div 
+                style='
+                    margin:10px;
+                    width:560px;
+                    height: 70px;
+                    background-color:#;
+                    box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                    </div>"
+        Width: =612
+        X: =28
+        Y: =774
+        ZIndex: =2
+
+    OvervåkerAttachment As attachments:
+        BorderColor: =BlueViolet
+        Height: =126
+        IsInDataCard: =true
+        Items: =
+        NoAttachmentsText: =""
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        Size: =16
+        Tooltip: ="Add Files here"
+        Width: =556
+        X: =44
+        Y: =888
+        ZIndex: =3
+
     HtmlText1_5 As htmlViewer:
         Height: =154
         HtmlText: |-
@@ -24,7 +57,7 @@ OvervåkerRapport As screen:
         Width: =612
         X: =25
         Y: =1020
-        ZIndex: =2
+        ZIndex: =4
 
     HtmlText1_1 As htmlViewer:
         Height: =154
@@ -40,7 +73,7 @@ OvervåkerRapport As screen:
         Width: =612
         X: =25
         Y: =336
-        ZIndex: =3
+        ZIndex: =5
 
     HtmlText1_2 As htmlViewer:
         Height: =154
@@ -56,7 +89,7 @@ OvervåkerRapport As screen:
         Width: =612
         X: =25
         Y: =477
-        ZIndex: =4
+        ZIndex: =6
 
     HtmlText1_3 As htmlViewer:
         Height: =154
@@ -72,23 +105,7 @@ OvervåkerRapport As screen:
         Width: =612
         X: =25
         Y: =620
-        ZIndex: =5
-
-    HtmlText1_4 As htmlViewer:
-        Height: =154
-        HtmlText: |-
-            ="<div 
-                style='
-                    margin:10px;
-                    width:560px;
-                    height: 70px;
-                    background-color:#;
-                    box-shadow:0px 0px 20px -2px #ACB2B3;'>
-                    </div>"
-        Width: =612
-        X: =28
-        Y: =774
-        ZIndex: =6
+        ZIndex: =7
 
     HtmlText1 As htmlViewer:
         Height: =169
@@ -104,7 +121,7 @@ OvervåkerRapport As screen:
         Width: =612
         X: =25
         Y: =180
-        ZIndex: =7
+        ZIndex: =8
 
     Button1 As button:
         BorderThickness: =0
@@ -125,7 +142,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =1036
-        ZIndex: =8
+        ZIndex: =9
 
     FlytText As text:
         BorderThickness: =0
@@ -141,7 +158,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =195
-        ZIndex: =9
+        ZIndex: =10
 
     OvervåkerHeader As label:
         Align: =Align.Center
@@ -152,7 +169,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =35
-        ZIndex: =10
+        ZIndex: =11
 
     FlytLabel As label:
         FontWeight: =Semibold
@@ -162,7 +179,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =125
-        ZIndex: =11
+        ZIndex: =12
 
     UtfordringerLabel As label:
         FontWeight: =Semibold
@@ -172,7 +189,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =279
-        ZIndex: =12
+        ZIndex: =13
 
     UtfordringerText As text:
         BorderThickness: =0
@@ -188,7 +205,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =349
-        ZIndex: =13
+        ZIndex: =14
 
     B2Label As label:
         FontWeight: =Semibold
@@ -198,7 +215,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =428
-        ZIndex: =14
+        ZIndex: =15
 
     B2Text As text:
         BorderThickness: =0
@@ -213,7 +230,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =490
-        ZIndex: =15
+        ZIndex: =16
 
     DiverseLabel As label:
         FontWeight: =Semibold
@@ -223,7 +240,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =722
-        ZIndex: =16
+        ZIndex: =17
 
     DiverseText As text:
         BorderThickness: =0
@@ -238,7 +255,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =787
-        ZIndex: =17
+        ZIndex: =18
 
     B3Label As label:
         FontWeight: =Semibold
@@ -248,7 +265,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =572
-        ZIndex: =18
+        ZIndex: =19
 
     B3Text As text:
         BorderThickness: =0
@@ -263,7 +280,7 @@ OvervåkerRapport As screen:
         Width: =560
         X: =40
         Y: =635
-        ZIndex: =19
+        ZIndex: =20
 
     Label2 As label:
         Align: =Align.Right
@@ -274,7 +291,7 @@ OvervåkerRapport As screen:
         Width: =121
         X: =479
         Y: =35
-        ZIndex: =20
+        ZIndex: =21
 
     OvervåkerBackBtn As icon.BackArrow:
         Color: =RGBA(0, 0, 0, 1)
@@ -282,7 +299,7 @@ OvervåkerRapport As screen:
         OnSelect: =Back(ScreenTransition.UnCoverRight)
         X: =536
         Y: =33
-        ZIndex: =23
+        ZIndex: =22
 
     Group1 As group:
         Height: =5
@@ -305,7 +322,7 @@ OvervåkerRapport As screen:
                 </div>"
             Visible: =vPopUp
             Width: =637
-            ZIndex: =24
+            ZIndex: =23
 
         OvervåkerSendMailBtn As button:
             BorderThickness: =0
@@ -316,7 +333,8 @@ OvervåkerRapport As screen:
             Height: =70
             HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
             OnSelect: |-
-                =ClearCollect(OvervakerCollection, 
+                =ClearCollect(
+                    OvervakerCollection,
                     {
                         FlytHeader: "Genrell Flyt",
                         FlytContent: FlytText.Text,
@@ -330,23 +348,25 @@ OvervåkerRapport As screen:
                         B3Content: B3Text.Text
                     }
                 );
-                ForAll(OvervakerCollection,
-                Patch(
-                    Table1,
-                    Defaults(Table1),
-                    {
-                        'Generell Flyt': FlytContent,
-                        Utfordringer: UtfordringsContent,
-                        'Diverse - OV': DiverseContent,
-                        B2: B2Content,
-                        B3: B3Content,
-                        Name: Navn,
-                        Timestamp: Tid,
-                        Group: Gruppe,
-                        Topic: OvervåkerHeader.Text,
-                        Shift: Shift
-                    }
-                ));
+                ForAll(
+                    OvervakerCollection,
+                    Patch(
+                        Table1,
+                        Defaults(Table1),
+                        {
+                            'Generell Flyt': ThisRecord.FlytContent,
+                            Utfordringer: ThisRecord.UtfordringsContent,
+                            'Diverse - OV': ThisRecord.DiverseContent,
+                            B2: ThisRecord.B2Content,
+                            B3: ThisRecord.B3Content,
+                            Name: Navn,
+                            Timestamp: Tid,
+                            Group: Gruppe,
+                            Topic: OvervåkerHeader.Text,
+                            Shift: Shift
+                        }
+                    )
+                );
                 ClearCollect(
                     FinalValuesSupervisor,
                     {
@@ -356,33 +376,42 @@ OvervåkerRapport As screen:
                 );
                 Clear(FinalValuesSupervisor);
                 //Collects All Input Boxes - Skips Empty
-                ForAll(OvervakerCollection,
-                    If(Not(FlytContent = ""),
-                        Collect(FinalValuesSupervisor,
+                ForAll(
+                    OvervakerCollection,
+                    If(
+                        Not(FlytContent = ""),
+                        Collect(
+                            FinalValuesSupervisor,
                             {
                                 Title: FlytHeader,
                                 Content: FlytContent
                             }
                         )
                     );
-                    If(Not(UtfordringsContent = ""),
-                        Collect(FinalValuesSupervisor,
+                    If(
+                        Not(UtfordringsContent = ""),
+                        Collect(
+                            FinalValuesSupervisor,
                             {
                                 Title: UtfordringsHeader,
                                 Content: UtfordringsContent
                             }
                         )
                     );
-                    If(Not(DiverseContent = ""),
-                        Collect(FinalValuesSupervisor,
+                    If(
+                        Not(DiverseContent = ""),
+                        Collect(
+                            FinalValuesSupervisor,
                             {
                                 Title: DiverseHeader,
                                 Content: DiverseContent
                             }
                         )
                     );
-                    If(Not(B2Content = ""),
-                        Collect(FinalValuesSupervisor,
+                    If(
+                        Not(B2Content = ""),
+                        Collect(
+                            FinalValuesSupervisor,
                             {
                                 Title: B2Header,
                                 Content: B2Content
@@ -401,7 +430,7 @@ OvervåkerRapport As screen:
                 );
                 If(
                     Not(IsEmpty(FinalValuesSupervisor)),
-                        Set(
+                    Set(
                         supervisorMailBody,
                         Concatenate(
                             genericTitles,
@@ -502,7 +531,7 @@ OvervåkerRapport As screen:
             Width: =250
             X: =40
             Y: =711
-            ZIndex: =25
+            ZIndex: =24
 
         OvervåkerCancelBtn As button:
             BorderThickness: =0
@@ -524,22 +553,5 @@ OvervåkerRapport As screen:
             Width: =250
             X: =350
             Y: =711
-            ZIndex: =26
-
-    OvervåkerAttachment As attachments:
-        BorderColor: =BlueViolet
-        Height: =126
-        IsInDataCard: =true
-        Items: =
-        NoAttachmentsText: =""
-        PaddingBottom: =5
-        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-        PaddingRight: =5
-        PaddingTop: =5
-        Size: =16
-        Tooltip: ="Add Files here"
-        Width: =556
-        X: =44
-        Y: =888
-        ZIndex: =29
+            ZIndex: =25
 

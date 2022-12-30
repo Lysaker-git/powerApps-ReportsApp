@@ -4359,6 +4359,41 @@
                         );
                     )
                 );
+                ForAll(
+                    FinalValues,
+                    If(
+                        And(
+                            Not(ThisRecord.Content = ""),
+                            Not(ThisRecord.Checkbox)
+                        ),//IF Content IS NOT empty AND IF checkbox IS NOT true
+                        Patch(InngåendeDB,Defaults(InngåendeDB),
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content,
+                                Name: Navn,
+                                Group: Gruppe,
+                                Tid: Tid,
+                                Shift: Shift
+                            }
+                        )
+                        ,
+                        Or(
+                            Not(ThisRecord.Content = ""),
+                            ThisRecord.Checkbox
+                        ),//IF content IS NOT empty OR IF checkbox IS true
+                        Patch(InngåendeDB,Defaults(InngåendeDB),
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content,
+                                Checkbox: ThisRecord.Checkbox,
+                                Name: Navn,
+                                Group: Gruppe,
+                                Tid: Tid,
+                                Shift: Shift
+                            }
+                        )
+                    )
+                );
                 /*Checking if there is input on FinalValues Collection - and makes the mailMainBody*/
                 If(
                     Not(IsEmpty(FinalValues)), //IF FinalValues IS NOT empty then..
@@ -4556,8 +4591,6 @@
                         </tr>
                 "
                 );
-                //All non-inline CSS rules are stored here
-                
                 Set(
                     FullBody,
                     $"<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
