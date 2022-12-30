@@ -347,6 +347,48 @@ OvervåkerRapport As screen:
                         Shift: Shift
                     }
                 ));
+                ClearCollect(
+                    FinalValuesSupervisor,
+                    {
+                        Title: Blank(),
+                        Content: Blank()
+                    }
+                );
+                //Collects All Input Boxes - Skips Empty
+                ForAll(OvervakerCollection,
+                    If(Not(FlytContent = ""),
+                        Collect(FinalValuesSupervisor,
+                            {
+                                Title: FlytHeader,
+                                Content: FlytContent
+                            }
+                        )
+                    );
+                    If(Not(UtfordringsContent = ""),
+                        Collect(FinalValuesSupervisor,
+                            {
+                                Title: UtfordringsHeader,
+                                Content: UtfordringsContent
+                            }
+                        )
+                    );
+                    If(Not(DiverseContent = ""),
+                        Collect(FinalValuesSupervisor,
+                            {
+                                Title: DiverseHeader,
+                                Content: DiverseContent
+                            }
+                        )
+                    );
+                    If(Not(B2Content = ""),
+                        Collect(FinalValuesSupervisor,
+                            {
+                                Title: B2Header,
+                                Content: B2Content
+                            }
+                        )
+                    )
+                );
                 Office365Outlook.SendEmailV2(
                     TestRecipients,
                     "",

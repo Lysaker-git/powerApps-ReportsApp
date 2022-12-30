@@ -422,7 +422,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/30/2022 11:41:58",
+  "HeaderLastSavedDateTimeUTC": "12/30/2022 11:50:50",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "050ebc86-bed1-4776-bcf5-c8a7f36710cb": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/18a438dabf06462e8ebb1c1aa18e949e\"",
@@ -448,6 +448,7 @@
     "Documents": 4,
     "Fellesområde": 5,
     "FinalValues": 13,
+    "FinalValuesSupervisor": 19,
     "Ledige Stillinger": 6,
     "ManglerBilerCollection": 14,
     "Office365Outlook": 0,
