@@ -4360,7 +4360,7 @@
                         );
                     )
                 );
-                /*ForAll(
+                ForAll(
                     ArrivalFinalCollection,
                     If(
                         And(
@@ -4394,7 +4394,7 @@
                             }
                         )
                     )
-                );*/
+                );
                 /*Checking if there is input on ArrivalFinalCollection Collection - and makes the arrivalsBodyHTML*/
                 If(
                     Not(IsEmpty(ArrivalFinalCollection)), //IF ArrivalFinalCollection IS NOT empty then..
