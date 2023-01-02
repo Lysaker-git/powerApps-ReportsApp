@@ -422,7 +422,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/02/2023 09:08:29",
+  "HeaderLastSavedDateTimeUTC": "01/02/2023 11:01:33",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "050ebc86-bed1-4776-bcf5-c8a7f36710cb": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/18a438dabf06462e8ebb1c1aa18e949e\"",
@@ -1063,7 +1063,7 @@
     "GLSContent": 286,
     "GLSLabel": 288,
     "Group1": 18,
-    "Group1_1": 74,
+    "Group1_1": 73,
     "Group1_2": 107,
     "HeisCheckHA": 69,
     "HistorikkBtn": 15,
@@ -1080,7 +1080,7 @@
     "HtmlText2": 399,
     "HtmlText2_1": 72,
     "HtmlText2_2": 106,
-    "Icon1_1": 73,
+    "Icon1_1": 74,
     "Icon2": 47,
     "Icon3": 109,
     "Icon4": 92,
@@ -1374,7 +1374,7 @@
       "typedDataCard": 62
     },
     "DeserializationLoadTime": 5.7323525,
-    "ErrorCount": 4
+    "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

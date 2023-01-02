@@ -4423,7 +4423,8 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style='{tdCss} background-color: #ffffff'; height:5px' colspan='2'></td>
+                                                <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
+                                                <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
                                             </tr>
                                         "
                                     )
@@ -4447,7 +4448,8 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style='{tdCss} background-color: #ffffff'; height:5px' colspan='2'></td>
+                                                <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
+                                                <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
                                             </tr>
                                         </tbody>"
                                     )
@@ -4505,7 +4507,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style='{tdCss} {darkBg}' height:5px'>
+                                    <td style='{tdCss} {darkBg} {height5}'>
                                     </td>
                                 </tr>"
                                 )
@@ -4553,7 +4555,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style='{tdCss} {darkBg} height:8px'>
+                                        <td style='{tdCss} {darkBg} {height5}'>
                                         </td>
                                     </tr>"
                                 )
@@ -4564,64 +4566,41 @@
                 //Header of the mail
                 Set(
                     arrivalsHeader,
-                    $"<tr style='{headerCss} {darkBg}'>
+                    $"
+                        <tr style='{headerCss} {darkBg}'>
                             <td style='{tdCss}'>
                                 <h1 style='{textLight} font-weight: bolder;'>Inngående {Shift}</h1>
                             </td>
                         </tr>
-                "
+                    "
                 );
                 Set(
                     arrivalsBody,
-                    $"<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
-                        <html xmlns='http://www.w3.org/1999/xhtml'>
-                        <head>
-                        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-                        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-                        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-                        <title>Rapport | Group</title>
-                        </head>
-                        <body style='
-                            {bodyCss}
-                        '>
-                        <center>
-                            <table style='{tableCss} {mainCss}'>
-                                <!-- TOP BORDER -->
-                                {genericHeader}
-                                {arrivalsHeader}
-                                <tr>
-                                    <td style='{tdCss}'>
-                                        <table style='{tableCss} {w100}'>
-                                            <tr>
-                                                <td style='{tdCss}' class='reports-content'>
-                                                    <!-- Repeatable content sections -->
-                                                    <table style='{tableCss} {w100}' class='rColumn'>
-                                                        <tr>
-                                                            <td style='{tdCss}' class='padding'>
-                                                                <table style='{tableCss} {w100}'>
-                                                                    {arrivalsBodyHTML}
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!-- Repeatable table Overlap-->
-                                {overliggHTML}
-                                <!-- Repeatable table Missing vehicle-->
-                                {missingCarHTML}
-                            </table>
-                        </center>
-                    </body>
-                </html>"
+                    $"
+                    {htmlStart}
+                    //ADD HEADER OF GROUP HERE
+                    {arrivalsHeader}
+                    //
+                    {htmlAfterHeaderBeforeContent}
+                    //ADD BODY OF GROUP HERE
+                    {arrivalsBodyHTML}
+                    //
+                    {htmlAfterContentSomethingStart}
+                    //ADD ADITIONAL CONTENT HERE
+                    {overliggHTML}
+                    {missingCarHTML}
+                    //
+                    {htmlAfterContentSomethingEnd}
+                    "
                 );
                 Office365Outlook.SendEmailV2(
-                    TestRecipients,//Concatenate(RecipientsLedere,RecipientsInngående),
+                    //TestRecipients,
+                    Concatenate(RecipientsLedere,RecipientsInngående),
                     "Overlevering",
                     arrivalsBody, {
+                        Importance: Normal,
+                        IsHtml: true,
+                        Cc: TestRecipients,
                         Attachments: AddColumns( RenameColumns(AttachmentContent.Attachments,"Value","ContentBytes"), "@odata.type", "")
                     }
                 );

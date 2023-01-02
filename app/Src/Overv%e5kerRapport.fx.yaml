@@ -421,9 +421,9 @@ OvervåkerRapport As screen:
                 );
                 Set(
                     supervisorHeader,
-                    $"<tr class='header'>
+                    $"<tr style='{headerCss}{darkBg}'>
                             <td>
-                                <h1 style='color: white; font-weight: bolder;'>Overvåker {Shift}</h1>
+                                <h1 style='{textLight} font-weight: bolder;'>Overvåker {Shift}</h1>
                             </td>
                         </tr>
                 "
@@ -437,19 +437,22 @@ OvervåkerRapport As screen:
                             Concat(
                                 FinalValuesSupervisor,
                                 Concatenate(
-                                    $"<tbody style='background-color: rgba(23, 26, 27, 0.02);'>
-                                        <tr>
-                                            <td>
-                                                <h4>{Title}</h4>
-                                            </td>
-                                            <td>
-                                                <p>{Content}</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan='2' height='5' style='background-color: #ffffff'></td>
-                                        </tr>
-                                    </tbody>"
+                                    $"
+                                        <tbody style='{contentBg}'>
+                                            <tr>
+                                                <td style='{tdCss}'>
+                                                    <h4 style='{textCSS}'>{Title}</h4>
+                                                </td>
+                                                <td style='{tdCss}'>
+                                                    <p style='{textCSS}'>{Content}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
+                                                <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
+                                            </tr>
+                                        </tbody>
+                                    "
                                 )
                             )
                         )
@@ -457,47 +460,24 @@ OvervåkerRapport As screen:
                 );
                 Set(
                     FullBodySupervisor,
-                    $"<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
-                        <html xmlns='http://www.w3.org/1999/xhtml'>
-                        <head>
-                        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-                        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-                        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-                        <title>Rapport | Group</title>
-                        {CSS}
-                        </head>
-                        <body>
-                        <center>
-                            <table class='main'>
-                                <!-- TOP BORDER -->
-                                {genericHeader}
-                                {supervisorHeader}
-                                <tr>
-                                    <td>
-                                        <table width='100%'>
-                                            <tr>
-                                                <td class='reports-content'>
-                                                    <!-- Repeatable content sections -->
-                                                    <table width='100%' class='rColumn'>
-                                                        <tr>
-                                                            <td class='padding'>
-                                                                <table width='100%'>
-                                                                    {supervisorMailBody}
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </center>
-                    </body>
-                </html>"
+                    $"
+                    {htmlStart}
+                    //ADD HEADER OF GROUP HERE
+                    {supervisorHeader}
+                    //
+                    {htmlAfterHeaderBeforeContent}
+                    //ADD BODY OF GROUP HERE
+                    {supervisorMailBody}
+                    //
+                    {htmlAfterContentSomethingStart}
+                    //ADD ADDITIONAL CONTENT HERE
+                
+                    //
+                    {htmlAfterContentSomethingEnd}
+                    "
                 );
                 Office365Outlook.SendEmailV2(
+                    //TestRecipients,
                     Concatenate(RecipientsLedere,RecipientsLedereEx),
                     "Overvåker Overlevering",
                     FullBodySupervisor,
