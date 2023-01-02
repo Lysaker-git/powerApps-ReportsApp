@@ -90,94 +90,114 @@ App As appinfo:
         ";
         TestRecipients = "robin.lysaker@posten.no";
         
-        
-        CSS = "<style type='text/css'>
-                body {
-                    margin: 0;
-                    background-color: #cccccc;
-                }
-                table {
-                    border-spacing: 0;
-                }
-                td {
-                    padding: 0;
-                }
-                img {
-                    border: 0;
-                }
-                .main {
-                    width: 100%;
-                    border-spacing: 0;
-                    text-align: center;
-                    max-width: 600px;
-                    background-color: #ffffff;
-                    font-family: sans-serif;
-                }
-                .column {
-                    display: inline-block;
-                    margin: 20px;
-                }
-                .header {
-                    height: 200px;
-                    font-size: 30px;
-                    background-position: center;
-                    background-image: url(https://www.bring.no/tjenester/post/endret-utleveringsfrekvens-post/_/image/588a61a5-fd67-46db-8fbf-d81267679e8a:52db7b79e4c237e6165280dda196f0e576d1f296/block-768-324/posten-og-bringbud_sammen_1024x682px.jpg);
-                }
-                .rColumn .content
-                {
-                    width: 180px;
-                    max-width: 200px;
-                    display: inline-block;
-                    margin: 5px;
-                    padding: 10px;
-                    vertical-align: top;
-                    text-align: start;
-                }
-                .padding {
-                    margin: 10px;
-                }
-                .two-Column .content {
-                    color: #ffffff;
-                    width: 200px;
-                    max-width: 300px;
-                    display: inline-block;
-                    margin: 5px;
-                    padding: 10px;
-                    vertical-align: top;
-                    text-align: start;
-                }
-                .oColumn {
-                    color: #ffffff;
-                    padding: 5px;
-                    background-color: #3a3f41;
-                }
-                	h4, h3, p {
-        		    padding-left: 20px;
-        		    text-align: start;
-        		    margin: 10px;
-        	    }
-            </style>";
-        genericHeader = "<tr>
-        <td height='8' style='background-color: #171a1b'>
+        bodyCss = "
+            margin: 0;
+            background-color: #cccccc;
+        ";
+        tableCss = "
+            border-spacing: 0;
+        ";
+        tdCss = "
+            padding: 0;
+        ";
+        imgCss = "
+            border: 0;
+        ";
+        mainCss = "
+            width: 100%;
+            border-spacing: 0;
+            text-align: center;
+            max-width: 600px;
+            background-color: #ffffff;
+            font-family: sans-serif;
+        ";
+        columnCss = "
+            display: inline-block;
+            margin: 20px; 
+        ";
+        headerCss = "
+            height: 200px;
+            font-size: 30px;
+            background-position: center;
+            background-image: url(https://www.bring.no/tjenester/post/endret-utleveringsfrekvens-post/_/image/588a61a5-fd67-46db-8fbf-d81267679e8a:52db7b79e4c237e6165280dda196f0e576d1f296/block-768-324/posten-og-bringbud_sammen_1024x682px.jpg);
+        ";
+        rColContentCss = "
+            width: 180px;
+            max-width: 200px;
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            vertical-align: top;
+            text-align: start;
+        ";
+        twoColContentCss = "
+            color: #ffffff;
+            width: 200px;
+            max-width: 300px;
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            vertical-align: top;
+            text-align: start;
+        ";
+        oColCss = "
+            color: #ffffff;
+            padding: 5px;
+            background-color: #3a3f41;
+        ";
+        textCSS = "
+            padding-left: 20px;
+            text-align: start;
+            margin: 10px;
+        "; 
+        paddingCss = "
+            margin: 10px;
+        ";
+        w25 = "
+            width: 25%;
+        ";
+        w50 = "
+            width: 50%;
+        ";
+        w75 = "
+            width: 75%;
+        ";
+        w100 = "
+            width: 100%;
+        ";
+        darkBg = "
+            background-color: #171a1b;
+        ";
+        contentBg = "
+            background-color: #fbfbfb;
+        ";
+        textLight = "
+            color:#ffffff;
+        ";
+        m0 = "
+            margin: 0;
+        ";
+        genericHeader = $"<tr>
+        <td height='8' style='{darkBg} {tdCss} {m0}'>
         </td>
         <tr>
-            <td>
-                <table width='100%'>
+            <td style='{tdCss}'>
+                <table width='{w100}'>
                     <tr>
-                        <td class='column'>
-                            <img src='https://upload.wikimedia.org/wikipedia/commons/5/53/Posten-Norge-Logo.svg' alt='Posten Logo'>
+                        <td style='{tdCss} {columnCss}' class='column'>
+                            <img style='{imgCss}' src='https://upload.wikimedia.org/wikipedia/commons/5/53/Posten-Norge-Logo.svg' alt='Posten Logo'>
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>";
-        genericTitles = $"<thead>
-                        <th width='30%'>
-                            <h3>Område:</h3>
-                        </th>
-                        <th width='70%'>
-                            <h3>Info:</h3>
-                        </th>
-                    </thead>";
+        genericTitles = $"<tr>
+                        <td style='{w25}'>
+                            <h3 style='{textCSS}'>Område:</h3>
+                        </td>
+                        <td style='{w75}'>
+                            <h3 style='{textCSS}'>Info:</h3>
+                        </td>
+                    </tr>";
     OnStart: =Set(CurrentTime, Now())
 

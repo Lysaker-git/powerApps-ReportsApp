@@ -4081,7 +4081,7 @@
             Color: =RGBA(123, 193, 68, 1)
             Fill: =RGBA(0, 47, 25, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, 75%)
-            FontWeight: =Bold
+            FontWeight: =FontWeight.Normal
             Height: =70
             HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
             OnSelect: |-
@@ -4360,7 +4360,7 @@
                         );
                     )
                 );
-                ForAll(
+                /*ForAll(
                     ArrivalFinalCollection,
                     If(
                         And(
@@ -4394,7 +4394,7 @@
                             }
                         )
                     )
-                );
+                );*/
                 /*Checking if there is input on ArrivalFinalCollection Collection - and makes the arrivalsBodyHTML*/
                 If(
                     Not(IsEmpty(ArrivalFinalCollection)), //IF ArrivalFinalCollection IS NOT empty then..
@@ -4412,20 +4412,20 @@
                                 Concat(
                                     ArrivalFinalCollection,
                                     Concatenate(
-                                        $"<tbody style='background-color: rgba(23, 26, 27, 0.02);'>
-                                <tr>
-                                    <td>
-                                        <h4>{Title}</h4>
-                                    </td>
-                                    <td>
-                                        <p>{Content}</p>
-                                        <p>{Checkbox}</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan='2' height='5' style='background-color: #ffffff'></td>
-                                </tr>
-                            </tbody>"
+                                        $"
+                                            <tr style='{contentBg}'>
+                                                <td style='{tdCss}'>
+                                                    <h4 style='{textCSS}'>{Title}</h4>
+                                                </td>
+                                                <td style='{tdCss}'>
+                                                    <p style='{textCSS}'>{Content}</p>
+                                                    <p style='{textCSS}'>{Checkbox}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} background-color: #ffffff'; height:5px' colspan='2'></td>
+                                            </tr>
+                                        "
                                     )
                                 )
                             )
@@ -4437,17 +4437,17 @@
                                 Concat(
                                     ArrivalFinalCollection,
                                     Concatenate(
-                                        $"<tbody style='background-color: rgba(23, 26, 27, 0.02);'>
+                                        $"<tbody style='{contentBg}'>
                                             <tr>
-                                                <td>
-                                                    <h4>{Title}</h4>
+                                                <td style='{tdCss}'>
+                                                    <h4 style='{textCSS}'>{Title}</h4>
                                                 </td>
-                                                <td>
-                                                    <p>{Content}</p>
+                                                <td style='{tdCss}'>
+                                                    <p style='{textCSS}'>{Content}</p>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan='2' height='5' style='background-color: #ffffff'></td>
+                                                <td style='{tdCss} background-color: #ffffff'; height:5px' colspan='2'></td>
                                             </tr>
                                         </tbody>"
                                     )
@@ -4469,9 +4469,9 @@
                     Set(
                         overliggHTML,
                         Concatenate(
-                            $"<tr style='background-color: #171a1b;'>
-                            <td>
-                                <h2 style='color:#ffffff'>Overligg</h2>
+                            $"<tr style='{darkBg}'>
+                            <td style='{tdCss}'>
+                                <h2 style='{textLight}'>Overligg</h2>
                             </td>
                         </tr>
                         ",
@@ -4479,43 +4479,33 @@
                                 OverliggItems,
                                 Concatenate(
                                     $"<tr>
-                                    <td>
-                                        <table width='100%' class='oColumn'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Fra:</th>
-                                                    <th>VBH:</th>
-                                                    <th>Port:</th>
-                                                    <th>Plasser:</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>{Fra}</td>
-                                                    <td>{VBH}</td>
-                                                    <td>{Port}</td>
-                                                    <td>{Plasser}</td>
-                                                </tr>
-                                            </tbody>
+                                    <td style='{tdCss}'>
+                                        <table style='{tableCss} {w100} {oColCss}' class='oColumn'>
+                                            <tr>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Fra:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>VBH:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Port:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Plasser:</h4></td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Fra}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{VBH}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Port}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Plasser}</p></td>
+                                            </tr>
                                         </table>
-                                        <table width='100%' class='oColumn'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Info</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <p>{Info}</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
+                                        <table style='{tableCss} {w100} {oColCss}' class='oColumn'>
+                                            <tr>
+                                                <td style='{tdCss} {w100}'><h4 style='{textCSS}'>Info</h4></td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w100}'><p style='{textCSS}'>{Info}</p></td>
+                                            </tr>
                                         </table>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td height='5' style='background-color: #171a1b'>
+                                    <td style='{tdCss} {darkBg}' height:5px'>
                                     </td>
                                 </tr>"
                                 )
@@ -4532,34 +4522,30 @@
                     Set(
                         missingCarHTML,
                         Concatenate(
-                            $"<tr style='background-color: #171a1b;'>
-                                <td>
-                                    <h2 style='color:#ffffff'>Manglende Biler</h2>
+                            $"<tr style='{darkBg}'>
+                                <td style='{tdCss}'>
+                                    <h2 style='{textLight}'>Manglende Biler</h2>
                                 </td>
                             </tr>",
                             Concat(
                                 ManglerBilerCollection,
                                 Concatenate(
                                     $"<tr>
-                                        <td>
-                                            <table width='100%'>
+                                        <td style='{tdCss}'>
+                                            <table style='{w100}{tableCss}'>
                                                 <tr>
-                                                    <td class='padding'>
-                                                        <table width='100%' class='content oColumn'>
-                                                            <thead>
-                                                                <tr>
-                                                                    <th style='width: 25%'>Reg. nummer:</th>
-                                                                    <th style='width: 25%'>Bil Tur:</th>
-                                                                    <th style='width: 50%'>Kommerntar:</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>{Reg}</td>
-                                                                    <td>{Tur}</td>
-                                                                    <td>{Kommentar}</td>
-                                                                </tr>
-                                                            </tbody>
+                                                    <td style='{tdCss}' class='padding'>
+                                                        <table style='{tableCss} {oColCss} {w100}' class='content oColumn'>
+                                                            <tr>
+                                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Reg. nummer:</h4></td>
+                                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Bil Tur:</h4></td>
+                                                                <td style='{tdCss} {w50}'><h4 style='{textCSS}'>Kommerntar:</h4></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Reg}</p></td>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Tur}</p></td>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Kommentar}</p></td>
+                                                            </tr>
                                                         </table>
                                                     </td>
                                                 </tr>
@@ -4567,7 +4553,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td height='8' style='background-color: #171a1b'>
+                                        <td style='{tdCss} {darkBg} height:8px'>
                                         </td>
                                     </tr>"
                                 )
@@ -4578,9 +4564,9 @@
                 //Header of the mail
                 Set(
                     arrivalsHeader,
-                    $"<tr class='header'>
-                            <td>
-                                <h1 style='color: white; font-weight: bolder;'>Inngående {Shift}</h1>
+                    $"<tr style='{headerCss} {darkBg}'>
+                            <td style='{tdCss}'>
+                                <h1 style='{textLight} font-weight: bolder;'>Inngående {Shift}</h1>
                             </td>
                         </tr>
                 "
@@ -4594,24 +4580,25 @@
                         <meta http-equiv='X-UA-Compatible' content='IE=edge' />
                         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
                         <title>Rapport | Group</title>
-                        {CSS}
                         </head>
-                        <body>
+                        <body style='
+                            {bodyCss}
+                        '>
                         <center>
-                            <table class='main'>
+                            <table style='{tableCss} {mainCss}'>
                                 <!-- TOP BORDER -->
                                 {genericHeader}
                                 {arrivalsHeader}
                                 <tr>
-                                    <td>
-                                        <table width='100%'>
+                                    <td style='{tdCss}'>
+                                        <table style='{tableCss} {w100}'>
                                             <tr>
-                                                <td class='reports-content'>
+                                                <td style='{tdCss}' class='reports-content'>
                                                     <!-- Repeatable content sections -->
-                                                    <table width='100%' class='rColumn'>
+                                                    <table style='{tableCss} {w100}' class='rColumn'>
                                                         <tr>
-                                                            <td class='padding'>
-                                                                <table width='100%'>
+                                                            <td style='{tdCss}' class='padding'>
+                                                                <table style='{tableCss} {w100}'>
                                                                     {arrivalsBodyHTML}
                                                                 </table>
                                                             </td>
@@ -4632,7 +4619,7 @@
                 </html>"
                 );
                 Office365Outlook.SendEmailV2(
-                    Concatenate(RecipientsLedere,RecipientsInngående),
+                    TestRecipients,//Concatenate(RecipientsLedere,RecipientsInngående),
                     "Overlevering",
                     arrivalsBody, {
                         Attachments: AddColumns( RenameColumns(AttachmentContent.Attachments,"Value","ContentBytes"), "@odata.type", "")
