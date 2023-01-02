@@ -193,7 +193,7 @@ App As appinfo:
             </tr>
             <tr>
                 <td style='{tdCss}'>
-                    <table width='{w100}'>
+                    <table width='{w100}' align='center'>
                         <tr>
                             <td style='{tdCss} {columnCss}' class='column'>
                                 <img style='{imgCss}' src='https://upload.wikimedia.org/wikipedia/commons/5/53/Posten-Norge-Logo.svg' alt='Posten Logo'>

@@ -422,7 +422,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/02/2023 11:01:33",
+  "HeaderLastSavedDateTimeUTC": "01/02/2023 11:15:45",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "050ebc86-bed1-4776-bcf5-c8a7f36710cb": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/18a438dabf06462e8ebb1c1aa18e949e\"",
@@ -444,8 +444,8 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "ArrivalFinalCollection": 16,
-    "ArrivalSortCollection": 12,
+    "ArrivalFinalCollection": 12,
+    "ArrivalSortCollection": 16,
     "CheckListCollection": 13,
     "ComboBoxSample": 2,
     "CustomGallerySample": 3,

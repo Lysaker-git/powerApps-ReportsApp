@@ -4081,7 +4081,7 @@
             Color: =RGBA(123, 193, 68, 1)
             Fill: =RGBA(0, 47, 25, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, 75%)
-            FontWeight: =FontWeight.Normal
+            FontWeight: =FontWeight.Bold
             Height: =70
             HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
             OnSelect: |-
@@ -4578,18 +4578,18 @@
                     arrivalsBody,
                     $"
                     {htmlStart}
-                    //ADD HEADER OF GROUP HERE
+                    
                     {arrivalsHeader}
-                    //
+                
                     {htmlAfterHeaderBeforeContent}
-                    //ADD BODY OF GROUP HERE
+                
                     {arrivalsBodyHTML}
-                    //
+                
                     {htmlAfterContentSomethingStart}
-                    //ADD ADITIONAL CONTENT HERE
+                
                     {overliggHTML}
                     {missingCarHTML}
-                    //
+                
                     {htmlAfterContentSomethingEnd}
                     "
                 );

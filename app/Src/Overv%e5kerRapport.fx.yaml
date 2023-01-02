@@ -462,23 +462,21 @@ OvervåkerRapport As screen:
                     FullBodySupervisor,
                     $"
                     {htmlStart}
-                    //ADD HEADER OF GROUP HERE
-                    {supervisorHeader}
-                    //
-                    {htmlAfterHeaderBeforeContent}
-                    //ADD BODY OF GROUP HERE
-                    {supervisorMailBody}
-                    //
-                    {htmlAfterContentSomethingStart}
-                    //ADD ADDITIONAL CONTENT HERE
                 
-                    //
+                    {supervisorHeader}
+                
+                    {htmlAfterHeaderBeforeContent}
+                
+                    {supervisorMailBody}
+                
+                    {htmlAfterContentSomethingStart}
+                
                     {htmlAfterContentSomethingEnd}
                     "
                 );
                 Office365Outlook.SendEmailV2(
-                    //TestRecipients,
-                    Concatenate(RecipientsLedere,RecipientsLedereEx),
+                    TestRecipients,
+                    //Concatenate(RecipientsLedere,RecipientsLedereEx),
                     "Overvåker Overlevering",
                     FullBodySupervisor,
                     {

@@ -409,17 +409,15 @@
                     FullBodyHostpial,
                     $"
                     {htmlStart}
-                    //ADD HEADER OF GROUP HERE
+                
                     {supervisorHeader}
-                    //
+                
                     {htmlAfterHeaderBeforeContent}
-                    //ADD BODY OF GROUP HERE
+                
                     {hospitalBodyHTML}
-                    //
+                
                     {htmlAfterContentSomethingStart}
-                    //ADD ADDITIONAL CONTENT HERE
-                    
-                    //
+                
                     {htmlAfterContentSomethingEnd}
                     "
                 );
