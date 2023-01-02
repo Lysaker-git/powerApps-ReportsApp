@@ -217,9 +217,9 @@ Overview As screen:
         ZIndex: =15
 
     LogoApp As image:
-        Height: =234
-        Image: =Bring
-        Width: =320
-        X: =162
+        Height: =210
+        Image: ='Posten-Norge-Logo'
+        Width: =339
+        X: =159
         ZIndex: =16
 

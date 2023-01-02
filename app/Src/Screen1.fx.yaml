@@ -106,10 +106,26 @@ Screen1 As screen:
         ZIndex: =6
 
     HtmlText2 As htmlViewer:
-        Height: =381
+        Height: =922
         HtmlText: =
         Width: =600
-        X: =40
-        Y: =382
+        X: =20
+        Y: =81
         ZIndex: =7
+
+    PostenImage As image:
+        Height: =320
+        Image: ='posten-og-bringbud_sammen_1024x682px'
+        Width: =534
+        X: =28
+        Y: =331
+        ZIndex: =8
+
+    LogoImage As image:
+        Height: =320
+        Image: ='Posten-Norge-Logo_1'
+        Width: =534
+        X: =53
+        Y: =554
+        ZIndex: =9
 
