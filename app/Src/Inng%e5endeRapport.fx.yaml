@@ -2593,7 +2593,8 @@
                 AutoHeight: =true
                 Height: =GLSLabel.Height
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: |-
+                    ="UPS:"
                 Width: =GLSLabel.Width
                 Wrap: =false
                 X: =GLSLabel.X

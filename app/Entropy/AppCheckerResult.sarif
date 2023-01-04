@@ -704,6 +704,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "InngåendeRapport.EditForm1.GjenståendeLøsContainer.GjenståendeLøsContent.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "InngåendeRapport.EditForm1.GjenståendeLøsContainer.GjenståendeLøsContent.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "InngåendeRapport",
+                "type": "InngåendeRapport.EditForm1.GjenståendeLøsContainer.GjenståendeLøsContent"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "InngåendeRapport.EditForm1.AnkomstRadioContainer.AnkomstRadioBtn.AccessibleLabel"
                 }
               ],
@@ -2983,36 +3013,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "InngåendeRapport.EditForm1.GjenståendeLøsContainer.GjenståendeLøsContent.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "InngåendeRapport.EditForm1.GjenståendeLøsContainer.GjenståendeLøsContent.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "InngåendeRapport",
-                "type": "InngåendeRapport.EditForm1.GjenståendeLøsContainer.GjenståendeLøsContent"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.logo"
                 }
               ],
@@ -3043,17 +3043,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.ListVar"
+                  "fullyQualifiedName": "App.ButtonDep"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.ListVar",
+                  "fullyQualifiedName": "App.ButtonDep",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "ListVar",
+                "member": "ButtonDep",
                 "module": "App",
                 "type": "App"
               }
@@ -3073,17 +3073,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.ButtonDep"
+                  "fullyQualifiedName": "App.ListVar"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.ButtonDep",
+                  "fullyQualifiedName": "App.ListVar",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "ButtonDep",
+                "member": "ListVar",
                 "module": "App",
                 "type": "App"
               }

@@ -4,14 +4,14 @@ App As appinfo:
         =Shift = If(
             Int(
                 Left(
-                    Label2,
+                    TimeLabel,
                     2
                 )
             ) <= 7,
             "Natt",
             Int(
                 Left(
-                    Label2,
+                    TimeLabel,
                     2
                 )
             ) >= 20,
