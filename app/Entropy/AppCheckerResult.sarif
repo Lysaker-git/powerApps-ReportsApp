@@ -2983,17 +2983,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.ButtonDep"
+                  "fullyQualifiedName": "App.logo"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.ButtonDep",
+                  "fullyQualifiedName": "App.logo",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "ButtonDep",
+                "member": "logo",
                 "module": "App",
                 "type": "App"
               }
@@ -3043,17 +3043,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.logo"
+                  "fullyQualifiedName": "App.ButtonDep"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.logo",
+                  "fullyQualifiedName": "App.ButtonDep",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "logo",
+                "member": "ButtonDep",
                 "module": "App",
                 "type": "App"
               }

@@ -475,8 +475,8 @@ OvervåkerRapport As screen:
                     "
                 );
                 Office365Outlook.SendEmailV2(
-                    TestRecipients,
-                    //Concatenate(RecipientsLedere,RecipientsLedereEx),
+                    //TestRecipients,
+                    Concatenate(RecipientsLedere,RecipientsLedereEx),
                     "Overvåker Overlevering",
                     FullBodySupervisor,
                     {

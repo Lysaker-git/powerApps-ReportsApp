@@ -98,11 +98,11 @@
     "Id": "583a509c-bc27-4dbc-8754-4bca92022b38",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "Reports-Test",
+    "Name": "Maskinell-Rapport",
     "OriginatingVersion": "1.324"
   },
   "PublishInfo": {
-    "AppName": "Reports-Test",
+    "AppName": "Maskinell-Rapport",
     "BackgroundColor": "rgba(255, 255, 255, 1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "",
