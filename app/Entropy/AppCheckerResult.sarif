@@ -2983,6 +2983,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "InngåendeRapport.EditForm1.GjenståendeLøsContainer.GjenståendeLøsContent.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "InngåendeRapport.EditForm1.GjenståendeLøsContainer.GjenståendeLøsContent.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "InngåendeRapport",
+                "type": "InngåendeRapport.EditForm1.GjenståendeLøsContainer.GjenståendeLøsContent"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.logo"
                 }
               ],

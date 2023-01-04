@@ -1476,6 +1476,35 @@
                 Y: =GjenståendeBurLabel.Y
                 ZIndex: =4
 
+        GjenståendeLøsContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =225
+            Visible: =If(showFields=10||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =22
+            ZIndex: =1
+
+            GjenståendeLøsLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Gjenstående Løslast"
+                Width: =560
+                X: =30
+                Y: =8
+                ZIndex: =1
+
+            GjenståendeLøsContent As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Width: =GjenståendeBurContent.Width
+                X: =30
+                Y: =78
+                ZIndex: =2
+
         AnkomstBilContainer As typedDataCard.blankCard:
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -4183,6 +4212,10 @@
                     {
                         Title: GjenståendeBurLabel.Text,
                         Content: GjenståendeBurContent.Text
+                    },
+                    {
+                        Title: GjenståendeLøsLabel.Text,
+                        Content: GjenståendeLøsContent.Text
                     },
                     {
                         Title: "Ankomster",
