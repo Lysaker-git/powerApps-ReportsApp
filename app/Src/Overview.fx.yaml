@@ -223,3 +223,25 @@ Overview As screen:
         X: =159
         ZIndex: =16
 
+    Timer1_1 As timer:
+        AutoStart: =true
+        Duration: =1000
+        Height: =70
+        OnTimerEnd: =Set(CurrentTime, Now())
+        Repeat: =true
+        Visible: =false
+        Width: =280
+        X: =28
+        Y: =32
+        ZIndex: =17
+
+    TimeLabel_1 As label:
+        Align: =Align.Right
+        Height: =70
+        Size: =18
+        Text: =Text(CurrentTime, LongTime24)
+        Width: =280
+        X: =339
+        Y: =17
+        ZIndex: =18
+
