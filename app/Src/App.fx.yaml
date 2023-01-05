@@ -1,7 +1,7 @@
 App As appinfo:
     BackEnabled: =false
     Formulas: |-
-        =Shift = If(
+        =Shift = "";/*If(
             Int(
                 Left(
                     TimeLabel,
@@ -17,7 +17,7 @@ App As appinfo:
             ) >= 20,
             "Kveld",
             "Dag"
-        );
+        );*/
         Gruppe = Left(
             Office365Users.MyProfile().Department,
             6
