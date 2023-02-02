@@ -4407,7 +4407,7 @@
                                 Content: ThisRecord.Content,
                                 Name: Navn,
                                 Group: Gruppe,
-                                Tid: Tid,
+                                //Tid: Tid,
                                 Shift: Shift
                             }
                         )
@@ -4423,7 +4423,7 @@
                                 Checkbox: ThisRecord.Checkbox,
                                 Name: Navn,
                                 Group: Gruppe,
-                                Tid: Tid,
+                                //Tid: Tid,
                                 Shift: Shift
                             }
                         )
