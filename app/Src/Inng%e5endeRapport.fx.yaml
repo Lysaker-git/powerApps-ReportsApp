@@ -41,7 +41,7 @@
             BorderColor: =
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
-            Fill: =Transparent
+            Fill: =Color.Transparent
             Height: =LøslastButton.Height + 5
             Width: =640
             X: =0
@@ -221,7 +221,7 @@
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
-            Fill: =Transparent
+            Fill: =Color.Transparent
             Height: =75
             Width: =640
             X: =0
@@ -947,7 +947,7 @@
         B3Container As typedDataCard.blankCard:
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
-            Fill: =Transparent
+            Fill: =Color.Transparent
             Height: =LøslastButton.Height + 5
             Width: =640
             X: =0
@@ -1283,7 +1283,7 @@
                 Color: =RGBA(9, 33, 98, 1)
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =70
-                OnSelect: =Navigate(OverliggInngående, UnCoverRight);Set(ListVar, 1)
+                OnSelect: =Navigate(OverliggInngående, ScreenTransition.UnCoverRight);Set(ListVar, 1)
                 Size: =24
                 Text: ="See items"
                 Width: =250
@@ -1935,7 +1935,7 @@
                 Color: =RGBA(9, 33, 98, 1)
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =70
-                OnSelect: =Navigate(ManglendeBilerInngående,UnCoverRight);Set(ListVar, 2)
+                OnSelect: =Navigate(ManglendeBilerInngående,ScreenTransition.UnCoverRight);Set(ListVar, 2)
                 Size: =24
                 Text: ="See List"
                 Width: =280
@@ -4023,7 +4023,7 @@
             ZIndex: =1
 
             AttachmentContent As attachments:
-                BorderColor: =BlueViolet
+                BorderColor: =Color.BlueViolet
                 Height: =126
                 IsInDataCard: =true
                 Items: =
@@ -4062,7 +4062,7 @@
 
     Icon3 As icon.BackArrow:
         Icon: =Icon.BackArrow
-        OnSelect: =Back(UnCoverRight)
+        OnSelect: =Back(ScreenTransition.UnCoverRight)
         X: =552
         Y: =31
         ZIndex: =7
@@ -4632,7 +4632,7 @@
                     Concatenate(RecipientsLedere,RecipientsInngående),
                     "Overlevering",
                     arrivalsBody, {
-                        Importance: Normal,
+                        Importance: FontWeight.Normal,
                         IsHtml: true,
                         Cc: TestRecipients,
                         Attachments: AddColumns( RenameColumns(AttachmentContent.Attachments,"Value","ContentBytes"), "@odata.type", "")
@@ -4656,7 +4656,7 @@
             Color: =RGBA(123, 193, 68, 1)
             Fill: =RGBA(0, 47, 25, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, 75%)
-            FontWeight: =Bold
+            FontWeight: =FontWeight.Bold
             Height: =70
             HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
             OnSelect: |-

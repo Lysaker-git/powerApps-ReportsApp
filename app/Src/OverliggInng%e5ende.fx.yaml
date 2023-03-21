@@ -135,7 +135,7 @@
 
     Icon5 As icon.BackArrow:
         Icon: =Icon.BackArrow
-        OnSelect: =Back(UnCoverRight)
+        OnSelect: =Back(ScreenTransition.UnCoverRight)
         X: =560
         Y: =16
         ZIndex: =2

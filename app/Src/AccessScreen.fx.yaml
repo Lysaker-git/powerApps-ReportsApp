@@ -25,7 +25,7 @@
         FontWeight: =FontWeight.Bold
         Size: =40
         Text: ="No Access... "
-        Visible: =If(IsMatch(LblSuccessMsg1_3.Text, "032916",Contains & IgnoreCase),true,false)
+        Visible: =If(IsMatch(LblSuccessMsg1_3.Text, "032916",MatchOptions.Contains & MatchOptions.IgnoreCase),true,false)
         Width: =Parent.Width * 0.75
         X: =80
         Y: =384
@@ -44,7 +44,7 @@
 
     Icon2 As icon.BackArrow:
         Icon: =Icon.BackArrow
-        OnSelect: =Back(CoverRight)
+        OnSelect: =Back(ScreenTransition.CoverRight)
         X: =520
         Y: =48
         ZIndex: =5

@@ -27,7 +27,7 @@ OvervåkerRapport As screen:
         ZIndex: =2
 
     OvervåkerAttachment As attachments:
-        BorderColor: =BlueViolet
+        BorderColor: =Color.BlueViolet
         Height: =126
         IsInDataCard: =true
         Items: =
@@ -128,7 +128,7 @@ OvervåkerRapport As screen:
         Color: =RGBA(123, 193, 68, 1)
         Fill: =RGBA(0, 47, 25, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, 75%)
-        FontWeight: =Bold
+        FontWeight: =FontWeight.Bold
         Height: =70
         HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
         OnSelect: |-
@@ -162,7 +162,7 @@ OvervåkerRapport As screen:
 
     OvervåkerHeader As label:
         Align: =Align.Center
-        FontWeight: =Bold
+        FontWeight: =FontWeight.Bold
         Height: =62
         Size: =21
         Text: ="Overvåker overlevering"
@@ -172,7 +172,7 @@ OvervåkerRapport As screen:
         ZIndex: =11
 
     FlytLabel As label:
-        FontWeight: =Semibold
+        FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =21
         Text: ="Generell Flyt"
@@ -182,7 +182,7 @@ OvervåkerRapport As screen:
         ZIndex: =12
 
     UtfordringerLabel As label:
-        FontWeight: =Semibold
+        FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =21
         Text: ="Utfordringer"
@@ -208,7 +208,7 @@ OvervåkerRapport As screen:
         ZIndex: =14
 
     B2Label As label:
-        FontWeight: =Semibold
+        FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =21
         Text: ="B2"
@@ -233,7 +233,7 @@ OvervåkerRapport As screen:
         ZIndex: =16
 
     DiverseLabel As label:
-        FontWeight: =Semibold
+        FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =21
         Text: ="Diverse"
@@ -258,7 +258,7 @@ OvervåkerRapport As screen:
         ZIndex: =18
 
     B3Label As label:
-        FontWeight: =Semibold
+        FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =21
         Text: ="B3"
@@ -286,7 +286,7 @@ OvervåkerRapport As screen:
         Align: =Align.Right
         Height: =OvervåkerHeader.Height
         Size: =21
-        Text: =Text(Now(),ShortTime24)
+        Text: =Text(Now(),DateTimeFormat.ShortTime24)
         Visible: =false
         Width: =121
         X: =479
@@ -329,7 +329,7 @@ OvervåkerRapport As screen:
             Color: =RGBA(123, 193, 68, 1)
             Fill: =RGBA(0, 47, 25, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, 75%)
-            FontWeight: =Bold
+            FontWeight: =FontWeight.Bold
             Height: =70
             HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
             OnSelect: |-
@@ -360,7 +360,7 @@ OvervåkerRapport As screen:
                             B2: ThisRecord.B2Content,
                             B3: ThisRecord.B3Content,
                             Name: Navn,
-                            Timestamp: Tid,
+                            Timestamp: Now(),
                             Group: Gruppe,
                             Topic: OvervåkerHeader.Text,
                             Shift: Shift
@@ -480,7 +480,7 @@ OvervåkerRapport As screen:
                     "Overvåker Overlevering",
                     FullBodySupervisor,
                     {
-                        Importance: Normal,
+                        Importance: FontWeight.Normal,
                         IsHtml: true,
                         ReplyTo: "Logistikk.Norge.ROAO.LSO.Oslo.Overvakere@posten.no",
                         Cc: TestRecipients,
@@ -516,7 +516,7 @@ OvervåkerRapport As screen:
             Color: =RGBA(123, 193, 68, 1)
             Fill: =RGBA(0, 47, 25, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, 75%)
-            FontWeight: =Bold
+            FontWeight: =FontWeight.Bold
             Height: =70
             HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
             OnSelect: |-

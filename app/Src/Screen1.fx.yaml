@@ -15,7 +15,7 @@ Screen1 As screen:
     TimeLabel As label:
         Height: =70
         Size: =21
-        Text: =Text(CurrentTime, LongTime24)
+        Text: =Text(CurrentTime, DateTimeFormat.LongTime24)
         Width: =280
         X: =28
         Y: =102

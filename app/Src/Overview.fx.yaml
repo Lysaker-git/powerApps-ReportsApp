@@ -108,21 +108,21 @@ Overview As screen:
                     IsMatch(
                         CurrentUser,
                         "032916",
-                        Contains & IgnoreCase
+                        MatchOptions.Contains & MatchOptions.IgnoreCase
                     ),
                     IsMatch(
                         CurrentUser,
                         "032917",
-                        Contains & IgnoreCase
+                        MatchOptions.Contains & MatchOptions.IgnoreCase
                     )
                 ),
                 Navigate(
                     HospitalRapport,
-                    Cover
+                    ScreenTransition.Cover
                 ),
                 Navigate(
                     AccessScreen,
-                    Cover
+                    ScreenTransition.Cover
                 )
             )
         Size: =24
@@ -160,7 +160,7 @@ Overview As screen:
         Height: =132
         HoverColor: =HospitalBtn.HoverColor
         HoverFill: =HospitalBtn.HoverFill
-        OnSelect: =Navigate(InngåendeRapport, Cover); Set(cornerVar, 10)
+        OnSelect: =Navigate(InngåendeRapport, ScreenTransition.Cover); Set(cornerVar, 10)
         Size: =24
         Text: ="Inngående"
         Width: =270
@@ -196,7 +196,7 @@ Overview As screen:
         Fill: =HospitalBtn.Fill
         Height: =132
         HoverFill: =RGBA(123, 193, 68, 1)
-        OnSelect: =Navigate(OvervåkerRapport, CoverRight)
+        OnSelect: =Navigate(OvervåkerRapport, ScreenTransition.CoverRight)
         Size: =24
         Text: ="Overvåker"
         Width: =270
@@ -239,7 +239,7 @@ Overview As screen:
         Align: =Align.Right
         Height: =70
         Size: =18
-        Text: =Text(CurrentTime, LongTime24)
+        Text: =Text(CurrentTime, DateTimeFormat.LongTime24)
         Width: =280
         X: =339
         Y: =17
