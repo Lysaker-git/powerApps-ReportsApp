@@ -348,7 +348,7 @@ OvervåkerRapport As screen:
                         B3Content: B3Text.Text
                     }
                 );
-                ForAll(
+                /*ForAll(
                     OvervakerCollection,
                     Patch(
                         Table1,
@@ -359,14 +359,13 @@ OvervåkerRapport As screen:
                             'Diverse - OV': ThisRecord.DiverseContent,
                             B2: ThisRecord.B2Content,
                             B3: ThisRecord.B3Content,
-                            Name: Navn,
-                            Timestamp: Now(),
-                            Group: Gruppe,
+                            Name: "",
+                            Group: "",
                             Topic: OvervåkerHeader.Text,
-                            Shift: Shift
+                            Shift: ""
                         }
                     )
-                );
+                );*/
                 ClearCollect(
                     FinalValuesSupervisor,
                     {
@@ -417,16 +416,25 @@ OvervåkerRapport As screen:
                                 Content: B2Content
                             }
                         )
+                    );
+                    If(
+                        Not(B3Content = ""),
+                        Collect(
+                            FinalValuesSupervisor,
+                            {
+                                Title: B3Header,
+                                Content: B3Content
+                            }
+                        )
                     )
                 );
                 Set(
                     supervisorHeader,
                     $"<tr style='{headerCss}{darkBg}'>
                             <td>
-                                <h1 style='{textLight} font-weight: bolder;'>Overvåker {Shift}</h1>
+                                <h1 style='{textLight}font-weight: bolder;'>Overvåker{Shift}</h1>
                             </td>
-                        </tr>
-                "
+                        </tr>"
                 );
                 If(
                     Not(IsEmpty(FinalValuesSupervisor)),
@@ -437,8 +445,7 @@ OvervåkerRapport As screen:
                             Concat(
                                 FinalValuesSupervisor,
                                 Concatenate(
-                                    $"
-                                        <tbody style='{contentBg}'>
+                                    $"<tbody style='{contentBg}'>
                                             <tr>
                                                 <td style='{tdCss}'>
                                                     <h4 style='{textCSS}'>{Title}</h4>
@@ -448,11 +455,10 @@ OvervåkerRapport As screen:
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
-                                                <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
+                                                <td style='{tdCss}{w25}{whiteBg}{height5}'></td>
+                                                <td style='{tdCss}{w75}{whiteBg}{height5}'></td>
                                             </tr>
-                                        </tbody>
-                                    "
+                                        </tbody>"
                                 )
                             )
                         )
@@ -460,23 +466,14 @@ OvervåkerRapport As screen:
                 );
                 Set(
                     FullBodySupervisor,
-                    $"
-                    {htmlStart}
-                
-                    {supervisorHeader}
-                
-                    {htmlAfterHeaderBeforeContent}
-                
-                    {supervisorMailBody}
-                
-                    {htmlAfterContentSomethingStart}
-                
-                    {htmlAfterContentSomethingEnd}
-                    "
+                    $"{htmlStart}{supervisorHeader}{htmlAfterHeaderBeforeContent}{supervisorMailBody}{htmlAfterContentSomethingStart}{htmlAfterContentSomethingEnd}"
                 );
                 Office365Outlook.SendEmailV2(
                     //TestRecipients,
-                    Concatenate(RecipientsLedere,RecipientsLedereEx),
+                    Concatenate(
+                        RecipientsLedere,
+                        RecipientsLedereEx
+                    ),
                     "Overvåker Overlevering",
                     FullBodySupervisor,
                     {
