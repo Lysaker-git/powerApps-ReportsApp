@@ -38,7 +38,8 @@ App As appinfo:
         tom.inge.kvaernstuen@posten.no; 
         maawya.hussein@posten.no; 
         Kenneth.Gravdal@posten.no;
-        Alf.Hakon.Landmark@bring.com; 
+        Alf.Hakon.Landmark@bring.com;
+        anne.hagelin@posten.no; 
         Logistikk.Norge.ROAO.LSO.Oslo.Overvakere@posten.no;";
         RecipientsLedereEx = "
         glenn.hegstad@posten.no; 
@@ -242,4 +243,11 @@ App As appinfo:
         =Set(CurrentTime, Now());
         Set(logo ,JSON(LogoImage.Image,JSONFormat.IncludeBinaryData));
         Set(postenImage ,JSON(PostenImage.Image,JSONFormat.IncludeBinaryData));
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
 

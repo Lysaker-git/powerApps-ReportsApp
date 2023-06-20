@@ -1,8 +1,5 @@
 {
   "050ebc86-bed1-4776-bcf5-c8a7f36710cb": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "SharePoint",
@@ -36,9 +33,6 @@
     "id": "050ebc86-bed1-4776-bcf5-c8a7f36710cb"
   },
   "5e9c8963-f7fc-4cbb-bed7-7d57a6d5acc3": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Excel Online (Business)",
@@ -76,9 +70,6 @@
     "id": "5e9c8963-f7fc-4cbb-bed7-7d57a6d5acc3"
   },
   "788fe25f-be09-4f31-ace8-019c094a8e57": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Office 365 Outlook",
@@ -96,9 +87,6 @@
     "id": "788fe25f-be09-4f31-ace8-019c094a8e57"
   },
   "dcd8bcdc-a6db-476d-9d02-0f0309143c2c": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Office 365 Users",
@@ -116,9 +104,6 @@
     "id": "dcd8bcdc-a6db-476d-9d02-0f0309143c2c"
   },
   "e12db647-012a-4cae-beab-932835474128": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "displayName": "Excel Online (Business)",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1600/1.0.1600.3026/excelonlinebusiness/icon.png",
