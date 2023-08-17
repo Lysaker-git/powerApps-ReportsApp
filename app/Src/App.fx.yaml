@@ -48,6 +48,7 @@ App As appinfo:
         elin.oldemark@posten.no; 
         gard.nordsveen@posten.no; 
         heidi.aldal@posten.no;
+        Jorgen.Elsebutangen.Bilet@posten.no;
         Robin.A.Skarning@posten.no;
         ";
         RecipientsInngående = " 
@@ -245,6 +246,7 @@ App As appinfo:
         =Set(CurrentTime, Now());
         Set(logo ,JSON(LogoImage.Image,JSONFormat.IncludeBinaryData));
         Set(postenImage ,JSON(PostenImage.Image,JSONFormat.IncludeBinaryData));
+    Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
         OnCancel: =false
