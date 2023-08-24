@@ -1484,7 +1484,7 @@
             Visible: =If(showFields=10||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =22
+            Y: =23
             ZIndex: =1
 
             GjenståendeLøsLabel As label:
@@ -1512,7 +1512,7 @@
             Height: =AnkomstBilHeader.Height + 50
             Width: =640
             X: =0
-            Y: =23
+            Y: =24
             ZIndex: =1
 
             AnkomstBilHeader As label:
@@ -1533,7 +1533,7 @@
             Height: =LøsBtnContainer.Height
             Width: =640
             X: =0
-            Y: =24
+            Y: =25
             ZIndex: =1
 
             AnkomstButton As button:
@@ -1564,7 +1564,7 @@
             Visible: =If(showFields=5||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =25
+            Y: =26
             ZIndex: =1
 
             AnkomstRadioBtn As radio:
@@ -1590,7 +1590,7 @@
             Visible: =If(showFields=5||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =26
+            Y: =27
             ZIndex: =1
 
             AnkomstLabel As label:
@@ -1658,7 +1658,7 @@
             Height: =LøsBtnContainer.Height
             Width: =640
             X: =0
-            Y: =27
+            Y: =28
             ZIndex: =1
 
             ManglerBilerButton As button:
@@ -1689,7 +1689,7 @@
             Visible: =If(showFields=6||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =28
+            Y: =29
             ZIndex: =1
 
             ManglerBilRegLabel As label:
@@ -1774,7 +1774,7 @@
             Visible: =If(showFields=6||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =29
+            Y: =30
             ZIndex: =1
 
             ManglerBilTurLabel As label:
@@ -1848,7 +1848,7 @@
             Visible: =If(showFields=6||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =30
+            Y: =31
             ZIndex: =1
 
             ManglerBilKommLabel As label:
@@ -1950,7 +1950,7 @@
             Height: =129
             Width: =640
             X: =0
-            Y: =31
+            Y: =32
             ZIndex: =1
 
             LagerHeader As label:
@@ -1978,7 +1978,7 @@
             Update: =PåLagerContent.Text
             Width: =640
             X: =0
-            Y: =32
+            Y: =33
             ZIndex: =1
 
             PåLagerLabel As label:
@@ -2046,7 +2046,7 @@
             Height: =LøsBtnContainer.Height
             Width: =640
             X: =0
-            Y: =33
+            Y: =34
             ZIndex: =1
 
             OpplastetButton As button:
@@ -2078,7 +2078,7 @@
             Visible: =If(showFields=7||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =34
+            Y: =35
             ZIndex: =1
 
             OpplastetByggLabel As label:
@@ -2152,7 +2152,7 @@
             Visible: =If(showFields=7||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =35
+            Y: =36
             ZIndex: =1
 
             OpplastetNCLabel As label:
@@ -2226,7 +2226,7 @@
             Visible: =If(showFields=7||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =36
+            Y: =37
             ZIndex: =1
 
             OpplastetLagerLabel As label:
@@ -2293,7 +2293,7 @@
             Height: =137
             Width: =640
             X: =0
-            Y: =37
+            Y: =38
             ZIndex: =1
 
             DiverseButton As label:
@@ -2320,7 +2320,7 @@
             Update: =SkaddeContent.Text
             Width: =640
             X: =0
-            Y: =38
+            Y: =39
             ZIndex: =1
 
             SkaddeLabel As label:
@@ -2387,7 +2387,7 @@
             Height: =LøsBtnContainer.Height
             Width: =640
             X: =0
-            Y: =39
+            Y: =40
             ZIndex: =1
 
             KunderButton As button:
@@ -2419,7 +2419,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =40
+            Y: =41
             ZIndex: =1
 
             BCLabel As label:
@@ -2503,7 +2503,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =40
+            Y: =42
             ZIndex: =1
 
             GLSLabel As label:
@@ -2586,7 +2586,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =41
+            Y: =43
             ZIndex: =1
 
             UPSLabel As label:
@@ -2670,7 +2670,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =42
+            Y: =44
             ZIndex: =1
 
             MaskeLabel As label:
@@ -2755,7 +2755,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =43
+            Y: =45
             ZIndex: =1
 
             SdFsLabel As label:
@@ -2840,7 +2840,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =44
+            Y: =46
             ZIndex: =1
 
             StaplesLabel As label:
@@ -2925,7 +2925,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =45
+            Y: =47
             ZIndex: =1
 
             TechdataLabel As label:
@@ -3009,7 +3009,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =46
+            Y: =48
             ZIndex: =1
 
             TightsLabel As label:
@@ -3093,7 +3093,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =48
+            Y: =49
             ZIndex: =1
 
             VidaXLLabel As label:
@@ -3177,7 +3177,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =49
+            Y: =50
             ZIndex: =1
 
             ZalandoLabel As label:
@@ -3261,7 +3261,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =50
+            Y: =51
             ZIndex: =1
 
             RandOneContent As text:
@@ -3334,7 +3334,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =51
+            Y: =52
             ZIndex: =1
 
             RandTwoContent As text:
@@ -3400,7 +3400,7 @@
             Height: =LøsBtnContainer.Height
             Width: =640
             X: =0
-            Y: =52
+            Y: =53
             ZIndex: =1
 
             AnnetButton As button:
@@ -3432,7 +3432,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =53
+            Y: =54
             ZIndex: =1
 
             AvvikLabel As label:
@@ -3507,7 +3507,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =54
+            Y: =55
             ZIndex: =1
 
             TollLagerLabel As label:
@@ -3582,7 +3582,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =55
+            Y: =56
             ZIndex: =1
 
             NestenulykkerLabel As label:
@@ -3657,7 +3657,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =56
+            Y: =57
             ZIndex: =1
 
             LBSkiltLabel As label:
@@ -3732,7 +3732,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =57
+            Y: =58
             ZIndex: =1
 
             KippLabel As label:
@@ -3807,7 +3807,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =58
+            Y: =59
             ZIndex: =1
 
             AnnetLabel As label:
@@ -3882,7 +3882,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =59
+            Y: =60
             ZIndex: =1
 
             ForsinkelserLabel As label:
@@ -3957,7 +3957,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =60
+            Y: =61
             ZIndex: =1
 
             DriftLabel As label:
@@ -4018,6 +4018,47 @@
                 Y: =DriftLabel.Y
                 ZIndex: =4
 
+        DataCard2 As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =195
+            Width: =640
+            X: =0
+            Y: =62
+            ZIndex: =1
+
+            MouseTraoLabel As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Mousetrap:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =16
+                ZIndex: =1
+
+            MouseTrapContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.DataField
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =120
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =69
+                ZIndex: =2
+
         AttachmentContainer As typedDataCard.blankCard:
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -4025,7 +4066,7 @@
             Height: =225
             Width: =640
             X: =0
-            Y: =61
+            Y: =63
             ZIndex: =1
 
             AttachmentContent As attachments:
