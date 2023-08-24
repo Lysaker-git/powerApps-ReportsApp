@@ -3308,13 +3308,16 @@
                 Y: =GLSbox.Y
                 ZIndex: =5
 
-            RandOneLabel As text:
-                Default: =""
-                Height: =70
+            RandOneLabel As label:
+                AutoHeight: =true
+                Height: =GLSLabel.Height
                 Size: =21
-                Width: =152
-                X: =30
-                Y: =10
+                Text: |-
+                    ="WJ:"
+                Width: =GLSLabel.Width
+                Wrap: =false
+                X: =GLSLabel.X
+                Y: =GLSLabel.Y
                 ZIndex: =6
 
         RandTwoContainer As typedDataCard.textualEditCard:
@@ -3378,13 +3381,16 @@
                 Y: =GLSbox.Y
                 ZIndex: =5
 
-            RandTwoLabel As text:
-                Default: =""
-                Height: =70
+            RandTwoLabel As label:
+                AutoHeight: =true
+                Height: =GLSLabel.Height
                 Size: =21
-                Width: =RandOneLabel.Width
-                X: =RandOneLabel.X
-                Y: =RandOneLabel.Y
+                Text: |-
+                    ="JO:"
+                Width: =GLSLabel.Width
+                Wrap: =false
+                X: =GLSLabel.X
+                Y: =GLSLabel.Y
                 ZIndex: =6
 
         AnnetButtonContainer As typedDataCard.blankCard:
