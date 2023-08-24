@@ -4629,7 +4629,7 @@
                 );
                 Office365Outlook.SendEmailV2(
                     //TestRecipients,
-                    Concatenate(RecipientsLedere,RecipientsInngående),
+                    RecipientsInngående,
                     "Overlevering",
                     arrivalsBody, {
                         Importance: FontWeight.Normal,
