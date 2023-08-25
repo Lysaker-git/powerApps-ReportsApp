@@ -4023,6 +4023,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =195
+            Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
             Y: =62
@@ -4384,6 +4385,10 @@
                     {
                         Title: DriftLabel.Text,
                         Content: DriftContent.Text
+                    },
+                    {
+                        Title: MouseTraoLabel.Text,
+                        Content: MouseTrapContent.Text
                     }
                 );
                 /*This will initiate the ArrivalFinalCollection as an Collection*/
