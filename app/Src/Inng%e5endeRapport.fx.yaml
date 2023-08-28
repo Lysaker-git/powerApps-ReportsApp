@@ -4104,6 +4104,7 @@
                         Title: Concatenate(
                             LosseButton.Text,
                             " ",
+                            "Buffer ",
                             LosseDetBufferOneLabel.Text
                         ),
                         Content: LosseDetBufferOneContent.Text
@@ -4112,6 +4113,7 @@
                         Title: Concatenate(
                             LosseButton.Text,
                             " ",
+                            "Buffer ",
                             LosseDetBufferTwoLabel.Text
                         ),
                         Content: LosseDetBufferTwoContent.Text
@@ -4120,6 +4122,7 @@
                         Title: Concatenate(
                             LosseButton.Text,
                             " ",
+                            "Buffer ",
                             LosseDetBufferThreeLabel.Text
                         ),
                         Content: LosseDetBufferThreeContent.Text
@@ -4128,6 +4131,7 @@
                         Title: Concatenate(
                             LosseButton.Text,
                             " ",
+                            "Buffer ",
                             LosseDetBufferFourLabel.Text
                         ),
                         Content: LosseDetBufferFourContent.Text
