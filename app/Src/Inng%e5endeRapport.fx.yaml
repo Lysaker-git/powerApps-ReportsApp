@@ -344,81 +344,6 @@
                 X: =40
                 ZIndex: =1
 
-        LosseDetUpriContainer As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="LossDetUpri"
-            Default: =ThisItem.LossDetUpri
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"LossDetUpri")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "LossDetUpri")
-            Required: =false
-            Update: =LosseDetUpriContent.Text
-            Visible: =If(showDetFields=1||showDetFields=-1,true,false)
-            Width: =LosseDetPriContainer.Width
-            X: =0
-            Y: =7
-            ZIndex: =1
-
-            LosseDetUpriLabel As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: |-
-                    ="Upri:"
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            LosseDetUpriContent As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =cornerVar
-                RadiusBottomRight: =cornerVar
-                RadiusTopLeft: =cornerVar
-                RadiusTopRight: =cornerVar
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =LosseDetUpriLabel.Y + LosseDetUpriLabel.Height + 5
-                ZIndex: =2
-
-            ErrorMessage7 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =LosseDetUpriContent.Y + LosseDetUpriContent.Height
-                ZIndex: =3
-
-            StarVisible7 As label:
-                Align: =Align.Center
-                Height: =LosseDetUpriLabel.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =LosseDetUpriLabel.Y
-                ZIndex: =4
-
         LosseDetPriContainer As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="LossDetPri"
@@ -426,14 +351,14 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"LossDetPri")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =822
             MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "LossDetPri")
             Required: =false
             Update: =LosseDetPriContent.Text
             Visible: =If(showDetFields=1||showDetFields=-1,true,false)
-            Width: =Parent.Width / 2
+            Width: =640
             X: =0
-            Y: =8
+            Y: =7
             ZIndex: =1
 
             LosseDetPriLabel As label:
@@ -442,10 +367,10 @@
                 Size: =21
                 Text: |-
                     ="Pri:"
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width - 60) / 2
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =27
                 ZIndex: =1
 
             LosseDetPriContent As text:
@@ -462,7 +387,7 @@
                 RadiusTopRight: =cornerVar
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =Parent.Width / 2 - 60
                 X: =30
                 Y: =LosseDetPriLabel.Y + LosseDetPriLabel.Height + 5
                 ZIndex: =2
@@ -494,36 +419,19 @@
                 Y: =LosseDetPriLabel.Y
                 ZIndex: =4
 
-        LosseDetBuffToContainer As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="LossDetBuffTo"
-            Default: =ThisItem.LossDetBuffTo
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"LossDetBuffTo")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "LossDetBuffTo")
-            Required: =false
-            Update: =LosseDetBuffToContent.Text
-            Visible: =If(showDetFields=1||showDetFields=-1,true,false)
-            Width: =LosseDetPriContainer.Width
-            X: =0
-            Y: =9
-            ZIndex: =1
-
-            LosseDetBuffToLabel As label:
+            LosseDetUPriLabel As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
                 Text: |-
-                    ="Buffer 2:"
-                Width: =Parent.Width - 60
+                    ="U-Pri:"
+                Width: =(Parent.Width - 60) / 2
                 Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
+                X: =350
+                Y: =27
+                ZIndex: =5
 
-            LosseDetBuffToContent As text:
+            LosseDetUPriContent As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -537,68 +445,34 @@
                 RadiusTopRight: =cornerVar
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =LosseDetBuffToLabel.Y + LosseDetBuffToLabel.Height + 5
-                ZIndex: =2
+                Width: =Parent.Width / 2 - 60
+                X: =350
+                Y: =80
+                ZIndex: =6
 
-            ErrorMessage9 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
+            Rectangle1 As rectangle:
+                Fill: =RGBA(0, 100, 58, .2)
+                Height: =339
+                Width: =580
                 X: =30
-                Y: =LosseDetBuffToContent.Y + LosseDetBuffToContent.Height
-                ZIndex: =3
+                Y: =457
+                ZIndex: =7
 
-            StarVisible9 As label:
+            LosseDetBufferLabel As label:
                 Align: =Align.Center
-                Height: =LosseDetBuffToLabel.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =LosseDetBuffToLabel.Y
-                ZIndex: =4
-
-        LosseDetPallContainer As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="LossDetPall"
-            Default: =ThisItem.LossDetPall
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"LossDetPall")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "LossDetPall")
-            Required: =false
-            Update: =LosseDetPallContent.Text
-            Visible: =If(showDetFields=1||showDetFields=-1,true,false)
-            Width: =LosseDetPriContainer.Width
-            X: =0
-            Y: =10
-            ZIndex: =1
-
-            LosseDetPallLabel As label:
                 AutoHeight: =true
+                FontWeight: =FontWeight.Bold
                 Height: =48
                 Size: =21
                 Text: |-
-                    ="Pall:"
-                Width: =Parent.Width - 60
+                    ="Buffer:"
+                Width: =(Parent.Width - 60) / 2
                 Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
+                X: =175
+                Y: =457
+                ZIndex: =8
 
-            LosseDetPallContent As text:
+            LosseDetBufferOneContent As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -612,68 +486,12 @@
                 RadiusTopRight: =cornerVar
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =LosseDetPallLabel.Y + LosseDetPallLabel.Height + 5
-                ZIndex: =2
+                Width: =Parent.Width / 2 - 100
+                X: =65
+                Y: =547
+                ZIndex: =9
 
-            ErrorMessage8 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =LosseDetPallContent.Y + LosseDetPallContent.Height
-                ZIndex: =3
-
-            StarVisible8 As label:
-                Align: =Align.Center
-                Height: =LosseDetPallLabel.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =LosseDetPallLabel.Y
-                ZIndex: =4
-
-        LosseDetBuffFireContainer As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="LossDetBuffFire"
-            Default: =ThisItem.LossDetBuffFire
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"LossDetBuffFire")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "LossDetBuffFire")
-            Required: =false
-            Update: =LosseDetBuffFireContent.Text
-            Visible: =If(showDetFields=1||showDetFields=-1,true,false)
-            Width: =LosseDetPriContainer.Width
-            X: =0
-            Y: =11
-            ZIndex: =1
-
-            LosseDetBuffFireLabel As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: |-
-                    ="Buffer 4:"
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            LosseDetBuffFireContent As text:
+            LosseDetBufferTwoContent As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -687,68 +505,12 @@
                 RadiusTopRight: =cornerVar
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =LosseDetBuffFireLabel.Y + LosseDetBuffFireLabel.Height + 5
-                ZIndex: =2
+                Width: =Parent.Width / 2 - 100
+                X: =350
+                Y: =547
+                ZIndex: =10
 
-            ErrorMessage11 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =LosseDetBuffFireContent.Y + LosseDetBuffFireContent.Height
-                ZIndex: =3
-
-            StarVisible11 As label:
-                Align: =Align.Center
-                Height: =LosseDetBuffFireLabel.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =LosseDetBuffFireLabel.Y
-                ZIndex: =4
-
-        LosseDetBuffTreContainer As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="LossDetBuffTre"
-            Default: =ThisItem.LossDetBuffTre
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"LossDetBuffTre")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "LossDetBuffTre")
-            Required: =false
-            Update: =LosseDetBuffTreContent.Text
-            Visible: =If(showDetFields=1||showDetFields=-1,true,false)
-            Width: =LosseDetPriContainer.Width
-            X: =0
-            Y: =12
-            ZIndex: =1
-
-            LosseDetBuffTreLabel As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: |-
-                    ="Buffer 3:"
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            LosseDetBuffTreContent As text:
+            LosseDetBufferThreeContent As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -762,54 +524,108 @@
                 RadiusTopRight: =cornerVar
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =LosseDetBuffTreLabel.Y + LosseDetBuffTreLabel.Height + 5
-                ZIndex: =2
+                Width: =Parent.Width / 2 - 100
+                X: =67
+                Y: =682
+                ZIndex: =11
 
-            ErrorMessage10 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =LosseDetBuffTreContent.Y + LosseDetBuffTreContent.Height
-                ZIndex: =3
-
-            StarVisible10 As label:
-                Align: =Align.Center
-                Height: =LosseDetBuffTreLabel.Height
+            LosseDetBufferFourContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =cornerVar
+                RadiusBottomRight: =cornerVar
+                RadiusTopLeft: =cornerVar
+                RadiusTopRight: =cornerVar
                 Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =LosseDetBuffTreLabel.Y
-                ZIndex: =4
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width / 2 - 100
+                X: =352
+                Y: =682
+                ZIndex: =12
 
-        LosseDetWasteContainer As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="LossDetWaste"
-            Default: =ThisItem.LossDetWaste
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"LossDetWaste")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =LosseDetEdiContainer.Height
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "LossDetWaste")
-            Required: =false
-            Update: =LosseDetWasteContent.Text
-            Visible: =If(showDetFields=1||showDetFields=-1,true,false)
-            Width: =LosseDetPriContainer.Width
-            X: =0
-            Y: =13
-            ZIndex: =1
+            LosseDetBufferOneLabel As label:
+                FontWeight: =FontWeight.Bold
+                Height: =42
+                Size: =21
+                Text: |-
+                    ="1:"
+                Width: =195
+                Wrap: =false
+                X: =77
+                Y: =505
+                ZIndex: =13
+
+            LosseDetBufferTwoLabel As label:
+                FontWeight: =FontWeight.Bold
+                Height: =42
+                Size: =21
+                Text: |-
+                    ="2:"
+                Width: =195
+                Wrap: =false
+                X: =352
+                Y: =505
+                ZIndex: =14
+
+            LosseDetBufferThreeLabel As label:
+                FontWeight: =FontWeight.Bold
+                Height: =42
+                Size: =21
+                Text: |-
+                    ="3:"
+                Width: =195
+                Wrap: =false
+                X: =77
+                Y: =640
+                ZIndex: =15
+
+            LosseDetBufferFourLabel As label:
+                FontWeight: =FontWeight.Bold
+                Height: =42
+                Size: =21
+                Text: |-
+                    ="4:"
+                Width: =195
+                Wrap: =false
+                X: =352
+                Y: =640
+                ZIndex: =16
+
+            LosseDetPortLabel As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Port 223:"
+                Width: =(Parent.Width - 60) / 2
+                Wrap: =false
+                X: =30
+                Y: =176
+                ZIndex: =17
+
+            LosseDetPortContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =cornerVar
+                RadiusBottomRight: =cornerVar
+                RadiusTopLeft: =cornerVar
+                RadiusTopRight: =cornerVar
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width / 2 - 60
+                X: =30
+                Y: =229
+                ZIndex: =18
 
             LosseDetWasteLabel As label:
                 AutoHeight: =true
@@ -817,11 +633,11 @@
                 Size: =21
                 Text: |-
                     ="Wasteline:"
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width - 60) / 2
                 Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
+                X: =350
+                Y: =176
+                ZIndex: =19
 
             LosseDetWasteContent As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
@@ -837,37 +653,65 @@
                 RadiusTopRight: =cornerVar
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =LosseDetWasteLabel.Y + LosseDetWasteLabel.Height + 5
-                ZIndex: =2
+                Width: =Parent.Width / 2 - 60
+                X: =350
+                Y: =229
+                ZIndex: =20
 
-            ErrorMessage13 As label:
+            LosseDetPallerLabel As label:
                 AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =LosseDetWasteContent.Y + LosseDetWasteContent.Height
-                ZIndex: =3
-
-            StarVisible13 As label:
-                Align: =Align.Center
-                Height: =LosseDetWasteLabel.Height
+                Height: =48
                 Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
+                Text: |-
+                    ="Paller igjen Totalt:"
+                Width: =(Parent.Width - 60) / 2
                 Wrap: =false
-                Y: =LosseDetWasteLabel.Y
-                ZIndex: =4
+                X: =29
+                Y: =316
+                ZIndex: =21
+
+            LosseDetPallerContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =cornerVar
+                RadiusBottomRight: =cornerVar
+                RadiusTopLeft: =cornerVar
+                RadiusTopRight: =cornerVar
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =29
+                Y: =369
+                ZIndex: =22
+
+        GjenståendeContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =LøsBtnContainer.Height
+            Width: =640
+            X: =0
+            Y: =8
+            ZIndex: =1
+
+            GjenståendeButton As button:
+                Fill: =LøslastButton.Fill
+                Height: =70
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showFields=10,Set(showFields,0),Set(showFields,10))
+                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
+                RadiusBottomRight: =LøslastButton.RadiusBottomRight
+                RadiusTopLeft: =LøslastButton.RadiusTopLeft
+                RadiusTopRight: =LøslastButton.RadiusTopRight
+                Size: =24
+                Text: ="Gjenstående forrige skift"
+                Width: =Parent.Width
+                ZIndex: =1
 
         LosseDetEdiContainer As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -883,7 +727,7 @@
             Visible: =If(showDetFields=1||showDetFields=-1,true,false)
             Width: =LosseDetPriContainer.Width
             X: =0
-            Y: =14
+            Y: =9
             ZIndex: =1
 
             LosseDetEdiLabel As label:
@@ -951,7 +795,7 @@
             Height: =LøslastButton.Height + 5
             Width: =640
             X: =0
-            Y: =15
+            Y: =10
             ZIndex: =1
 
             B3Button As button:
@@ -987,7 +831,7 @@
             Visible: =If(showFields=3||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =16
+            Y: =11
             ZIndex: =1
 
             B3SørLabel As label:
@@ -1061,7 +905,7 @@
             Visible: =If(showFields=3||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =17
+            Y: =12
             ZIndex: =1
 
             B3NordLabel As label:
@@ -1129,7 +973,7 @@
             Height: =LøsBtnContainer.Height
             Width: =640
             X: =0
-            Y: =18
+            Y: =13
             ZIndex: =1
 
             OverliggButton As button:
@@ -1154,7 +998,7 @@
             Visible: =If(showFields=4||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =19
+            Y: =14
             ZIndex: =1
 
             OverliggFraLabel As label:
@@ -1302,30 +1146,6 @@
                 Y: =20
                 ZIndex: =13
 
-        GjenståendeContainer As typedDataCard.blankCard:
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =LøsBtnContainer.Height
-            Width: =640
-            X: =0
-            Y: =20
-            ZIndex: =1
-
-            GjenståendeButton As button:
-                Fill: =LøslastButton.Fill
-                Height: =70
-                HoverFill: =ColorFade(Self.Fill, -20%)
-                OnSelect: =If(showFields=10,Set(showFields,0),Set(showFields,10))
-                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
-                RadiusBottomRight: =LøslastButton.RadiusBottomRight
-                RadiusTopLeft: =LøslastButton.RadiusTopLeft
-                RadiusTopRight: =LøslastButton.RadiusTopRight
-                Size: =24
-                Text: ="Gjenstående forrige skift"
-                Width: =Parent.Width
-                ZIndex: =1
-
         GjenståendePallContainer As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="GjenståPall"
@@ -1333,14 +1153,14 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"GjenståPall")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =208
             MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "GjenståPall")
             Required: =false
             Update: =GjenståendePallContent.Text
             Visible: =If(showFields=10||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =21
+            Y: =15
             ZIndex: =1
 
             GjenståendePallLabel As label:
@@ -1369,9 +1189,9 @@
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width / 2) - 60
                 X: =30
-                Y: =GjenståendePallLabel.Y + GjenståendePallLabel.Height + 5
+                Y: =115
                 ZIndex: =2
 
             ErrorMessage21 As label:
@@ -1401,6 +1221,47 @@
                 Y: =GjenståendePallLabel.Y
                 ZIndex: =4
 
+            GjenståendePallContentB3 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width / 2) - 60
+                X: =350
+                Y: =115
+                ZIndex: =5
+
+            GjenståendePallLabelB2 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: ="B2"
+                Width: =260
+                Wrap: =false
+                X: =30
+                Y: =67
+                ZIndex: =6
+
+            GjenståendePallLabelB3 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: ="B3"
+                Width: =260
+                Wrap: =false
+                X: =350
+                Y: =67
+                ZIndex: =7
+
         GjenståendeBurContainer As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="GjenståBur"
@@ -1408,14 +1269,14 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"GjenståBur")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =210
             MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "GjenståBur")
             Required: =false
             Update: =GjenståendeBurContent.Text
             Visible: =If(showFields=10||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =22
+            Y: =16
             ZIndex: =1
 
             GjenståendeBurLabel As label:
@@ -1444,9 +1305,9 @@
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width / 2) - 60
                 X: =30
-                Y: =GjenståendeBurLabel.Y + GjenståendeBurLabel.Height + 5
+                Y: =120
                 ZIndex: =2
 
             ErrorMessage20 As label:
@@ -1476,6 +1337,47 @@
                 Y: =GjenståendeBurLabel.Y
                 ZIndex: =4
 
+            GjenståendeBurContentB3 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width / 2) - 60
+                X: =350
+                Y: =120
+                ZIndex: =5
+
+            GjenståendeBurLabelB2 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: ="B2"
+                Width: =260
+                Wrap: =false
+                X: =30
+                Y: =72
+                ZIndex: =6
+
+            GjenståendeBurLabelB3 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: ="B3"
+                Width: =260
+                Wrap: =false
+                X: =350
+                Y: =72
+                ZIndex: =7
+
         GjenståendeLøsContainer As typedDataCard.blankCard:
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -1484,7 +1386,7 @@
             Visible: =If(showFields=10||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =23
+            Y: =17
             ZIndex: =1
 
             GjenståendeLøsLabel As label:
@@ -1500,7 +1402,7 @@
                 Default: =""
                 Height: =70
                 Size: =21
-                Width: =GjenståendeBurContent.Width
+                Width: =Parent.Width - 60
                 X: =30
                 Y: =78
                 ZIndex: =2
@@ -1512,7 +1414,7 @@
             Height: =AnkomstBilHeader.Height + 50
             Width: =640
             X: =0
-            Y: =24
+            Y: =18
             ZIndex: =1
 
             AnkomstBilHeader As label:
@@ -1533,7 +1435,7 @@
             Height: =LøsBtnContainer.Height
             Width: =640
             X: =0
-            Y: =25
+            Y: =19
             ZIndex: =1
 
             AnkomstButton As button:
@@ -1564,7 +1466,7 @@
             Visible: =If(showFields=5||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =26
+            Y: =20
             ZIndex: =1
 
             AnkomstRadioBtn As radio:
@@ -1590,7 +1492,7 @@
             Visible: =If(showFields=5||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =27
+            Y: =21
             ZIndex: =1
 
             AnkomstLabel As label:
@@ -1658,7 +1560,7 @@
             Height: =LøsBtnContainer.Height
             Width: =640
             X: =0
-            Y: =28
+            Y: =22
             ZIndex: =1
 
             ManglerBilerButton As button:
@@ -1689,7 +1591,7 @@
             Visible: =If(showFields=6||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =29
+            Y: =23
             ZIndex: =1
 
             ManglerBilRegLabel As label:
@@ -1774,7 +1676,7 @@
             Visible: =If(showFields=6||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =30
+            Y: =24
             ZIndex: =1
 
             ManglerBilTurLabel As label:
@@ -1848,7 +1750,7 @@
             Visible: =If(showFields=6||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =31
+            Y: =25
             ZIndex: =1
 
             ManglerBilKommLabel As label:
@@ -1950,7 +1852,7 @@
             Height: =129
             Width: =640
             X: =0
-            Y: =32
+            Y: =26
             ZIndex: =1
 
             LagerHeader As label:
@@ -1978,7 +1880,7 @@
             Update: =PåLagerContent.Text
             Width: =640
             X: =0
-            Y: =33
+            Y: =27
             ZIndex: =1
 
             PåLagerLabel As label:
@@ -2046,7 +1948,7 @@
             Height: =LøsBtnContainer.Height
             Width: =640
             X: =0
-            Y: =34
+            Y: =28
             ZIndex: =1
 
             OpplastetButton As button:
@@ -2078,7 +1980,7 @@
             Visible: =If(showFields=7||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =35
+            Y: =29
             ZIndex: =1
 
             OpplastetByggLabel As label:
@@ -2152,7 +2054,7 @@
             Visible: =If(showFields=7||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =36
+            Y: =30
             ZIndex: =1
 
             OpplastetNCLabel As label:
@@ -2226,7 +2128,7 @@
             Visible: =If(showFields=7||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =37
+            Y: =31
             ZIndex: =1
 
             OpplastetLagerLabel As label:
@@ -2293,7 +2195,7 @@
             Height: =137
             Width: =640
             X: =0
-            Y: =38
+            Y: =32
             ZIndex: =1
 
             DiverseButton As label:
@@ -2320,7 +2222,7 @@
             Update: =SkaddeContent.Text
             Width: =640
             X: =0
-            Y: =39
+            Y: =33
             ZIndex: =1
 
             SkaddeLabel As label:
@@ -2387,7 +2289,7 @@
             Height: =LøsBtnContainer.Height
             Width: =640
             X: =0
-            Y: =40
+            Y: =34
             ZIndex: =1
 
             KunderButton As button:
@@ -2419,7 +2321,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =41
+            Y: =35
             ZIndex: =1
 
             BCLabel As label:
@@ -2503,7 +2405,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =42
+            Y: =36
             ZIndex: =1
 
             GLSLabel As label:
@@ -2586,7 +2488,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =43
+            Y: =37
             ZIndex: =1
 
             UPSLabel As label:
@@ -2670,7 +2572,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =44
+            Y: =38
             ZIndex: =1
 
             MaskeLabel As label:
@@ -2755,7 +2657,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =45
+            Y: =39
             ZIndex: =1
 
             SdFsLabel As label:
@@ -2840,7 +2742,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =46
+            Y: =40
             ZIndex: =1
 
             StaplesLabel As label:
@@ -2925,7 +2827,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =47
+            Y: =41
             ZIndex: =1
 
             TechdataLabel As label:
@@ -3009,7 +2911,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =48
+            Y: =42
             ZIndex: =1
 
             TightsLabel As label:
@@ -3093,7 +2995,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =49
+            Y: =43
             ZIndex: =1
 
             VidaXLLabel As label:
@@ -3177,7 +3079,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =50
+            Y: =44
             ZIndex: =1
 
             ZalandoLabel As label:
@@ -3261,7 +3163,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =51
+            Y: =45
             ZIndex: =1
 
             RandOneContent As text:
@@ -3334,7 +3236,7 @@
             Visible: =If(showFields=8||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =52
+            Y: =46
             ZIndex: =1
 
             RandTwoContent As text:
@@ -3400,7 +3302,7 @@
             Height: =LøsBtnContainer.Height
             Width: =640
             X: =0
-            Y: =53
+            Y: =47
             ZIndex: =1
 
             AnnetButton As button:
@@ -3432,7 +3334,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =54
+            Y: =48
             ZIndex: =1
 
             AvvikLabel As label:
@@ -3507,7 +3409,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =55
+            Y: =49
             ZIndex: =1
 
             TollLagerLabel As label:
@@ -3582,7 +3484,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =56
+            Y: =50
             ZIndex: =1
 
             NestenulykkerLabel As label:
@@ -3657,7 +3559,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =57
+            Y: =51
             ZIndex: =1
 
             LBSkiltLabel As label:
@@ -3732,7 +3634,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =58
+            Y: =52
             ZIndex: =1
 
             KippLabel As label:
@@ -3807,7 +3709,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =59
+            Y: =53
             ZIndex: =1
 
             AnnetLabel As label:
@@ -3882,7 +3784,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =60
+            Y: =54
             ZIndex: =1
 
             ForsinkelserLabel As label:
@@ -3957,7 +3859,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =61
+            Y: =55
             ZIndex: =1
 
             DriftLabel As label:
@@ -4026,7 +3928,7 @@
             Visible: =If(showFields=9||showFields=-1,true,false)
             Width: =640
             X: =0
-            Y: =62
+            Y: =56
             ZIndex: =1
 
             MouseTraoLabel As label:
@@ -4067,7 +3969,7 @@
             Height: =225
             Width: =640
             X: =0
-            Y: =63
+            Y: =57
             ZIndex: =1
 
             AttachmentContent As attachments:
@@ -4186,9 +4088,9 @@
                         Title: Concatenate(
                             LosseButton.Text,
                             " ",
-                            LosseDetUpriLabel.Text
+                            LosseDetUPriLabel.Text
                         ),
-                        Content: LosseDetUpriContent.Text
+                        Content: LosseDetUPriContent.Text
                     },
                     {
                         Title: Concatenate(
@@ -4202,33 +4104,49 @@
                         Title: Concatenate(
                             LosseButton.Text,
                             " ",
-                            LosseDetBuffToLabel.Text
+                            LosseDetBufferOneLabel.Text
                         ),
-                        Content: LosseDetBuffToContent.Text
+                        Content: LosseDetBufferOneContent.Text
                     },
                     {
                         Title: Concatenate(
                             LosseButton.Text,
                             " ",
-                            LosseDetBuffTreLabel.Text
+                            LosseDetBufferTwoLabel.Text
                         ),
-                        Content: LosseDetBuffTreContent.Text
+                        Content: LosseDetBufferTwoContent.Text
                     },
                     {
                         Title: Concatenate(
                             LosseButton.Text,
                             " ",
-                            LosseDetBuffFireLabel.Text
+                            LosseDetBufferThreeLabel.Text
                         ),
-                        Content: LosseDetBuffFireContent.Text
+                        Content: LosseDetBufferThreeContent.Text
                     },
                     {
                         Title: Concatenate(
                             LosseButton.Text,
                             " ",
-                            LosseDetPallLabel.Text
+                            LosseDetBufferFourLabel.Text
                         ),
-                        Content: LosseDetPallContent.Text
+                        Content: LosseDetBufferFourContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetPallerLabel.Text
+                        ),
+                        Content: LosseDetPallerContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetPortLabel.Text
+                        ),
+                        Content: LosseDetPortContent.Text
                     },
                     {
                         Title: Concatenate(
@@ -4256,11 +4174,27 @@
                     },
                     {
                         Title: GjenståendePallLabel.Text,
-                        Content: GjenståendePallContent.Text
+                        Content: Concatenate(
+                            GjenståendePallLabelB2.Text,
+                            ": ",
+                            GjenståendePallContent.Text,
+                            " - ",
+                            GjenståendePallLabelB3.Text,
+                            ": ",
+                            GjenståendePallContentB3.Text
+                        )
                     },
                     {
                         Title: GjenståendeBurLabel.Text,
-                        Content: GjenståendeBurContent.Text
+                        Content: Concatenate(
+                            GjenståendeBurLabelB2.Text,
+                            ": ",
+                            GjenståendeBurContent.Text,
+                            " - ",
+                            GjenståendeBurLabelB3.Text,
+                            ": ",
+                            GjenståendeBurContentB3.Text
+                        )
                     },
                     {
                         Title: GjenståendeLøsLabel.Text,
@@ -4406,7 +4340,6 @@
                 );
                 /*This will clear the ArrivalFinalCollection Collection*/
                 Clear(ArrivalFinalCollection);
-                
                 /*Loops through the ArrivalSortCollection collection and appends Title, Content and if present Checkbox*/
                 ForAll(
                     ArrivalSortCollection,
@@ -4439,7 +4372,7 @@
                             }
                         );
                         /*Updates if its used Checkboxes during the report*/
-                        UpdateIf(
+                UpdateIf(
                             varCollection,
                             var = false,
                             {var: true}
@@ -4453,7 +4386,9 @@
                             Not(ThisRecord.Content = ""),
                             Not(ThisRecord.Checkbox)
                         ),//IF Content IS NOT empty AND IF checkbox IS NOT true
-                        Patch(InngåendeDB,Defaults(InngåendeDB),
+                        Patch(
+                            InngåendeDB,
+                            Defaults(InngåendeDB),
                             {
                                 Title: ThisRecord.Title,
                                 Content: ThisRecord.Content,
@@ -4462,13 +4397,14 @@
                                 //Tid: Tid,
                                 Shift: Shift
                             }
-                        )
-                        ,
+                        ),
                         Or(
                             Not(ThisRecord.Content = ""),
                             ThisRecord.Checkbox
                         ),//IF content IS NOT empty OR IF checkbox IS true
-                        Patch(InngåendeDB,Defaults(InngåendeDB),
+                        Patch(
+                            InngåendeDB,
+                            Defaults(InngåendeDB),
                             {
                                 Title: ThisRecord.Title,
                                 Content: ThisRecord.Content,
@@ -4483,7 +4419,7 @@
                 );
                 /*Checking if there is input on ArrivalFinalCollection Collection - and makes the arrivalsBodyHTML*/
                 If(
-                    Not(IsEmpty(ArrivalFinalCollection)), //IF ArrivalFinalCollection IS NOT empty then..
+                    Not(IsEmpty(ArrivalFinalCollection)),//IF ArrivalFinalCollection IS NOT empty then..
                     If(
                         Boolean(
                             Concat(
@@ -4494,7 +4430,7 @@
                         Set(
                             arrivalsBodyHTML,
                             Concatenate(
-                               genericTitles,
+                                genericTitles,
                                 Concat(
                                     ArrivalFinalCollection,
                                     Concatenate(
@@ -4664,18 +4600,12 @@
                     arrivalsBody,
                     $"
                     {htmlStart}
-                    
                     {arrivalsHeader}
-                
                     {htmlAfterHeaderBeforeContent}
-                
                     {arrivalsBodyHTML}
-                
                     {htmlAfterContentSomethingStart}
-                
                     {overliggHTML}
                     {missingCarHTML}
-                
                     {htmlAfterContentSomethingEnd}
                     "
                 );
@@ -4683,14 +4613,26 @@
                     //TestRecipients,
                     RecipientsInngående,
                     "Overlevering",
-                    arrivalsBody, {
+                    arrivalsBody,
+                    {
                         Importance: FontWeight.Normal,
                         IsHtml: true,
                         Cc: TestRecipients,
-                        Attachments: AddColumns( RenameColumns(AttachmentContent.Attachments,"Value","ContentBytes"), "@odata.type", "")
+                        Attachments: AddColumns(
+                            RenameColumns(
+                                AttachmentContent.Attachments,
+                                "Value",
+                                "ContentBytes"
+                            ),
+                            "@odata.type",
+                            ""
+                        )
                     }
                 );
-                Navigate(SucessScreen,ScreenTransition.CoverRight)
+                Navigate(
+                    SucessScreen,
+                    ScreenTransition.CoverRight
+                )
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
