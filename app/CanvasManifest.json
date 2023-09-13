@@ -14,7 +14,6 @@
       "appinsightserrortracing": false,
       "appinstrumentationcorrelationtracing": false,
       "autocreateenvironmentvariables": false,
-      "backfromhostaction": true,
       "behaviorpropertyui": false,
       "blockmovingcontrol": true,
       "cdsdataformatting": false,
