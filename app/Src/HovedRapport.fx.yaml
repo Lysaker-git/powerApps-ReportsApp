@@ -173,4 +173,44 @@
                 X: =FredrikstadInput.X
                 Y: =If(StokkeCheck.Value = true, 90,0)
                 ZIndex: =3
+        Førde/SogndalCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(FørdeSogndalCheck.Value = true, FørdeSogndalLabel.Height + FørdeSogndalInput.Height + 40, FørdeSogndalLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =6
+        
+            FørdeSogndalLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Førde/Sogndal"
+                Width: =200
+                X: =FredrikstadLabel.X
+                Y: =FredrikstadLabel.Y
+                ZIndex: =1
+        
+            FørdeSogndalCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+        
+            FørdeSogndalInput As text:
+                Default: ="Text input"
+                Height: =70
+                Size: =21
+                Visible: =If(FørdeSogndalCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(FørdeSogndalCheck.Value = true, 90, 0)
+                ZIndex: =3
+
 
