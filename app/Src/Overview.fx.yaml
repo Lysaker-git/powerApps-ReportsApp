@@ -143,9 +143,10 @@ Overview As screen:
         ZIndex: =9
 
     HovedBtn As button:
-        Fill: =RGBA(230, 230, 230, 1)
+        Fill: =HospitalBtn.Fill
         Height: =132
-        HoverFill: =ColorFade(RGBA(230, 230, 230, 1), -20%)
+        HoverFill: =HospitalBtn.HoverFill
+        OnSelect: =Navigate(HovedRapport,ScreenTransition.CoverRight)
         Size: =24
         Text: |-
             ="Hovedpost-

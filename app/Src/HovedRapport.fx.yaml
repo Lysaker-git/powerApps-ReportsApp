@@ -1,0 +1,176 @@
+"HovedRapport As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    Canvas2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        ZIndex: =3
+
+        DataCard3 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =95
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label1 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Hovedpostgang Rapport"
+                Width: =400
+                X: =104
+                Y: =16
+                ZIndex: =1
+
+            Icon1 As icon.BackArrow:
+                Icon: =Icon.BackArrow
+                OnSelect: =Back(ScreenTransition.UnCoverRight)
+                X: =550
+                Y: =19
+                ZIndex: =2
+
+        DataCard4 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =74
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            Button5 As button:
+                Height: =70
+                OnSelect: =If(hovedFields=1,Set(hovedFields,0),Set(hovedFields,1))
+                Size: =24
+                Text: ="Destinasjoner"
+                Width: =640
+                ZIndex: =1
+
+        FredrikstadCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(FredrikstadCheck.Value = true, FredriskstadLabel.Height + FredrikstadInput.Height + 40, FredriskstadLabel.Height + 40)
+            Visible: =If(hovedFields=1,true,false)
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =3
+
+            FredriskstadLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Fredrikstad"
+                Width: =200
+                X: =23
+                Y: =13
+                ZIndex: =1
+
+            FredrikstadCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =547
+                ZIndex: =2
+
+            FredrikstadInput As text:
+                Default: ="Text input"
+                Height: =70
+                Size: =21
+                Visible: =If(FredrikstadCheck.Value = true, true, false)
+                Width: =582
+                X: =23
+                Y: =If(FredrikstadCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        DrammenCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(DrammenCheck.Value = true, DrammenLabel.Height + DrammenInput.Height + 40, DrammenLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =4
+
+            DrammenLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Drammen"
+                Width: =200
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            DrammenCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            DrammenInput As text:
+                Default: ="Text input"
+                Height: =70
+                Size: =21
+                Visible: =If(DrammenCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(DrammenCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        StokkeCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(StokkeCheck.Value = true, StokkeLabel.Height + StokkeInput.Height + 40, StokkeLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =5
+
+            StokkeLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Stokke"
+                Width: =200
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            StokkeCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            StokkeInput As text:
+                Default: ="Text input"
+                Height: =70
+                Size: =21
+                Visible: =If(StokkeCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(StokkeCheck.Value = true, 90,0)
+                ZIndex: =3
+
