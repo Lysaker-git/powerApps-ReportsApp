@@ -182,6 +182,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(241, 244, 249, 1)
             Height: =100
+            Visible: =true
             Width: =640
             X: =0
             Y: =1
@@ -244,6 +245,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =If(AlesundCheck.Value = true, AlesundLabel.Height + AlesundInput.Height + 40, AlesundLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =7
@@ -283,6 +285,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =DrammenCard.Fill
             Height: =If(BergenCheck.Value = true, BergenLabel.Height + BergenInput.Height + 40, BergenLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =8
@@ -322,6 +325,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =If(NarvikCheck.Value = true, NarvikLabel.Height + NarvikInput.Height + 40, NarvikLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =9
@@ -361,6 +365,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =DrammenCard.Fill
             Height: =If(AltaCheck.Value = true, AltaLabel.Height + AltaInput.Height + 40, AltaLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =10
@@ -400,6 +405,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =If(KristiansandCheck.Value = true, KristiansandLabel.Height + KristiansandInput.Height + 40, KristiansandLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =11
@@ -439,6 +445,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =DrammenCard.Fill
             Height: =If(HaugesundCheck.Value = true, HaugesundLabel.Height + HaugesundInput.Height + 40, HaugesundLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =12
@@ -478,6 +485,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =If(MoldeCheck.Value = true, MoldeLabel.Height + MoldeInput.Height + 40, MoldeLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =13
@@ -517,6 +525,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =DrammenCard.Fill
             Height: =If(StavangerCheck.Value = true, StavangerLabel.Height + StavangerInput.Height + 40, StavangerLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =14
@@ -556,6 +565,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =If(TrondheimCheck.Value = true, TrondheimLabel.Height + TrondheimInput.Height + 40, TrondheimLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =15
@@ -595,6 +605,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =DrammenCard.Fill
             Height: =If(HamarCheck.Value = true, HamarLabel.Height + HamarInput.Height + 40, HamarLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =16
@@ -634,6 +645,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =If(TanaCheck.Value = true, TanaLabel.Height + TanaInput.Height + 40, TanaLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =17
@@ -673,6 +685,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =DrammenCard.Fill
             Height: =If(TromsøCheck.Value = true, TromsøLabel.Height + TromsøInput.Height + 40, TromsøLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =18
@@ -712,6 +725,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =If(FauskeCheck.Value = true, FauskeLabel.Height + FauskeInput.Height + 40, FauskeLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =19
@@ -751,6 +765,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =DrammenCard.Fill
             Height: =If(MoiranaCheck.Value = true, MoiranaLabel.Height + MoiranaInput.Height + 40, MoiranaLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
             Width: =640
             X: =0
             Y: =20
@@ -789,33 +804,112 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =300
             Width: =640
             X: =0
             Y: =21
             ZIndex: =22
 
+            MoiranaLabel_1 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: ="BPX / Ekspress"
+                Width: =Parent.Width - 50 
+                X: =23
+                Y: =28
+                ZIndex: =1
+
+            MoiranaCheck_1 As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =538
+                Y: =90
+                ZIndex: =2
+
+            MoiranaInput_1 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Width: =450
+                X: =163
+                Y: =195
+                ZIndex: =3
+
+            MoiranaLabel_2 As label:
+                Height: =70
+                Size: =21
+                Text: ="Er alt BPX sendt? (Kryss av for JA)"
+                Width: =Parent.Width - 50
+                X: =23
+                Y: =98
+                ZIndex: =4
+
+            MoiranaLabel_3 As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Avvik:"
+                Width: =130
+                X: =23
+                Y: =195
+                ZIndex: =5
+
         AndreCard As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
-            Fill: =DrammenCard.Fill
+            Fill: =StatusCard.Fill
             Height: =100
             Width: =640
             X: =0
             Y: =22
             ZIndex: =23
 
+            AndreLabel As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Andre Punkter"
+                Width: =560
+                X: =46
+                Y: =18
+                ZIndex: =1
+
         EtterfyllingCard As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =300
             Width: =640
             X: =0
             Y: =23
             ZIndex: =24
+
+            Label6 As label:
+                Align: =Align.Center
+                Height: =70
+                Size: =21
+                Text: ="Etterfyllinger"
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+            TextInput2 As text:
+                Default: ="Text input"
+                Height: =150
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =560
+                X: =40
+                Y: =110
+                ZIndex: =2
 
         KippenCard As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)

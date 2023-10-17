@@ -3414,7 +3414,7 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"DivForsink")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =59
+            Height: =250
             MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "DivForsink")
             Required: =false
             Update: =ForsinkelserContent.Text
@@ -3441,8 +3441,9 @@
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =150
                 MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -3489,7 +3490,7 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"DivDrift")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =250
             MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "DivDrift")
             Required: =false
             Update: =DriftContent.Text
@@ -3516,8 +3517,9 @@
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =150
                 MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
