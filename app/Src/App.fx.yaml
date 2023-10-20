@@ -54,8 +54,7 @@ App As appinfo:
         RecipientsInngående = " 
         Abdullah.Al.Eboudi@posten.no;
         Christopher.Andersen@posten.no; 
-        Appiah.Foster@posten.no; 
-        Adnan.Aslam@posten.no; 
+        Appiah.Foster@posten.no;  
         anders.augestad@posten.no; 
         Nighat.Chaudhry@posten.no; 
         Christian.Dahl@bring.com; 
@@ -101,11 +100,11 @@ App As appinfo:
         ";
         HARecipients = "   
         zulifqar.haider@posten.no;
-        Thomas.Nystuen@posten.no;
         Jetmir.Ismaili@posten.no;
         quynh.duong@posten.no;
         ole.johansen@posten.no;
         olejorgen.moen@posten.no;
+        Adnan.Aslam@posten.no;
         janne.muan@posten.no;
         ";
         TestRecipients = "robin.lysaker@posten.no";

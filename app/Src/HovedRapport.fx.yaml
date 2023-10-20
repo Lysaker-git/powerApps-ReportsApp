@@ -190,9 +190,9 @@
 
             StatusLabelHoved As label:
                 Align: =Align.Center
-                FontWeight: =FontWeight.Semibold
+                FontWeight: =FontWeight.Bold
                 Height: =70
-                Size: =21
+                Size: =30
                 Text: ="Status Destinasjoner"
                 Width: =560
                 X: =50
@@ -807,7 +807,7 @@
             Height: =300
             Width: =640
             X: =0
-            Y: =21
+            Y: =22
             ZIndex: =22
 
             MoiranaLabel_1 As label:
@@ -866,14 +866,14 @@
             Height: =100
             Width: =640
             X: =0
-            Y: =22
+            Y: =21
             ZIndex: =23
 
             AndreLabel As label:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Bold
                 Height: =70
-                Size: =21
+                Size: =30
                 Text: ="Andre Punkter"
                 Width: =560
                 X: =46
@@ -884,8 +884,8 @@
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =300
+            Fill: =DrammenCard.Fill
+            Height: =530
             Width: =640
             X: =0
             Y: =23
@@ -893,29 +893,76 @@
 
             Label6 As label:
                 Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
                 Height: =70
                 Size: =21
                 Text: ="Etterfyllinger"
                 Width: =560
                 X: =40
-                Y: =40
+                Y: =15
                 ZIndex: =1
 
             TextInput2 As text:
                 Default: ="Text input"
-                Height: =150
-                Mode: =TextMode.MultiLine
+                Height: =70
                 Size: =21
                 Width: =560
                 X: =40
-                Y: =110
+                Y: =155
                 ZIndex: =2
+
+            TextInput2_1 As text:
+                Default: ="Text input"
+                Height: =70
+                Size: =21
+                Width: =560
+                X: =40
+                Y: =300
+                ZIndex: =3
+
+            Button6 As button:
+                Height: =70
+                Size: =24
+                Text: ="Add to List"
+                Width: =280
+                X: =40
+                Y: =395
+                ZIndex: =4
+
+            Button6_1 As button:
+                Height: =70
+                Size: =24
+                Text: ="View List"
+                Width: =230
+                X: =370
+                Y: =395
+                ZIndex: =5
+
+            Label6_1 As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Område:"
+                Width: =560
+                X: =40
+                Y: =98
+                ZIndex: =6
+
+            Label6_2 As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Info:"
+                Width: =560
+                X: =40
+                Y: =243
+                ZIndex: =7
 
         KippenCard As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
-            Fill: =DrammenCard.Fill
+            Fill: =RGBA(0,0,0,0)
             Height: =100
             Width: =640
             X: =0

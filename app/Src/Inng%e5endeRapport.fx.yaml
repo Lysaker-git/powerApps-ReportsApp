@@ -682,36 +682,6 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-        B3Container As typedDataCard.blankCard:
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =Color.Transparent
-            Height: =LøslastButton.Height + 5
-            Width: =640
-            X: =0
-            Y: =10
-            ZIndex: =1
-
-            B3Button As button:
-                BorderThickness: =0
-                Fill: =LøslastButton.Fill
-                Height: =70
-                HoverColor: =RGBA(255,255,255,1)
-                HoverFill: =ColorFade(Self.Fill, -20%)
-                OnSelect: =If(showFields=3,Set(showFields,0),Set(showFields,3))
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
-                RadiusBottomRight: =LøslastButton.RadiusBottomRight
-                RadiusTopLeft: =LøslastButton.RadiusTopLeft
-                RadiusTopRight: =LøslastButton.RadiusTopRight
-                Size: =24
-                Text: ="B3 (Nord og Sør)"
-                Width: =Parent.Width
-                ZIndex: =1
-
         GjenståendePallContainer As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="GjenståPall"
@@ -826,6 +796,36 @@
                 X: =30
                 Y: =214
                 ZIndex: =7
+
+        B3Container As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =Color.Transparent
+            Height: =LøslastButton.Height + 5
+            Width: =640
+            X: =0
+            Y: =10
+            ZIndex: =1
+
+            B3Button As button:
+                BorderThickness: =0
+                Fill: =LøslastButton.Fill
+                Height: =70
+                HoverColor: =RGBA(255,255,255,1)
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showFields=3,Set(showFields,0),Set(showFields,3))
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
+                RadiusBottomRight: =LøslastButton.RadiusBottomRight
+                RadiusTopLeft: =LøslastButton.RadiusTopLeft
+                RadiusTopRight: =LøslastButton.RadiusTopRight
+                Size: =24
+                Text: ="B3 (Nord og Sør)"
+                Width: =Parent.Width
+                ZIndex: =1
 
         B3SørContainer As typedDataCard.textualMultiLineEditCard:
             BorderStyle: =BorderStyle.Solid
