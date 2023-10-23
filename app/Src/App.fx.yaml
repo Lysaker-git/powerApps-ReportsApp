@@ -42,7 +42,8 @@ App As appinfo:
         Alf.Hakon.Landmark@bring.com;
         Abdullah.Al.Eboudi@posten.no;
         anne.hagelin@posten.no; 
-        Logistikk.Norge.ROAO.LSO.Oslo.Overvakere@posten.no;";
+        Logistikk.Norge.ROAO.LSO.Oslo.Overvakere@posten.no;
+        ";
         RecipientsLedereEx = "
         glenn.hegstad@posten.no; 
         elin.oldemark@posten.no; 
@@ -96,7 +97,7 @@ App As appinfo:
         Hamza.Khan@posten.no;
         Terje.Aas@posten.no;
         lso.paller@posten.no;
-        anders.svensson@bring.com
+        anders.svensson@bring.com;
         ";
         HARecipients = "   
         zulifqar.haider@posten.no;
