@@ -146,7 +146,7 @@ Overview As screen:
         Fill: =HospitalBtn.Fill
         Height: =132
         HoverFill: =HospitalBtn.HoverFill
-        OnSelect: =
+        OnSelect: =Navigate(HovedRapport, ScreenTransition.CoverRight)
         Size: =24
         Text: |-
             ="Hovedpost-
