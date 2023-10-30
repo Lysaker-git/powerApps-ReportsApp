@@ -921,6 +921,7 @@
                 ZIndex: =3
 
             Button6 As button:
+                Fill: =HovedButton.Fill
                 Height: =70
                 Size: =24
                 Text: ="Add to List"
@@ -930,6 +931,7 @@
                 ZIndex: =4
 
             Button6_1 As button:
+                Fill: =HovedButton.Fill
                 Height: =70
                 Size: =24
                 Text: ="View List"
@@ -963,7 +965,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0,0,0,0)
-            Height: =300
+            Height: =400
             Width: =640
             X: =0
             Y: =24
@@ -977,39 +979,189 @@
                 Text: ="Kipp"
                 Width: =560
                 X: =40
-                Y: =40
+                Y: =20
                 ZIndex: =1
+
+            TextInput2_2 As text:
+                Default: =""
+                Height: =189
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =560
+                X: =40
+                Y: =147
+                ZIndex: =2
+
+            Label6_3 As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Kipp: (VBH, Modul, Tralle)"
+                Width: =560
+                X: =40
+                Y: =77
+                ZIndex: =3
 
         RyddighetCard As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
+            Fill: |
+                =StatusCard.Fill
             Height: =100
             Width: =640
             X: =0
             Y: =25
             ZIndex: =26
 
+            AndreLabel_1 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Ryddighet"
+                Width: =560
+                X: =38
+                Y: =16
+                ZIndex: =1
+
         CheckboxTitleCard As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =500
             Width: =640
             X: =0
             Y: =26
             ZIndex: =27
 
-        CheckBoxCard As dataCard.blankCard:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
-            Width: =640
-            X: =0
-            Y: =27
-            ZIndex: =28
+            Checkbox1 As checkbox:
+                Height: =85
+                Size: =21
+                Text: ="Er sikkerthetsnett rullet?"
+                Width: =450
+                X: =34
+                Y: =22
+                ZIndex: =4
+
+            Checkbox1_1 As checkbox:
+                Height: =85
+                Size: =21
+                Text: ="Mousetrap under avkast?"
+                Width: =450
+                X: =34
+                Y: =107
+                ZIndex: =5
+
+            Checkbox1_2 As checkbox:
+                Height: =85
+                Size: =21
+                Text: ="Fyllingsgrad sjekket?"
+                Width: =450
+                X: =34
+                Y: =192
+                ZIndex: =6
+
+            Label7 As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Avvik: (Lavt lastet)"
+                Width: =560
+                X: =34
+                Y: =292
+                ZIndex: =7
+
+            TextInput4 As text:
+                Default: =""
+                Height: =107
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =560
+                X: =34
+                Y: =362
+                ZIndex: =8
+
+    HovedButton As button:
+        Fill: =RGBA(0, 47, 25, 1)
+        Height: =72
+        OnSelect: |-
+            =UpdateContext({vPopUpHoved: true})
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: ="Send Report"
+        Width: =640
+        Y: =1064
+        ZIndex: =4
+
+    Group1_3 As group:
+        Height: =5
+        Width: =5
+        X: =3
+        Y: =60
+        ZIndex: =8
+
+        HtmlText2_3 As htmlViewer:
+            Height: =1136
+            HtmlText: |-
+                ="<div style='
+                    background-color:rgba(255,255,255,0.95);
+                    height: 1125px;
+                    display: grid;
+                    place-content: center;
+                '>
+                <p style='margin: auto auto 0 auto'>Sende e-post?</p>
+                <p style='margin: 0 auto 0 auto'>Send mail?</p>
+                </div>"
+            Visible: =vPopUpHoved
+            Width: =637
+            X: =3
+            ZIndex: =5
+
+        Button1_8 As button:
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="JA"
+            Visible: =vPopUpHoved
+            Width: =250
+            X: =43
+            Y: =710
+            ZIndex: =6
+
+        Button1_9 As button:
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+                =UpdateContext({vPopUpHoved: false})
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="NEI"
+            Visible: =vPopUpHoved
+            Width: =250
+            X: =353
+            Y: =710
+            ZIndex: =7
 
