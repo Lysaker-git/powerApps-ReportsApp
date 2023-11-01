@@ -810,7 +810,7 @@
             Y: =22
             ZIndex: =22
 
-            MoiranaLabel_1 As label:
+            BpxCardLabel As label:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Semibold
                 Height: =70
@@ -821,7 +821,7 @@
                 Y: =28
                 ZIndex: =1
 
-            MoiranaCheck_1 As checkbox:
+            BpxCardSendtCehck As checkbox:
                 Height: =85
                 Size: =21
                 Text: =""
@@ -830,7 +830,7 @@
                 Y: =90
                 ZIndex: =2
 
-            MoiranaInput_1 As text:
+            BpxCardAvvikContent As text:
                 Default: =""
                 Height: =70
                 Size: =21
@@ -839,7 +839,7 @@
                 Y: =195
                 ZIndex: =3
 
-            MoiranaLabel_2 As label:
+            BpxCardSendtLabel As label:
                 Height: =70
                 Size: =21
                 Text: ="Er alt BPX sendt? (Kryss av for JA)"
@@ -848,7 +848,7 @@
                 Y: =98
                 ZIndex: =4
 
-            MoiranaLabel_3 As label:
+            BpxCardAvvikLabel As label:
                 Height: =70
                 Size: =21
                 Text: |-
@@ -903,7 +903,7 @@
                 ZIndex: =1
 
             TextInput2 As text:
-                Default: ="Text input"
+                Default: =""
                 Height: =70
                 Size: =21
                 Width: =560
@@ -912,7 +912,7 @@
                 ZIndex: =2
 
             TextInput2_1 As text:
-                Default: ="Text input"
+                Default: =""
                 Height: =70
                 Size: =21
                 Width: =560
@@ -971,7 +971,7 @@
             Y: =24
             ZIndex: =25
 
-            Label4 As label:
+            KippenCardTitle As label:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Semibold
                 Height: =70
@@ -982,7 +982,7 @@
                 Y: =20
                 ZIndex: =1
 
-            TextInput2_2 As text:
+            KippenCardContent As text:
                 Default: =""
                 Height: =189
                 Mode: =TextMode.MultiLine
@@ -992,7 +992,7 @@
                 Y: =147
                 ZIndex: =2
 
-            Label6_3 As label:
+            KippenCardLabel As label:
                 Height: =70
                 Size: =21
                 Text: |-
@@ -1036,7 +1036,7 @@
             Y: =26
             ZIndex: =27
 
-            Checkbox1 As checkbox:
+            SikerhetsnettCheck As checkbox:
                 Height: =85
                 Size: =21
                 Text: ="Er sikkerthetsnett rullet?"
@@ -1045,7 +1045,7 @@
                 Y: =22
                 ZIndex: =4
 
-            Checkbox1_1 As checkbox:
+            MousetrapCheck As checkbox:
                 Height: =85
                 Size: =21
                 Text: ="Mousetrap under avkast?"
@@ -1054,7 +1054,7 @@
                 Y: =107
                 ZIndex: =5
 
-            Checkbox1_2 As checkbox:
+            FyllingsgradCheck As checkbox:
                 Height: =85
                 Size: =21
                 Text: ="Fyllingsgrad sjekket?"
@@ -1063,7 +1063,7 @@
                 Y: =192
                 ZIndex: =6
 
-            Label7 As label:
+            AviikCheckLabel As label:
                 Height: =70
                 Size: =21
                 Text: |-
@@ -1073,7 +1073,7 @@
                 Y: =292
                 ZIndex: =7
 
-            TextInput4 As text:
+            AvikCheckContent As text:
                 Default: =""
                 Height: =107
                 Mode: =TextMode.MultiLine
@@ -1130,7 +1130,545 @@
             FontWeight: =FontWeight.Bold
             Height: =70
             HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
-            OnSelect: =
+            OnSelect: |-
+                =// Set Variables for all fields
+                ClearCollect(
+                    HovedSortCollection,
+                    {
+                        Title: "BPX (Express)",
+                        Content: Concatenate(
+                            "Er BPX sendt",
+                            "? ",
+                            If(BpxCardSendtCehck.Value = true, "Ja", "Nei"),
+                            " - ",
+                            If(BpxCardAvvikContent.Text = "", "", BpxCardAvvikLabel.Text),
+                            If(BpxCardAvvikContent.Text = "", "", BpxCardAvvikContent.Text)
+                        )
+                    },
+                    {
+                        Title: KippenCardLabel.Text,
+                        Content: KippenCardContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseGenLabel.Text
+                        ),
+                        Content: LosseGenContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetUPriLabel.Text
+                        ),
+                        Content: LosseDetUPriContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetPriLabel.Text
+                        ),
+                        Content: LosseDetPriContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferOneLabel.Text
+                        ),
+                        Content: LosseDetBufferOneContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferTwoLabel.Text
+                        ),
+                        Content: LosseDetBufferTwoContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferThreeLabel.Text
+                        ),
+                        Content: LosseDetBufferThreeContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferFourLabel.Text
+                        ),
+                        Content: LosseDetBufferFourContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetPortLabel.Text
+                        ),
+                        Content: LosseDetPortContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetWasteLabel.Text
+                        ),
+                        Content: LosseDetWasteContent.Text
+                    },
+                    {
+                        Title: B3SørLabel.Text,
+                        Content: B3SørContent.Text
+                    },
+                    {
+                        Title: B3NordLabel.Text,
+                        Content: B3NordContent.Text
+                    },
+                    {
+                        Title: GjenståendeButton.Text,
+                        Content: Concatenate(
+                            GjenståendePallLabelB2.Text,
+                            ": ",
+                            GjenståendePallContent.Text,
+                            " - ",
+                            GjenståendePallLabelB3.Text,
+                            ": ",
+                            GjenståendePallContentB3.Text
+                        )
+                    },
+                    {
+                        Title: AnkomstLabel.Text,
+                        Content: AnkomstContent.Text
+                    },
+                    {
+                        Title: PåLagerLabel.Text,
+                        Content: PåLagerContent.Text
+                    },
+                    {
+                        Title: OpplastetByggLabel.Text,
+                        Content: OpplastetByggContent.Text
+                    },
+                    {
+                        Title: OpplastetNCLabel.Text,
+                        Content: OpplastetNCContent.Text
+                    },
+                    {
+                        Title: OpplastetLagerLabel.Text,
+                        Content: OpplastetLagerContent.Text
+                    },
+                    {
+                        Title: SkaddeLabel.Text,
+                        Content: SkaddeContent.Text
+                    },
+                    {
+                        Title: BCLabel.Text,
+                        Content: BCContent.Text,
+                        Checkbox: BCBox.Value
+                    },
+                    {
+                        Title: GLSLabel.Text,
+                        Content: GLSContent.Text,
+                        Checkbox: GLSbox.Value
+                    },
+                    {
+                        Title: UPSLabel.Text,
+                        Content: UPSContent.Text,
+                        Checkbox: UPSBox.Value
+                    },
+                    {
+                        Title: MaskeLabel.Text,
+                        Content: MaskeContent.Text,
+                        Checkbox: MaskeBox.Value
+                    },
+                    {
+                        Title: SdFsLabel.Text,
+                        Content: SdFsContent.Text,
+                        Checkbox: SdFsBox.Value
+                    },
+                    {
+                        Title: StaplesLabel.Text,
+                        Content: StaplesContent.Text,
+                        Checkbox: StaplesBox.Value
+                    },
+                    {
+                        Title: TechdataLabel.Text,
+                        Content: TechdataContent.Text,
+                        Checkbox: TechdataBox.Value
+                    },
+                    {
+                        Title: VidaXLLabel.Text,
+                        Content: VidaXLContent.Text,
+                        Checkbox: VidaXLBox.Value
+                    },
+                    {
+                        Title: ZalandoLabel.Text,
+                        Content: ZalandoContent.Text,
+                        Checkbox: ZalandoBox.Value
+                    },
+                    {
+                        Title: RandOneLabel.Text,
+                        Content: RandOneContent.Text,
+                        Checkbox: RandOneBox.Value
+                    },
+                    {
+                        Title: RandTwoLabel.Text,
+                        Content: RandTwoContent.Text,
+                        Checkbox: RandTwoBox.Value
+                    },
+                    {
+                        Title: AvvikLabel.Text,
+                        Content: AvvikContent.Text
+                    },
+                    {
+                        Title: TollLagerLabel.Text,
+                        Content: TollLagerContent.Text
+                    },
+                    {
+                        Title: NestenulykkerLabel.Text,
+                        Content: NestenulykkerContent.Text
+                    },
+                    {
+                        Title: LBSkiltLabel.Text,
+                        Content: LBSkiltContent.Text
+                    },
+                    {
+                        Title: KippLabel.Text,
+                        Content: KippContent.Text
+                    },
+                    {
+                        Title: AnnetLabel.Text,
+                        Content: AnnetContent.Text
+                    },
+                    {
+                        Title: ForsinkelserLabel.Text,
+                        Content: ForsinkelserContent.Text
+                    },
+                    {
+                        Title: DriftLabel.Text,
+                        Content: DriftContent.Text
+                    },
+                    {
+                        Title: MouseTraoLabel.Text,
+                        Content: MouseTrapContent.Text
+                    }
+                );
+                /*This will initiate the ArrivalFinalCollection as an Collection*/
+                ClearCollect(
+                    ArrivalFinalCollection,
+                    {
+                        Title: Blank(),
+                        Content: Blank(),
+                        Checkbox: Blank()
+                    }
+                );
+                ClearCollect(
+                    varCollection,
+                    {var: false}
+                );
+                /*This will clear the ArrivalFinalCollection Collection*/
+                Clear(ArrivalFinalCollection);
+                /*Loops through the ArrivalSortCollection collection and appends Title, Content and if present Checkbox*/
+                ForAll(
+                    ArrivalSortCollection,
+                    If(
+                        And(
+                            Not(ThisRecord.Content = ""),
+                            Not(ThisRecord.Checkbox)
+                        ),//IF Content IS NOT empty AND IF checkbox IS NOT false
+                        Collect(
+                            ArrivalFinalCollection,
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content
+                            }
+                        ),
+                        Or(
+                            Not(ThisRecord.Content = ""),
+                            ThisRecord.Checkbox
+                        ),//IF content IS NOT empty OR IF checkbox IS true
+                        Collect(
+                            ArrivalFinalCollection,
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content,
+                                Checkbox: If(
+                                    ThisRecord.Checkbox = false,
+                                    "",
+                                    "OK"
+                                )
+                            }
+                        );
+                        /*Updates if its used Checkboxes during the report*/
+                UpdateIf(
+                            varCollection,
+                            var = false,
+                            {var: true}
+                        );
+                    )
+                );
+                ForAll(
+                    ArrivalFinalCollection,
+                    If(
+                        And(
+                            Not(ThisRecord.Content = ""),
+                            Not(ThisRecord.Checkbox)
+                        ),//IF Content IS NOT empty AND IF checkbox IS NOT true
+                        Patch(
+                            InngåendeDB,
+                            Defaults(InngåendeDB),
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content,
+                                Name: Navn,
+                                Group: Gruppe,
+                                //Tid: Tid,
+                                Shift: Shift
+                            }
+                        ),
+                        Or(
+                            Not(ThisRecord.Content = ""),
+                            ThisRecord.Checkbox
+                        ),//IF content IS NOT empty OR IF checkbox IS true
+                        Patch(
+                            InngåendeDB,
+                            Defaults(InngåendeDB),
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content,
+                                Checkbox: ThisRecord.Checkbox,
+                                Name: Navn,
+                                Group: Gruppe,
+                                //Tid: Tid,
+                                Shift: Shift
+                            }
+                        )
+                    )
+                );
+                /*Checking if there is input on ArrivalFinalCollection Collection - and makes the arrivalsBodyHTML*/
+                If(
+                    Not(IsEmpty(ArrivalFinalCollection)),//IF ArrivalFinalCollection IS NOT empty then..
+                    If(
+                        Boolean(
+                            Concat(
+                                varCollection,
+                                Concatenate(var)
+                            )
+                        ) = true,
+                        Set(
+                            arrivalsBodyHTML,
+                            Concatenate(
+                                genericTitles,
+                                Concat(
+                                    ArrivalFinalCollection,
+                                    Concatenate(
+                                        $"
+                                            <tr style='{contentBg}'>
+                                                <td style='{tdCss}'>
+                                                    <h4 style='{textCSS}'>{Title}</h4>
+                                                </td>
+                                                <td style='{tdCss}'>
+                                                    <p style='{textCSS}'>{Content}</p>
+                                                    <p style='{textCSS}'>{Checkbox}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
+                                                <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
+                                            </tr>
+                                        "
+                                    )
+                                )
+                            )
+                        ),
+                        Set(
+                            arrivalsBodyHTML,
+                            Concatenate(
+                                genericTitles,
+                                Concat(
+                                    ArrivalFinalCollection,
+                                    Concatenate(
+                                        $"<tbody style='{contentBg}'>
+                                            <tr>
+                                                <td style='{tdCss}'>
+                                                    <h4 style='{textCSS}'>{Title}</h4>
+                                                </td>
+                                                <td style='{tdCss}'>
+                                                    <p style='{textCSS}'>{Content}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
+                                                <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
+                                            </tr>
+                                        </tbody>"
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    Set(
+                        arrivalsBodyHTML,
+                        ""
+                    )
+                );
+                If(
+                    IsEmpty(OverliggItems),//If OverliggItems IS empty then...
+                    Set(
+                        overliggHTML,
+                        ""
+                    ),
+                    Set(
+                        overliggHTML,
+                        Concatenate(
+                            $"<tr style='{darkBg}'>
+                            <td style='{tdCss}'>
+                                <h2 style='{textLight}'>Overligg</h2>
+                            </td>
+                        </tr>
+                        ",
+                            Concat(
+                                OverliggItems,
+                                Concatenate(
+                                    $"<tr>
+                                    <td style='{tdCss}'>
+                                        <table style='{tableCss} {w100} {oColCss}' class='oColumn'>
+                                            <tr>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Fra:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>VBH:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Port:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Plasser:</h4></td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Fra}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{VBH}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Port}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Plasser}</p></td>
+                                            </tr>
+                                        </table>
+                                        <table style='{tableCss} {w100} {oColCss}' class='oColumn'>
+                                            <tr>
+                                                <td style='{tdCss} {w100}'><h4 style='{textCSS}'>Info</h4></td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w100}'><p style='{textCSS}'>{Info}</p></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style='{tdCss} {darkBg} {height5}'>
+                                    </td>
+                                </tr>"
+                                )
+                            )
+                        )
+                    )
+                );
+                If(
+                    IsEmpty(ManglerBilerCollection),// IF ManglerBilderBollection IS empty then..
+                    Set(
+                        missingCarHTML,
+                        ""
+                    ),
+                    Set(
+                        missingCarHTML,
+                        Concatenate(
+                            $"<tr style='{darkBg}'>
+                                <td style='{tdCss}'>
+                                    <h2 style='{textLight}'>Manglende Biler</h2>
+                                </td>
+                            </tr>",
+                            Concat(
+                                ManglerBilerCollection,
+                                Concatenate(
+                                    $"<tr>
+                                        <td style='{tdCss}'>
+                                            <table style='{w100}{tableCss}'>
+                                                <tr>
+                                                    <td style='{tdCss}' class='padding'>
+                                                        <table style='{tableCss} {oColCss} {w100}' class='content oColumn'>
+                                                            <tr>
+                                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Reg. nummer:</h4></td>
+                                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Bil Tur:</h4></td>
+                                                                <td style='{tdCss} {w50}'><h4 style='{textCSS}'>Kommerntar:</h4></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Reg}</p></td>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Tur}</p></td>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Kommentar}</p></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style='{tdCss} {darkBg} {height5}'>
+                                        </td>
+                                    </tr>"
+                                )
+                            )
+                        )
+                    )
+                );
+                //Header of the mail
+                Set(
+                    arrivalsHeader,
+                    $"
+                        <tr style='{headerCss} {darkBg}'>
+                            <td style='{tdCss}'>
+                                <h1 style='{textLight} font-weight: bolder;'>Inngående {Shift}</h1>
+                            </td>
+                        </tr>
+                    "
+                );
+                Set(
+                    arrivalsBody,
+                    $"
+                    {htmlStart}
+                    {arrivalsHeader}
+                    {htmlAfterHeaderBeforeContent}
+                    {arrivalsBodyHTML}
+                    {htmlAfterContentSomethingStart}
+                    {overliggHTML}
+                    {missingCarHTML}
+                    {htmlAfterContentSomethingEnd}
+                    "
+                );
+                Office365Outlook.SendEmailV2(
+                    //TestRecipients,
+                    RecipientsInngående,
+                    "Overlevering",
+                    arrivalsBody,
+                    {
+                        Importance: FontWeight.Normal,
+                        IsHtml: true,
+                        Cc: TestRecipients,
+                        Attachments: AddColumns(
+                            RenameColumns(
+                                AttachmentContent.Attachments,
+                                "Value",
+                                "ContentBytes"
+                            ),
+                            "@odata.type",
+                            ""
+                        )
+                    }
+                );
+                Navigate(
+                    SucessScreen,
+                    ScreenTransition.CoverRight
+                )
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
