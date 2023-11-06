@@ -1645,6 +1645,7 @@
                     {htmlAfterContentSomethingEnd}
                     "
                 );
+                /*
                 Office365Outlook.SendEmailV2(
                     //TestRecipients,
                     RecipientsInngående,
@@ -1669,6 +1670,7 @@
                     SucessScreen,
                     ScreenTransition.CoverRight
                 )
+                */
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
