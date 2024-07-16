@@ -484,10 +484,10 @@ OvervåkerRapport As screen:
                         Attachments: AddColumns(
                             RenameColumns(
                                 OvervåkerAttachment.Attachments,
-                                "Value",
-                                "ContentBytes"
+                                Value,
+                                ContentBytes
                             ),
-                            "@odata.type",
+                            '@odata.type',
                             ""
                         )
                     }

@@ -67,6 +67,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "B2Label",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -377,6 +378,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "B2Text",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -641,6 +643,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "B3Label",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -951,6 +954,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "B3Text",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1289,6 +1293,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1543,6 +1548,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DiverseLabel",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1846,6 +1852,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DiverseText",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2110,6 +2117,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FlytLabel",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2428,6 +2436,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FlytText",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2649,6 +2658,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Group1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2726,6 +2736,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2870,6 +2881,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText1_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3014,6 +3026,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText1_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3158,6 +3171,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText1_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3302,6 +3316,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText1_4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3446,6 +3461,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText1_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3610,6 +3626,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3849,6 +3866,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4168,6 +4186,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "OvervåkerAttachment",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4514,6 +4533,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "OvervåkerBackBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4686,6 +4706,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "OvervåkerBackdropAndHTML",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4934,6 +4955,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "OvervåkerCancelBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5200,6 +5222,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "OvervåkerHeader",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5430,6 +5453,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "OvervåkerRapport",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5640,6 +5664,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "OvervåkerSendMailBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5899,6 +5924,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "UtfordringerLabel",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6209,6 +6235,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "UtfordringerText",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [

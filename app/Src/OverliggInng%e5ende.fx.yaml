@@ -1,6 +1,7 @@
 "OverliggInngående As screen.'phoneLayout_HeaderAndForm_ver3.0'":
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        '#CopilotOverlayLabel': ="Filtered"
         Height: =1028
         Items: =OverliggItems
         Layout: =Layout.Vertical

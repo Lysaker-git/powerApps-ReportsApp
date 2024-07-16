@@ -75,7 +75,7 @@
             DataField: ="LøsPri"
             Default: =ThisItem.LøsPri
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"LøsPri")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,LøsPri)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -148,7 +148,7 @@
             DataField: ="LøsUpri"
             Default: =ThisItem.LøsUpri
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"LøsUpri")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,LøsUpri)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =245
             Required: =false
@@ -253,10 +253,10 @@
             DataField: ="LosseGen"
             Default: =ThisItem.LosseGen
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"LosseGen")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,LosseGen)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =165
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "LosseGen")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, LosseGen)
             Required: =false
             Update: =LosseGenContent.Text
             Visible: =If(showFields=2||showFields=-1,true,false)
@@ -350,10 +350,10 @@
             DataField: ="LossDetPri"
             Default: =ThisItem.LossDetPri
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"LossDetPri")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,LossDetPri)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =822
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "LossDetPri")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, LossDetPri)
             Required: =false
             Update: =LosseDetPriContent.Text
             Visible: =If(showDetFields=1||showDetFields=-1,true,false)
@@ -687,10 +687,10 @@
             DataField: ="GjenståPall"
             Default: =ThisItem.GjenståPall
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"GjenståPall")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,GjenståPall)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =358
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "GjenståPall")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, GjenståPall)
             Required: =false
             Update: =GjenståendePallContent.Text
             Visible: =If(showFields=10||showFields=-1,true,false)
@@ -832,7 +832,7 @@
             DataField: ="ByggTreSør"
             Default: =ThisItem.ByggTreSør
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"ByggTreSør")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,ByggTreSør)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =B3SørContent.Height + B3SørLabel.Height + 50
             Required: =false
@@ -906,7 +906,7 @@
             DataField: ="ByggTreNord"
             Default: =ThisItem.ByggTreNord
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"ByggTreNord")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,ByggTreNord)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =B3NordLabel.Height + B3NordContent.Height + 50
             Required: =false
@@ -1205,7 +1205,7 @@
             DataField: ="AnkKomm"
             Default: =ThisItem.AnkKomm
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"AnkKomm")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,AnkKomm)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =AnkomstContent.Height + AnkomstLabel.Height + 50
             Required: =false
@@ -1303,10 +1303,10 @@
             DataField: ="MangBilReg"
             Default: =ThisItem.MangBilReg
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"MangBilReg")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,MangBilReg)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "MangBilReg")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, MangBilReg)
             Required: =false
             Update: =ManglerBilRegContent.Text
             Visible: =If(showFields=6||showFields=-1,true,false)
@@ -1388,10 +1388,10 @@
             DataField: ="MangBilTur"
             Default: =ThisItem.MangBilTur
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"MangBilTur")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,MangBilTur)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "MangBilTur")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, MangBilTur)
             Required: =false
             Update: =ManglerBilTurContent.Text
             Visible: =If(showFields=6||showFields=-1,true,false)
@@ -1463,7 +1463,7 @@
             DataField: ="MangBilKomm"
             Default: =ThisItem.MangBilKomm
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"MangBilKomm")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,MangBilKomm)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =328
             Required: =false
@@ -1593,10 +1593,10 @@
             DataField: ="PåLager"
             Default: =ThisItem.PåLager
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"PåLager")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,PåLager)
             Fill: =ColorFade(LøslastButton.Fill, 20%)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "PåLager")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, PåLager)
             Required: =false
             Update: =PåLagerContent.Text
             Width: =640
@@ -1692,10 +1692,10 @@
             DataField: ="OpplastBFireogFem"
             Default: =ThisItem.OpplastBFireogFem
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"OpplastBFireogFem")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,OpplastBFireogFem)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =36
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "OpplastBFireogFem")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, OpplastBFireogFem)
             Required: =false
             Update: =OpplastetByggContent.Text
             Visible: =If(showFields=7||showFields=-1,true,false)
@@ -1766,10 +1766,10 @@
             DataField: ="OpplastNC"
             Default: =ThisItem.OpplastNC
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"OpplastNC")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,OpplastNC)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "OpplastNC")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, OpplastNC)
             Required: =false
             Update: =OpplastetNCContent.Text
             Visible: =If(showFields=7||showFields=-1,true,false)
@@ -1840,10 +1840,10 @@
             DataField: ="OpplastLag"
             Default: =ThisItem.OpplastLag
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"OpplastLag")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,OpplastLag)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =55
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "OpplastLag")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, OpplastLag)
             Required: =false
             Update: =OpplastetLagerContent.Text
             Visible: =If(showFields=7||showFields=-1,true,false)
@@ -1935,10 +1935,10 @@
             DataField: ="Skadde"
             Default: =ThisItem.Skadde
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"Skadde")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,Skadde)
             Fill: =PåLagerContainer.Fill
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "Skadde")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, Skadde)
             Required: =false
             Update: =SkaddeContent.Text
             Width: =640
@@ -2033,10 +2033,10 @@
             DataField: ="KundBC"
             Default: =ThisItem.KundBC
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"KundBC")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundBC)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "KundBC")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundBC)
             Required: =false
             Update: =BCContent.Text
             Visible: =If(showFields=8||showFields=-1,true,false)
@@ -2117,10 +2117,10 @@
             DataField: ="KunGLS"
             Default: =ThisItem.KunGLS
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"KunGLS")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KunGLS)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "KunGLS")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KunGLS)
             Required: =false
             Update: =GLSContent.Text
             Visible: =If(showFields=8||showFields=-1,true,false)
@@ -2200,10 +2200,10 @@
             DataField: ="KundUPS"
             Default: =ThisItem.KundUPS
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"KundUPS")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundUPS)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "KundUPS")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundUPS)
             Required: =false
             Update: =UPSContent.Text
             Visible: =If(showFields=8||showFields=-1,true,false)
@@ -2284,10 +2284,10 @@
             DataField: ="KundMaske"
             Default: =ThisItem.KundMaske
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"KundMaske")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundMaske)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "KundMaske")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundMaske)
             Required: =false
             Update: =MaskeContent.Text
             Visible: =If(showFields=8||showFields=-1,true,false)
@@ -2369,10 +2369,10 @@
             DataField: ="KundSdFs"
             Default: =ThisItem.KundSdFs
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"KundSdFs")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundSdFs)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "KundSdFs")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundSdFs)
             Required: =false
             Update: =SdFsContent.Text
             Visible: =If(showFields=8||showFields=-1,true,false)
@@ -2454,10 +2454,10 @@
             DataField: ="KundStaples"
             Default: =ThisItem.KundStaples
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"KundStaples")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundStaples)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "KundStaples")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundStaples)
             Required: =false
             Update: =StaplesContent.Text
             Visible: =If(showFields=8||showFields=-1,true,false)
@@ -2539,10 +2539,10 @@
             DataField: ="KundTech"
             Default: =ThisItem.KundTech
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"KundTech")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundTech)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "KundTech")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundTech)
             Required: =false
             Update: =TechdataContent.Text
             Visible: =If(showFields=8||showFields=-1,true,false)
@@ -2623,10 +2623,10 @@
             DataField: ="KundVidaXL"
             Default: =ThisItem.KundVidaXL
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"KundVidaXL")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundVidaXL)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "KundVidaXL")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundVidaXL)
             Required: =false
             Update: =VidaXLContent.Text
             Visible: =If(showFields=8||showFields=-1,true,false)
@@ -2707,10 +2707,10 @@
             DataField: ="KundZalando"
             Default: =ThisItem.KundZalando
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"KundZalando")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundZalando)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "KundZalando")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundZalando)
             Required: =false
             Update: =ZalandoContent.Text
             Visible: =If(showFields=8||showFields=-1,true,false)
@@ -2791,10 +2791,10 @@
             DataField: ="KundRandEn"
             Default: =ThisItem.KundRandEn
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"KundRandEn")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundRandEn)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "KundRandEn")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundRandEn)
             Required: =false
             Update: =RandOneContent.Text
             Visible: =If(showFields=8||showFields=-1,true,false)
@@ -2864,10 +2864,10 @@
             DataField: ="KundRandTo"
             Default: =ThisItem.KundRandTo
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"KundRandTo")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundRandTo)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =RandOneLabel.Height
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "KundRandTo")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundRandTo)
             Required: =false
             Update: =RandTwoContent.Text
             Visible: =If(showFields=8||showFields=-1,true,false)
@@ -2962,10 +2962,10 @@
             DataField: ="DivAvvik"
             Default: =ThisItem.DivAvvik
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"DivAvvik")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivAvvik)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "DivAvvik")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivAvvik)
             Required: =false
             Update: =AvvikContent.Text
             Visible: =If(showFields=9||showFields=-1,true,false)
@@ -3037,10 +3037,10 @@
             DataField: ="DivToll"
             Default: =ThisItem.DivToll
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"DivToll")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivToll)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "DivToll")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivToll)
             Required: =false
             Update: =TollLagerContent.Text
             Visible: =If(showFields=9||showFields=-1,true,false)
@@ -3112,10 +3112,10 @@
             DataField: ="DivNesten"
             Default: =ThisItem.DivNesten
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"DivNesten")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivNesten)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "DivNesten")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivNesten)
             Required: =false
             Update: =NestenulykkerContent.Text
             Visible: =If(showFields=9||showFields=-1,true,false)
@@ -3187,10 +3187,10 @@
             DataField: ="DivLB"
             Default: =ThisItem.DivLB
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"DivLB")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivLB)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =56
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "DivLB")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivLB)
             Required: =false
             Update: =LBSkiltContent.Text
             Visible: =If(showFields=9||showFields=-1,true,false)
@@ -3262,10 +3262,10 @@
             DataField: ="DivKipp"
             Default: =ThisItem.DivKipp
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"DivKipp")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivKipp)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =57
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "DivKipp")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivKipp)
             Required: =false
             Update: =KippContent.Text
             Visible: =If(showFields=9||showFields=-1,true,false)
@@ -3337,10 +3337,10 @@
             DataField: ="DivAnnet"
             Default: =ThisItem.DivAnnet
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"DivAnnet")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivAnnet)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =58
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "DivAnnet")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivAnnet)
             Required: =false
             Update: =AnnetContent.Text
             Visible: =If(showFields=9||showFields=-1,true,false)
@@ -3412,10 +3412,10 @@
             DataField: ="DivForsink"
             Default: =ThisItem.DivForsink
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"DivForsink")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivForsink)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =250
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "DivForsink")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivForsink)
             Required: =false
             Update: =ForsinkelserContent.Text
             Visible: =If(showFields=9||showFields=-1,true,false)
@@ -3488,10 +3488,10 @@
             DataField: ="DivDrift"
             Default: =ThisItem.DivDrift
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,"DivDrift")
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivDrift)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =250
-            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, "DivDrift")
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivDrift)
             Required: =false
             Update: =DriftContent.Text
             Visible: =If(showFields=9||showFields=-1,true,false)
@@ -4223,10 +4223,10 @@
                         Attachments: AddColumns(
                             RenameColumns(
                                 AttachmentContent.Attachments,
-                                "Value",
-                                "ContentBytes"
+                                Value,
+                                ContentBytes
                             ),
-                            "@odata.type",
+                            '@odata.type',
                             ""
                         )
                     }

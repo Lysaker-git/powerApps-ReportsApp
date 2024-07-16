@@ -73,6 +73,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AvkastInputHA",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -337,6 +338,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AvkastLabelHA",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -604,6 +606,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BaljeCheckHA",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -861,6 +864,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BurCheckHA",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1194,6 +1198,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button1_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1537,6 +1542,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button1_4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1885,6 +1891,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button1_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2102,6 +2109,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Canvas1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2231,6 +2239,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CheckLabelHA",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2457,6 +2466,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataCard1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2587,6 +2597,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DiverseInputHA",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2851,6 +2862,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DiverseLabelHA",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3072,6 +3084,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Group1_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3169,6 +3182,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HeisCheckHA",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3435,6 +3449,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HospitalHeader",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3673,6 +3688,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HospitalRapport",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3770,6 +3786,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText2_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3921,6 +3938,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon1_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4113,6 +4131,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image2_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4350,6 +4369,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ManglendeInputHANumber",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4621,6 +4641,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ManglendeLabelHANumber",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4896,6 +4917,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SkrivingInputHA",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5173,6 +5195,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SkrivingInputHANumber",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5437,6 +5460,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SkrivingLabelHA",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5713,6 +5737,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SkrivingLabelHANumber",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5980,6 +6005,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TommeCheckHA",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6252,6 +6278,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "UtlInputHANumber",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6523,6 +6550,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "UtlLabelHANumber",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [

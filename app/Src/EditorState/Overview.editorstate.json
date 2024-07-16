@@ -52,6 +52,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BackdropHTML",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -211,6 +212,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BackdropShadowHist",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -360,6 +362,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BackdropShadowOVer",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -517,6 +520,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BackgroundImage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -766,6 +770,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HistorikkBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1045,6 +1050,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HospitalBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1317,6 +1323,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HovedBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1603,6 +1610,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "InngåendeBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1840,6 +1848,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LogoApp",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2069,6 +2078,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LokalBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2335,6 +2345,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ManuellBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2602,6 +2613,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "OvervåkerBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2832,6 +2844,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Overview",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2958,6 +2971,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TimeLabel_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3242,6 +3256,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Timer1_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3495,6 +3510,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TittelPartThree",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3778,6 +3794,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TittelPartTwo",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4047,6 +4064,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TtteilPartOne",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4316,6 +4334,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "VelgTittel",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
