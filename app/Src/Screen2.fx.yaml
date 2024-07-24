@@ -6,6 +6,8 @@
         ZIndex: =1
 
     LblAppName1 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
         Height: =88
         Size: =27
         Text: ="[Title]"
@@ -16,12 +18,14 @@
 
     IconRefresh1 As icon.Reload:
         AccessibleLabel: =IconRefresh1.Tooltip
+        Color: =RGBA(255, 255, 255, 1)
         Height: =88
         Icon: =Icon.Reload
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
         PaddingTop: =22
+        PressedFill: =RGBA(255, 255, 255, 0.3)
         TabIndex: =0
         Tooltip: ="Refresh list"
         Width: =88
@@ -30,6 +34,7 @@
 
     IconSortUpDown1 As icon.ArrowsUpDown:
         AccessibleLabel: =IconSortUpDown1.Tooltip
+        Color: =RGBA(255, 255, 255, 1)
         Height: =88
         Icon: =Icon.Sort
         OnSelect: |-
@@ -38,6 +43,7 @@
         PaddingLeft: =26
         PaddingRight: =26
         PaddingTop: =26
+        PressedFill: =RGBA(255, 255, 255, 0.3)
         TabIndex: =0
         Tooltip: =If(SortDescending1, "Sort list in reverse alphabetical order", "Sort list in alphabetical order")
         Width: =88
@@ -46,12 +52,14 @@
 
     IconNewItem1 As icon.Add:
         AccessibleLabel: =IconNewItem1.Tooltip
+        Color: =RGBA(255, 255, 255, 1)
         Height: =88
         Icon: =Icon.Add
         PaddingBottom: =24
         PaddingLeft: =24
         PaddingRight: =24
         PaddingTop: =24
+        PressedFill: =RGBA(255, 255, 255, 0.3)
         TabIndex: =0
         Tooltip: ="Create new item"
         Width: =88
@@ -59,6 +67,7 @@
         ZIndex: =5
 
     TextSearchBox1 As text:
+        BorderStyle: =BorderStyle.None
         Default: =""
         Height: =68
         HintText: ="Search items"
@@ -86,6 +95,7 @@
         ZIndex: =7
 
     Rectangle11 As rectangle:
+        Fill: =RGBA(0, 18, 107, 1)
         Height: =2
         Width: =Parent.Width
         Y: =TextSearchBox1.Y + TextSearchBox1.Height
@@ -112,12 +122,15 @@
             ZIndex: =1
 
         Title2 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            FontWeight: =FontWeight.Semibold
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =20
             Text: =ThisItem.B2Content
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image4.Width - 104
@@ -126,12 +139,14 @@
             ZIndex: =2
 
         Subtitle2 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =18
             Text: =ThisItem.B2Header
             VerticalAlign: =VerticalAlign.Top
             Width: =Title2.Width
@@ -156,6 +171,7 @@
             ZIndex: =4
 
         Separator3 As rectangle:
+            Fill: =RGBA(0, 18, 107, 1)
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
@@ -163,12 +179,15 @@
             ZIndex: =5
 
         Title2_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            FontWeight: =FontWeight.Semibold
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =20
             Text: =ThisItem.B3Content
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image4.Width - 104
@@ -177,12 +196,14 @@
             ZIndex: =6
 
         Subtitle2_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =18
             Text: =ThisItem.B3Header
             VerticalAlign: =VerticalAlign.Top
             Width: =Title2_1.Width
@@ -191,12 +212,15 @@
             ZIndex: =7
 
         Title2_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            FontWeight: =FontWeight.Semibold
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =20
             Text: =ThisItem.B3Content
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image4.Width - 104
@@ -205,12 +229,14 @@
             ZIndex: =8
 
         Subtitle2_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =18
             Text: =ThisItem.B3Header
             VerticalAlign: =VerticalAlign.Top
             Width: =Title2_2.Width

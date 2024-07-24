@@ -14,6 +14,7 @@
         ZIndex: =2
 
     iconCheck1 As icon.Check:
+        Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(0, 100, 58, 1)
         Height: =iconCircle1.Height
         Icon: =Icon.Check
@@ -21,6 +22,7 @@
         PaddingLeft: =Self.PaddingTop
         PaddingRight: =Self.PaddingTop
         PaddingTop: =18
+        PressedFill: =RGBA(255, 255, 255, 0.3)
         Width: =iconCircle1.Width
         X: =Parent.Width/2 - Self.Width/2
         Y: =(Parent.Height/2 - Self.Height/2) * .7

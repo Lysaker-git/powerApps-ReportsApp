@@ -88,6 +88,8 @@
 
             LøsPriLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: ="Løslast Pri"
@@ -118,6 +120,9 @@
 
             ErrorMessage3 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -134,6 +139,8 @@
 
             StarVisible3 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =LøsPriLabel.Height
                 Size: =21
                 Text: ="*"
@@ -161,6 +168,8 @@
 
             LøsUpriLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: ="Løslast Upri"
@@ -191,6 +200,9 @@
 
             ErrorMessage4 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -207,6 +219,8 @@
 
             StarVisible4 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =LøsUpriLabel.Height
                 Size: =21
                 Text: ="*"
@@ -267,6 +281,8 @@
 
             LosseGenLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -298,6 +314,9 @@
 
             ErrorMessage5 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -314,6 +333,8 @@
 
             StarVisible5 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =LosseGenLabel.Height
                 Size: =21
                 Text: ="*"
@@ -364,6 +385,8 @@
 
             LosseDetPriLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -395,6 +418,9 @@
 
             ErrorMessage6 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -411,6 +437,8 @@
 
             StarVisible6 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =LosseDetPriLabel.Height
                 Size: =21
                 Text: ="*"
@@ -422,6 +450,8 @@
 
             LosseDetUPriLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -462,6 +492,8 @@
             LosseDetBufferLabel As label:
                 Align: =Align.Center
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =48
                 Size: =21
@@ -550,6 +582,8 @@
                 ZIndex: =12
 
             LosseDetBufferOneLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =42
                 Size: =21
@@ -562,6 +596,8 @@
                 ZIndex: =13
 
             LosseDetBufferTwoLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =42
                 Size: =21
@@ -574,6 +610,8 @@
                 ZIndex: =14
 
             LosseDetBufferThreeLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =42
                 Size: =21
@@ -586,6 +624,8 @@
                 ZIndex: =15
 
             LosseDetBufferFourLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =42
                 Size: =21
@@ -599,6 +639,8 @@
 
             LosseDetPortLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: ="Manglende EDI (104)"
@@ -629,6 +671,8 @@
 
             LosseDetWasteLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -701,6 +745,8 @@
 
             GjenståendePallLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: ="Gjenstående"
@@ -731,6 +777,9 @@
 
             ErrorMessage21 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -747,6 +796,8 @@
 
             StarVisible21 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =GjenståendePallLabel.Height
                 Size: =21
                 Text: ="*"
@@ -776,6 +827,8 @@
                 ZIndex: =5
 
             GjenståendePallLabelB2 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =48
                 Size: =21
@@ -787,6 +840,8 @@
                 ZIndex: =6
 
             GjenståendePallLabelB3 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =48
                 Size: =21
@@ -845,6 +900,8 @@
 
             B3SørLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -876,6 +933,9 @@
 
             ErrorMessage17 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -892,6 +952,8 @@
 
             StarVisible17 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =B3SørLabel.Height
                 Size: =21
                 Text: ="*"
@@ -919,6 +981,8 @@
 
             B3NordLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -950,6 +1014,9 @@
 
             ErrorMessage16 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -966,6 +1033,8 @@
 
             StarVisible16 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =B3NordLabel.Height
                 Size: =21
                 Text: ="*"
@@ -1218,6 +1287,8 @@
 
             AnkomstLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -1249,6 +1320,9 @@
 
             ErrorMessage24 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -1265,6 +1339,8 @@
 
             StarVisible24 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =AnkomstLabel.Height
                 Size: =21
                 Text: ="*"
@@ -1317,6 +1393,8 @@
 
             ManglerBilRegLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -1348,6 +1426,9 @@
 
             ErrorMessage26 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -1364,6 +1445,8 @@
 
             StarVisible26 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =ManglerBilRegLabel.Height
                 Size: =21
                 Text: ="*"
@@ -1402,6 +1485,8 @@
 
             ManglerBilTurLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -1433,6 +1518,9 @@
 
             ErrorMessage25 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -1449,6 +1537,8 @@
 
             StarVisible25 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =ManglerBilTurLabel.Height
                 Size: =21
                 Text: ="*"
@@ -1476,6 +1566,8 @@
 
             ManglerBilKommLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -1507,6 +1599,9 @@
 
             ErrorMessage28 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -1523,6 +1618,8 @@
 
             StarVisible28 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =ManglerBilKommLabel.Height
                 Size: =21
                 Text: ="*"
@@ -1605,6 +1702,7 @@
             ZIndex: =1
 
             PåLagerLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
                 Color: =RGBA(255, 255, 255, 1)
                 Height: =48
                 Size: =21
@@ -1637,6 +1735,9 @@
 
             ErrorMessage29 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -1653,6 +1754,8 @@
 
             StarVisible29 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =PåLagerLabel.Height
                 Size: =21
                 Text: ="*"
@@ -1706,6 +1809,8 @@
 
             OpplastetByggLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: ="Opplastet til B4 og B5"
@@ -1736,6 +1841,9 @@
 
             ErrorMessage32 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -1752,6 +1860,8 @@
 
             StarVisible32 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =OpplastetByggLabel.Height
                 Size: =21
                 Text: ="*"
@@ -1780,6 +1890,8 @@
 
             OpplastetNCLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: ="Opplastet til NC"
@@ -1810,6 +1922,9 @@
 
             ErrorMessage31 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -1826,6 +1941,8 @@
 
             StarVisible31 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =OpplastetNCLabel.Height
                 Size: =21
                 Text: ="*"
@@ -1854,6 +1971,8 @@
 
             OpplastetLagerLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: ="Opplastet til Lager"
@@ -1884,6 +2003,9 @@
 
             ErrorMessage30 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -1900,6 +2022,8 @@
 
             StarVisible30 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =OpplastetLagerLabel.Height
                 Size: =21
                 Text: ="*"
@@ -1947,6 +2071,7 @@
             ZIndex: =1
 
             SkaddeLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
                 Color: =RGBA(255, 255, 255, 1)
                 Height: =48
                 Size: =21
@@ -1978,6 +2103,9 @@
 
             ErrorMessage1 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -1994,6 +2122,8 @@
 
             StarVisible1 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =SkaddeLabel.Height
                 Size: =21
                 Text: ="*"
@@ -2047,6 +2177,8 @@
 
             BCLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -2078,6 +2210,9 @@
 
             ErrorMessage14 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -2094,6 +2229,8 @@
 
             StarVisible14 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =BCLabel.Height
                 Size: =21
                 Text: ="*"
@@ -2130,6 +2267,8 @@
             ZIndex: =1
 
             GLSLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -2161,6 +2300,9 @@
 
             ErrorMessage2 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -2177,6 +2319,8 @@
 
             StarVisible2 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =GLSLabel.Height
                 Size: =21
                 Text: ="*"
@@ -2214,6 +2358,8 @@
 
             UPSLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =GLSLabel.Height
                 Size: =21
                 Text: |-
@@ -2245,6 +2391,9 @@
 
             ErrorMessage34 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -2261,6 +2410,8 @@
 
             StarVisible34 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =UPSLabel.Height
                 Size: =21
                 Text: ="*"
@@ -2298,6 +2449,8 @@
 
             MaskeLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Font: =GLSLabel.Font
                 Height: =GLSLabel.Height
                 Size: =21
@@ -2330,6 +2483,9 @@
 
             ErrorMessage15 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -2346,6 +2502,8 @@
 
             StarVisible15 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =MaskeLabel.Height
                 Size: =21
                 Text: ="*"
@@ -2383,6 +2541,8 @@
 
             SdFsLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Font: =GLSLabel.Font
                 Height: =GLSLabel.Height
                 Size: =21
@@ -2415,6 +2575,9 @@
 
             ErrorMessage18 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -2431,6 +2594,8 @@
 
             StarVisible18 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =SdFsLabel.Height
                 Size: =21
                 Text: ="*"
@@ -2468,6 +2633,8 @@
 
             StaplesLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Font: =GLSLabel.Font
                 Height: =GLSLabel.Height
                 Size: =21
@@ -2500,6 +2667,9 @@
 
             ErrorMessage23 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -2516,6 +2686,8 @@
 
             StarVisible23 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =StaplesLabel.Height
                 Size: =21
                 Text: ="*"
@@ -2553,6 +2725,8 @@
 
             TechdataLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =GLSLabel.Height
                 Size: =21
                 Text: |-
@@ -2584,6 +2758,9 @@
 
             ErrorMessage27 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -2600,6 +2777,8 @@
 
             StarVisible27 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =TechdataLabel.Height
                 Size: =21
                 Text: ="*"
@@ -2637,6 +2816,8 @@
 
             VidaXLLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =GLSLabel.Height
                 Size: =21
                 Text: |-
@@ -2668,6 +2849,9 @@
 
             ErrorMessage35 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -2684,6 +2868,8 @@
 
             StarVisible35 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =VidaXLLabel.Height
                 Size: =21
                 Text: ="*"
@@ -2721,6 +2907,8 @@
 
             ZalandoLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =GLSLabel.Height
                 Size: =21
                 Text: |-
@@ -2752,6 +2940,9 @@
 
             ErrorMessage36 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -2768,6 +2959,8 @@
 
             StarVisible36 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =ZalandoLabel.Height
                 Size: =21
                 Text: ="*"
@@ -2824,6 +3017,9 @@
 
             ErrorMessage37 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -2849,6 +3045,8 @@
 
             RandOneLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =GLSLabel.Height
                 Size: =21
                 Text: |-
@@ -2897,6 +3095,9 @@
 
             ErrorMessage38 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -2922,6 +3123,8 @@
 
             RandTwoLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =GLSLabel.Height
                 Size: =21
                 Text: |-
@@ -2976,6 +3179,8 @@
 
             AvvikLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -3007,6 +3212,9 @@
 
             ErrorMessage40 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -3023,6 +3231,8 @@
 
             StarVisible40 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =AvvikLabel.Height
                 Size: =21
                 Text: ="*"
@@ -3051,6 +3261,8 @@
 
             TollLagerLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -3082,6 +3294,9 @@
 
             ErrorMessage46 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -3098,6 +3313,8 @@
 
             StarVisible46 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =TollLagerLabel.Height
                 Size: =21
                 Text: ="*"
@@ -3126,6 +3343,8 @@
 
             NestenulykkerLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -3157,6 +3376,9 @@
 
             ErrorMessage45 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -3173,6 +3395,8 @@
 
             StarVisible45 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =NestenulykkerLabel.Height
                 Size: =21
                 Text: ="*"
@@ -3201,6 +3425,8 @@
 
             LBSkiltLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -3232,6 +3458,9 @@
 
             ErrorMessage44 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -3248,6 +3477,8 @@
 
             StarVisible44 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =LBSkiltLabel.Height
                 Size: =21
                 Text: ="*"
@@ -3276,6 +3507,8 @@
 
             KippLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -3307,6 +3540,9 @@
 
             ErrorMessage43 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -3323,6 +3559,8 @@
 
             StarVisible43 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =KippLabel.Height
                 Size: =21
                 Text: ="*"
@@ -3351,6 +3589,8 @@
 
             AnnetLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -3382,6 +3622,9 @@
 
             ErrorMessage39 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -3398,6 +3641,8 @@
 
             StarVisible39 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =AnnetLabel.Height
                 Size: =21
                 Text: ="*"
@@ -3426,6 +3671,8 @@
 
             ForsinkelserLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -3458,6 +3705,9 @@
 
             ErrorMessage42 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -3474,6 +3724,8 @@
 
             StarVisible42 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =ForsinkelserLabel.Height
                 Size: =21
                 Text: ="*"
@@ -3502,6 +3754,8 @@
 
             DriftLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
@@ -3534,6 +3788,9 @@
 
             ErrorMessage41 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
@@ -3550,6 +3807,8 @@
 
             StarVisible41 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =DriftLabel.Height
                 Size: =21
                 Text: ="*"
@@ -3572,6 +3831,8 @@
 
             MouseTraoLabel As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
                 Height: =48
                 Size: =21
                 Text: |-
