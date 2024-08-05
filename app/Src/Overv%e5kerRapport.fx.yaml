@@ -11,6 +11,7 @@ OvervåkerRapport As screen:
         ZIndex: =1
 
     HtmlText1_4 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Height: =154
         HtmlText: |-
             ="<div 
@@ -21,6 +22,7 @@ OvervåkerRapport As screen:
                     background-color:#;
                     box-shadow:0px 0px 20px -2px #ACB2B3;'>
                     </div>"
+        Size: =21
         Width: =612
         X: =28
         Y: =774
@@ -44,6 +46,7 @@ OvervåkerRapport As screen:
         ZIndex: =3
 
     HtmlText1_5 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Height: =154
         HtmlText: |-
             ="<div 
@@ -54,12 +57,14 @@ OvervåkerRapport As screen:
                     background-color:#;
                     box-shadow:0px 0px 20px -2px #ACB2B3;'>
                     </div>"
+        Size: =21
         Width: =612
         X: =25
         Y: =1020
         ZIndex: =4
 
     HtmlText1_1 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Height: =154
         HtmlText: |-
             ="<div 
@@ -70,12 +75,14 @@ OvervåkerRapport As screen:
                     background-color:#;
                     box-shadow:0px 0px 20px -2px #ACB2B3;'>
                     </div>"
+        Size: =21
         Width: =612
         X: =25
         Y: =336
         ZIndex: =5
 
     HtmlText1_2 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Height: =154
         HtmlText: |-
             ="<div 
@@ -86,12 +93,14 @@ OvervåkerRapport As screen:
                     background-color:#;
                     box-shadow:0px 0px 20px -2px #ACB2B3;'>
                     </div>"
+        Size: =21
         Width: =612
         X: =25
         Y: =477
         ZIndex: =6
 
     HtmlText1_3 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Height: =154
         HtmlText: |-
             ="<div 
@@ -102,12 +111,14 @@ OvervåkerRapport As screen:
                     background-color:#;
                     box-shadow:0px 0px 20px -2px #ACB2B3;'>
                     </div>"
+        Size: =21
         Width: =612
         X: =25
         Y: =620
         ZIndex: =7
 
     HtmlText1 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Height: =169
         HtmlText: |-
             ="<div 
@@ -118,6 +129,7 @@ OvervåkerRapport As screen:
                     background-color:#;
                     box-shadow:0px 0px 20px -2px #ACB2B3;'>
                     </div>"
+        Size: =21
         Width: =612
         X: =25
         Y: =180
@@ -309,6 +321,7 @@ OvervåkerRapport As screen:
         ZIndex: =27
 
         OvervåkerBackdropAndHTML As htmlViewer:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Height: =1136
             HtmlText: |-
                 ="<div style='
@@ -320,6 +333,7 @@ OvervåkerRapport As screen:
                 <p style='margin: auto auto 0 auto'>Sende e-post?</p>
                 <p style='margin: 0 auto 0 auto'>Send mail?</p>
                 </div>"
+            Size: =21
             Visible: =vPopUp
             Width: =637
             ZIndex: =23

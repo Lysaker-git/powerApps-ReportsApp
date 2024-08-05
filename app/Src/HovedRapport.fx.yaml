@@ -1106,6 +1106,7 @@
         ZIndex: =8
 
         HtmlText2_3 As htmlViewer:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Height: =1136
             HtmlText: |-
                 ="<div style='
@@ -1117,6 +1118,7 @@
                 <p style='margin: auto auto 0 auto'>Sende e-post?</p>
                 <p style='margin: 0 auto 0 auto'>Send mail?</p>
                 </div>"
+            Size: =21
             Visible: =vPopUpHoved
             Width: =637
             X: =3
