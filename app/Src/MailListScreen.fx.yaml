@@ -16,7 +16,7 @@
             Color: =RGBA(166, 166, 166, 1)
             Height: =50
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
+            OnSelect: =Set(editVisible, true);Set(userVar, ThisItem)
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
@@ -148,108 +148,135 @@
 
     Button7 As button:
         Height: =70
+        OnSelect: =Set(editVisible, true)
         Size: =24
         Text: ="Add a new person"
         Width: =640
         Y: =1066
         ZIndex: =5
 
-    Rectangle3 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(241, 244, 249, 1)
-        Height: =573
-        Width: =566
-        X: =39
-        Y: =387
-        ZIndex: =6
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =18
 
-    NameInputMails As text:
-        Default: ="Name"
-        Height: =70
-        Size: =21
-        Width: =503
-        X: =72
-        Y: =415
-        ZIndex: =7
+        Rectangle3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(241, 244, 249, 1)
+            Height: =573
+            Visible: =editVisible
+            Width: =566
+            X: =39
+            Y: =387
+            ZIndex: =6
 
-    MailinputMails As text:
-        Default: ="Mail"
-        Height: =70
-        Size: =21
-        Width: =503
-        X: =73
-        Y: =506
-        ZIndex: =8
+        NameInputMails As text:
+            Default: ="Enter Name"
+            Height: =70
+            Size: =21
+            Visible: =editVisible
+            Width: =399
+            X: =72
+            Y: =415
+            ZIndex: =7
 
-    Checkbox1 As checkbox:
-        Height: =85
-        Size: =21
-        Text: ="HA"
-        Width: =158
-        X: =73
-        Y: =590
-        ZIndex: =9
+        MailinputMails As text:
+            Default: ="Enter Mail"
+            Height: =70
+            Size: =21
+            Visible: =editVisible
+            Width: =503
+            X: =73
+            Y: =506
+            ZIndex: =8
 
-    Checkbox1_1 As checkbox:
-        Height: =85
-        Size: =21
-        Text: ="NC"
-        Width: =158
-        X: =241
-        Y: =590
-        ZIndex: =10
+        Checkbox1 As checkbox:
+            Height: =85
+            Size: =21
+            Text: ="HA"
+            Visible: =editVisible
+            Width: =158
+            X: =73
+            Y: =590
+            ZIndex: =9
 
-    Checkbox1_2 As checkbox:
-        Height: =85
-        Size: =21
-        Text: ="LPG"
-        Width: =158
-        X: =418
-        Y: =590
-        ZIndex: =11
+        Checkbox1_1 As checkbox:
+            Height: =85
+            Size: =21
+            Text: ="NC"
+            Visible: =editVisible
+            Width: =158
+            X: =241
+            Y: =590
+            ZIndex: =10
 
-    Checkbox1_3 As checkbox:
-        Height: =85
-        Size: =21
-        Text: ="HPG"
-        Width: =158
-        X: =73
-        Y: =792
-        ZIndex: =12
+        Checkbox1_2 As checkbox:
+            Height: =85
+            Size: =21
+            Text: ="LPG"
+            Visible: =editVisible
+            Width: =158
+            X: =418
+            Y: =590
+            ZIndex: =11
 
-    Checkbox1_4 As checkbox:
-        Height: =85
-        Size: =21
-        Text: ="Overvåker"
-        Width: =234
-        X: =338
-        Y: =693
-        ZIndex: =13
+        Checkbox1_3 As checkbox:
+            Height: =85
+            Size: =21
+            Text: ="HPG"
+            Visible: =editVisible
+            Width: =158
+            X: =73
+            Y: =792
+            ZIndex: =12
 
-    Checkbox1_5 As checkbox:
-        Height: =85
-        Size: =21
-        Text: ="Inngående"
-        Width: =234
-        X: =68
-        Y: =693
-        ZIndex: =14
+        Checkbox1_4 As checkbox:
+            Height: =85
+            Size: =21
+            Text: ="Overvåker"
+            Visible: =editVisible
+            Width: =234
+            X: =338
+            Y: =693
+            ZIndex: =13
 
-    Label5 As label:
-        Height: =58
-        Size: =14
-        Text: ="Text"
-        Width: =265
-        X: =73
-        Y: =887
-        ZIndex: =15
+        Checkbox1_5 As checkbox:
+            Height: =85
+            Size: =21
+            Text: ="Inngående"
+            Visible: =editVisible
+            Width: =234
+            X: =68
+            Y: =693
+            ZIndex: =14
 
-    Button8 As button:
-        Height: =70
-        Size: =24
-        Text: ="Save   "
-        Width: =225
-        X: =351
-        Y: =875
-        ZIndex: =16
+        Label5 As label:
+            Height: =58
+            Size: =14
+            Text: ="Text"
+            Visible: =editVisible
+            Width: =265
+            X: =73
+            Y: =887
+            ZIndex: =15
+
+        Button8 As button:
+            Height: =70
+            Size: =24
+            Text: ="Save   "
+            Visible: =editVisible
+            Width: =225
+            X: =351
+            Y: =866
+            ZIndex: =16
+
+        Icon8 As icon.CancelBadge:
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(editVisible, false)
+            Visible: =editVisible
+            X: =512
+            Y: =415
+            ZIndex: =17
 
