@@ -114,12 +114,16 @@
         "dataSources": {
           "hospitalDB": {
             "tableName": "{CA9A44A0-4E05-4F19-9F32-D94047D28B69}"
+          },
+          "RecipientsTable": {
+            "tableName": "{588A7C9D-608B-40A5-9608-91C1D72FC934}"
           }
         }
       }
     },
     "dataSources": [
-      "hospitalDB"
+      "hospitalDB",
+      "RecipientsTable"
     ],
     "dependencies": {},
     "dependents": [],

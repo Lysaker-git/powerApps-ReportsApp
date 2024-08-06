@@ -118,7 +118,7 @@
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "",
     "ManualOfflineProfileId": "",
-    "Name": "Maskinell-Rapport.msapp",
+    "Name": "Maskinell-Rapport",
     "OriginatingVersion": "1.324",
     "ParserErrorCount": 1,
     "ShowStatusBar": false
@@ -145,6 +145,7 @@
     "InngåendeRapport",
     "Screen1",
     "Screen2",
-    "HovedRapport"
+    "HovedRapport",
+    "Screen3"
   ]
 }
