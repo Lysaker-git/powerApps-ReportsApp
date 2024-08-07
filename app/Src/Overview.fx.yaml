@@ -19,7 +19,7 @@ Overview As screen:
                 style='
                     margin:10px;
                     width:560px;
-                    height:132px;
+                    height: 50px;
                     background-color:#;
                     box-shadow:0px 0px 20px -2px #ACB2B3;'>
                     </div>"
@@ -213,14 +213,14 @@ Overview As screen:
 
     HistorikkBtn As button:
         Fill: =HospitalBtn.Fill
-        Height: =132
+        Height: =67
         HoverFill: =RGBA(123, 193, 68, 1)
         Size: =24
         Text: ="Historikk"
         Visible: =If(Office365Users.MyProfile().DisplayName in ["Lysaker Robin"],true,false)
         Width: =560
         X: =40
-        Y: =954
+        Y: =952
         ZIndex: =15
 
     LogoApp As image:
@@ -251,4 +251,37 @@ Overview As screen:
         X: =339
         Y: =17
         ZIndex: =18
+
+    HistorikkBtn_1 As button:
+        Fill: =HospitalBtn.Fill
+        Height: =62
+        HoverFill: =RGBA(123, 193, 68, 1)
+        OnSelect: =Navigate(MailListScreen)
+        Size: =24
+        Text: ="Mail-Liste"
+        Visible: |
+            =If(
+                Or(
+                    "robin.lysaker@posten.no" in Office365Users.MyProfile().Mail,
+                    "jihad.eldor@posten.no" in Office365Users.MyProfile().Mail,
+                    "tom.inge.kvaernstuen@posten.no" in Office365Users.MyProfile().Mail,
+                    "abdullah.al.eboudi@posten.no" in Office365Users.MyProfile().Mail,
+                    "kristine.myrhagen@posten.no" in Office365Users.MyProfile().Mail
+                ),
+                true,
+                false
+            )
+        Width: =560
+        X: =40
+        Y: =1040
+        ZIndex: =19
+
+    Label8 As label:
+        Height: =185
+        Size: =21
+        Text: =Office365OutlookU
+        Width: =560
+        X: =28
+        Y: =17
+        ZIndex: =20
 
