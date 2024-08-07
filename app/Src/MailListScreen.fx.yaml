@@ -251,7 +251,25 @@
             ZIndex: =8
 
         HACheckMails As checkbox:
-            Default: =If(userVar = "", false, LookUp(RecipientsTable,ID = userVar,HARapport))
+            Default: |-
+                =If(
+                    userVar = "",
+                    false,
+                    If(
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            HARapport
+                        ) = "False",
+                        false,
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            HARapport
+                        ) = "True",
+                        true
+                    )
+                )
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =85
             Size: =21
@@ -263,7 +281,25 @@
             ZIndex: =9
 
         NCCheckMails As checkbox:
-            Default: =If(userVar = "", false, LookUp(RecipientsTable,ID = userVar,NCRapport))
+            Default: |-
+                =If(
+                    userVar = "",
+                    false,
+                    If(
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            NCRapport
+                        ) = "False",
+                        false,
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            NCRapport
+                        ) = "True",
+                        true
+                    )
+                )
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =85
             Size: =21
@@ -275,7 +311,25 @@
             ZIndex: =10
 
         LPGCheckMails As checkbox:
-            Default: =If(userVar = "", false, LookUp(RecipientsTable,ID = userVar,LPGRapport))
+            Default: |-
+                =If(
+                    userVar = "",
+                    false,
+                    If(
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            LPGRapport
+                        ) = "False",
+                        false,
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            LPGRapport
+                        ) = "True",
+                        true
+                    )
+                )
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =85
             Size: =21
@@ -287,7 +341,25 @@
             ZIndex: =11
 
         HPGCheckMails As checkbox:
-            Default: =If(userVar = "", false, LookUp(RecipientsTable,ID = userVar,HPGRapport))
+            Default: |-
+                =If(
+                    userVar = "",
+                    false,
+                    If(
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            HPGRapport
+                        ) = "False",
+                        false,
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            HPGRapport
+                        ) = "True",
+                        true
+                    )
+                )
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =85
             Size: =21
@@ -299,7 +371,25 @@
             ZIndex: =12
 
         OVCheckMails As checkbox:
-            Default: =If(userVar = "", false, LookUp(RecipientsTable,ID = userVar,OVRapport))
+            Default: |-
+                =If(
+                    userVar = "",
+                    false,
+                    If(
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            OVRapport
+                        ) = "False",
+                        false,
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            OVRapport
+                        ) = "True",
+                        true
+                    )
+                )
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =85
             Size: =21
@@ -311,7 +401,25 @@
             ZIndex: =13
 
         InnCheckMails As checkbox:
-            Default: =If(userVar = "", false, LookUp(RecipientsTable,ID = userVar,InnRaport))
+            Default: |-
+                =If(
+                    userVar = "",
+                    false,
+                    If(
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            InnRaport
+                        ) = "False",
+                        false,
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            InnRaport
+                        ) = "True",
+                        true
+                    )
+                )
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =85
             Size: =21
