@@ -108,7 +108,7 @@
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =760
+        TemplateSize: =158
         Width: =Parent.Width
         Y: =TextSearchBox1.Y + TextSearchBox1.Height
         ZIndex: =9
@@ -243,4 +243,37 @@
             X: =167
             Y: =318
             ZIndex: =9
+
+    Label10 As label:
+        Height: =749
+        Size: =21
+        Text: =ConcatenatedEmails
+        Width: =560
+        X: =40
+        Y: =186
+        ZIndex: =10
+
+    Button10 As button:
+        Height: =70
+        OnSelect: |
+            =// Step 2: Concatenate the emails
+            Set(
+                ConcatenatedEmails,
+                Concat(
+                    ClearCollect(
+                        EmailCollection,
+                        Filter(
+                            RecipientsTable,
+                            OVRapport = "True"
+                        ).Mail
+                    ),
+                    Mail & ";"
+                )
+            );
+        Size: =24
+        Text: ="Button"
+        Width: =280
+        X: =180
+        Y: =1001
+        ZIndex: =11
 

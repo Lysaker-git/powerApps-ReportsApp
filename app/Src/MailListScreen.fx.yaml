@@ -228,7 +228,7 @@
             ZIndex: =6
 
         NameInputMails As text:
-            Default: =If(userVar = "", "Enter Name", LookUp(RecipientsTable,ID = userVar,Name))
+            Default: =If(Or(userVar = "", IsBlank(userVar)), "Enter Name", LookUp(RecipientsTable,ID = userVar,Name))
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =70
             Size: =21
@@ -239,11 +239,11 @@
             ZIndex: =7
 
         MailinputMails As text:
-            Default: =If(userVar = "", "Enter Name", LookUp(RecipientsTable,ID = userVar,Mail))
+            Default: =If(Or(userVar = "", IsBlank(userVar)), "Enter Name", LookUp(RecipientsTable,ID = userVar,Mail))
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =70
             Size: =21
-            Tooltip: =If(userVar = "", "Enter Name", LookUp(RecipientsTable,ID = userVar,Mail))
+            Tooltip: =If(Or(userVar = "", IsBlank(userVar)), "Enter Name", LookUp(RecipientsTable,ID = userVar,Mail))
             Visible: =editVisible
             Width: =503
             X: =73
@@ -251,25 +251,7 @@
             ZIndex: =8
 
         HACheckMails As checkbox:
-            Default: |-
-                =If(
-                    userVar = "",
-                    false,
-                    If(
-                        LookUp(
-                            RecipientsTable,
-                            ID = userVar,
-                            HARapport
-                        ) = "False",
-                        false,
-                        LookUp(
-                            RecipientsTable,
-                            ID = userVar,
-                            HARapport
-                        ) = "True",
-                        true
-                    )
-                )
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,HARapport)="False", false ,LookUp(RecipientsTable,ID=userVar,HARapport)="True", true ))
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =85
             Size: =21
@@ -281,25 +263,7 @@
             ZIndex: =9
 
         NCCheckMails As checkbox:
-            Default: |-
-                =If(
-                    userVar = "",
-                    false,
-                    If(
-                        LookUp(
-                            RecipientsTable,
-                            ID = userVar,
-                            NCRapport
-                        ) = "False",
-                        false,
-                        LookUp(
-                            RecipientsTable,
-                            ID = userVar,
-                            NCRapport
-                        ) = "True",
-                        true
-                    )
-                )
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,NCRapport)="False", false ,LookUp(RecipientsTable,ID=userVar,NCRapport)="True", true ))
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =85
             Size: =21
@@ -341,25 +305,7 @@
             ZIndex: =11
 
         HPGCheckMails As checkbox:
-            Default: |-
-                =If(
-                    userVar = "",
-                    false,
-                    If(
-                        LookUp(
-                            RecipientsTable,
-                            ID = userVar,
-                            HPGRapport
-                        ) = "False",
-                        false,
-                        LookUp(
-                            RecipientsTable,
-                            ID = userVar,
-                            HPGRapport
-                        ) = "True",
-                        true
-                    )
-                )
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,HPGRapport)="False", false ,LookUp(RecipientsTable,ID=userVar,HPGRapport)="True", true ))
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =85
             Size: =21
@@ -371,25 +317,7 @@
             ZIndex: =12
 
         OVCheckMails As checkbox:
-            Default: |-
-                =If(
-                    userVar = "",
-                    false,
-                    If(
-                        LookUp(
-                            RecipientsTable,
-                            ID = userVar,
-                            OVRapport
-                        ) = "False",
-                        false,
-                        LookUp(
-                            RecipientsTable,
-                            ID = userVar,
-                            OVRapport
-                        ) = "True",
-                        true
-                    )
-                )
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,OVRapport)="False", false ,LookUp(RecipientsTable,ID=userVar,OVRapport)="True", true ))
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =85
             Size: =21
@@ -401,25 +329,7 @@
             ZIndex: =13
 
         InnCheckMails As checkbox:
-            Default: |-
-                =If(
-                    userVar = "",
-                    false,
-                    If(
-                        LookUp(
-                            RecipientsTable,
-                            ID = userVar,
-                            InnRaport
-                        ) = "False",
-                        false,
-                        LookUp(
-                            RecipientsTable,
-                            ID = userVar,
-                            InnRaport
-                        ) = "True",
-                        true
-                    )
-                )
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,InnRaport)="False", false ,LookUp(RecipientsTable,ID=userVar,InnRaport)="True", true ))
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =85
             Size: =21
@@ -435,7 +345,7 @@
             Color: =RGBA(167, 182, 203, 1)
             Height: =38
             Size: =14
-            Text: =If(userVar = "", newID , LookUp(RecipientsTable,ID = userVar,ID))
+            Text: =If(Or(userVar = "", IsBlank(userVar)), newID , LookUp(RecipientsTable,ID = userVar,ID))
             Visible: =editVisible
             Width: =503
             X: =73

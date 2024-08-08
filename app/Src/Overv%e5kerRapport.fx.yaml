@@ -482,12 +482,26 @@ OvervåkerRapport As screen:
                     FullBodySupervisor,
                     $"{htmlStart}{supervisorHeader}{htmlAfterHeaderBeforeContent}{supervisorMailBody}{htmlAfterContentSomethingStart}{htmlAfterContentSomethingEnd}"
                 );
+                Set(
+                    RecipientsOvervaker,
+                    Concat(
+                        ClearCollect(
+                            EmailCollection,
+                            Filter(
+                                RecipientsTable,
+                                OVRapport = "True"
+                            ).Mail
+                        ),
+                        Mail & ";"
+                    )
+                );
                 Office365Outlook.SendEmailV2(
                     //TestRecipients,
-                    Concatenate(
-                        RecipientsLedere,
-                        RecipientsLedereEx
-                    ),
+                    RecipientsOvervaker,
+                    //Concatenate(
+                        //RecipientsLedere,
+                        //RecipientsLedereEx
+                    //),
                     "Overvåker Overlevering",
                     FullBodySupervisor,
                     {

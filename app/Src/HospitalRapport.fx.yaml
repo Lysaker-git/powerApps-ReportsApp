@@ -423,9 +423,22 @@
                     {htmlAfterContentSomethingEnd}
                     "
                 );
+                Set(
+                    RecipientsHA,
+                    Concat(
+                        ClearCollect(
+                            EmailCollection,
+                            Filter(
+                                RecipientsTable,
+                                HARapport = "True"
+                            ).Mail
+                        ),
+                        Mail & ";"
+                    )
+                );
                 Office365Outlook.SendEmailV2(
                     //TestRecipients,
-                    HARecipients,
+                    RecipientsHA,
                     "Hospital Overlevering",
                     FullBodyHostpial,
                     {

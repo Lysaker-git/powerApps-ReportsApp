@@ -4474,9 +4474,22 @@
                     {htmlAfterContentSomethingEnd}
                     "
                 );
+                Set(
+                    InngåendeRecipients,
+                    Concat(
+                        ClearCollect(
+                            EmailCollection,
+                            Filter(
+                                RecipientsTable,
+                                InnRaport = "True"
+                            ).Mail
+                        ),
+                        Mail & ";"
+                    )
+                );
                 Office365Outlook.SendEmailV2(
                     //TestRecipients,
-                    RecipientsInngående,
+                    InngåendeRecipients,
                     "Overlevering",
                     arrivalsBody,
                     {
