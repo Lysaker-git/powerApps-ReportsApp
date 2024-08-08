@@ -399,7 +399,6 @@
                         }
                     )
                 );
-                Refresh(RecipientsTable);
                 Set(
                     loader,
                     false
@@ -407,7 +406,8 @@
                 Set(
                     editVisible,
                     false
-                )
+                );
+                Refresh(RecipientsTable);
             Size: =24
             Text: ="Save   "
             Visible: =editVisible
