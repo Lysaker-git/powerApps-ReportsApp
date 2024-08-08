@@ -285,12 +285,3 @@ Overview As screen:
         Y: =1040
         ZIndex: =19
 
-    Label8 As label:
-        Height: =185
-        Size: =21
-        Text: =Office365OutlookU
-        Width: =560
-        X: =28
-        Y: =17
-        ZIndex: =20
-
