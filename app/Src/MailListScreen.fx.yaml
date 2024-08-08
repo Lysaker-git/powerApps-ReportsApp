@@ -3,7 +3,7 @@
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =894
-        Items: =Search(RecipientsTable,FilterInputMailList.Text,Name)
+        Items: =Sort(Search(RecipientsTable,FilterInputMailList.Text,Name),Name,SortOrder.Ascending)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
