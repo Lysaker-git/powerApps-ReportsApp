@@ -36,6 +36,17 @@
                 Y: =19
                 ZIndex: =2
 
+            Radio1 As radio:
+                Align: =Align.Center
+                Height: =93
+                Items: =["Dag", "Kveld", "Natt"]
+                Layout: =Layout.Horizontal
+                Size: =21
+                Width: =496
+                X: =66
+                Y: =99
+                ZIndex: =3
+
         DataCard4 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
@@ -1030,7 +1041,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =500
+            Height: =600  
             Width: =640
             X: =0
             Y: =26
@@ -1070,7 +1081,7 @@
                     ="Avvik: (Lavt lastet)"
                 Width: =560
                 X: =34
-                Y: =292
+                Y: =402
                 ZIndex: =7
 
             AvikCheckContent As text:
@@ -1080,8 +1091,17 @@
                 Size: =21
                 Width: =560
                 X: =34
-                Y: =362
+                Y: =472
                 ZIndex: =8
+
+            SikerhetsnettCheck_1 As checkbox:
+                Height: =85
+                Size: =21
+                Text: ="Er PDA på plass? "
+                Width: =450
+                X: =34
+                Y: =277
+                ZIndex: =9
 
     HovedButton As button:
         Fill: =RGBA(0, 47, 25, 1)
