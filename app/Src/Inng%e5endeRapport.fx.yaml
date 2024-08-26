@@ -4205,7 +4205,23 @@
                 );
                 /*This will clear the ArrivalFinalCollection Collection*/
                 Clear(ArrivalFinalCollection);
-                /*Loops through the ArrivalSortCollection collection and appends Title, Content and if present Checkbox*/
+                
+                
+                /*
+                 * Function: Process ArrivalSortCollection
+                 * Description: This function iterates through the ArrivalSortCollection and performs the following actions:
+                 *              - If the Content is not empty and the Checkbox is not false, it collects the Title and Content into ArrivalFinalCollection.
+                 *              - If the Content is not empty or the Checkbox is true, it collects the Title, Content, and a conditional Checkbox value ("OK" if true, empty otherwise) into ArrivalFinalCollection.
+                 *              - Updates varCollection where var is false to true if it has included Checkbox values.
+                 * Parameters:
+                 *   - ArrivalSortCollection: The collection to iterate through.
+                 *   - ThisRecord: Represents the current record in the iteration.
+                 *   - ArrivalFinalCollection: The collection to store the processed records.
+                 *   - varCollection: The collection to update based on the condition.
+                 * Returns: 
+                 *   - Collects records into ArrivalFinalCollection based on the specified conditions.
+                 *   - Updates varCollection based on the specified condition.
+                 */
                 ForAll(
                     ArrivalSortCollection,
                     If(
@@ -4237,13 +4253,15 @@
                             }
                         );
                         /*Updates if its used Checkboxes during the report*/
-                UpdateIf(
+                    UpdateIf(
                             varCollection,
                             var = false,
                             {var: true}
                         );
                     )
                 );
+                
+                
                 ForAll(
                     ArrivalFinalCollection,
                     If(
@@ -4282,6 +4300,8 @@
                         )
                     )
                 );
+                
+                
                 /*Checking if there is input on ArrivalFinalCollection Collection - and makes the arrivalsBodyHTML*/
                 If(
                     Not(IsEmpty(ArrivalFinalCollection)),//IF ArrivalFinalCollection IS NOT empty then..
@@ -4349,6 +4369,8 @@
                         ""
                     )
                 );
+                
+                
                 If(
                     IsEmpty(OverliggItems),//If OverliggItems IS empty then...
                     Set(
@@ -4402,6 +4424,8 @@
                         )
                     )
                 );
+                
+                
                 If(
                     IsEmpty(ManglerBilerCollection),// IF ManglerBilderBollection IS empty then..
                     Set(
@@ -4450,6 +4474,8 @@
                         )
                     )
                 );
+                
+                
                 //Header of the mail
                 Set(
                     arrivalsHeader,
@@ -4461,6 +4487,8 @@
                         </tr>
                     "
                 );
+                
+                
                 Set(
                     arrivalsBody,
                     $"
@@ -4474,6 +4502,8 @@
                     {htmlAfterContentSomethingEnd}
                     "
                 );
+                
+                
                 Set(
                     InngåendeRecipients,
                     Concat(
@@ -4487,6 +4517,8 @@
                         Mail & ";"
                     )
                 );
+                
+                
                 Office365Outlook.SendEmailV2(
                     //TestRecipients,
                     InngåendeRecipients,

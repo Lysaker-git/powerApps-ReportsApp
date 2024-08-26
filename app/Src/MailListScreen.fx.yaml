@@ -13,7 +13,10 @@
 
         NextArrow3 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 0, 0, 1)
             Color: =RGBA(26, 26, 26, 1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledColor: =RGBA(119, 119, 119, 1)
             Height: =50
             Icon: =Icon.ChevronRight
             OnSelect: =Set(loader, true);Set(userVar, ThisItem.ID); Set(buttonVarMails, true); Set(startTimerVar, false); Set(startTimerVar, true)
@@ -28,6 +31,7 @@
             ZIndex: =4
 
         Separator4 As rectangle:
+            BorderColor: =RGBA(0, 0, 255, 1)
             Fill: =RGBA(255, 255, 255, 1)
             Height: =8
             OnSelect: =Select(Parent)
@@ -355,7 +359,7 @@
         Button8 As button:
             DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
             Height: =70
-            OnSelect: |-
+            OnSelect: |
                 =Set(
                     buttonVarMails,
                     false
@@ -364,39 +368,63 @@
                     loader,
                     true
                 );
+                /*
+                 * Function: Validate and Patch Email Data
+                 * Description: This function validates the email format of the input, and based on the user variable,
+                 *              either creates a new record or updates an existing record in the RecipientsTable.
+                 * Parameters:
+                 *   - MailinputMails.Text: The email input to be validated.
+                 *   - userVar: A variable to determine if the record is new or existing.
+                 *   - NameInputMails.Text: The name input to be patched.
+                 *   - HACheckMails.Value, NCCheckMails.Value, LPGCheckMails.Value, InnCheckMails.Value, OVRapport.Value, HPGRapport.Value: Various report check values to be patched.
+                 *   - newID: The ID for the new record.
+                 * Returns: 
+                 *   - Notifies the user if the email is invalid.
+                 *   - Patches the RecipientsTable with the provided data if the email is valid.
+                 */
                 If(
-                    userVar = "",
-                    Patch(
-                        RecipientsTable,
-                        Defaults(RecipientsTable),
-                        {
-                            Name: NameInputMails.Text,
-                            Mail: MailinputMails.Text,
-                            HARapport: HACheckMails.Value,
-                            NCRapport: NCCheckMails.Value,
-                            LPGRapport: LPGCheckMails.Value,
-                            InnRaport: InnCheckMails.Value,
-                            OVRapport: OVCheckMails.Value,
-                            HPGRapport: HPGCheckMails.Value,
-                            ID: newID
-                        }
+                    IsMatch(
+                        MailinputMails.Text,
+                        "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                     ),
-                    Patch(
-                        RecipientsTable,
-                        LookUp(
+                    If(
+                        userVar = "",
+                        Patch(
                             RecipientsTable,
-                            ID = userVar
+                            Defaults(RecipientsTable),
+                            {
+                                Name: NameInputMails.Text,
+                                Mail: MailinputMails.Text,
+                                HARapport: HACheckMails.Value,
+                                NCRapport: NCCheckMails.Value,
+                                LPGRapport: LPGCheckMails.Value,
+                                InnRaport: InnCheckMails.Value,
+                                OVRapport: OVCheckMails.Value,
+                                HPGRapport: HPGCheckMails.Value,
+                                ID: newID
+                            }
                         ),
-                        {
-                            Name: NameInputMails.Text,
-                            Mail: MailinputMails.Text,
-                            HARapport: HACheckMails.Value,
-                            NCRapport: NCCheckMails.Value,
-                            LPGRapport: LPGCheckMails.Value,
-                            InnRaport: InnCheckMails.Value,
-                            OVRapport: OVCheckMails.Value,
-                            HPGRapport: HPGCheckMails.Value
-                        }
+                        Patch(
+                            RecipientsTable,
+                            LookUp(
+                                RecipientsTable,
+                                ID = userVar
+                            ),
+                            {
+                                Name: NameInputMails.Text,
+                                Mail: MailinputMails.Text,
+                                HARapport: HACheckMails.Value,
+                                NCRapport: NCCheckMails.Value,
+                                LPGRapport: LPGCheckMails.Value,
+                                InnRaport: InnCheckMails.Value,
+                                OVRapport: OVCheckMails.Value,
+                                HPGRapport: HPGCheckMails.Value
+                            }
+                        )
+                    ),
+                    Notify(
+                        "Invalid E-mail",
+                        NotificationType.Error
                     )
                 );
                 Set(
