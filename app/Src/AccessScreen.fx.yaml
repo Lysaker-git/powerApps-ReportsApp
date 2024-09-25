@@ -1,0 +1,51 @@
+"AccessScreen As screen.'phoneLayout_Success_ver3.0'":
+
+    Image2_2 As image:
+        Height: =1136
+        Image: ='Anders+Nord_Post+Norway_Brand+Identity_17'
+        ImagePosition: =ImagePosition.Fill
+        Transparency: =0.7
+        Width: =640
+        ZIndex: =1
+
+    LblSuccessMsg1_1 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        FontWeight: =FontWeight.Bold
+        Size: =40
+        Text: ="No Access... "
+        Width: =Parent.Width * 0.75
+        X: =80
+        Y: =529
+        ZIndex: =2
+
+    LblSuccessMsg1_2 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        FontWeight: =FontWeight.Bold
+        Size: =40
+        Text: ="No Access... "
+        Visible: =If(IsMatch(LblSuccessMsg1_3.Text, "032916",MatchOptions.Contains & MatchOptions.IgnoreCase),true,false)
+        Width: =Parent.Width * 0.75
+        X: =80
+        Y: =384
+        ZIndex: =3
+
+    LblSuccessMsg1_3 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        FontWeight: =FontWeight.Bold
+        Size: =40
+        Text: =Office365Users.MyProfileV2().department
+        Width: =Parent.Width * 0.75
+        X: =80
+        Y: =74
+        ZIndex: =4
+
+    Icon2 As icon.BackArrow:
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(ScreenTransition.CoverRight)
+        X: =520
+        Y: =48
+        ZIndex: =5
+
