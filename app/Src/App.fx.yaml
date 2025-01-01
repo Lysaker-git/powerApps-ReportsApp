@@ -26,7 +26,7 @@ App As appinfo:
         Tid = TimeLabel.Text;
         Navn = Office365Users.MyProfile().DisplayName;
         RecipientsLedere = "
-        jihad.eldor@posten.no;
+        mohammad.azzam@posten.no;
         Omar.Njie@posten.no; 
         nighat.ali@posten.no; 
         thomas.svaeren@bring.com; 
@@ -75,7 +75,7 @@ App As appinfo:
         trafikk.nord@bring.com; 
         trafikk.sorvest@bring.com; 
         Baris.Ekmekci@posten.no; 
-        jihad.eldor@posten.no; 
+        mohammad.azzam@posten.no; 
         Ronny.Engebretsen@posten.no;
         zulifqar.haider@posten.no; 
         mohammad.hanif@posten.no; 
