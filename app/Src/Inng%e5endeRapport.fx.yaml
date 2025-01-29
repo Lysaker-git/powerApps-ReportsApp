@@ -107,10 +107,10 @@
                 Height: =140
                 Mode: =TextMode.MultiLine
                 PaddingLeft: =5
-                RadiusBottomLeft: =PåLagerContent.RadiusBottomLeft
-                RadiusBottomRight: =PåLagerContent.RadiusBottomRight
-                RadiusTopLeft: =PåLagerContent.RadiusTopLeft
-                RadiusTopRight: =PåLagerContent.RadiusTopRight
+                RadiusBottomLeft: =PåLagerContentPallerPri.RadiusBottomLeft
+                RadiusBottomRight: =PåLagerContentPallerPri.RadiusBottomRight
+                RadiusTopLeft: =PåLagerContentPallerPri.RadiusTopLeft
+                RadiusTopRight: =PåLagerContentPallerPri.RadiusTopRight
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -187,10 +187,10 @@
                 Height: =140
                 Mode: =TextMode.MultiLine
                 PaddingLeft: =5
-                RadiusBottomLeft: =PåLagerContent.RadiusBottomLeft
-                RadiusBottomRight: =PåLagerContent.RadiusBottomRight
-                RadiusTopLeft: =PåLagerContent.RadiusTopLeft
-                RadiusTopRight: =PåLagerContent.RadiusTopRight
+                RadiusBottomLeft: =PåLagerContentPallerPri.RadiusBottomLeft
+                RadiusBottomRight: =PåLagerContentPallerPri.RadiusBottomRight
+                RadiusTopLeft: =PåLagerContentPallerPri.RadiusTopLeft
+                RadiusTopRight: =PåLagerContentPallerPri.RadiusTopRight
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -272,7 +272,7 @@
             Height: =165
             MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, LosseGen)
             Required: =false
-            Update: =LosseGenContent.Text
+            Update: =LosseGenContentBur.Text
             Visible: =If(showFields=2||showFields=-1,true,false)
             Width: =640
             X: =0
@@ -293,7 +293,7 @@
                 Y: =10
                 ZIndex: =1
 
-            LosseGenContent As text:
+            LosseGenContentBur As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -301,13 +301,13 @@
                 Height: =70
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
-                RadiusBottomLeft: =PåLagerContent.RadiusBottomLeft
-                RadiusBottomRight: =PåLagerContent.RadiusBottomRight
-                RadiusTopLeft: =PåLagerContent.RadiusTopLeft
-                RadiusTopRight: =PåLagerContent.RadiusTopRight
+                RadiusBottomLeft: =PåLagerContentPallerPri.RadiusBottomLeft
+                RadiusBottomRight: =PåLagerContentPallerPri.RadiusBottomRight
+                RadiusTopLeft: =PåLagerContentPallerPri.RadiusTopLeft
+                RadiusTopRight: =PåLagerContentPallerPri.RadiusTopRight
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =278
                 X: =30
                 Y: =LosseGenLabel.Y + LosseGenLabel.Height + 5
                 ZIndex: =2
@@ -328,7 +328,7 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =LosseGenContent.Y + LosseGenContent.Height
+                Y: =LosseGenContentBur.Y + LosseGenContentBur.Height
                 ZIndex: =3
 
             StarVisible5 As label:
@@ -343,6 +343,25 @@
                 Wrap: =false
                 Y: =LosseGenLabel.Y
                 ZIndex: =4
+
+            LosseGenContentPaller As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =PåLagerContentPallerPri.RadiusBottomLeft
+                RadiusBottomRight: =PåLagerContentPallerPri.RadiusBottomRight
+                RadiusTopLeft: =PåLagerContentPallerPri.RadiusTopLeft
+                RadiusTopRight: =PåLagerContentPallerPri.RadiusTopRight
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =278
+                X: =332
+                Y: =63
+                ZIndex: =5
 
         LossDetContainer As typedDataCard.blankCard:
             BorderStyle: =BorderStyle.Solid
@@ -971,14 +990,14 @@
                 Y: =28
                 ZIndex: =14
 
-                PåLagerContent_4 As text:
+                PåLagerContentSørPallerPri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
                     Format: =TextFormat.Number
                     Height: =70
-                    MaxLength: =Parent.MaxLength
+                    MaxLength: =500
                     PaddingLeft: =5
                     RadiusBottomLeft: =10
                     RadiusBottomRight: =10
@@ -991,14 +1010,14 @@
                     Y: =82
                     ZIndex: =6
 
-                PåLagerContent_7 As text:
+                PåLagerContentSørBurPri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
                     Format: =TextFormat.Number
                     Height: =70
-                    MaxLength: =Parent.MaxLength
+                    MaxLength: =500
                     PaddingLeft: =5
                     RadiusBottomLeft: =10
                     RadiusBottomRight: =10
@@ -1035,14 +1054,14 @@
                     Y: =34
                     ZIndex: =9
 
-                PåLagerContent_5 As text:
+                PåLagerContentSørPallerUpri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
                     Format: =TextFormat.Number
                     Height: =70
-                    MaxLength: =Parent.MaxLength
+                    MaxLength: =500
                     PaddingLeft: =5
                     RadiusBottomLeft: =10
                     RadiusBottomRight: =10
@@ -1055,14 +1074,14 @@
                     Y: =170
                     ZIndex: =10
 
-                PåLagerContent_6 As text:
+                PåLagerContentSørBurUpri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
                     Format: =TextFormat.Number
                     Height: =70
-                    MaxLength: =Parent.MaxLength
+                    MaxLength: =500
                     PaddingLeft: =5
                     RadiusBottomLeft: =10
                     RadiusBottomRight: =10
@@ -1178,6 +1197,139 @@
                 Wrap: =false
                 Y: =B3NordLabel.Y
                 ZIndex: =4
+
+            "'Bur/paller Group_2' As group":
+                Height: =5
+                Width: =5
+                X: =-105
+                Y: =-2
+                ZIndex: =13
+
+                PåLagerContentNordPallerPri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =162
+                    X: =432
+                    Y: =58
+                    ZIndex: =5
+
+                PåLagerContentNordBurPri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =142
+                    X: =250
+                    Y: =58
+                    ZIndex: =6
+
+                PåLagerLabel_10 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =48
+                    Size: =21
+                    Text: |-
+                        ="Bur:"
+                    Width: =128
+                    Wrap: =false
+                    X: =250
+                    Y: =10
+                    ZIndex: =7
+
+                PåLagerLabel_9 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =48
+                    Size: =21
+                    Text: |-
+                        ="Paller:"
+                    Width: =162
+                    Wrap: =false
+                    X: =432
+                    Y: =10
+                    ZIndex: =8
+
+                PåLagerContentNordPallerUpri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =162
+                    X: =432
+                    Y: =146
+                    ZIndex: =9
+
+                PåLagerContentNordBurUpri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =142
+                    X: =251
+                    Y: =146
+                    ZIndex: =10
+
+                PåLagerLabel_11 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =59
+                    Size: =21
+                    Text: ="Pri"
+                    Width: =66
+                    Wrap: =false
+                    X: =145
+                    Y: =63
+                    ZIndex: =11
+
+                PåLagerLabel_12 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =59
+                    Size: =21
+                    Text: ="Upri"
+                    Width: =77
+                    Wrap: =false
+                    X: =145
+                    Y: =151
+                    ZIndex: =12
 
         OverliggContainer As typedDataCard.blankCard:
             BorderStyle: =BorderStyle.Solid
@@ -1830,7 +1982,7 @@
             Height: =252
             MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, PåLager)
             Required: =false
-            Update: =PåLagerContent.Text
+            Update: =PåLagerContentPallerPri.Text
             Width: =640
             X: =0
             Y: =23
@@ -1865,7 +2017,7 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =PåLagerContent.Y + PåLagerContent.Height
+                Y: =PåLagerContentPallerPri.Y + PåLagerContentPallerPri.Height
                 ZIndex: =3
 
             StarVisible29 As label:
@@ -1888,7 +2040,7 @@
                 Y: =40
                 ZIndex: =14
 
-                PåLagerContent As text:
+                PåLagerContentPallerPri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -1908,7 +2060,7 @@
                     Y: =60
                     ZIndex: =2
 
-                PåLagerContent_1 As text:
+                PåLagerContentBurPri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -1954,7 +2106,7 @@
                     Y: =12
                     ZIndex: =7
 
-                PåLagerContent_2 As text:
+                PåLagerContentPallerUpri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -1974,7 +2126,7 @@
                     Y: =148
                     ZIndex: =8
 
-                PåLagerContent_3 As text:
+                PåLagerContentBurUpri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -2343,10 +2495,10 @@
                 Height: =70
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
-                RadiusBottomLeft: =PåLagerContent.RadiusBottomLeft
-                RadiusBottomRight: =PåLagerContent.RadiusBottomRight
-                RadiusTopLeft: =PåLagerContent.RadiusTopLeft
-                RadiusTopRight: =PåLagerContent.RadiusTopRight
+                RadiusBottomLeft: =PåLagerContentPallerPri.RadiusBottomLeft
+                RadiusBottomRight: =PåLagerContentPallerPri.RadiusBottomRight
+                RadiusTopLeft: =PåLagerContentPallerPri.RadiusTopLeft
+                RadiusTopRight: =PåLagerContentPallerPri.RadiusTopRight
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 260
@@ -4237,7 +4389,7 @@
                             " ",
                             LosseGenLabel.Text
                         ),
-                        Content: LosseGenContent.Text
+                        Content: LosseGenContentBur.Text
                     },
                     {
                         Title: Concatenate(
@@ -4308,32 +4460,8 @@
                         Content: LosseDetWasteContent.Text
                     },
                     {
-                        Title: B3SørLabel.Text,
-                        Content: B3SørContent.Text
-                    },
-                    {
-                        Title: B3NordLabel.Text,
-                        Content: B3NordContent.Text
-                    },
-                    {
-                        Title: GjenståendeButton.Text,
-                        Content: Concatenate(
-                            GjenståendePallLabelB2.Text,
-                            ": ",
-                            GjenståendePallContent.Text,
-                            " - ",
-                            GjenståendePallLabelB3.Text,
-                            ": ",
-                            GjenståendePallContentB3.Text
-                        )
-                    },
-                    {
                         Title: AnkomstLabel.Text,
                         Content: AnkomstContent.Text
-                    },
-                    {
-                        Title: PåLagerLabel.Text,
-                        Content: PåLagerContent.Text
                     },
                     {
                         Title: OpplastetByggLabel.Text,

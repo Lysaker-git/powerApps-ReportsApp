@@ -5,7 +5,7 @@
       "DataflowAnalysisEnabled": false,
       "DataflowAnalysisFlagStateToggledByUser": false
     },
-    "DocVersion": "1.343",
+    "DocVersion": "1.345",
     "MinVersionToLoad": "1.331",
     "MSAppStructureVersion": "2.0"
   },
@@ -33,6 +33,7 @@
       "disablebehaviorreturntypecheck": false,
       "disablecdsfileandlargeimage": false,
       "disabledeferloadingunusedscreenswithstartscreen": false,
+      "disablefallbacktopayamlv2": false,
       "disableloadcomponentdefinitionsondemand": false,
       "disableruntimepolicies": false,
       "dynamicschema": false,
@@ -70,7 +71,6 @@
       "improvedtabstopbehavior": true,
       "isemptyrequirestableargument": true,
       "keeprecentscreensloaded": false,
-      "legacyformulabar": false,
       "longlivingcache": false,
       "mobilenativerendering": false,
       "nativecdsexperimental": true,
@@ -107,7 +107,8 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 6,
+    "BindingErrorCount": 104,
+    "ConnectionString": "",
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -121,7 +122,6 @@
     "EnableInstrumentation": false,
     "FileID": "583a509c-bc27-4dbc-8754-4bca92022b38",
     "Id": "5fc688ba-08e6-4331-8974-4e630be3c90a",
-    "InstrumentationKey": "",
     "LocalDatabaseReferences": "",
     "ManualOfflineProfileId": "",
     "Name": "Maskinell-Rapport",

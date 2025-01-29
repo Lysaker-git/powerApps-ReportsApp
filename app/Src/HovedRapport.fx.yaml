@@ -1177,7 +1177,7 @@
                             " ",
                             LosseGenLabel.Text
                         ),
-                        Content: LosseGenContent.Text
+                        Content: LosseGenContentBur.Text
                     },
                     {
                         Title: Concatenate(
@@ -1273,7 +1273,7 @@
                     },
                     {
                         Title: PåLagerLabel.Text,
-                        Content: PåLagerContent.Text
+                        Content: PåLagerContentPallerPri.Text
                     },
                     {
                         Title: OpplastetByggLabel.Text,
