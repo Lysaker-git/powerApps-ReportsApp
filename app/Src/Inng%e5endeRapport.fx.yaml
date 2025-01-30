@@ -1198,6 +1198,16 @@
                 Y: =B3NordLabel.Y
                 ZIndex: =4
 
+            B3NordSørContentBur As label:
+                Height: =82
+                Size: =21
+                Text: =B3NordContentBurPri.Text + B3NordContentBurUpri.Text + B3SørContentBurPri.Text + B3SørContentBurUpri.Text
+                Visible: =false
+                Width: =62
+                X: =40
+                Y: =40
+                ZIndex: =13
+
             "'Bur/paller Group_2' As group":
                 Height: =5
                 Width: =5
@@ -1330,6 +1340,16 @@
                     X: =145
                     Y: =151
                     ZIndex: =12
+
+            B3NordSørContentPaller As label:
+                Height: =82
+                Size: =21
+                Text: =B3NordContentPallerPri.Text + B3NordContentPallerUpri.Text + B3SørContentPallerPri.Text + B3SørContentPallerUpri.Text
+                Visible: =false
+                Width: =62
+                X: =40
+                Y: =121
+                ZIndex: =14
 
         OverliggContainer As typedDataCard.blankCard:
             BorderStyle: =BorderStyle.Solid
@@ -2033,6 +2053,16 @@
                 Y: =PåLagerLabel.Y
                 ZIndex: =4
 
+            PåLagerContentBurSamlet As label:
+                Height: =84
+                Size: =21
+                Text: =PåLagerContentBurPri.Text + PåLagerContentBurUpri.Text
+                Visible: =false
+                Width: =76
+                X: =49
+                Y: =64
+                ZIndex: =14
+
             "'Bur/paller Group' As group":
                 Height: =5
                 Width: =5
@@ -2169,6 +2199,16 @@
                     X: =144
                     Y: =153
                     ZIndex: =13
+
+            PåLagerContentPallerSamlet As label:
+                Height: =84
+                Size: =21
+                Text: =PåLagerContentPallerPri.Text + PåLagerContentPallerUpri.Text
+                Visible: =false
+                Width: =76
+                X: =49
+                Y: =148
+                ZIndex: =15
 
         OpplastetContainer As typedDataCard.blankCard:
             BorderStyle: =BorderStyle.Solid
@@ -4378,7 +4418,7 @@
             Color: =RGBA(123, 193, 68, 1)
             Fill: =RGBA(0, 47, 25, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, 75%)
-            FontWeight: =FontWeight.Bold
+            FontWeight: =FontWeight.Normal
             Height: =70
             HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
             OnSelect: |-
@@ -4403,7 +4443,7 @@
                             " ",
                             LosseGenLabel.Text
                         ),
-                        Content: LosseGenContentBur.Text
+                        Content: Concatenate("Bur: ", LosseGenContentBur.Text, " Paller: ", LosseGenContentPaller.Text)
                     },
                     {
                         Title: Concatenate(
@@ -4474,8 +4514,20 @@
                         Content: LosseDetWasteContent.Text
                     },
                     {
+                        Title: GjenståendePallLabel.Text,
+                        Content: Concatenate("B2: ", GjenståendePallContent.Text, " B3: ", GjenståendePallContentB3.Text)
+                    },
+                    {
+                        Title: B3Label.Text,
+                        Content: Concatenate("Nord: ", B3NordSørContentBur.Text, " Sør: ", B3NordSørContentPaller.Text)
+                    },
+                    {
                         Title: AnkomstLabel.Text,
                         Content: AnkomstContent.Text
+                    },
+                    {
+                        Title: PåLagerLabel.Text,
+                        Content: Concatenate("Bur: ", PåLagerContentBurSamlet.Text, " Paller: ", PåLagerContentPallerSamlet.Text)
                     },
                     {
                         Title: OpplastetByggLabel.Text,
