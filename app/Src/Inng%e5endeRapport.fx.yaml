@@ -4337,6 +4337,16 @@
         Y: =1064
         ZIndex: =8
 
+    BurSamlet As label:
+        Height: =74
+        Size: =21
+        Text: =B3NordContentBurPri.Text + B3NordContentBurUpri.Text + B3SørContentBurPri.Text + B3SørContentBurUpri.Text + PåLagerContentBurPri.Text + PåLagerContentBurUpri.Text + LosseGenContentBur.Text
+        Visible: =false
+        Width: =80
+        X: =14
+        Y: =24
+        ZIndex: =12
+
     Group1_2 As group:
         Height: =5
         Width: =5
@@ -4375,6 +4385,10 @@
                 =// Set Variables for all fields
                 ClearCollect(
                     ArrivalSortCollection,
+                    {
+                        Title: "Samlet Enheter",
+                        Content: Concatenate("Bur: ", BurSamlet.Text, "Paller: ", PallerSamlet.Text)
+                    },
                     {
                         Title: LøsPriLabel.Text,
                         Content: LøsPriContent.Text
@@ -4957,4 +4971,14 @@
             X: =353
             Y: =710
             ZIndex: =11
+
+    PallerSamlet As label:
+        Height: =74
+        Size: =21
+        Text: =B3NordContentPallerPri.Text + B3NordContentPallerUpri.Text + B3SørContentPallerPri.Text + B3SørContentPallerUpri.Text + PåLagerContentPallerPri.Text + PåLagerContentPallerUpri.Text + LosseGenContentPaller.Text
+        Visible: =false
+        Width: =80
+        X: =56
+        Y: =24
+        ZIndex: =13
 
