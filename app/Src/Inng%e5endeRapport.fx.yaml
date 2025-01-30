@@ -1201,7 +1201,7 @@
             B3NordSørContentBur As label:
                 Height: =82
                 Size: =21
-                Text: =B3NordContentBurPri.Text + B3NordContentBurUpri.Text + B3SørContentBurPri.Text + B3SørContentBurUpri.Text
+                Text: =B3NordContentBurPri.Text + B3NordContentPallerPri.Text + B3SørContentBurPri.Text + B3SørContentPallerPri.Text
                 Visible: =false
                 Width: =62
                 X: =40
@@ -1344,7 +1344,7 @@
             B3NordSørContentPaller As label:
                 Height: =82
                 Size: =21
-                Text: =B3NordContentPallerPri.Text + B3NordContentPallerUpri.Text + B3SørContentPallerPri.Text + B3SørContentPallerUpri.Text
+                Text: =B3NordContentBurUpri.Text + B3NordContentPallerUpri.Text + B3SørContentPallerUpri.Text + B3SørContentPallerUpri.Text
                 Visible: =false
                 Width: =62
                 X: =40
@@ -4519,7 +4519,11 @@
                     },
                     {
                         Title: B3Label.Text,
-                        Content: Concatenate("Nord: ", B3NordSørContentBur.Text, " Sør: ", B3NordSørContentPaller.Text)
+                        Content: Concatenate("Pri: ", B3NordSørContentBur.Text)
+                    },
+                    {
+                        Title: B3Label.Text,
+                        Content: Concatenate("Upri: ", B3NordSørContentPaller.Text)
                     },
                     {
                         Title: AnkomstLabel.Text,
