@@ -4427,7 +4427,7 @@
                     ArrivalSortCollection,
                     {
                         Title: "Samlet Enheter",
-                        Content: Concatenate("Bur: ", BurSamlet.Text, "Paller: ", PallerSamlet.Text)
+                        Content: Concatenate("Bur: ", BurSamlet.Text, "<br/> Paller: ", PallerSamlet.Text)
                     },
                     {
                         Title: LøsPriLabel.Text,
@@ -4443,7 +4443,7 @@
                             " ",
                             LosseGenLabel.Text
                         ),
-                        Content: Concatenate("Bur: ", LosseGenContentBur.Text, " Paller: ", LosseGenContentPaller.Text)
+                        Content: Concatenate("Bur: ", LosseGenContentBur.Text, "<br/> Paller: ", LosseGenContentPaller.Text)
                     },
                     {
                         Title: Concatenate(
@@ -4515,15 +4515,11 @@
                     },
                     {
                         Title: GjenståendePallLabel.Text,
-                        Content: Concatenate("B2: ", GjenståendePallContent.Text, " B3: ", GjenståendePallContentB3.Text)
+                        Content: Concatenate("B2: ", GjenståendePallContent.Text, "<br/> B3: ", GjenståendePallContentB3.Text)
                     },
                     {
                         Title: B3Label.Text,
-                        Content: Concatenate("Pri: ", B3NordSørContentBur.Text)
-                    },
-                    {
-                        Title: B3Label.Text,
-                        Content: Concatenate("Upri: ", B3NordSørContentPaller.Text)
+                        Content: Concatenate("Pri: ", B3NordSørContentBur.Text, "<br/> Upri: ", B3NordSørContentPaller.Text)
                     },
                     {
                         Title: AnkomstLabel.Text,
@@ -4531,7 +4527,7 @@
                     },
                     {
                         Title: PåLagerLabel.Text,
-                        Content: Concatenate("Bur: ", PåLagerContentBurSamlet.Text, " Paller: ", PåLagerContentPallerSamlet.Text)
+                        Content: Concatenate("Bur: ", PåLagerContentBurSamlet.Text, "<br/> Paller: ", PåLagerContentPallerSamlet.Text)
                     },
                     {
                         Title: OpplastetByggLabel.Text,
