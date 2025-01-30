@@ -990,7 +990,7 @@
                 Y: =28
                 ZIndex: =14
 
-                PåLagerContentSørPallerPri As text:
+                B3SørContentPallerPri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -1010,7 +1010,7 @@
                     Y: =82
                     ZIndex: =6
 
-                PåLagerContentSørBurPri As text:
+                B3SørContentBurPri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -1054,7 +1054,7 @@
                     Y: =34
                     ZIndex: =9
 
-                PåLagerContentSørPallerUpri As text:
+                B3SørContentPallerUpri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -1074,7 +1074,7 @@
                     Y: =170
                     ZIndex: =10
 
-                PåLagerContentSørBurUpri As text:
+                B3SørContentBurUpri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -1205,7 +1205,7 @@
                 Y: =-2
                 ZIndex: =13
 
-                PåLagerContentNordPallerPri As text:
+                B3NordContentPallerPri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -1225,7 +1225,7 @@
                     Y: =58
                     ZIndex: =5
 
-                PåLagerContentNordBurPri As text:
+                B3NordContentBurPri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -1269,7 +1269,7 @@
                     Y: =10
                     ZIndex: =8
 
-                PåLagerContentNordPallerUpri As text:
+                B3NordContentPallerUpri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -1289,7 +1289,7 @@
                     Y: =146
                     ZIndex: =9
 
-                PåLagerContentNordBurUpri As text:
+                B3NordContentBurUpri As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -4901,8 +4901,8 @@
                 
                 
                 Office365Outlook.SendEmailV2(
-                    //TestRecipients,
-                    InngåendeRecipients,
+                    TestRecipients,
+                    //InngåendeRecipients,
                     "Overlevering",
                     arrivalsBody,
                     {
