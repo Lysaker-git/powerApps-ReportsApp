@@ -1,0 +1,578 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  MailListScreen:
+    Properties:
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+    Children:
+      - Gallery3:
+          Control: Gallery@2.15.0
+          Variant: BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =894
+            Items: =Sort(Search(RecipientsTable,FilterInputMailList.Text,Name),Name,SortOrder.Ascending)
+            TemplateSize: =208
+            Y: =150
+          Children:
+            - NextArrow3:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  AccessibleLabel: =Self.Tooltip
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  Color: =RGBA(26, 26, 26, 1)
+                  DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                  DisabledColor: =RGBA(119, 119, 119, 1)
+                  Height: =50
+                  Icon: =Icon.ChevronRight
+                  OnSelect: =Set(loader, true);Set(userVar, ThisItem.ID); Set(buttonVarMails, true); Set(startTimerVar, false); Set(startTimerVar, true)
+                  PaddingBottom: =16
+                  PaddingLeft: =16
+                  PaddingRight: =16
+                  PaddingTop: =16
+                  Tooltip: ="View item details"
+                  Width: =50
+                  X: =562
+                  Y: =75
+            - Separator4:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 0, 255, 1)
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =8
+                  OnSelect: =Select(Parent)
+                  Width: =Parent.TemplateWidth
+                  Y: =Parent.TemplateHeight - Self.Height
+            - Rectangle2:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.TemplateHeight - Separator4.Height
+                  OnSelect: =Select(Parent)
+                  Visible: =ThisItem.IsSelected
+                  Width: =4
+            - Label7:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  FontWeight: =FontWeight.Bold
+                  Height: =41
+                  OnSelect: =Select(Parent)
+                  Text: =ThisItem.Name
+                  Width: =462
+                  X: =150
+                  Y: =16
+            - Label7_1:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =41
+                  OnSelect: =Select(Parent)
+                  Text: ="Name:"
+                  Width: =107
+                  X: =23
+                  Y: =16
+            - Label7_2:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =41
+                  OnSelect: =Select(Parent)
+                  Size: =16
+                  Text: =ThisItem.Mail
+                  Width: =427
+                  X: =150
+                  Y: =86
+            - Label7_3:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =41
+                  OnSelect: =Select(Parent)
+                  Text: ="Mail:"
+                  Width: =107
+                  X: =23
+                  Y: =86
+            - Label7_4:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =45
+                  OnSelect: =Select(Parent)
+                  Text: ="Reports:"
+                  Width: =127
+                  X: =23
+                  Y: =135
+            - Label7_5:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =45
+                  OnSelect: =Select(Parent)
+                  Size: =16
+                  Text: |-
+                    =Concat(
+                        Filter(
+                            [
+                                If(ThisItem.HARapport = "True", "HA", Blank()),
+                                If(ThisItem.OVRapport = "True", "Overvåker", Blank()),
+                                If(ThisItem.NCRapport = "True", "NC", Blank()),
+                                If(ThisItem.LPGRapport = "True", "LPG", Blank()),
+                                If(ThisItem.HPGRapport = "True", "HPG", Blank()),
+                                If(ThisItem.InnRaport = "True", "Inngående", Blank())
+                            ],
+                            !IsBlank(Value)
+                        ),
+                        Value,
+                        ", "
+                    )
+                  Width: =427
+                  X: =150
+                  Y: =135
+            - Rectangle5:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(214, 223, 238, 1)
+                  Fill: =RGBA(227, 234, 243, 1)
+                  Height: =8
+                  OnSelect: =Select(Parent)
+                  Width: =640
+                  Y: =200
+      - Icon7:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            Height: =45
+            Icon: =Icon.BackArrow
+            OnSelect: =Back()
+            Width: =47
+            X: =576
+            Y: =18
+      - FilterInputMailList:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: =
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Width: =605
+            X: =18
+            Y: =75
+      - Label4:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Text: ="Search for person"
+            X: =15
+            Y: =15
+      - Button7:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Set(editVisible, true);Set(userVar, ""); Set(newID, GUID());Set(buttonVarMails, true)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Add a new person"
+            Width: =640
+            Y: =1066
+      - Rectangle3:
+          Control: Rectangle@2.3.0
+          Group: Group2
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(241, 244, 249, 1)
+            Height: =657
+            Visible: =editVisible
+            Width: =566
+            X: =39
+            Y: =387
+      - NameInputMails:
+          Control: Classic/TextInput@2.3.2
+          Group: Group2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: =If(Or(userVar = "", IsBlank(userVar)), "Enter Name", LookUp(RecipientsTable,ID = userVar,Name))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Visible: =editVisible
+            Width: =399
+            X: =72
+            Y: =415
+      - MailinputMails:
+          Control: Classic/TextInput@2.3.2
+          Group: Group2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: =If(Or(userVar = "", IsBlank(userVar)), "Enter Name", LookUp(RecipientsTable,ID = userVar,Mail))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Tooltip: =If(Or(userVar = "", IsBlank(userVar)), "Enter Name", LookUp(RecipientsTable,ID = userVar,Mail))
+            Visible: =editVisible
+            Width: =503
+            X: =73
+            Y: =506
+      - HACheckMails:
+          Control: Classic/CheckBox@2.1.0
+          Group: Group2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+            CheckmarkFill: =RGBA(0, 0, 0, 1)
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,HARapport)="False", false ,LookUp(RecipientsTable,ID=userVar,HARapport)="True", true ))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Font: =Font.'Open Sans'
+            HoverColor: =RGBA(0, 18, 107, 1)
+            Text: ="HA"
+            Visible: =editVisible
+            Width: =158
+            X: =73
+            Y: =590
+      - NCCheckMails:
+          Control: Classic/CheckBox@2.1.0
+          Group: Group2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+            CheckmarkFill: =RGBA(0, 0, 0, 1)
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,NCRapport)="False", false ,LookUp(RecipientsTable,ID=userVar,NCRapport)="True", true ))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Font: =Font.'Open Sans'
+            HoverColor: =RGBA(0, 18, 107, 1)
+            Text: ="NC"
+            Visible: =editVisible
+            Width: =158
+            X: =241
+            Y: =590
+      - LPGCheckMails:
+          Control: Classic/CheckBox@2.1.0
+          Group: Group2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+            CheckmarkFill: =RGBA(0, 0, 0, 1)
+            Default: |-
+              =If(
+                  userVar = "",
+                  false,
+                  If(
+                      LookUp(
+                          RecipientsTable,
+                          ID = userVar,
+                          LPGRapport
+                      ) = "False",
+                      false,
+                      LookUp(
+                          RecipientsTable,
+                          ID = userVar,
+                          LPGRapport
+                      ) = "True",
+                      true
+                  )
+              )
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Font: =Font.'Open Sans'
+            HoverColor: =RGBA(0, 18, 107, 1)
+            Text: ="LPG"
+            Visible: =editVisible
+            Width: =158
+            X: =418
+            Y: =590
+      - HPGCheckMails:
+          Control: Classic/CheckBox@2.1.0
+          Group: Group2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+            CheckmarkFill: =RGBA(0, 0, 0, 1)
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,HPGRapport)="False", false ,LookUp(RecipientsTable,ID=userVar,HPGRapport)="True", true ))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Font: =Font.'Open Sans'
+            HoverColor: =RGBA(0, 18, 107, 1)
+            Text: ="HPG"
+            Visible: =editVisible
+            Width: =158
+            X: =73
+            Y: =792
+      - OVCheckMails:
+          Control: Classic/CheckBox@2.1.0
+          Group: Group2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+            CheckmarkFill: =RGBA(0, 0, 0, 1)
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,OVRapport)="False", false ,LookUp(RecipientsTable,ID=userVar,OVRapport)="True", true ))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Font: =Font.'Open Sans'
+            HoverColor: =RGBA(0, 18, 107, 1)
+            Text: ="Overvåker"
+            Visible: =editVisible
+            Width: =234
+            X: =338
+            Y: =693
+      - InnCheckMails:
+          Control: Classic/CheckBox@2.1.0
+          Group: Group2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+            CheckmarkFill: =RGBA(0, 0, 0, 1)
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,InnRaport)="False", false ,LookUp(RecipientsTable,ID=userVar,InnRaport)="True", true ))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Font: =Font.'Open Sans'
+            HoverColor: =RGBA(0, 18, 107, 1)
+            Text: ="Inngående"
+            Visible: =editVisible
+            Width: =234
+            X: =68
+            Y: =693
+      - Label5:
+          Control: Label@2.5.1
+          Group: Group2
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(167, 182, 203, 1)
+            Font: =Font.'Open Sans'
+            Height: =38
+            Size: =14
+            Text: =If(Or(userVar = "", IsBlank(userVar)), newID , LookUp(RecipientsTable,ID = userVar,ID))
+            Visible: =editVisible
+            Width: =503
+            X: =73
+            Y: =1006
+      - Button8:
+          Control: Classic/Button@2.2.0
+          Group: Group2
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: |
+              =Set(
+                  buttonVarMails,
+                  false
+              );
+              Set(
+                  loader,
+                  true
+              );
+              /*
+               * Function: Validate and Patch Email Data
+               * Description: This function validates the email format of the input, and based on the user variable,
+               *              either creates a new record or updates an existing record in the RecipientsTable.
+               * Parameters:
+               *   - MailinputMails.Text: The email input to be validated.
+               *   - userVar: A variable to determine if the record is new or existing.
+               *   - NameInputMails.Text: The name input to be patched.
+               *   - HACheckMails.Value, NCCheckMails.Value, LPGCheckMails.Value, InnCheckMails.Value, OVRapport.Value, HPGRapport.Value: Various report check values to be patched.
+               *   - newID: The ID for the new record.
+               * Returns: 
+               *   - Notifies the user if the email is invalid.
+               *   - Patches the RecipientsTable with the provided data if the email is valid.
+               */
+              If(
+                  IsMatch(
+                      MailinputMails.Text,
+                      "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  ),
+                  If(
+                      userVar = "",
+                      Patch(
+                          RecipientsTable,
+                          Defaults(RecipientsTable),
+                          {
+                              Name: NameInputMails.Text,
+                              Mail: MailinputMails.Text,
+                              HARapport: HACheckMails.Value,
+                              NCRapport: NCCheckMails.Value,
+                              LPGRapport: LPGCheckMails.Value,
+                              InnRaport: InnCheckMails.Value,
+                              OVRapport: OVCheckMails.Value,
+                              HPGRapport: HPGCheckMails.Value,
+                              ID: newID
+                          }
+                      ),
+                      Patch(
+                          RecipientsTable,
+                          LookUp(
+                              RecipientsTable,
+                              ID = userVar
+                          ),
+                          {
+                              Name: NameInputMails.Text,
+                              Mail: MailinputMails.Text,
+                              HARapport: HACheckMails.Value,
+                              NCRapport: NCCheckMails.Value,
+                              LPGRapport: LPGCheckMails.Value,
+                              InnRaport: InnCheckMails.Value,
+                              OVRapport: OVCheckMails.Value,
+                              HPGRapport: HPGCheckMails.Value
+                          }
+                      )
+                  ),
+                  Notify(
+                      "Invalid E-mail",
+                      NotificationType.Error
+                  )
+              );
+              Set(
+                  loader,
+                  false
+              );
+              Set(
+                  editVisible,
+                  false
+              );
+              Refresh(RecipientsTable);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Save   "
+            Visible: =editVisible
+            Width: =502
+            X: =73
+            Y: =936
+      - Icon8:
+          Control: Classic/Icon@2.5.0
+          Group: Group2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(editVisible, false)
+            Visible: =editVisible
+            X: =512
+            Y: =415
+      - Button9:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: |-
+              =If(
+                  Or(
+                      userVar = "",
+                      buttonVarMails = false
+                  ),
+                  DisplayMode.Disabled,
+                  DisplayMode.Edit
+              )
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: |-
+              =Set(
+                  buttonVarMails,
+                  false
+              );
+              Set(
+                  loader,
+                  true
+              );
+              If(
+                  !IsBlank(userVar),
+                  RemoveIf(
+                      RecipientsTable,
+                      ID = userVar
+                  )
+              );
+              Set(
+                  editVisible,
+                  false
+              );
+              Refresh(RecipientsTable);
+              Set(
+                  loader,
+                  false
+              )
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Remove"
+            Visible: =editVisible
+            Width: =195
+            X: =378
+            Y: =850
+      - Rectangle4:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Height: =191
+            Visible: =loader
+            Width: =260
+            X: =190
+            Y: =543
+      - Image5:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =140
+            Image: ='90-ring'
+            Visible: =loader
+            Width: =140
+            X: =250
+            Y: =565
+      - timerMails:
+          Control: Timer@2.1.0
+          Properties:
+            AutoPause: =false
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =ColorFade(Self.BorderColor, 70%)
+            DisabledColor: =ColorFade(Self.Fill, 90%)
+            DisabledFill: =ColorFade(Self.Fill, 70%)
+            DisplayMode: =DisplayMode.View
+            Duration: =3500
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            Height: =36
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnTimerEnd: =Set(loader, false); Set(editVisible, true); timerMails.Reset
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Start: =startTimerVar
+            Visible: =false
+            X: =276
+            Y: =22

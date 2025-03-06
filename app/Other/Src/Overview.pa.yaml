@@ -1,0 +1,371 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Overview:
+    Properties:
+      Fill: =RGBA(0, 0, 0, 0)
+      ImagePosition: =ImagePosition.Fill
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+    Children:
+      - BackgroundImage:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =1136
+            Image: ='Anders+Nord_Post+Norway_Brand+Identity_17'
+            ImagePosition: =ImagePosition.Fill
+            Transparency: =0.9
+            Width: =640
+      - BackdropShadowHist:
+          Control: HtmlViewer@2.1.0
+          Properties:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Font: =Font.'Open Sans'
+            Height: =167
+            HtmlText: |-
+              ="<div 
+                  style='
+                      margin:10px;
+                      width:560px;
+                      height: 50px;
+                      background-color:#;
+                      box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                      </div>"
+            Visible: =If(Office365Users.MyProfile().DisplayName in ["Lysaker Robin"],true,false)
+            Width: =594
+            X: =25
+            Y: =935
+      - BackdropShadowOVer:
+          Control: HtmlViewer@2.1.0
+          Properties:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Font: =Font.'Open Sans'
+            Height: =167
+            HtmlText: |-
+              ="<div 
+                  style='
+                      margin:10px;
+                      width:270px;
+                      height:132px;
+                      background-color:#;
+                      box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                      </div>"
+            Width: =304
+            X: =315
+            Y: =785
+      - BackdropHTML:
+          Control: HtmlViewer@2.1.0
+          Properties:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Font: =Font.'Open Sans'
+            Height: =222
+            HtmlText: |-
+              ="<div 
+                  style='
+                      margin:10px;
+                      height:190px;
+                      background-color:rgba(255,255,255,0.7);
+                      box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                      </div>"
+            Width: =441
+            X: =108
+            Y: =210
+      - TtteilPartOne:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Text: ="Velkommen til"
+            X: =40
+            Y: =228
+      - TittelPartTwo:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Size: =40
+            Text: ="LSO"
+            X: =40
+            Y: =280
+      - TittelPartThree:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Text: ="sitt Raporterings-system"
+            X: =40
+            Y: =332
+      - HospitalBtn:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 100, 58, 1)
+            Font: =Font.'Open Sans'
+            Height: =132
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(123, 193, 68, 1)
+            OnSelect: |-
+              =Set(
+                  CurrentUser,
+                  Office365Users.MyProfileV2().department
+              );
+              Set(
+                  ButtonDep,
+                  "032916"
+              );
+              If(
+                  Or(
+                      IsMatch(
+                          CurrentUser,
+                          "032916",
+                          MatchOptions.Contains & MatchOptions.IgnoreCase
+                      ),
+                      IsMatch(
+                          CurrentUser,
+                          "032917",
+                          MatchOptions.Contains & MatchOptions.IgnoreCase
+                      )
+                  ),
+                  Navigate(
+                      HospitalRapport,
+                      ScreenTransition.Cover
+                  ),
+                  Navigate(
+                      AccessScreen,
+                      ScreenTransition.Cover
+                  )
+              )
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Hospital Area"
+            Width: =270
+            X: =40
+            Y: =502
+      - VelgTittel:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Text: ="Velg Gruppe:"
+            X: =40
+            Y: =432
+      - HovedBtn:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =HospitalBtn.Fill
+            Font: =Font.'Open Sans'
+            Height: =132
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =HospitalBtn.HoverFill
+            OnSelect: =Navigate(HovedRapport, ScreenTransition.CoverRight)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: |-
+              ="Hovedpost-
+              gang"
+            Width: =270
+            X: =330
+            Y: =502
+      - InngåendeBtn:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =HospitalBtn.Fill
+            Font: =Font.'Open Sans'
+            Height: =132
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =HospitalBtn.HoverColor
+            HoverFill: =HospitalBtn.HoverFill
+            OnSelect: =Navigate(InngåendeRapport, ScreenTransition.Cover); Set(cornerVar, 10)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Inngående"
+            Width: =270
+            X: =40
+            Y: =652
+      - LokalBtn:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(230, 230, 230, 1)
+            Font: =Font.'Open Sans'
+            Height: =132
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(230, 230, 230, 1), -20%)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: |-
+              ="Lokalpost-
+              gang"
+            Width: =270
+            X: =330
+            Y: =652
+      - ManuellBtn:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(230, 230, 230, 1)
+            Font: =Font.'Open Sans'
+            Height: =132
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(230, 230, 230, 1), -20%)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Manuell NC"
+            Width: =270
+            X: =40
+            Y: =804
+      - OvervåkerBtn:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =HospitalBtn.Fill
+            Font: =Font.'Open Sans'
+            Height: =132
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(123, 193, 68, 1)
+            OnSelect: =Navigate(OvervåkerRapport, ScreenTransition.CoverRight)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Overvåker"
+            Width: =270
+            X: =330
+            Y: =804
+      - HistorikkBtn:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =HospitalBtn.Fill
+            Font: =Font.'Open Sans'
+            Height: =67
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(123, 193, 68, 1)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Historikk"
+            Visible: =If(Office365Users.MyProfile().DisplayName in ["Lysaker Robin"],true,false)
+            Width: =560
+            X: =40
+            Y: =952
+      - LogoApp:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =210
+            Image: ='Posten-Norge-Logo'
+            Width: =339
+            X: =159
+      - Timer1_1:
+          Control: Timer@2.1.0
+          Properties:
+            AutoStart: =true
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =ColorFade(Self.BorderColor, 70%)
+            DisabledColor: =ColorFade(Self.Fill, 90%)
+            DisabledFill: =ColorFade(Self.Fill, 70%)
+            Duration: =1000
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnTimerEnd: =Set(CurrentTime, Now())
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Repeat: =true
+            Visible: =false
+            X: =28
+            Y: =32
+      - TimeLabel_1:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Size: =18
+            Text: =Text(CurrentTime, DateTimeFormat.LongTime24)
+            Width: =280
+            X: =339
+            Y: =17
+      - HistorikkBtn_1:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =HospitalBtn.Fill
+            Font: =Font.'Open Sans'
+            Height: =62
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(123, 193, 68, 1)
+            OnSelect: =Navigate(MailListScreen)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Mail-Liste"
+            Visible: |
+              =If(
+                  Or(
+                      "robin.lysaker@posten.no" in Office365Users.MyProfile().Mail,
+                      "jihad.eldor@posten.no" in Office365Users.MyProfile().Mail,
+                      "tom.inge.kvaernstuen@posten.no" in Office365Users.MyProfile().Mail,
+                      "abdullah.al.eboudi@posten.no" in Office365Users.MyProfile().Mail,
+                      "terje.aas@posten.no" in Office365Users.MyProfile().Mail,
+                      "christopher.andersen@posten.no" in Office365Users.MyProfile().Mail,
+                      "nighat.chaudhry@posten.no" in Office365Users.MyProfile().Mail,
+                      "hanne.helganger@bring.com" in Office365Users.MyProfile().Mail,
+                      "kent.sivertsen.haugane@posten.no" in Office365Users.MyProfile().Mail,
+                      "baris.ekmekci@posten.no" in Office365Users.MyProfile().Mail,
+                      "zulifqar.haider@posten.no" in Office365Users.MyProfile().Mail,
+                      "mohammad.hanif@posten.no" in Office365Users.MyProfile().Mail,
+                      "thomas.svaeren@bring.com" in Office365Users.MyProfile().Mail,
+                      "kristine.myrhagen@posten.no" in Office365Users.MyProfile().Mail
+                  ),
+                  true,
+                  false
+              )
+            Width: =560
+            X: =40
+            Y: =1040
