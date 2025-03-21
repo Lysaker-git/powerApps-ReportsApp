@@ -1,0 +1,560 @@
+OvervåkerRapport As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+
+    Image1 As image:
+        DisplayMode: =DisplayMode.View
+        Height: =1136
+        Image: ='Anders+Nord_Post+Norway_Brand+Identity_17'
+        ImagePosition: =ImagePosition.Fill
+        Transparency: =0.8
+        Width: =640
+        ZIndex: =1
+
+    HtmlText1_4 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
+        Height: =154
+        HtmlText: |-
+            ="<div 
+                style='
+                    margin:10px;
+                    width:560px;
+                    height: 70px;
+                    background-color:#;
+                    box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                    </div>"
+        Size: =21
+        Width: =612
+        X: =28
+        Y: =774
+        ZIndex: =2
+
+    OvervåkerAttachment As attachments:
+        BorderColor: =Color.BlueViolet
+        Height: =126
+        IsInDataCard: =true
+        Items: =
+        NoAttachmentsText: =""
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        Size: =16
+        Tooltip: ="Add Files here"
+        Width: =556
+        X: =44
+        Y: =888
+        ZIndex: =3
+
+    HtmlText1_5 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
+        Height: =154
+        HtmlText: |-
+            ="<div 
+                style='
+                    margin:10px;
+                    width:560px;
+                    height: 70px;
+                    background-color:#;
+                    box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                    </div>"
+        Size: =21
+        Width: =612
+        X: =25
+        Y: =1020
+        ZIndex: =4
+
+    HtmlText1_1 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
+        Height: =154
+        HtmlText: |-
+            ="<div 
+                style='
+                    margin:10px;
+                    width:560px;
+                    height:70px;
+                    background-color:#;
+                    box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                    </div>"
+        Size: =21
+        Width: =612
+        X: =25
+        Y: =336
+        ZIndex: =5
+
+    HtmlText1_2 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
+        Height: =154
+        HtmlText: |-
+            ="<div 
+                style='
+                    margin:10px;
+                    width:560px;
+                    height:70px;
+                    background-color:#;
+                    box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                    </div>"
+        Size: =21
+        Width: =612
+        X: =25
+        Y: =477
+        ZIndex: =6
+
+    HtmlText1_3 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
+        Height: =154
+        HtmlText: |-
+            ="<div 
+                style='
+                    margin:10px;
+                    width:560px;
+                    height:70px;
+                    background-color:#;
+                    box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                    </div>"
+        Size: =21
+        Width: =612
+        X: =25
+        Y: =620
+        ZIndex: =7
+
+    HtmlText1 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
+        Height: =169
+        HtmlText: |-
+            ="<div 
+                style='
+                    margin:10px;
+                    width:560px;
+                    height:70px;
+                    background-color:#;
+                    box-shadow:0px 0px 20px -2px #ACB2B3;'>
+                    </div>"
+        Size: =21
+        Width: =612
+        X: =25
+        Y: =180
+        ZIndex: =8
+
+    Button1 As button:
+        BorderThickness: =0
+        Color: =RGBA(123, 193, 68, 1)
+        Fill: =RGBA(0, 47, 25, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+        OnSelect: |-
+            =UpdateContext({vPopUp: true})
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =32
+        Text: ="SEND MAIL"
+        Width: =560
+        X: =40
+        Y: =1036
+        ZIndex: =9
+
+    FlytText As text:
+        BorderThickness: =0
+        Clear: =true
+        Default: =""
+        Height: =70
+        Mode: =TextMode.MultiLine
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Width: =560
+        X: =40
+        Y: =195
+        ZIndex: =10
+
+    OvervåkerHeader As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =62
+        Size: =21
+        Text: ="Overvåker overlevering"
+        Width: =560
+        X: =40
+        Y: =35
+        ZIndex: =11
+
+    FlytLabel As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Generell Flyt"
+        Width: =560
+        X: =40
+        Y: =125
+        ZIndex: =12
+
+    UtfordringerLabel As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Utfordringer"
+        Width: =560
+        X: =40
+        Y: =279
+        ZIndex: =13
+
+    UtfordringerText As text:
+        BorderThickness: =0
+        Default: =""
+        Height: |
+            =70
+        Mode: =TextMode.MultiLine
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Width: =560
+        X: =40
+        Y: =349
+        ZIndex: =14
+
+    B2Label As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="B2"
+        Width: =560
+        X: =40
+        Y: =428
+        ZIndex: =15
+
+    B2Text As text:
+        BorderThickness: =0
+        Default: =""
+        Height: =70
+        Mode: =TextMode.MultiLine
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Width: =560
+        X: =40
+        Y: =490
+        ZIndex: =16
+
+    DiverseLabel As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Diverse"
+        Width: =560
+        X: =40
+        Y: =722
+        ZIndex: =17
+
+    DiverseText As text:
+        BorderThickness: =0
+        Default: =""
+        Height: =70
+        Mode: =TextMode.MultiLine
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Width: =560
+        X: =40
+        Y: =787
+        ZIndex: =18
+
+    B3Label As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="B3"
+        Width: =560
+        X: =40
+        Y: =572
+        ZIndex: =19
+
+    B3Text As text:
+        BorderThickness: =0
+        Default: =""
+        Height: =70
+        Mode: =TextMode.MultiLine
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Width: =560
+        X: =40
+        Y: =635
+        ZIndex: =20
+
+    Label2 As label:
+        Align: =Align.Right
+        Height: =OvervåkerHeader.Height
+        Size: =21
+        Text: =Text(Now(),DateTimeFormat.ShortTime24)
+        Visible: =false
+        Width: =121
+        X: =479
+        Y: =35
+        ZIndex: =21
+
+    OvervåkerBackBtn As icon.BackArrow:
+        Color: =RGBA(0, 0, 0, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(ScreenTransition.UnCoverRight)
+        X: =536
+        Y: =33
+        ZIndex: =22
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =27
+
+        OvervåkerBackdropAndHTML As htmlViewer:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Height: =1136
+            HtmlText: |-
+                ="<div style='
+                    background-color:rgba(255,255,255,0.8);
+                    height: 1125px;
+                    display: grid;
+                    place-content: center;
+                '>
+                <p style='margin: auto auto 0 auto'>Sende e-post?</p>
+                <p style='margin: 0 auto 0 auto'>Send mail?</p>
+                </div>"
+            Size: =21
+            Visible: =vPopUp
+            Width: =637
+            ZIndex: =23
+
+        OvervåkerSendMailBtn As button:
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+                =ClearCollect(
+                    OvervakerCollection,
+                    {
+                        FlytHeader: "Genrell Flyt",
+                        FlytContent: FlytText.Text,
+                        UtfordringsHeader: "Utfordringer",
+                        UtfordringsContent: UtfordringerText.Text,
+                        DiverseHeader: "Diverse - OV",
+                        DiverseContent: DiverseText.Text,
+                        B2Header: "B2",
+                        B2Content: B2Text.Text,
+                        B3Header: "B3",
+                        B3Content: B3Text.Text
+                    }
+                );
+                /*ForAll(
+                    OvervakerCollection,
+                    Patch(
+                        Table1,
+                        Defaults(Table1),
+                        {
+                            'Generell Flyt': ThisRecord.FlytContent,
+                            Utfordringer: ThisRecord.UtfordringsContent,
+                            'Diverse - OV': ThisRecord.DiverseContent,
+                            B2: ThisRecord.B2Content,
+                            B3: ThisRecord.B3Content,
+                            Name: "",
+                            Group: "",
+                            Topic: OvervåkerHeader.Text,
+                            Shift: ""
+                        }
+                    )
+                );*/
+                ClearCollect(
+                    FinalValuesSupervisor,
+                    {
+                        Title: Blank(),
+                        Content: Blank()
+                    }
+                );
+                Clear(FinalValuesSupervisor);
+                //Collects All Input Boxes - Skips Empty
+                ForAll(
+                    OvervakerCollection,
+                    If(
+                        Not(FlytContent = ""),
+                        Collect(
+                            FinalValuesSupervisor,
+                            {
+                                Title: FlytHeader,
+                                Content: FlytContent
+                            }
+                        )
+                    );
+                    If(
+                        Not(UtfordringsContent = ""),
+                        Collect(
+                            FinalValuesSupervisor,
+                            {
+                                Title: UtfordringsHeader,
+                                Content: UtfordringsContent
+                            }
+                        )
+                    );
+                    If(
+                        Not(DiverseContent = ""),
+                        Collect(
+                            FinalValuesSupervisor,
+                            {
+                                Title: DiverseHeader,
+                                Content: DiverseContent
+                            }
+                        )
+                    );
+                    If(
+                        Not(B2Content = ""),
+                        Collect(
+                            FinalValuesSupervisor,
+                            {
+                                Title: B2Header,
+                                Content: B2Content
+                            }
+                        )
+                    );
+                    If(
+                        Not(B3Content = ""),
+                        Collect(
+                            FinalValuesSupervisor,
+                            {
+                                Title: B3Header,
+                                Content: B3Content
+                            }
+                        )
+                    )
+                );
+                Set(
+                    supervisorHeader,
+                    $"<tr style='{headerCss}{darkBg}'>
+                            <td>
+                                <h1 style='{textLight}font-weight: bolder;'>Overvåker{Shift}</h1>
+                            </td>
+                        </tr>"
+                );
+                If(
+                    Not(IsEmpty(FinalValuesSupervisor)),
+                    Set(
+                        supervisorMailBody,
+                        Concatenate(
+                            genericTitles,
+                            Concat(
+                                FinalValuesSupervisor,
+                                Concatenate(
+                                    $"<tbody style='{contentBg}'>
+                                            <tr>
+                                                <td style='{tdCss}'>
+                                                    <h4 style='{textCSS}'>{Title}</h4>
+                                                </td>
+                                                <td style='{tdCss}'>
+                                                    <p style='{textCSS}'>{Content}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss}{w25}{whiteBg}{height5}'></td>
+                                                <td style='{tdCss}{w75}{whiteBg}{height5}'></td>
+                                            </tr>
+                                        </tbody>"
+                                )
+                            )
+                        )
+                    )
+                );
+                Set(
+                    FullBodySupervisor,
+                    $"{htmlStart}{supervisorHeader}{htmlAfterHeaderBeforeContent}{supervisorMailBody}{htmlAfterContentSomethingStart}{htmlAfterContentSomethingEnd}"
+                );
+                Set(
+                    RecipientsOvervaker,
+                    Concat(
+                        ClearCollect(
+                            EmailCollection,
+                            Filter(
+                                RecipientsTable,
+                                OVRapport = "True"
+                            ).Mail
+                        ),
+                        Mail & ";"
+                    )
+                );
+                Office365Outlook.SendEmailV2(
+                    //TestRecipients,
+                    RecipientsOvervaker,
+                    //Concatenate(
+                        //RecipientsLedere,
+                        //RecipientsLedereEx
+                    //),
+                    "Overvåker Overlevering",
+                    FullBodySupervisor,
+                    {
+                        Importance: FontWeight.Normal,
+                        IsHtml: true,
+                        ReplyTo: "Logistikk.Norge.ROAO.LSO.Oslo.Overvakere@posten.no",
+                        Cc: TestRecipients,
+                        Attachments: AddColumns(
+                            RenameColumns(
+                                OvervåkerAttachment.Attachments,
+                                Value,
+                                ContentBytes
+                            ),
+                            '@odata.type',
+                            ""
+                        )
+                    }
+                );
+                Navigate(
+                    SucessScreen,
+                    ScreenTransition.CoverRight
+                )
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="JA"
+            Visible: =vPopUp
+            Width: =250
+            X: =40
+            Y: =711
+            ZIndex: =24
+
+        OvervåkerCancelBtn As button:
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+                =UpdateContext({vPopUp: false})
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="NEI"
+            Visible: =vPopUp
+            Width: =250
+            X: =350
+            Y: =711
+            ZIndex: =25
+

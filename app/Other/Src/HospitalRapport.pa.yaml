@@ -1,0 +1,524 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  HospitalRapport:
+    Properties:
+      ImagePosition: =ImagePosition.Fill
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+    Children:
+      - Image2_1:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =1136
+            Image: ='Anders+Nord_Post+Norway_Brand+Identity_17'
+            ImagePosition: =ImagePosition.Fill
+            Transparency: =0.9
+            Width: =640
+      - Canvas1:
+          Control: FluidGrid@2.3.0
+          Properties:
+            BorderThickness: =0
+            Height: =1136
+            Width: =Parent.Width
+          Children:
+            - DataCard1:
+                Control: DataCard@1.0.2
+                Properties:
+                  Height: =1036
+                  Width: =Parent.Width
+                Children:
+                  - HospitalHeader:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Bold
+                        Text: ="Hospital Overlevering"
+                        X: =40
+                        Y: =40
+                  - AvkastLabelHA:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Hvordan ser Avkast ut?"
+                        X: =40
+                        Y: =110
+                  - AvkastInputHA:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Default: =""
+                        Font: =Font.'Open Sans'
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        Mode: =TextMode.MultiLine
+                        X: =40
+                        Y: =180
+                  - SkrivingLabelHA:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Hvordan går det på Skriving?"
+                        X: =40
+                        Y: =268
+                  - SkrivingInputHA:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Default: =""
+                        Font: =Font.'Open Sans'
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        Mode: =TextMode.MultiLine
+                        X: =40
+                        Y: =338
+                  - ManglendeLabelHANumber:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Manglende"
+                        Width: =169
+                        X: =40
+                        Y: =408
+                  - ManglendeInputHANumber:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Default: =""
+                        Font: =Font.'Open Sans'
+                        Format: =TextFormat.Number
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        Width: =169
+                        X: =40
+                        Y: =478
+                  - SkrivingLabelHANumber:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Skriving"
+                        Width: =169
+                        X: =235
+                        Y: =408
+                  - SkrivingInputHANumber:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Default: =""
+                        Font: =Font.'Open Sans'
+                        Format: =TextFormat.Number
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        Width: =169
+                        X: =235
+                        Y: =478
+                  - UtlLabelHANumber:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Utleverte"
+                        Width: =169
+                        X: =431
+                        Y: =408
+                  - UtlInputHANumber:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Default: =""
+                        Font: =Font.'Open Sans'
+                        Format: =TextFormat.Number
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        Width: =169
+                        X: =431
+                        Y: =478
+                  - CheckLabelHA:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Kryss av det som er gjort:"
+                        X: =40
+                        Y: =773
+                  - TommeCheckHA:
+                      Control: Classic/CheckBox@2.1.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+                        CheckmarkFill: =RGBA(0, 0, 0, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        HoverColor: =RGBA(0, 18, 107, 1)
+                        Text: ="Hentet Tomme"
+                        X: =39
+                        Y: =843
+                  - HeisCheckHA:
+                      Control: Classic/CheckBox@2.1.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+                        CheckmarkFill: =RGBA(0, 0, 0, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        HoverColor: =RGBA(0, 18, 107, 1)
+                        Text: ="Kjørt Heis"
+                        X: =319
+                        Y: =843
+                  - BurCheckHA:
+                      Control: Classic/CheckBox@2.1.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+                        CheckmarkFill: =RGBA(0, 0, 0, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        HoverColor: =RGBA(0, 18, 107, 1)
+                        Text: ="Byttet Bur"
+                        X: =39
+                        Y: =928
+                  - BaljeCheckHA:
+                      Control: Classic/CheckBox@2.1.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+                        CheckmarkFill: =RGBA(0, 0, 0, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        HoverColor: =RGBA(0, 18, 107, 1)
+                        Text: ="Fedex retur Kjørt"
+                        X: =319
+                        Y: =928
+                  - DiverseLabelHA:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Andre Notater:"
+                        X: =40
+                        Y: =548
+                  - DiverseInputHA:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Default: =""
+                        Font: =Font.'Open Sans'
+                        Height: =155
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        Mode: =TextMode.MultiLine
+                        X: =40
+                        Y: =618
+      - Icon1_1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Icon: =Icon.BackArrow
+            OnSelect: =Back(ScreenTransition.UnCoverRight)
+            X: =536
+            Y: =33
+      - Button1_3:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+              =UpdateContext({vPopUp: true})
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="SEND MAIL"
+            Width: =560
+            X: =43
+            Y: =1036
+      - HtmlText2_1:
+          Control: HtmlViewer@2.1.0
+          Group: Group1_1
+          Properties:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Font: =Font.'Open Sans'
+            Height: =1136
+            HtmlText: |-
+              ="<div style='
+                  background-color:rgba(255,255,255,0.8);
+                  height: 1125px;
+                  display: grid;
+                  place-content: center;
+              '>
+              <p style='margin: auto auto 0 auto'>Sende e-post?</p>
+              <p style='margin: 0 auto 0 auto'>Send mail?</p>
+              </div>"
+            Visible: =vPopUp
+            Width: =637
+            X: =3
+      - Button1_5:
+          Control: Classic/Button@2.2.0
+          Group: Group1_1
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+              =ClearCollect(
+                  HANumbersCollection,
+                  {
+                      Title: SkrivingLabelHANumber.Text,
+                      Content: SkrivingInputHANumber.Text
+                  },
+                  {
+                      Title: ManglendeLabelHANumber.Text,
+                      Content: ManglendeInputHANumber.Text
+                  },
+                  {
+                      Title: UtlLabelHANumber.Text,
+                      Content: UtlInputHANumber.Text
+                  }
+              );
+              ClearCollect(
+                  CheckListCollection,
+                  {
+                      Title: TommeCheckHA.Text,
+                      Content: If(TommeCheckHA.Value,"Ja","Nei")
+                  },
+                  {
+                      Title: BurCheckHA.Text,
+                      Content: If(BurCheckHA.Value,"Ja","Nei")
+                  },
+                  {
+                      Title: HeisCheckHA.Text,
+                      Content: If(HeisCheckHA.Value,"Ja","Nei")
+                  },
+                  {
+                      Title: BaljeCheckHA.Text,
+                      Content: If(BaljeCheckHA.Value,"Ja","Nei")
+                  }
+              );
+              ClearCollect(
+                  HARawCollectionMail,
+                  {
+                      Title: "Avkast",
+                      Content: AvkastInputHA.Text
+                  },
+                  {
+                      Title: "Skriving",
+                      Content: SkrivingInputHA.Text
+                  },
+                  {
+                      Title: "Diverse",
+                      Content: DiverseInputHA.Text
+                  },
+                  {
+                      Title: "Numbers",
+                      Content: Concat(
+                          HANumbersCollection,
+                          Concatenate($"{ThisRecord.Title}: {ThisRecord.Content}"),
+                          "<br>"
+                      )
+                  },
+                  {
+                      Title: "Checklist",
+                      Content: Concat(
+                          CheckListCollection,
+                          Concatenate($"{ThisRecord.Title}: {ThisRecord.Content}"),
+                          "<br>"
+                      )
+                  }
+              );
+              Patch(
+                  hospitalDB,
+                  Defaults(hospitalDB),
+                  {
+                      Avkast: AvkastInputHA.Text,
+                      Skriving: SkrivingInputHA.Text,
+                      Numbers: Concat(
+                          HANumbersCollection,
+                          Concatenate($"{ThisRecord.Title} {ThisRecord.Content}"),
+                          " - "
+                      ),
+                      Checklist: Concat(
+                          CheckListCollection,
+                          Concatenate($"{ThisRecord.Title} {ThisRecord.Content}"),
+                          " - "
+                      ),
+                      Navn: Navn,
+                      Group: Gruppe,
+                      Timestamp: Tid,
+                      Shift: Shift
+                  }
+              );
+              Set(
+                  supervisorHeader,
+                  $"<tr style='{headerCss}{darkBg}'>
+                          <td>
+                              <h1 style='{textLight} font-weight: bolder;'>Hospital {Shift}</h1>
+                          </td>
+                      </tr>
+              "
+              );
+              If(
+                  Not(IsEmpty(HARawCollectionMail)),
+                  Set(
+                      hospitalBodyHTML,
+                      Concatenate(
+                          genericTitles,
+                          Concat(
+                              HARawCollectionMail,
+                              Concatenate(
+                                  $"
+                                      <tbody style='{contentBg}'>
+                                          <tr>
+                                              <td style='{tdCss}'>
+                                                  <h4 style='{textCSS}'>{Title}</h4>
+                                              </td>
+                                              <td style='{tdCss}'>
+                                                  <p style='{textCSS}'>{Content}</p>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
+                                              <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
+                                          </tr>
+                                      </tbody>
+                                  "
+                              )
+                          )
+                      )
+                  )
+              );
+              Set(
+                  FullBodyHostpial,
+                  $"
+                  {htmlStart}
+
+                  {supervisorHeader}
+
+                  {htmlAfterHeaderBeforeContent}
+
+                  {hospitalBodyHTML}
+
+                  {htmlAfterContentSomethingStart}
+
+                  {htmlAfterContentSomethingEnd}
+                  "
+              );
+              Set(
+                  RecipientsHA,
+                  Concat(
+                      ClearCollect(
+                          EmailCollection,
+                          Filter(
+                              RecipientsTable,
+                              HARapport = "True"
+                          ).Mail
+                      ),
+                      Mail & ";"
+                  )
+              );
+              Office365Outlook.SendEmailV2(
+                  //TestRecipients,
+                  RecipientsHA,
+                  "Hospital Overlevering",
+                  FullBodyHostpial,
+                  {
+                      Importance: FontWeight.Normal,
+                      IsHtml: true,
+                      ReplyTo: "haider.zulifqar@posten.no",
+                      Cc: "robin.lysaker@posten.no"
+                  }
+              );
+              Navigate(
+                  SucessScreen,
+                  ScreenTransition.CoverRight
+              )
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="JA"
+            Visible: =vPopUp
+            Width: =250
+            X: =43
+            Y: =711
+      - Button1_4:
+          Control: Classic/Button@2.2.0
+          Group: Group1_1
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+              =UpdateContext({vPopUp: false})
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="NEI"
+            Visible: =vPopUp
+            Width: =250
+            X: =353
+            Y: =711

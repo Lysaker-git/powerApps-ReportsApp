@@ -1,0 +1,5036 @@
+"InngåendeRapport As screen.'phoneLayout_HeaderAndForm_ver3.0'":
+
+    Image2_3 As image:
+        Height: =1136
+        Image: ='Anders+Nord_Post+Norway_Brand+Identity_17'
+        ImagePosition: =ImagePosition.Fill
+        Transparency: =0.9
+        Width: =640
+        ZIndex: =1
+
+    EditForm1 As form:
+        DataSource: =Table4
+        Height: =944
+        Item: =Defaults(Table4)
+        Width: =Parent.Width
+        Y: =120
+        ZIndex: =5
+
+        StatusContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =99
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            StatusLabel As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =25
+                Text: ="Status Produksjon"
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+        LøsBtnContainer As typedDataCard.blankCard:
+            BorderColor: =
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =Color.Transparent
+            Height: =LøslastButton.Height + 5
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            LøslastButton As button:
+                BorderColor: =ColorFade(Self.Fill, 40%)
+                BorderThickness: =0
+                Fill: =RGBA(0, 100, 58, 1)
+                Height: =70
+                HoverBorderColor: =ColorFade(Self.Fill, 20%)
+                HoverColor: =RGBA(255,255,255,1)
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showFields=1,Set(showFields,0),Set(showFields,1))
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =24
+                Text: ="Løslast"
+                Width: =Parent.Width
+                ZIndex: =1
+
+        LøsPriContainer As typedDataCard.textualMultiLineEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="LøsPri"
+            Default: =ThisItem.LøsPri
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,LøsPri)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =LøsPriContent.Text
+            Visible: =If(showFields=1||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            LøsPriLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: ="Løslast Pri"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            LøsPriContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =140
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =PåLagerContentPallerPri.RadiusBottomLeft
+                RadiusBottomRight: =PåLagerContentPallerPri.RadiusBottomRight
+                RadiusTopLeft: =PåLagerContentPallerPri.RadiusTopLeft
+                RadiusTopRight: =PåLagerContentPallerPri.RadiusTopRight
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =LøsPriLabel.Y + LøsPriLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =LøsPriContent.Y + LøsPriContent.Height
+                ZIndex: =3
+
+            StarVisible3 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =LøsPriLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =LøsPriLabel.Y
+                ZIndex: =4
+
+        LøsUpriContainer As typedDataCard.textualMultiLineEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="LøsUpri"
+            Default: =ThisItem.LøsUpri
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,LøsUpri)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =245
+            Required: =false
+            Update: =LøsUpriContent.Text
+            Visible: =If(showFields=1||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            LøsUpriLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: ="Løslast Upri"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            LøsUpriContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =140
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =PåLagerContentPallerPri.RadiusBottomLeft
+                RadiusBottomRight: =PåLagerContentPallerPri.RadiusBottomRight
+                RadiusTopLeft: =PåLagerContentPallerPri.RadiusTopLeft
+                RadiusTopRight: =PåLagerContentPallerPri.RadiusTopRight
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =LøsUpriLabel.Y + LøsUpriLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =LøsUpriContent.Y + LøsUpriContent.Height
+                ZIndex: =3
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =LøsUpriLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =LøsUpriLabel.Y
+                ZIndex: =4
+
+        LosseBtnContainer As typedDataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =Color.Transparent
+            Height: =75
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            LosseButton As button:
+                BorderThickness: =0
+                Fill: =LøslastButton.Fill
+                FocusedBorderThickness: =0
+                Height: =70
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showFields=2,Set(showFields,0),Set(showFields,2))
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
+                RadiusBottomRight: =LøslastButton.RadiusBottomRight
+                RadiusTopLeft: =LøslastButton.RadiusTopLeft
+                RadiusTopRight: =LøslastButton.RadiusTopRight
+                Size: =24
+                Text: ="Losseområdet"
+                Width: =Parent.Width
+                ZIndex: =1
+
+        LosseGenContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="LosseGen"
+            Default: =ThisItem.LosseGen
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,LosseGen)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =165
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, LosseGen)
+            Required: =false
+            Update: =LosseGenContentBur.Text
+            Visible: =If(showFields=2||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            LosseGenLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Totalt Igjen: (Bur og Paller) "
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            LosseGenContentBur As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =PåLagerContentPallerPri.RadiusBottomLeft
+                RadiusBottomRight: =PåLagerContentPallerPri.RadiusBottomRight
+                RadiusTopLeft: =PåLagerContentPallerPri.RadiusTopLeft
+                RadiusTopRight: =PåLagerContentPallerPri.RadiusTopRight
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =278
+                X: =30
+                Y: =LosseGenLabel.Y + LosseGenLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage5 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =LosseGenContentBur.Y + LosseGenContentBur.Height
+                ZIndex: =3
+
+            StarVisible5 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =LosseGenLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =LosseGenLabel.Y
+                ZIndex: =4
+
+            LosseGenContentPaller As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =PåLagerContentPallerPri.RadiusBottomLeft
+                RadiusBottomRight: =PåLagerContentPallerPri.RadiusBottomRight
+                RadiusTopLeft: =PåLagerContentPallerPri.RadiusTopLeft
+                RadiusTopRight: =PåLagerContentPallerPri.RadiusTopRight
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =278
+                X: =332
+                Y: =63
+                ZIndex: =5
+
+        LossDetContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =LosseDetButton.Height + 30
+            Visible: =If(showFields=2||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            LosseDetButton As button:
+                Fill: =LøslastButton.Fill
+                Height: =70
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showDetFields=1,Set(showDetFields,0),Set(showDetFields,1))
+                Size: =24
+                Text: ="Detaljert"
+                Width: =Parent.Width - 80
+                X: =40
+                ZIndex: =1
+
+        LosseDetPriContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="LossDetPri"
+            Default: =ThisItem.LossDetPri
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,LossDetPri)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =822
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, LossDetPri)
+            Required: =false
+            Update: =LosseDetPriContent.Text
+            Visible: =If(showDetFields=1||showDetFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            LosseDetPriLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Pri:"
+                Width: =(Parent.Width - 60) / 2
+                Wrap: =false
+                X: =30
+                Y: =27
+                ZIndex: =1
+
+            LosseDetPriContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =cornerVar
+                RadiusBottomRight: =cornerVar
+                RadiusTopLeft: =cornerVar
+                RadiusTopRight: =cornerVar
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width / 2 - 60
+                X: =30
+                Y: =LosseDetPriLabel.Y + LosseDetPriLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage6 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =LosseDetPriContent.Y + LosseDetPriContent.Height
+                ZIndex: =3
+
+            StarVisible6 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =LosseDetPriLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =LosseDetPriLabel.Y
+                ZIndex: =4
+
+            LosseDetUPriLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="U-Pri:"
+                Width: =(Parent.Width - 60) / 2
+                Wrap: =false
+                X: =350
+                Y: =27
+                ZIndex: =5
+
+            LosseDetUPriContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =cornerVar
+                RadiusBottomRight: =cornerVar
+                RadiusTopLeft: =cornerVar
+                RadiusTopRight: =cornerVar
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width / 2 - 60
+                X: =350
+                Y: =80
+                ZIndex: =6
+
+            Rectangle1 As rectangle:
+                Fill: =RGBA(0, 100, 58, .2)
+                Height: =339
+                Width: =580
+                X: =30
+                Y: =457
+                ZIndex: =7
+
+            LosseDetBufferLabel As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Buffer:"
+                Width: =(Parent.Width - 60) / 2
+                Wrap: =false
+                X: =175
+                Y: =457
+                ZIndex: =8
+
+            LosseDetBufferOneContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =cornerVar
+                RadiusBottomRight: =cornerVar
+                RadiusTopLeft: =cornerVar
+                RadiusTopRight: =cornerVar
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width / 2 - 100
+                X: =65
+                Y: =547
+                ZIndex: =9
+
+            LosseDetBufferTwoContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =cornerVar
+                RadiusBottomRight: =cornerVar
+                RadiusTopLeft: =cornerVar
+                RadiusTopRight: =cornerVar
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width / 2 - 100
+                X: =350
+                Y: =547
+                ZIndex: =10
+
+            LosseDetBufferThreeContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =cornerVar
+                RadiusBottomRight: =cornerVar
+                RadiusTopLeft: =cornerVar
+                RadiusTopRight: =cornerVar
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width / 2 - 100
+                X: =67
+                Y: =682
+                ZIndex: =11
+
+            LosseDetBufferFourContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =cornerVar
+                RadiusBottomRight: =cornerVar
+                RadiusTopLeft: =cornerVar
+                RadiusTopRight: =cornerVar
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width / 2 - 100
+                X: =352
+                Y: =682
+                ZIndex: =12
+
+            LosseDetBufferOneLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =42
+                Size: =21
+                Text: |-
+                    ="1:"
+                Width: =195
+                Wrap: =false
+                X: =77
+                Y: =505
+                ZIndex: =13
+
+            LosseDetBufferTwoLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =42
+                Size: =21
+                Text: |-
+                    ="2:"
+                Width: =195
+                Wrap: =false
+                X: =352
+                Y: =505
+                ZIndex: =14
+
+            LosseDetBufferThreeLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =42
+                Size: =21
+                Text: |-
+                    ="3:"
+                Width: =195
+                Wrap: =false
+                X: =77
+                Y: =640
+                ZIndex: =15
+
+            LosseDetBufferFourLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =42
+                Size: =21
+                Text: |-
+                    ="4 og Port 223:"
+                Width: =220
+                Wrap: =false
+                X: =352
+                Y: =640
+                ZIndex: =16
+
+            LosseDetPortLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: ="Manglende EDI (104)"
+                Width: =(Parent.Width - 60) / 2
+                Wrap: =false
+                X: =30
+                Y: =176
+                ZIndex: =17
+
+            LosseDetPortContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =cornerVar
+                RadiusBottomRight: =cornerVar
+                RadiusTopLeft: =cornerVar
+                RadiusTopRight: =cornerVar
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width / 2 - 60
+                X: =30
+                Y: =229
+                ZIndex: =18
+
+            LosseDetWasteLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Wasteline:"
+                Width: =(Parent.Width - 60) / 2
+                Wrap: =false
+                X: =350
+                Y: =176
+                ZIndex: =19
+
+            LosseDetWasteContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =cornerVar
+                RadiusBottomRight: =cornerVar
+                RadiusTopLeft: =cornerVar
+                RadiusTopRight: =cornerVar
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width / 2 - 60
+                X: =350
+                Y: =229
+                ZIndex: =20
+
+        GjenståendeContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =LøsBtnContainer.Height
+            Width: =640
+            X: =0
+            Y: =8
+            ZIndex: =1
+
+            GjenståendeButton As button:
+                Fill: =LøslastButton.Fill
+                Height: =70
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showFields=10,Set(showFields,0),Set(showFields,10))
+                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
+                RadiusBottomRight: =LøslastButton.RadiusBottomRight
+                RadiusTopLeft: =LøslastButton.RadiusTopLeft
+                RadiusTopRight: =LøslastButton.RadiusTopRight
+                Size: =24
+                Text: ="Gjenstående fra forrige skift"
+                Width: =Parent.Width
+                ZIndex: =1
+
+        GjenståendePallContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="GjenståPall"
+            Default: =ThisItem.GjenståPall
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,GjenståPall)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =358
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, GjenståPall)
+            Required: =false
+            Update: =GjenståendePallContent.Text
+            Visible: =If(showFields=10||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =9
+            ZIndex: =1
+
+            GjenståendePallLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: ="Gjenstående"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            GjenståendePallContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =115
+                ZIndex: =2
+
+            ErrorMessage21 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =GjenståendePallContent.Y + GjenståendePallContent.Height
+                ZIndex: =3
+
+            StarVisible21 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =GjenståendePallLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =GjenståendePallLabel.Y
+                ZIndex: =4
+
+            GjenståendePallContentB3 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =262
+                ZIndex: =5
+
+            GjenståendePallLabelB2 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: ="B2"
+                Width: =260
+                Wrap: =false
+                X: =30
+                Y: =67
+                ZIndex: =6
+
+            GjenståendePallLabelB3 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: ="B3"
+                Width: =260
+                Wrap: =false
+                X: =30
+                Y: =214
+                ZIndex: =7
+
+        B3Container As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =Color.Transparent
+            Height: =LøslastButton.Height + 5
+            Width: =640
+            X: =0
+            Y: =10
+            ZIndex: =1
+
+            B3Button As button:
+                BorderThickness: =0
+                Fill: =LøslastButton.Fill
+                Height: =70
+                HoverColor: =RGBA(255,255,255,1)
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showFields=3,Set(showFields,0),Set(showFields,3))
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
+                RadiusBottomRight: =LøslastButton.RadiusBottomRight
+                RadiusTopLeft: =LøslastButton.RadiusTopLeft
+                RadiusTopRight: =LøslastButton.RadiusTopRight
+                Size: =24
+                Text: ="B3 (Nord og Sør)"
+                Width: =Parent.Width
+                ZIndex: =1
+
+        B3SørContainer As typedDataCard.textualMultiLineEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ByggTreSør"
+            Default: =ThisItem.ByggTreSør
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,ByggTreSør)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =B3SørContent.Height + B3SørLabel.Height + 50
+            Required: =false
+            Update: =B3SørContent.Text
+            Visible: =If(showFields=3||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =11
+            ZIndex: =1
+
+            B3SørLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Sør:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            B3SørContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =178
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Visible: =false
+                Width: =44
+                X: =30
+                Y: =B3SørLabel.Y + B3SørLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage17 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =B3SørContent.Y + B3SørContent.Height
+                ZIndex: =3
+
+            StarVisible17 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =B3SørLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =B3SørLabel.Y
+                ZIndex: =4
+
+            "'Bur/paller Group_1' As group":
+                Height: =5
+                Width: =5
+                X: =-104
+                Y: =28
+                ZIndex: =14
+
+                B3SørContentPallerPri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =162
+                    X: =432
+                    Y: =82
+                    ZIndex: =6
+
+                B3SørContentBurPri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =142
+                    X: =250
+                    Y: =82
+                    ZIndex: =7
+
+                PåLagerLabel_4 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =48
+                    Size: =21
+                    Text: |-
+                        ="Bur:"
+                    Width: =128
+                    Wrap: =false
+                    X: =250
+                    Y: =34
+                    ZIndex: =8
+
+                PåLagerLabel_3 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =48
+                    Size: =21
+                    Text: |-
+                        ="Paller:"
+                    Width: =162
+                    Wrap: =false
+                    X: =432
+                    Y: =34
+                    ZIndex: =9
+
+                B3SørContentPallerUpri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =162
+                    X: =432
+                    Y: =170
+                    ZIndex: =10
+
+                B3SørContentBurUpri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =142
+                    X: =251
+                    Y: =170
+                    ZIndex: =11
+
+                PåLagerLabel_7 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =59
+                    Size: =21
+                    Text: ="Pri"
+                    Width: =66
+                    Wrap: =false
+                    X: =145
+                    Y: =87
+                    ZIndex: =12
+
+                PåLagerLabel_8 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =59
+                    Size: =21
+                    Text: ="Upri"
+                    Width: =77
+                    Wrap: =false
+                    X: =145
+                    Y: =175
+                    ZIndex: =13
+
+        B3NordContainer As typedDataCard.textualMultiLineEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ByggTreNord"
+            Default: =ThisItem.ByggTreNord
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,ByggTreNord)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =B3NordLabel.Height + B3NordContent.Height + 50
+            Required: =false
+            Update: =B3NordContent.Text
+            Visible: =If(showFields=3||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =12
+            ZIndex: =1
+
+            B3NordLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Nord:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            B3NordContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =140
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Visible: =false
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =B3NordLabel.Y + B3NordLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage16 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =B3NordContent.Y + B3NordContent.Height
+                ZIndex: =3
+
+            StarVisible16 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =B3NordLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =B3NordLabel.Y
+                ZIndex: =4
+
+            B3NordSørContentBur As label:
+                Height: =82
+                Size: =21
+                Text: =B3NordContentBurPri.Text + B3NordContentPallerPri.Text + B3SørContentBurPri.Text + B3SørContentPallerPri.Text
+                Visible: =false
+                Width: =62
+                X: =40
+                Y: =40
+                ZIndex: =13
+
+            "'Bur/paller Group_2' As group":
+                Height: =5
+                Width: =5
+                X: =-105
+                Y: =-2
+                ZIndex: =13
+
+                B3NordContentPallerPri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =162
+                    X: =432
+                    Y: =58
+                    ZIndex: =5
+
+                B3NordContentBurPri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =142
+                    X: =250
+                    Y: =58
+                    ZIndex: =6
+
+                PåLagerLabel_10 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =48
+                    Size: =21
+                    Text: |-
+                        ="Bur:"
+                    Width: =128
+                    Wrap: =false
+                    X: =250
+                    Y: =10
+                    ZIndex: =7
+
+                PåLagerLabel_9 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =48
+                    Size: =21
+                    Text: |-
+                        ="Paller:"
+                    Width: =162
+                    Wrap: =false
+                    X: =432
+                    Y: =10
+                    ZIndex: =8
+
+                B3NordContentPallerUpri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =162
+                    X: =432
+                    Y: =146
+                    ZIndex: =9
+
+                B3NordContentBurUpri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =500
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =142
+                    X: =251
+                    Y: =146
+                    ZIndex: =10
+
+                PåLagerLabel_11 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =59
+                    Size: =21
+                    Text: ="Pri"
+                    Width: =66
+                    Wrap: =false
+                    X: =145
+                    Y: =63
+                    ZIndex: =11
+
+                PåLagerLabel_12 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Height: =59
+                    Size: =21
+                    Text: ="Upri"
+                    Width: =77
+                    Wrap: =false
+                    X: =145
+                    Y: =151
+                    ZIndex: =12
+
+            B3NordSørContentPaller As label:
+                Height: =82
+                Size: =21
+                Text: =B3NordContentBurUpri.Text + B3NordContentPallerUpri.Text + B3SørContentPallerUpri.Text + B3SørContentPallerUpri.Text
+                Visible: =false
+                Width: =62
+                X: =40
+                Y: =121
+                ZIndex: =14
+
+        OverliggContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =LøsBtnContainer.Height
+            Width: =640
+            X: =0
+            Y: =13
+            ZIndex: =1
+
+            OverliggButton As button:
+                Fill: =LøslastButton.Fill
+                Height: =70
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showFields=4,Set(showFields,0),Set(showFields,4))
+                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
+                RadiusBottomRight: =LøslastButton.RadiusBottomRight
+                RadiusTopLeft: =LøslastButton.RadiusTopLeft
+                RadiusTopRight: =LøslastButton.RadiusTopRight
+                Size: =24
+                Text: ="Overligg"
+                Width: =Parent.Width
+                ZIndex: =1
+
+        OverliggContainerOne As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =614
+            Visible: =If(showFields=4||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =14
+            ZIndex: =1
+
+            OverliggFraLabel As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Fra:"
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+            OverliggFraContent As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Width: =560
+                X: =40
+                Y: =110
+                ZIndex: =2
+
+            OverliggVBHLabel As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="VBH:"
+                Width: =OverliggVBHContent.Width
+                X: =40
+                Y: =180
+                ZIndex: =3
+
+            OverliggVBHContent As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Width: =(OverliggFraContent.Width / 2) - 20
+                X: =40
+                Y: =250
+                ZIndex: =4
+
+            OverliggPortLabel As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Port:"
+                Width: =OverliggPortContent.Width
+                X: =330
+                Y: =180
+                ZIndex: =5
+
+            OverliggPortContent As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Width: =(OverliggVBHContent.Width / 2) - 10
+                X: =330
+                Y: =250
+                ZIndex: =6
+
+            OverliggPlasserLabel As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Plasser:"
+                Width: =OverliggPlasserContent.Width
+                X: =480
+                Y: =180
+                ZIndex: =7
+
+            OverliggPlasserContent As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Width: =(OverliggVBHContent.Width / 2) - 10
+                X: =480
+                Y: =250
+                ZIndex: =8
+
+            OverliggInfoLabel As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Info:"
+                Width: =560
+                X: =40
+                Y: =320
+                ZIndex: =9
+
+            OverliggInfoContent As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Width: =560
+                X: =40
+                Y: =390
+                ZIndex: =10
+
+            OverliggAddNewOne As button:
+                Fill: =LøslastButton.Fill
+                Height: =70
+                OnSelect: |-
+                    =Collect(
+                        OverliggItems,
+                        {
+                            Fra: OverliggFraContent.Text,
+                            VBH: OverliggVBHContent.Text,
+                            Port: OverliggPortContent.Text,
+                            Plasser: OverliggPlasserContent.Text,
+                            Info: OverliggInfoContent.Text
+                        }
+                    );
+                    Reset(OverliggInfoContent);
+                    Reset(OverliggPlasserContent);
+                    Reset(OverliggPortContent);
+                    Reset(OverliggPlasserContent);
+                    Reset(OverliggFraContent);
+                    Reset(OverliggVBHContent)
+                Size: =24
+                Text: ="Add"
+                Width: =280
+                X: =320
+                Y: =502
+                ZIndex: =11
+
+            OverliggAddNewOne_1 As button:
+                Color: =RGBA(9, 33, 98, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =70
+                OnSelect: =Navigate(OverliggInngående, ScreenTransition.UnCoverRight);Set(ListVar, 1)
+                Size: =24
+                Text: ="See items"
+                Width: =250
+                X: =40
+                Y: =502
+                ZIndex: =12
+
+            CountOverligg As label:
+                Align: =Align.Right
+                Height: =35
+                Size: =16
+                Text: |-
+                    =Concatenate("Antall Registrert: ", CountRows(OverliggItems))
+                Width: =300
+                X: =320
+                Y: =20
+                ZIndex: =13
+
+        AnkomstBilContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =AnkomstBilHeader.Height + 50
+            Width: =640
+            X: =0
+            Y: =15
+            ZIndex: =1
+
+            AnkomstBilHeader As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =25
+                Text: ="Ankomster og Biler"
+                Width: =560
+                X: =36
+                Y: =27
+                ZIndex: =1
+
+        AnkomstContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =LøsBtnContainer.Height
+            Width: =640
+            X: =0
+            Y: =16
+            ZIndex: =1
+
+            AnkomstButton As button:
+                Fill: =LøslastButton.Fill
+                Height: =70
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showFields=5,Set(showFields,0),Set(showFields,5))
+                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
+                RadiusBottomRight: =LøslastButton.RadiusBottomRight
+                RadiusTopLeft: =LøslastButton.RadiusTopLeft
+                RadiusTopRight: =LøslastButton.RadiusTopRight
+                Size: =24
+                Text: ="Ankomster"
+                Width: =Parent.Width
+                ZIndex: =1
+
+        AnkomstContentContainer As typedDataCard.textualMultiLineEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="AnkKomm"
+            Default: =ThisItem.AnkKomm
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,AnkKomm)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =AnkomstContent.Height + AnkomstLabel.Height + 50
+            Required: =false
+            Update: =AnkomstContent.Text
+            Visible: =If(showFields=5||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =17
+            ZIndex: =1
+
+            AnkomstLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Ankomst Kommentar:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            AnkomstContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =140
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =AnkomstLabel.Y + AnkomstLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage24 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =AnkomstContent.Y + AnkomstContent.Height
+                ZIndex: =3
+
+            StarVisible24 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =AnkomstLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =AnkomstLabel.Y
+                ZIndex: =4
+
+        ManglerBilerContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =LøsBtnContainer.Height
+            Width: =640
+            X: =0
+            Y: =18
+            ZIndex: =1
+
+            ManglerBilerButton As button:
+                Fill: =LøslastButton.Fill
+                Height: =70
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showFields=6,Set(showFields,0),Set(showFields,6))
+                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
+                RadiusBottomRight: =LøslastButton.RadiusBottomRight
+                RadiusTopLeft: =LøslastButton.RadiusTopLeft
+                RadiusTopRight: =LøslastButton.RadiusTopRight
+                Size: =24
+                Text: ="Manglende Biler"
+                Width: =Parent.Width
+                ZIndex: =1
+
+        ManglerBilRegContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="MangBilReg"
+            Default: =ThisItem.MangBilReg
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,MangBilReg)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, MangBilReg)
+            Required: =false
+            Update: =ManglerBilRegContent.Text
+            Visible: =If(showFields=6||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =19
+            ZIndex: =1
+
+            ManglerBilRegLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Bil Reg:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ManglerBilRegContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =ManglerBilRegLabel.Y + ManglerBilRegLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage26 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =ManglerBilRegContent.Y + ManglerBilRegContent.Height
+                ZIndex: =3
+
+            StarVisible26 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =ManglerBilRegLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =ManglerBilRegLabel.Y
+                ZIndex: =4
+
+            CountManglerBil As label:
+                Align: =Align.Right
+                Height: =45
+                Size: =16
+                Text: |-
+                    =Concatenate("Antall reg: ", CountRows(ManglerBilerCollection))
+                Width: =206
+                X: =404
+                ZIndex: =5
+
+        ManglerBilTurContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="MangBilTur"
+            Default: =ThisItem.MangBilTur
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,MangBilTur)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, MangBilTur)
+            Required: =false
+            Update: =ManglerBilTurContent.Text
+            Visible: =If(showFields=6||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =20
+            ZIndex: =1
+
+            ManglerBilTurLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Bil tur:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ManglerBilTurContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =ManglerBilTurLabel.Y + ManglerBilTurLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage25 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =ManglerBilTurContent.Y + ManglerBilTurContent.Height
+                ZIndex: =3
+
+            StarVisible25 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =ManglerBilTurLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =ManglerBilTurLabel.Y
+                ZIndex: =4
+
+        ManglerBilKommContainer As typedDataCard.textualMultiLineEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="MangBilKomm"
+            Default: =ThisItem.MangBilKomm
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,MangBilKomm)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =328
+            Required: =false
+            Update: =ManglerBilKommContent.Text
+            Visible: =If(showFields=6||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =21
+            ZIndex: =1
+
+            ManglerBilKommLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Kommentar:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ManglerBilKommContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =140
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =ManglerBilKommLabel.Y + ManglerBilKommLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage28 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =ManglerBilKommContent.Y + ManglerBilKommContent.Height
+                ZIndex: =3
+
+            StarVisible28 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =ManglerBilKommLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =ManglerBilKommLabel.Y
+                ZIndex: =4
+
+            Button4 As button:
+                Fill: =LøslastButton.Fill
+                Height: =70
+                OnSelect: |-
+                    =Collect(
+                        ManglerBilerCollection,
+                        {
+                            Reg: ManglerBilRegContent.Text,
+                            Tur: ManglerBilTurContent.Text,
+                            Kommentar: ManglerBilKommContent.Text
+                        }
+                    );
+                    Reset(ManglerBilRegContent);
+                    Reset(ManglerBilTurContent);
+                    Reset(ManglerBilKommContent)
+                Size: =24
+                Text: ="Add"
+                Width: =280
+                X: =330
+                Y: =226
+                ZIndex: =5
+
+            Button4_1 As button:
+                Color: =RGBA(9, 33, 98, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =70
+                OnSelect: =Navigate(ManglendeBilerInngående,ScreenTransition.UnCoverRight);Set(ListVar, 2)
+                Size: =24
+                Text: ="See List"
+                Width: =280
+                X: =30
+                Y: =226
+                ZIndex: =6
+
+        LagerHeaderContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Width: =640
+            X: =0
+            Y: =22
+            ZIndex: =1
+
+            LagerHeader As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =25
+                Text: ="Lagerbeholdning"
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+        PåLagerContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DataField: ="PåLager"
+            Default: =ThisItem.PåLager
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,PåLager)
+            Fill: =ColorFade(LøslastButton.Fill, 20%)
+            Height: =252
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, PåLager)
+            Required: =false
+            Update: =PåLagerContentPallerPri.Text
+            Width: =640
+            X: =0
+            Y: =23
+            ZIndex: =1
+
+            PåLagerLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Står På lager:"
+                Width: =200
+                Wrap: =false
+                X: =30
+                Y: =12
+                ZIndex: =1
+
+            ErrorMessage29 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =PåLagerContentPallerPri.Y + PåLagerContentPallerPri.Height
+                ZIndex: =3
+
+            StarVisible29 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =PåLagerLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =PåLagerLabel.Y
+                ZIndex: =4
+
+            PåLagerContentBurSamlet As label:
+                Height: =84
+                Size: =21
+                Text: =PåLagerContentBurPri.Text + PåLagerContentBurUpri.Text
+                Visible: =false
+                Width: =76
+                X: =49
+                Y: =64
+                ZIndex: =14
+
+            "'Bur/paller Group' As group":
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =14
+
+                PåLagerContentPallerPri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =162
+                    X: =431
+                    Y: =60
+                    ZIndex: =2
+
+                PåLagerContentBurPri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =142
+                    X: =249
+                    Y: =60
+                    ZIndex: =5
+
+                PåLagerLabel_1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =48
+                    Size: =21
+                    Text: |-
+                        ="Bur:"
+                    Width: =128
+                    Wrap: =false
+                    X: =249
+                    Y: =12
+                    ZIndex: =6
+
+                PåLagerLabel_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =48
+                    Size: =21
+                    Text: |-
+                        ="Paller:"
+                    Width: =162
+                    Wrap: =false
+                    X: =431
+                    Y: =12
+                    ZIndex: =7
+
+                PåLagerContentPallerUpri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =162
+                    X: =431
+                    Y: =148
+                    ZIndex: =8
+
+                PåLagerContentBurUpri As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    Height: =70
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =142
+                    X: =250
+                    Y: =148
+                    ZIndex: =10
+
+                PåLagerLabel_5 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =59
+                    Size: =21
+                    Text: ="Pri"
+                    Width: =66
+                    Wrap: =false
+                    X: =144
+                    Y: =65
+                    ZIndex: =12
+
+                PåLagerLabel_6 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =59
+                    Size: =21
+                    Text: ="Upri"
+                    Width: =77
+                    Wrap: =false
+                    X: =144
+                    Y: =153
+                    ZIndex: =13
+
+            PåLagerContentPallerSamlet As label:
+                Height: =84
+                Size: =21
+                Text: =PåLagerContentPallerPri.Text + PåLagerContentPallerUpri.Text
+                Visible: =false
+                Width: =76
+                X: =49
+                Y: =148
+                ZIndex: =15
+
+        OpplastetContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =LøsBtnContainer.Height
+            Width: =640
+            X: =0
+            Y: =24
+            ZIndex: =1
+
+            OpplastetButton As button:
+                Fill: =LøslastButton.Fill
+                Height: =70
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showFields=7,Set(showFields,0),Set(showFields,7))
+                RadiusBottomLeft: =LøslastButton.RadiusTopRight
+                RadiusBottomRight: =LøslastButton.RadiusBottomRight
+                RadiusTopLeft: =LøslastButton.RadiusTopLeft
+                RadiusTopRight: =LøslastButton.RadiusTopRight
+                Size: =24
+                Text: ="Opplastet"
+                Width: =Parent.Width
+                Y: =5
+                ZIndex: =1
+
+        OpplastetByggContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OpplastBFireogFem"
+            Default: =ThisItem.OpplastBFireogFem
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,OpplastBFireogFem)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =36
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, OpplastBFireogFem)
+            Required: =false
+            Update: =OpplastetByggContent.Text
+            Visible: =If(showFields=7||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =25
+            ZIndex: =1
+
+            OpplastetByggLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: ="Opplastet til B4 og B5"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            OpplastetByggContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =OpplastetByggLabel.Y + OpplastetByggLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage32 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =OpplastetByggContent.Y + OpplastetByggContent.Height
+                ZIndex: =3
+
+            StarVisible32 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =OpplastetByggLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =OpplastetByggLabel.Y
+                ZIndex: =4
+
+        OpplastetNCContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OpplastNC"
+            Default: =ThisItem.OpplastNC
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,OpplastNC)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, OpplastNC)
+            Required: =false
+            Update: =OpplastetNCContent.Text
+            Visible: =If(showFields=7||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =26
+            ZIndex: =1
+
+            OpplastetNCLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: ="Opplastet til NC"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            OpplastetNCContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =OpplastetNCLabel.Y + OpplastetNCLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage31 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =OpplastetNCContent.Y + OpplastetNCContent.Height
+                ZIndex: =3
+
+            StarVisible31 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =OpplastetNCLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =OpplastetNCLabel.Y
+                ZIndex: =4
+
+        OpplastetLagerContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OpplastLag"
+            Default: =ThisItem.OpplastLag
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,OpplastLag)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =55
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, OpplastLag)
+            Required: =false
+            Update: =OpplastetLagerContent.Text
+            Visible: =If(showFields=7||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =27
+            ZIndex: =1
+
+            OpplastetLagerLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: ="Opplastet til Lager"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            OpplastetLagerContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =OpplastetLagerLabel.Y + OpplastetLagerLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage30 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =OpplastetLagerContent.Y + OpplastetLagerContent.Height
+                ZIndex: =3
+
+            StarVisible30 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =OpplastetLagerLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =OpplastetLagerLabel.Y
+                ZIndex: =4
+
+        DiverseContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =137
+            Width: =640
+            X: =0
+            Y: =28
+            ZIndex: =1
+
+            DiverseButton As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =25
+                Text: ="Diverse"
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+        SkaddeContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Skadde"
+            Default: =ThisItem.Skadde
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,Skadde)
+            Fill: =PåLagerContainer.Fill
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, Skadde)
+            Required: =false
+            Update: =SkaddeContent.Text
+            Width: =640
+            X: =0
+            Y: =29
+            ZIndex: =1
+
+            SkaddeLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =175
+                Wrap: =false
+                X: =30
+                Y: =21
+                ZIndex: =1
+
+            SkaddeContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =PåLagerContentPallerPri.RadiusBottomLeft
+                RadiusBottomRight: =PåLagerContentPallerPri.RadiusBottomRight
+                RadiusTopLeft: =PåLagerContentPallerPri.RadiusTopLeft
+                RadiusTopRight: =PåLagerContentPallerPri.RadiusTopRight
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 260
+                X: =230
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =SkaddeContent.Y + SkaddeContent.Height
+                ZIndex: =3
+
+            StarVisible1 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =SkaddeLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =SkaddeLabel.Y
+                ZIndex: =4
+
+        KunderContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =LøsBtnContainer.Height
+            Width: =640
+            X: =0
+            Y: =30
+            ZIndex: =1
+
+            KunderButton As button:
+                Fill: =LøslastButton.Fill
+                Height: =70
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =If(showFields=8,Set(showFields,0),Set(showFields,8))
+                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
+                RadiusBottomRight: =LøslastButton.RadiusBottomRight
+                RadiusTopLeft: =LøslastButton.RadiusTopLeft
+                RadiusTopRight: =LøslastButton.RadiusTopRight
+                Size: =24
+                Text: ="Kunder"
+                Width: =Parent.Width
+                Y: =5
+                ZIndex: =1
+
+        BCContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KundBC"
+            Default: =ThisItem.KundBC
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundBC)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundBC)
+            Required: =false
+            Update: =BCContent.Text
+            Visible: =If(showFields=8||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =31
+            ZIndex: =1
+
+            BCLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="BC:"
+                Width: =170 
+                Wrap: =false
+                X: =GLSLabel.X
+                Y: =GLSLabel.Y
+                ZIndex: =1
+
+            BCContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =GLSContent.Height
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =GLSContent.Width
+                X: =GLSContent.X
+                Y: =GLSContent.Y
+                ZIndex: =2
+
+            ErrorMessage14 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =BCContent.Y + BCContent.Height
+                ZIndex: =3
+
+            StarVisible14 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =BCLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =BCLabel.Y
+                ZIndex: =4
+
+            BCBox As checkbox:
+                Height: =GLSbox.Height
+                Size: =21
+                Text: =""
+                Width: =GLSbox.Width
+                X: =GLSbox.X
+                Y: =GLSbox.Y
+                ZIndex: =5
+
+        GLSContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KunGLS"
+            Default: =ThisItem.KunGLS
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KunGLS)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KunGLS)
+            Required: =false
+            Update: =GLSContent.Text
+            Visible: =If(showFields=8||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =32
+            ZIndex: =1
+
+            GLSLabel As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="GLS:"
+                Width: =170
+                Wrap: =false
+                X: =30
+                Y: =21
+                ZIndex: =1
+
+            GLSContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 360
+                X: =330
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage2 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =GLSContent.Y + GLSContent.Height
+                ZIndex: =3
+
+            StarVisible2 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =GLSLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =GLSLabel.Y
+                ZIndex: =4
+
+            GLSbox As checkbox:
+                Height: =69
+                Size: =21
+                Text: =""
+                Width: =72
+                X: =200
+                Y: =5
+                ZIndex: =5
+
+        UPSContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KundUPS"
+            Default: =ThisItem.KundUPS
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundUPS)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundUPS)
+            Required: =false
+            Update: =UPSContent.Text
+            Visible: =If(showFields=8||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =33
+            ZIndex: =1
+
+            UPSLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =GLSLabel.Height
+                Size: =21
+                Text: |-
+                    ="UPS:"
+                Width: =GLSLabel.Width
+                Wrap: =false
+                X: =GLSLabel.X
+                Y: =GLSLabel.Y
+                ZIndex: =1
+
+            UPSContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =GLSContent.Height
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =GLSContent.Width
+                X: =GLSContent.X
+                Y: =GLSContent.Y
+                ZIndex: =2
+
+            ErrorMessage34 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =UPSContent.Y + UPSContent.Height
+                ZIndex: =3
+
+            StarVisible34 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =UPSLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =UPSLabel.Y
+                ZIndex: =4
+
+            UPSBox As checkbox:
+                Height: =GLSbox.Height
+                Size: =21
+                Text: =""
+                Width: =GLSbox.Width
+                X: =GLSbox.X
+                Y: =GLSbox.Y
+                ZIndex: =5
+
+        MaskeContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KundMaske"
+            Default: =ThisItem.KundMaske
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundMaske)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundMaske)
+            Required: =false
+            Update: =MaskeContent.Text
+            Visible: =If(showFields=8||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =34
+            ZIndex: =1
+
+            MaskeLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Font: =GLSLabel.Font
+                Height: =GLSLabel.Height
+                Size: =21
+                Text: |-
+                    ="Maske:"
+                Width: =GLSLabel.Width
+                Wrap: =false
+                X: =GLSLabel.X
+                Y: =GLSLabel.Y
+                ZIndex: =1
+
+            MaskeContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =GLSContent.Height
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =GLSContent.Width
+                X: =GLSContent.X
+                Y: =GLSContent.Y
+                ZIndex: =2
+
+            ErrorMessage15 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =MaskeContent.Y + MaskeContent.Height
+                ZIndex: =3
+
+            StarVisible15 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =MaskeLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =MaskeLabel.Y
+                ZIndex: =4
+
+            MaskeBox As checkbox:
+                Height: =GLSbox.Height
+                Size: =21
+                Text: =""
+                Width: =GLSbox.Width
+                X: =GLSbox.X
+                Y: =GLSbox.Y
+                ZIndex: =5
+
+        SdFsContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KundSdFs"
+            Default: =ThisItem.KundSdFs
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundSdFs)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundSdFs)
+            Required: =false
+            Update: =SdFsContent.Text
+            Visible: =If(showFields=8||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =35
+            ZIndex: =1
+
+            SdFsLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Font: =GLSLabel.Font
+                Height: =GLSLabel.Height
+                Size: =21
+                Text: |-
+                    ="SD / FS:"
+                Width: =GLSLabel.Width
+                Wrap: =false
+                X: =GLSLabel.X
+                Y: =GLSLabel.Y
+                ZIndex: =1
+
+            SdFsContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =GLSContent.Height
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =GLSContent.Width
+                X: =GLSContent.X
+                Y: =GLSContent.Y
+                ZIndex: =2
+
+            ErrorMessage18 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =SdFsContent.Y + SdFsContent.Height
+                ZIndex: =3
+
+            StarVisible18 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =SdFsLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =SdFsLabel.Y
+                ZIndex: =4
+
+            SdFsBox As checkbox:
+                Height: =GLSbox.Height
+                Size: =21
+                Text: =""
+                Width: =GLSbox.Width
+                X: =GLSbox.X
+                Y: =GLSbox.Y
+                ZIndex: =5
+
+        StaplesContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KundStaples"
+            Default: =ThisItem.KundStaples
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundStaples)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundStaples)
+            Required: =false
+            Update: =StaplesContent.Text
+            Visible: =If(showFields=8||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =36
+            ZIndex: =1
+
+            StaplesLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Font: =GLSLabel.Font
+                Height: =GLSLabel.Height
+                Size: =21
+                Text: |-
+                    ="Lyreco:"
+                Width: =GLSLabel.Width
+                Wrap: =false
+                X: =GLSLabel.X
+                Y: =GLSLabel.Y
+                ZIndex: =1
+
+            StaplesContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =GLSContent.Height
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =GLSContent.Width
+                X: =GLSContent.X
+                Y: =GLSContent.Y
+                ZIndex: =2
+
+            ErrorMessage23 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =StaplesContent.Y + StaplesContent.Height
+                ZIndex: =3
+
+            StarVisible23 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =StaplesLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =StaplesLabel.Y
+                ZIndex: =4
+
+            StaplesBox As checkbox:
+                Height: =GLSbox.Height
+                Size: =21
+                Text: =""
+                Width: =GLSbox.Width
+                X: =GLSbox.X
+                Y: =GLSbox.Y
+                ZIndex: =5
+
+        TechdataContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KundTech"
+            Default: =ThisItem.KundTech
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundTech)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundTech)
+            Required: =false
+            Update: =TechdataContent.Text
+            Visible: =If(showFields=8||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =37
+            ZIndex: =1
+
+            TechdataLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =GLSLabel.Height
+                Size: =21
+                Text: |-
+                    ="Techdata:"
+                Width: =GLSLabel.Width
+                Wrap: =false
+                X: =GLSLabel.Y
+                Y: =GLSLabel.Y
+                ZIndex: =1
+
+            TechdataContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =GLSContent.Height
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =GLSContent.Width
+                X: =GLSContent.X
+                Y: =GLSContent.Y
+                ZIndex: =2
+
+            ErrorMessage27 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =TechdataContent.Y + TechdataContent.Height
+                ZIndex: =3
+
+            StarVisible27 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =TechdataLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =TechdataLabel.Y
+                ZIndex: =4
+
+            TechdataBox As checkbox:
+                Height: =GLSbox.Height
+                Size: =21
+                Text: =""
+                Width: =GLSbox.Width
+                X: =GLSbox.X
+                Y: =GLSbox.Y
+                ZIndex: =5
+
+        VidaXLContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KundVidaXL"
+            Default: =ThisItem.KundVidaXL
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundVidaXL)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundVidaXL)
+            Required: =false
+            Update: =VidaXLContent.Text
+            Visible: =If(showFields=8||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =38
+            ZIndex: =1
+
+            VidaXLLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =GLSLabel.Height
+                Size: =21
+                Text: |-
+                    ="VidaXL:"
+                Width: =GLSLabel.Width
+                Wrap: =false
+                X: =GLSLabel.X
+                Y: =GLSLabel.Y
+                ZIndex: =1
+
+            VidaXLContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =GLSContent.Height
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =GLSContent.Width
+                X: =GLSContent.X
+                Y: =GLSContent.Y
+                ZIndex: =2
+
+            ErrorMessage35 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =VidaXLContent.Y + VidaXLContent.Height
+                ZIndex: =3
+
+            StarVisible35 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =VidaXLLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =VidaXLLabel.Y
+                ZIndex: =4
+
+            VidaXLBox As checkbox:
+                Height: =GLSbox.Height
+                Size: =21
+                Text: =""
+                Width: =GLSbox.Width
+                X: =GLSbox.X
+                Y: =GLSbox.Y
+                ZIndex: =5
+
+        ZalandoContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KundZalando"
+            Default: =ThisItem.KundZalando
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundZalando)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundZalando)
+            Required: =false
+            Update: =ZalandoContent.Text
+            Visible: =If(showFields=8||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =39
+            ZIndex: =1
+
+            ZalandoLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =GLSLabel.Height
+                Size: =21
+                Text: |-
+                    ="Zalando:"
+                Width: =GLSLabel.Width
+                Wrap: =false
+                X: =GLSLabel.X
+                Y: =GLSLabel.Y
+                ZIndex: =1
+
+            ZalandoContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =GLSContent.Height
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =GLSContent.Width
+                X: =GLSContent.X
+                Y: =GLSContent.Y
+                ZIndex: =2
+
+            ErrorMessage36 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =ZalandoContent.Y + ZalandoContent.Height
+                ZIndex: =3
+
+            StarVisible36 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =ZalandoLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =ZalandoLabel.Y
+                ZIndex: =4
+
+            ZalandoBox As checkbox:
+                Height: =GLSbox.Height
+                Size: =21
+                Text: =""
+                Width: =GLSbox.Width
+                X: =GLSbox.X
+                Y: =GLSbox.Y
+                ZIndex: =5
+
+        RandOneContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KundRandEn"
+            Default: =ThisItem.KundRandEn
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundRandEn)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundRandEn)
+            Required: =false
+            Update: =RandOneContent.Text
+            Visible: =If(showFields=8||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =40
+            ZIndex: =1
+
+            RandOneContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =GLSContent.Height
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =GLSContent.Width
+                X: =GLSContent.X
+                Y: =GLSContent.Y
+                ZIndex: =2
+
+            ErrorMessage37 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =RandOneContent.Y + RandOneContent.Height
+                ZIndex: =3
+
+            RandOneBox As checkbox:
+                Height: =GLSbox.Height
+                Size: =21
+                Text: =""
+                Width: =GLSbox.Width
+                X: =GLSbox.X
+                Y: =GLSbox.Y
+                ZIndex: =5
+
+            RandOneLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =GLSLabel.Height
+                Size: =21
+                Text: |-
+                    ="WJ:"
+                Width: =GLSLabel.Width
+                Wrap: =false
+                X: =GLSLabel.X
+                Y: =GLSLabel.Y
+                ZIndex: =6
+
+        RandTwoContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KundRandTo"
+            Default: =ThisItem.KundRandTo
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,KundRandTo)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =RandOneLabel.Height
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, KundRandTo)
+            Required: =false
+            Update: =RandTwoContent.Text
+            Visible: =If(showFields=8||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =41
+            ZIndex: =1
+
+            RandTwoContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =GLSContent.Height
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =GLSContent.Width
+                X: =GLSContent.X
+                Y: =GLSContent.Y
+                ZIndex: =2
+
+            ErrorMessage38 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =RandTwoContent.Y + RandTwoContent.Height
+                ZIndex: =3
+
+            RandTwoBox As checkbox:
+                Height: =GLSbox.Height
+                Size: =21
+                Text: =""
+                Width: =GLSbox.Width
+                X: =GLSbox.X
+                Y: =GLSbox.Y
+                ZIndex: =5
+
+            RandTwoLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =GLSLabel.Height
+                Size: =21
+                Text: |-
+                    ="JO:"
+                Width: =GLSLabel.Width
+                Wrap: =false
+                X: =GLSLabel.X
+                Y: =GLSLabel.Y
+                ZIndex: =6
+
+        AnnetButtonContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =LøsBtnContainer.Height
+            Width: =640
+            X: =0
+            Y: =42
+            ZIndex: =1
+
+            AnnetButton As button:
+                Fill: =LøslastButton.Fill
+                Height: =70
+                HoverFill: =ColorFade(Self.Fill, 20%)
+                OnSelect: =If(showFields=9,Set(showFields,0),Set(showFields,9))
+                RadiusBottomLeft: =LøslastButton.RadiusBottomLeft
+                RadiusBottomRight: =LøslastButton.RadiusBottomRight
+                RadiusTopLeft: =LøslastButton.RadiusTopLeft
+                RadiusTopRight: =LøslastButton.RadiusTopRight
+                Size: =24
+                Text: ="Annet / Info / Avvik"
+                Width: =Parent.Width
+                Y: =5
+                ZIndex: =1
+
+        AvvikContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DivAvvik"
+            Default: =ThisItem.DivAvvik
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivAvvik)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivAvvik)
+            Required: =false
+            Update: =AvvikContent.Text
+            Visible: =If(showFields=9||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =43
+            ZIndex: =1
+
+            AvvikLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Avvik:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            AvvikContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =AvvikLabel.Y + AvvikLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage40 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =AvvikContent.Y + AvvikContent.Height
+                ZIndex: =3
+
+            StarVisible40 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =AvvikLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =AvvikLabel.Y
+                ZIndex: =4
+
+        TollLagerContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DivToll"
+            Default: =ThisItem.DivToll
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivToll)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivToll)
+            Required: =false
+            Update: =TollLagerContent.Text
+            Visible: =If(showFields=9||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =44
+            ZIndex: =1
+
+            TollLagerLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Tolllager status:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            TollLagerContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =TollLagerLabel.Y + TollLagerLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage46 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =TollLagerContent.Y + TollLagerContent.Height
+                ZIndex: =3
+
+            StarVisible46 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =TollLagerLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =TollLagerLabel.Y
+                ZIndex: =4
+
+        NestenulykkerContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DivNesten"
+            Default: =ThisItem.DivNesten
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivNesten)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivNesten)
+            Required: =false
+            Update: =NestenulykkerContent.Text
+            Visible: =If(showFields=9||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =45
+            ZIndex: =1
+
+            NestenulykkerLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Nesten ulykker:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            NestenulykkerContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =NestenulykkerLabel.Y + NestenulykkerLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage45 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =NestenulykkerContent.Y + NestenulykkerContent.Height
+                ZIndex: =3
+
+            StarVisible45 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =NestenulykkerLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =NestenulykkerLabel.Y
+                ZIndex: =4
+
+        LBSkiltContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DivLB"
+            Default: =ThisItem.DivLB
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivLB)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =56
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivLB)
+            Required: =false
+            Update: =LBSkiltContent.Text
+            Visible: =If(showFields=9||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =46
+            ZIndex: =1
+
+            LBSkiltLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="LB-Skilt:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            LBSkiltContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =LBSkiltLabel.Y + LBSkiltLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage44 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =LBSkiltContent.Y + LBSkiltContent.Height
+                ZIndex: =3
+
+            StarVisible44 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =LBSkiltLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =LBSkiltLabel.Y
+                ZIndex: =4
+
+        KippContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DivKipp"
+            Default: =ThisItem.DivKipp
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivKipp)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =57
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivKipp)
+            Required: =false
+            Update: =KippContent.Text
+            Visible: =If(showFields=9||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =47
+            ZIndex: =1
+
+            KippLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Kipp:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            KippContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =KippLabel.Y + KippLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage43 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =KippContent.Y + KippContent.Height
+                ZIndex: =3
+
+            StarVisible43 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =KippLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =KippLabel.Y
+                ZIndex: =4
+
+        AnnetContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DivAnnet"
+            Default: =ThisItem.DivAnnet
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivAnnet)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =58
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivAnnet)
+            Required: =false
+            Update: =AnnetContent.Text
+            Visible: =If(showFields=9||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =48
+            ZIndex: =1
+
+            AnnetLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Annet:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            AnnetContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =AnnetLabel.Y + AnnetLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage39 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =AnnetContent.Y + AnnetContent.Height
+                ZIndex: =3
+
+            StarVisible39 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =AnnetLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =AnnetLabel.Y
+                ZIndex: =4
+
+        ForsinkelserContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DivForsink"
+            Default: =ThisItem.DivForsink
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivForsink)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =250
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivForsink)
+            Required: =false
+            Update: =ForsinkelserContent.Text
+            Visible: =If(showFields=9||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =49
+            ZIndex: =1
+
+            ForsinkelserLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Forsinkelser:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ForsinkelserContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =150
+                MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =ForsinkelserLabel.Y + ForsinkelserLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage42 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =ForsinkelserContent.Y + ForsinkelserContent.Height
+                ZIndex: =3
+
+            StarVisible42 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =ForsinkelserLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =ForsinkelserLabel.Y
+                ZIndex: =4
+
+        DriftContainer As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DivDrift"
+            Default: =ThisItem.DivDrift
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,DivDrift)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =250
+            MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, DivDrift)
+            Required: =false
+            Update: =DriftContent.Text
+            Visible: =If(showFields=9||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =50
+            ZIndex: =1
+
+            DriftLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Drift:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DriftContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =150
+                MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DriftLabel.Y + DriftLabel.Height + 5
+                ZIndex: =2
+
+            ErrorMessage41 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(168, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DriftContent.Y + DriftContent.Height
+                ZIndex: =3
+
+            StarVisible41 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =DriftLabel.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DriftLabel.Y
+                ZIndex: =4
+
+        DataCard2 As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =195
+            Visible: =If(showFields=9||showFields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =51
+            ZIndex: =1
+
+            MouseTraoLabel As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Mousetrap:"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =16
+                ZIndex: =1
+
+            MouseTrapContent As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.DataField
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =120
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =69
+                ZIndex: =2
+
+        AttachmentContainer As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =225
+            Width: =640
+            X: =0
+            Y: =52
+            ZIndex: =1
+
+            AttachmentContent As attachments:
+                BorderColor: =Color.BlueViolet
+                Height: =126
+                IsInDataCard: =true
+                Items: =
+                NoAttachmentsText: =
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                Size: =16
+                Tooltip: ="Add Files here"
+                Width: =556
+                X: =44
+                Y: =84
+                ZIndex: =1
+
+            AttachmentLabel As label:
+                Align: =Align.Center
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Add image or file:"
+                Width: =560
+                X: =40
+                Y: =14
+                ZIndex: =2
+
+    Label9 As label:
+        Align: =Align.Center
+        Height: =70
+        Size: =30
+        Text: ="Inngående Overlevering"
+        Width: =560
+        X: =28
+        Y: =28
+        ZIndex: =6
+
+    Icon3 As icon.BackArrow:
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(ScreenTransition.UnCoverRight)
+        X: =552
+        Y: =31
+        ZIndex: =7
+
+    Button3 As button:
+        Fill: =RGBA(0, 47, 25, 1)
+        Height: =72
+        OnSelect: |-
+            =UpdateContext({vPopUpInn: true})
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: ="Send Report"
+        Width: =640
+        Y: =1064
+        ZIndex: =8
+
+    BurSamlet As label:
+        Height: =74
+        Size: =21
+        Text: =B3NordContentBurPri.Text + B3NordContentBurUpri.Text + B3SørContentBurPri.Text + B3SørContentBurUpri.Text + PåLagerContentBurPri.Text + PåLagerContentBurUpri.Text + LosseGenContentBur.Text
+        Visible: =false
+        Width: =80
+        X: =14
+        Y: =24
+        ZIndex: =12
+
+    Group1_2 As group:
+        Height: =5
+        Width: =5
+        X: =3
+        Y: =60
+        ZIndex: =12
+
+        HtmlText2_2 As htmlViewer:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Height: =1136
+            HtmlText: |-
+                ="<div style='
+                    background-color:rgba(255,255,255,0.95);
+                    height: 1125px;
+                    display: grid;
+                    place-content: center;
+                '>
+                <p style='margin: auto auto 0 auto'>Sende e-post?</p>
+                <p style='margin: 0 auto 0 auto'>Send mail?</p>
+                </div>"
+            Size: =21
+            Visible: =vPopUpInn
+            Width: =637
+            X: =3
+            ZIndex: =9
+
+        Button1_7 As button:
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            FontWeight: =FontWeight.Normal
+            Height: =70
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+                =// Set Variables for all fields
+                ClearCollect(
+                    ArrivalSortCollection,
+                    {
+                        Title: "Samlet Enheter",
+                        Content: Concatenate("Bur: ", BurSamlet.Text, "<br/> Paller: ", PallerSamlet.Text)
+                    },
+                    {
+                        Title: LøsPriLabel.Text,
+                        Content: LøsPriContent.Text
+                    },
+                    {
+                        Title: LøsUpriLabel.Text,
+                        Content: LøsUpriContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseGenLabel.Text
+                        ),
+                        Content: Concatenate("Bur: ", LosseGenContentBur.Text, "<br/> Paller: ", LosseGenContentPaller.Text)
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetUPriLabel.Text
+                        ),
+                        Content: LosseDetUPriContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetPriLabel.Text
+                        ),
+                        Content: LosseDetPriContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferOneLabel.Text
+                        ),
+                        Content: LosseDetBufferOneContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferTwoLabel.Text
+                        ),
+                        Content: LosseDetBufferTwoContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferThreeLabel.Text
+                        ),
+                        Content: LosseDetBufferThreeContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferFourLabel.Text
+                        ),
+                        Content: LosseDetBufferFourContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetPortLabel.Text
+                        ),
+                        Content: LosseDetPortContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetWasteLabel.Text
+                        ),
+                        Content: LosseDetWasteContent.Text
+                    },
+                    {
+                        Title: GjenståendePallLabel.Text,
+                        Content: Concatenate("B2: ", GjenståendePallContent.Text, "<br/> B3: ", GjenståendePallContentB3.Text)
+                    },
+                    {
+                        Title: B3Label.Text,
+                        Content: Concatenate("Pri: ", B3NordSørContentBur.Text, "<br/> Upri: ", B3NordSørContentPaller.Text)
+                    },
+                    {
+                        Title: AnkomstLabel.Text,
+                        Content: AnkomstContent.Text
+                    },
+                    {
+                        Title: PåLagerLabel.Text,
+                        Content: Concatenate("Bur: ", PåLagerContentBurSamlet.Text, "<br/> Paller: ", PåLagerContentPallerSamlet.Text)
+                    },
+                    {
+                        Title: OpplastetByggLabel.Text,
+                        Content: OpplastetByggContent.Text
+                    },
+                    {
+                        Title: OpplastetNCLabel.Text,
+                        Content: OpplastetNCContent.Text
+                    },
+                    {
+                        Title: OpplastetLagerLabel.Text,
+                        Content: OpplastetLagerContent.Text
+                    },
+                    {
+                        Title: SkaddeLabel.Text,
+                        Content: SkaddeContent.Text
+                    },
+                    {
+                        Title: BCLabel.Text,
+                        Content: BCContent.Text,
+                        Checkbox: BCBox.Value
+                    },
+                    {
+                        Title: GLSLabel.Text,
+                        Content: GLSContent.Text,
+                        Checkbox: GLSbox.Value
+                    },
+                    {
+                        Title: UPSLabel.Text,
+                        Content: UPSContent.Text,
+                        Checkbox: UPSBox.Value
+                    },
+                    {
+                        Title: MaskeLabel.Text,
+                        Content: MaskeContent.Text,
+                        Checkbox: MaskeBox.Value
+                    },
+                    {
+                        Title: SdFsLabel.Text,
+                        Content: SdFsContent.Text,
+                        Checkbox: SdFsBox.Value
+                    },
+                    {
+                        Title: StaplesLabel.Text,
+                        Content: StaplesContent.Text,
+                        Checkbox: StaplesBox.Value
+                    },
+                    {
+                        Title: TechdataLabel.Text,
+                        Content: TechdataContent.Text,
+                        Checkbox: TechdataBox.Value
+                    },
+                    {
+                        Title: VidaXLLabel.Text,
+                        Content: VidaXLContent.Text,
+                        Checkbox: VidaXLBox.Value
+                    },
+                    {
+                        Title: ZalandoLabel.Text,
+                        Content: ZalandoContent.Text,
+                        Checkbox: ZalandoBox.Value
+                    },
+                    {
+                        Title: RandOneLabel.Text,
+                        Content: RandOneContent.Text,
+                        Checkbox: RandOneBox.Value
+                    },
+                    {
+                        Title: RandTwoLabel.Text,
+                        Content: RandTwoContent.Text,
+                        Checkbox: RandTwoBox.Value
+                    },
+                    {
+                        Title: AvvikLabel.Text,
+                        Content: AvvikContent.Text
+                    },
+                    {
+                        Title: TollLagerLabel.Text,
+                        Content: TollLagerContent.Text
+                    },
+                    {
+                        Title: NestenulykkerLabel.Text,
+                        Content: NestenulykkerContent.Text
+                    },
+                    {
+                        Title: LBSkiltLabel.Text,
+                        Content: LBSkiltContent.Text
+                    },
+                    {
+                        Title: KippLabel.Text,
+                        Content: KippContent.Text
+                    },
+                    {
+                        Title: AnnetLabel.Text,
+                        Content: AnnetContent.Text
+                    },
+                    {
+                        Title: ForsinkelserLabel.Text,
+                        Content: ForsinkelserContent.Text
+                    },
+                    {
+                        Title: DriftLabel.Text,
+                        Content: DriftContent.Text
+                    },
+                    {
+                        Title: MouseTraoLabel.Text,
+                        Content: MouseTrapContent.Text
+                    }
+                );
+                /*This will initiate the ArrivalFinalCollection as an Collection*/
+                ClearCollect(
+                    ArrivalFinalCollection,
+                    {
+                        Title: Blank(),
+                        Content: Blank(),
+                        Checkbox: Blank()
+                    }
+                );
+                ClearCollect(
+                    varCollection,
+                    {var: false}
+                );
+                /*This will clear the ArrivalFinalCollection Collection*/
+                Clear(ArrivalFinalCollection);
+                
+                
+                /*
+                 * Function: Process ArrivalSortCollection
+                 * Description: This function iterates through the ArrivalSortCollection and performs the following actions:
+                 *              - If the Content is not empty and the Checkbox is not false, it collects the Title and Content into ArrivalFinalCollection.
+                 *              - If the Content is not empty or the Checkbox is true, it collects the Title, Content, and a conditional Checkbox value ("OK" if true, empty otherwise) into ArrivalFinalCollection.
+                 *              - Updates varCollection where var is false to true if it has included Checkbox values.
+                 * Parameters:
+                 *   - ArrivalSortCollection: The collection to iterate through.
+                 *   - ThisRecord: Represents the current record in the iteration.
+                 *   - ArrivalFinalCollection: The collection to store the processed records.
+                 *   - varCollection: The collection to update based on the condition.
+                 * Returns: 
+                 *   - Collects records into ArrivalFinalCollection based on the specified conditions.
+                 *   - Updates varCollection based on the specified condition.
+                 */
+                ForAll(
+                    ArrivalSortCollection,
+                    If(
+                        And(
+                            Not(ThisRecord.Content = ""),
+                            Not(ThisRecord.Checkbox)
+                        ),//IF Content IS NOT empty AND IF checkbox IS NOT false
+                        Collect(
+                            ArrivalFinalCollection,
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content
+                            }
+                        ),
+                        Or(
+                            Not(ThisRecord.Content = ""),
+                            ThisRecord.Checkbox
+                        ),//IF content IS NOT empty OR IF checkbox IS true
+                        Collect(
+                            ArrivalFinalCollection,
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content,
+                                Checkbox: If(
+                                    ThisRecord.Checkbox = false,
+                                    "",
+                                    "OK"
+                                )
+                            }
+                        );
+                        /*Updates if its used Checkboxes during the report*/
+                    UpdateIf(
+                            varCollection,
+                            var = false,
+                            {var: true}
+                        );
+                    )
+                );
+                
+                
+                ForAll(
+                    ArrivalFinalCollection,
+                    If(
+                        And(
+                            Not(ThisRecord.Content = ""),
+                            Not(ThisRecord.Checkbox)
+                        ),//IF Content IS NOT empty AND IF checkbox IS NOT true
+                        Patch(
+                            InngåendeDB,
+                            Defaults(InngåendeDB),
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content,
+                                Name: Navn,
+                                Group: Gruppe,
+                                //Tid: Tid,
+                                Shift: Shift
+                            }
+                        ),
+                        Or(
+                            Not(ThisRecord.Content = ""),
+                            ThisRecord.Checkbox
+                        ),//IF content IS NOT empty OR IF checkbox IS true
+                        Patch(
+                            InngåendeDB,
+                            Defaults(InngåendeDB),
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content,
+                                Checkbox: ThisRecord.Checkbox,
+                                Name: Navn,
+                                Group: Gruppe,
+                                //Tid: Tid,
+                                Shift: Shift
+                            }
+                        )
+                    )
+                );
+                
+                
+                /*Checking if there is input on ArrivalFinalCollection Collection - and makes the arrivalsBodyHTML*/
+                If(
+                    Not(IsEmpty(ArrivalFinalCollection)),//IF ArrivalFinalCollection IS NOT empty then..
+                    If(
+                        Boolean(
+                            Concat(
+                                varCollection,
+                                Concatenate(var)
+                            )
+                        ) = true,
+                        Set(
+                            arrivalsBodyHTML,
+                            Concatenate(
+                                genericTitles,
+                                Concat(
+                                    ArrivalFinalCollection,
+                                    Concatenate(
+                                        $"
+                                            <tr style='{contentBg}'>
+                                                <td style='{tdCss}'>
+                                                    <h4 style='{textCSS}'>{Title}</h4>
+                                                </td>
+                                                <td style='{tdCss}'>
+                                                    <p style='{textCSS}'>{Content}</p>
+                                                    <p style='{textCSS}'>{Checkbox}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
+                                                <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
+                                            </tr>
+                                        "
+                                    )
+                                )
+                            )
+                        ),
+                        Set(
+                            arrivalsBodyHTML,
+                            Concatenate(
+                                genericTitles,
+                                Concat(
+                                    ArrivalFinalCollection,
+                                    Concatenate(
+                                        $"<tbody style='{contentBg}'>
+                                            <tr>
+                                                <td style='{tdCss}'>
+                                                    <h4 style='{textCSS}'>{Title}</h4>
+                                                </td>
+                                                <td style='{tdCss}'>
+                                                    <p style='{textCSS}'>{Content}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
+                                                <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
+                                            </tr>
+                                        </tbody>"
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    Set(
+                        arrivalsBodyHTML,
+                        ""
+                    )
+                );
+                
+                
+                If(
+                    IsEmpty(OverliggItems),//If OverliggItems IS empty then...
+                    Set(
+                        overliggHTML,
+                        ""
+                    ),
+                    Set(
+                        overliggHTML,
+                        Concatenate(
+                            $"<tr style='{darkBg}'>
+                            <td style='{tdCss}'>
+                                <h2 style='{textLight}'>Overligg</h2>
+                            </td>
+                        </tr>
+                        ",
+                            Concat(
+                                OverliggItems,
+                                Concatenate(
+                                    $"<tr>
+                                    <td style='{tdCss}'>
+                                        <table style='{tableCss} {w100} {oColCss}' class='oColumn'>
+                                            <tr>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Fra:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>VBH:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Port:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Plasser:</h4></td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Fra}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{VBH}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Port}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Plasser}</p></td>
+                                            </tr>
+                                        </table>
+                                        <table style='{tableCss} {w100} {oColCss}' class='oColumn'>
+                                            <tr>
+                                                <td style='{tdCss} {w100}'><h4 style='{textCSS}'>Info</h4></td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w100}'><p style='{textCSS}'>{Info}</p></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style='{tdCss} {darkBg} {height5}'>
+                                    </td>
+                                </tr>"
+                                )
+                            )
+                        )
+                    )
+                );
+                
+                
+                If(
+                    IsEmpty(ManglerBilerCollection),// IF ManglerBilderBollection IS empty then..
+                    Set(
+                        missingCarHTML,
+                        ""
+                    ),
+                    Set(
+                        missingCarHTML,
+                        Concatenate(
+                            $"<tr style='{darkBg}'>
+                                <td style='{tdCss}'>
+                                    <h2 style='{textLight}'>Manglende Biler</h2>
+                                </td>
+                            </tr>",
+                            Concat(
+                                ManglerBilerCollection,
+                                Concatenate(
+                                    $"<tr>
+                                        <td style='{tdCss}'>
+                                            <table style='{w100}{tableCss}'>
+                                                <tr>
+                                                    <td style='{tdCss}' class='padding'>
+                                                        <table style='{tableCss} {oColCss} {w100}' class='content oColumn'>
+                                                            <tr>
+                                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Reg. nummer:</h4></td>
+                                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Bil Tur:</h4></td>
+                                                                <td style='{tdCss} {w50}'><h4 style='{textCSS}'>Kommerntar:</h4></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Reg}</p></td>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Tur}</p></td>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Kommentar}</p></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style='{tdCss} {darkBg} {height5}'>
+                                        </td>
+                                    </tr>"
+                                )
+                            )
+                        )
+                    )
+                );
+                
+                
+                //Header of the mail
+                Set(
+                    arrivalsHeader,
+                    $"
+                        <tr style='{headerCss} {darkBg}'>
+                            <td style='{tdCss}'>
+                                <h1 style='{textLight} font-weight: bolder;'>Inngående {Shift}</h1>
+                            </td>
+                        </tr>
+                    "
+                );
+                
+                
+                Set(
+                    arrivalsBody,
+                    $"
+                    {htmlStart}
+                    {arrivalsHeader}
+                    {htmlAfterHeaderBeforeContent}
+                    {arrivalsBodyHTML}
+                    {htmlAfterContentSomethingStart}
+                    {overliggHTML}
+                    {missingCarHTML}
+                    {htmlAfterContentSomethingEnd}
+                    "
+                );
+                
+                
+                Set(
+                    InngåendeRecipients,
+                    Concat(
+                        ClearCollect(
+                            EmailCollection,
+                            Filter(
+                                RecipientsTable,
+                                InnRaport = "True"
+                            ).Mail
+                        ),
+                        Mail & ";"
+                    )
+                );
+                
+                
+                Office365Outlook.SendEmailV2(
+                    TestRecipients,
+                    //InngåendeRecipients,
+                    "Overlevering",
+                    arrivalsBody,
+                    {
+                        Importance: FontWeight.Normal,
+                        IsHtml: true,
+                        Cc: TestRecipients,
+                        Attachments: AddColumns(
+                            RenameColumns(
+                                AttachmentContent.Attachments,
+                                Value,
+                                ContentBytes
+                            ),
+                            '@odata.type',
+                            ""
+                        )
+                    }
+                );
+                Navigate(
+                    SucessScreen,
+                    ScreenTransition.CoverRight
+                )
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="JA"
+            Visible: =vPopUpInn
+            Width: =250
+            X: =43
+            Y: =710
+            ZIndex: =10
+
+        Button1_6 As button:
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+                =UpdateContext({vPopUpInn: false})
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="NEI"
+            Visible: =vPopUpInn
+            Width: =250
+            X: =353
+            Y: =710
+            ZIndex: =11
+
+    PallerSamlet As label:
+        Height: =74
+        Size: =21
+        Text: =B3NordContentPallerPri.Text + B3NordContentPallerUpri.Text + B3SørContentPallerPri.Text + B3SørContentPallerUpri.Text + PåLagerContentPallerPri.Text + PåLagerContentPallerUpri.Text + LosseGenContentPaller.Text
+        Visible: =false
+        Width: =80
+        X: =56
+        Y: =24
+        ZIndex: =13
+

@@ -1,0 +1,287 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+App:
+  Properties:
+    BackEnabled: =false
+    Formulas: |
+      =Shift = "";
+      /*If(
+          Int(
+              Left(
+                  TimeLabel,
+                  2
+              )
+          ) <= 7,
+          "Natt",
+          Int(
+              Left(
+                  TimeLabel,
+                  2
+              )
+          ) >= 20,
+          "Kveld",
+          "Dag"
+      );*/
+      Gruppe = Left(
+          Office365Users.MyProfile().Department,
+          6
+      );
+      Tid = TimeLabel.Text;
+      Navn = Office365Users.MyProfile().DisplayName;
+      RecipientsLedere = "
+      mohammad.azzam@posten.no;
+      Omar.Njie@posten.no; 
+      nighat.ali@posten.no; 
+      thomas.svaeren@bring.com; 
+      Ahmet.Incesoy@posten.no; 
+      zulifqar.haider@posten.no;
+      terje.aas@posten.no;
+      Per.Ronning@bring.com; 
+      christopher.andersen@posten.no; 
+      kristine.myrhagen@posten.no;
+      vilde.kristine.runnesto@posten.no; 
+      tom.inge.kvaernstuen@posten.no; 
+      maawya.hussein@posten.no; 
+      Kenneth.Gravdal@posten.no;
+      Abdullah.Al.Eboudi@posten.no;
+      mohammad.hanif@posten.no;
+      hanne.helganger@bring.com;
+      kent.sivertsen.haugane@posten.no; 
+      Baris.Ekmekci@posten.no;
+      anne.hagelin@posten.no; 
+      Logistikk.Norge.ROAO.LSO.Oslo.Overvakere@posten.no;
+      ";
+      RecipientsLedereEx = "
+      glenn.hegstad@posten.no; 
+      elin.oldemark@posten.no; 
+      gard.nordsveen@posten.no; 
+      heidi.aldal@posten.no;
+      Jorgen.Elsebutangen.Bilet@posten.no;
+      Robin.A.Skarning@posten.no;
+      ";
+      RecipientsInngående = " 
+      Abdullah.Al.Eboudi@posten.no;
+      Christopher.Andersen@posten.no; 
+      Appiah.Foster@posten.no;  
+      anders.augestad@posten.no; 
+      Nighat.Chaudhry@posten.no; 
+      Christian.Dahl@bring.com;
+      kristine.myrhagen@posten.no;
+      vilde.kristine.runnesto@posten.no;
+      mahfoz.ahmed@posten.no;
+      hanne.helganger@bring.com;
+      kent.sivertsen.haugane@posten.no; 
+      Trafikk@posten.no;
+      mahmdouh.ahmed@posten.no; 
+      trafikk1-3@bring.com; 
+      trafikk.midt@bring.com; 
+      trafikk.nord@bring.com; 
+      trafikk.sorvest@bring.com; 
+      Baris.Ekmekci@posten.no; 
+      mohammad.azzam@posten.no; 
+      Ronny.Engebretsen@posten.no;
+      zulifqar.haider@posten.no; 
+      mohammad.hanif@posten.no; 
+      Mohammad.Haroon@posten.no; 
+      Khalid.Hussain@posten.no; 
+      Maawya.Hussein@posten.no; 
+      Sahal.Yassin.Ibrahim@posten.no; 
+      Ahmet.Incesoy@posten.no; 
+      Karim.Bazzak@posten.no; 
+      Hugi.olafsson@posten.no; 
+      Kevin.Kristiansen@posten.no; 
+      Tom.Inge.Kvaernstuen@posten.no;
+      marius.luthmann@posten.no; 
+      robin.lysaker@posten.no; 
+      eirik.manskow@posten.no; 
+      Marie.Norderud@posten.no; 
+      HoXuan.Nguyen@posten.no; 
+      Omar.Njie@posten.no; 
+      Ranz.Baleros@posten.no; 
+      Omid.Rasooli@posten.no; 
+      Said.Oufkir@posten.no; 
+      Thor-Martin.Stensby@posten.no; 
+      Thomas.Svaeren@bring.com; 
+      Taimoor.Azam@posten.no;
+      Emil.Tjugum.Saetrang@posten.no; 
+      Hamza.Khan@posten.no;
+      Terje.Aas@posten.no;
+      lso.paller@posten.no;
+      ";
+      HARecipients = "   
+      zulifqar.haider@posten.no;
+      Jetmir.Ismaili@posten.no;
+      quynh.duong@posten.no;
+      ole.johansen@posten.no;
+      olejorgen.moen@posten.no;
+      Adnan.Aslam@posten.no;
+      janne.muan@posten.no;
+      ";
+      TestRecipients = "robin.lysaker@posten.no";
+      bodyCss = "
+          margin: 0;
+          background-color: #cccccc;
+      ";
+      tableCss = "
+          border-spacing: 0;
+          border-collapse: collapse;
+      ";
+      tdCss = "
+          padding: 0;
+      ";
+      imgCss = "
+          border: 0;
+      ";
+      mainCss = "
+          width: 100%;
+          border-spacing: 0;
+          text-align: center;
+          max-width: 600px;
+          background-color: #ffffff;
+          font-family: sans-serif;
+      ";
+      columnCss = "
+          display: inline-block;
+          margin: 20px; 
+      ";
+      headerCss = $"height: 200px;
+          font-size: 30px;
+          background-position: center;
+          background-image: url({postenImage});";
+      rColContentCss = "
+          width: 180px;
+          max-width: 200px;
+          display: inline-block;
+          margin: 5px;
+          padding: 10px;
+          vertical-align: top;
+          text-align: start;
+      ";
+      twoColContentCss = "
+          color: #ffffff;
+          width: 200px;
+          max-width: 300px;
+          display: inline-block;
+          margin: 5px;
+          padding: 10px;
+          vertical-align: top;
+          text-align: start;
+      ";
+      oColCss = "
+          color: #ffffff;
+          padding: 5px;
+          background-color: #3a3f41;
+      ";
+      textCSS = "
+          padding-left: 20px;
+          text-align: start;
+          margin: 10px;
+      ";
+      paddingCss = "
+          margin: 10px;
+      ";
+      w25 = "
+          width: 25%;
+      ";
+      w50 = "
+          width: 50%;
+      ";
+      w75 = "
+          width: 75%;
+      ";
+      w100 = "
+          width: 100%;
+      ";
+      darkBg = "
+          background-color: #33383a;
+      ";
+      contentBg = "
+          background-color: #fbfbfb;
+      ";
+      whiteBg = "
+          background-color: #ffffff;
+      ";
+      textLight = "
+          color:#ffffff;
+      ";
+      m0 = "
+          margin: 0;
+          padding: 0;
+          border-spacing:0;
+      ";
+      height5 = "
+          height: 5px;
+      ";
+      postenB64 = $"<img style='{imgCss}' alt='Posten Logo' src='data:image/svg+xml;base64,77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8IS0tIENyZWF0ZWQgd2l0aCBJbmtzY2FwZSAoaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvKSAtLT4NCjxzdmcgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIiB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIgd2lkdGg9IjEzNC44NTAxMyIgaGVpZ2h0PSI0MS4wMTk4NzEiIGlkPSJzdmczMTMzIiB2ZXJzaW9uPSIxLjEiIGlua3NjYXBlOnZlcnNpb249IjAuNDcgcjIyNTgzIiBzb2RpcG9kaTpkb2NuYW1lPSJOZXcgZG9jdW1lbnQgMyI+DQogIDxkZWZzIGlkPSJkZWZzMzEzNSI+DQogICAgPGlua3NjYXBlOnBlcnNwZWN0aXZlIHNvZGlwb2RpOnR5cGU9Imlua3NjYXBlOnBlcnNwM2QiIGlua3NjYXBlOnZwX3g9IjAgOiA1MjYuMTgxMDkgOiAxIiBpbmtzY2FwZTp2cF95PSIwIDogMTAwMCA6IDAiIGlua3NjYXBlOnZwX3o9Ijc0NC4wOTQ0OCA6IDUyNi4xODEwOSA6IDEiIGlua3NjYXBlOnBlcnNwM2Qtb3JpZ2luPSIzNzIuMDQ3MjQgOiAzNTAuNzg3MzkgOiAxIiBpZD0icGVyc3BlY3RpdmUzMTQxIiAvPg0KICAgIDxpbmtzY2FwZTpwZXJzcGVjdGl2ZSBpZD0icGVyc3BlY3RpdmUzMTE0IiBpbmtzY2FwZTpwZXJzcDNkLW9yaWdpbj0iMC41IDogMC4zMzMzMzMzMyA6IDEiIGlua3NjYXBlOnZwX3o9IjEgOiAwLjUgOiAxIiBpbmtzY2FwZTp2cF95PSIwIDogMTAwMCA6IDAiIGlua3NjYXBlOnZwX3g9IjAgOiAwLjUgOiAxIiBzb2RpcG9kaTp0eXBlPSJpbmtzY2FwZTpwZXJzcDNkIiAvPg0KICAgIDxjbGlwUGF0aCBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9ImNsaXBQYXRoMjAiPg0KICAgICAgPHBhdGggZD0ibSAyNi45MjksNTMyLjM0NiAxOTMuNjA2LDAgMCwzNi4yMzYgLTE5My42MDYsMCAwLC0zNi4yMzYgeiIgaWQ9InBhdGgyMiIgLz4NCiAgICA8L2NsaXBQYXRoPg0KICAgIDxpbmtzY2FwZTpwZXJzcGVjdGl2ZSBpZD0icGVyc3BlY3RpdmUzMjE2IiBpbmtzY2FwZTpwZXJzcDNkLW9yaWdpbj0iMC41IDogMC4zMzMzMzMzMyA6IDEiIGlua3NjYXBlOnZwX3o9IjEgOiAwLjUgOiAxIiBpbmtzY2FwZTp2cF95PSIwIDogMTAwMCA6IDAiIGlua3NjYXBlOnZwX3g9IjAgOiAwLjUgOiAxIiBzb2RpcG9kaTp0eXBlPSJpbmtzY2FwZTpwZXJzcDNkIiAvPg0KICA8L2RlZnM+DQogIDxzb2RpcG9kaTpuYW1lZHZpZXcgaWQ9ImJhc2UiIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIgYm9yZGVyY29sb3I9IiM2NjY2NjYiIGJvcmRlcm9wYWNpdHk9IjEuMCIgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAuMCIgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIgaW5rc2NhcGU6em9vbT0iMy44MTgwNjM1IiBpbmtzY2FwZTpjeD0iODUuMjcyNTkxIiBpbmtzY2FwZTpjeT0iMTAuNjM2MTA1IiBpbmtzY2FwZTpkb2N1bWVudC11bml0cz0icHgiIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9ImxheWVyMSIgc2hvd2dyaWQ9ImZhbHNlIiBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjEwMjQiIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjcwOCIgaW5rc2NhcGU6d2luZG93LXg9Ii00IiBpbmtzY2FwZTp3aW5kb3cteT0iLTQiIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiIC8+DQogIDxtZXRhZGF0YSBpZD0ibWV0YWRhdGEzMTM4Ij4NCiAgICA8cmRmOlJERj4NCiAgICAgIDxjYzpXb3JrIHJkZjphYm91dD0iIj4NCiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+DQogICAgICAgIDxkYzp0eXBlIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+DQogICAgICAgIDxkYzp0aXRsZT48L2RjOnRpdGxlPg0KICAgICAgPC9jYzpXb3JrPg0KICAgIDwvcmRmOlJERj4NCiAgPC9tZXRhZGF0YT4NCiAgPGcgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDEiIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiIGlkPSJsYXllcjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjEuMjU3NSwtNDU1LjMxMjA1KSI+DQogICAgPHBhdGggaWQ9InBhdGgzMiIgc3R5bGU9ImZpbGw6I2UzMmQyMjtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSIgZD0ibSAyMDIuNzkzNjIsNDgxLjExNDQyIGMgLTEuNjQ1LC0wLjEgLTIuNzIxMjUsLTAuMSAtMi42NTUsLTEuOTQ4NzUgMC4wMzM3LC0xLjA3NjI1IDAuMzExMjUsLTEuODQ3NSAzLjU3MTI1LC0xLjc0NzUgMi4yMTc1LDAuMDY3NSAyLjkxMjUsMC41Mzc1IDIuOTEyNSwyLjExNzUgbCAzLjQ5NSwwIGMgMCwtMy44OTg3NSAtMi4zNzUsLTUuMTA4NzUgLTYuNDQxMjUsLTUuMTc1IC00LjM2ODc1LC0wLjA2NzUgLTcuMjY2MjUsMC44NCAtNy4zMzM3NSw0LjkwNjI1IC0wLjEwMTI1LDUuMDQxMjUgMy42NjI1LDQuOTA2MjUgNy4zMjUsNS4xMDc1IDEuODgyNSwwLjEgMy4wMjM3NSwwLjEzMzc1IDIuOTU3NSwyLjA4MjUgLTAuMDMzNywxLjE3NzUgLTAuNDE4NzUsMS45MTYyNSAtMy42Nzg3NSwxLjgxNjI1IC0yLjY4NzUsLTAuMDY3NSAtMy4xOCwtMC43NCAtMy4xOCwtMi4xNTEyNSBsIC0zLjQ5NzUsMCBjIDAsNC4wMzI1IDIuNTc3NSw1LjEwNzUgNi43MTEyNSw1LjE3NSA0LjQwMjUsMC4wNjc1IDcuMzQxMjUsLTAuOTczNzUgNy40MDg3NSwtNS4wMDc1IDAuMTAxMjUsLTUuMjQxMjUgLTMuODMxMjUsLTQuOTM4NzUgLTcuNTk1LC01LjE3NSBtIDE2LjA1MTI1LDcuMDkxMjUgYyAtMS44NDg3NSwtMC4wMzUgLTIuMDcyNSwtMC45NyAtMi4wNzI1LC0yLjIxODc1IGwgMCwtOC4wNSA3LjQ2NzUsMCAwLC0zLjI3NzUgLTcuNDY3NSwwIDAsLTUuMyAtMy43OTc1LDAgMCw1LjMgLTIuMjEsMCAwLDMuMjc3NSAyLjIxLDAgMCw4LjA1IGMgMCwzLjY2Mzc1IDIuMTgzNzUsNS4zMSA1Ljk4MjUsNS4zMSAzLjI1ODc1LDAgNS4zMjc1LC0xLjI0MjUgNS4zMjc1LC01LjE3NSBsIC0zLjQ0ODc1LDAgYyAtMC4wMzg3LDEuMDQ2MjUgLTAuMjc3NSwyLjExNjI1IC0xLjk5MTI1LDIuMDgzNzUgbSAzMC45MDg3NSwtMTMuODQ1IGMgLTIuMzE4NzUsMCAtMy43OTYyNSwwLjczODc1IC00LjczNzUsMS41Nzg3NSBsIDAsLTEuMjggLTMuMjkzNzUsMCAwLDE2LjM2ODc1IDMuNzk3NSwwIDAsLTcuNjI4NzUgYyAwLC0yLjg1NjI1IC0wLjMwMzc1LC01LjY3ODc1IDMuNzk3NSwtNS42Nzg3NSAzLjI5MjUsMCAyLjk5LDEuNTEyNSAyLjk5LDQuNjcxMjUgbCAwLDguNjM2MjUgMy43OTg3NSwwIDAsLTguOTM4NzUgYyAwLC0zLjU2MjUgMC4yNjg3NSwtNy43Mjg3NSAtNi4zNTI1LC03LjcyODc1IG0gLTIwLjc1ODc1LDYuODIxMjUgYyAwLC0yLjE4Mzc1IDAuMzM1LC0zLjY5NjI1IDMuNjYyNSwtMy42OTYyNSAzLjUyODc1LDAgMy43Mjg3NSwxLjM0NSAzLjcyODc1LDMuNjk2MjUgbCAtNy4zOTEyNSwwIHogbSAzLjY2MjUsLTYuODIxMjUgYyAtNi41ODc1LDAgLTcuNTI3NSwzLjc2MjUgLTcuNTI3NSw4LjY2ODc1IDAsNC43NzI1IDEuMDQyNSw4LjI2NzUgNy42Mjc1LDguMjY3NSAzLjA5MTI1LDAgNy4xOTI1LC0wLjc3MjUgNy4xOTI1LC01LjE3NSBsIC0zLjY3NSwwIGMgLTAuMDMyNSwxLjg0ODc1IC0yLjAwNjI1LDIuMDUgLTMuMzgyNSwyLjA1IC0zLjI2MTI1LDAgLTMuOTY2MjUsLTEuMTA4NzUgLTMuOTY2MjUsLTMuODk4NzUgbCAxMS4yMjUsMCBjIDAsLTUuNzExMjUgLTAuMzM2MjUsLTkuOTEyNSAtNy40OTM3NSwtOS45MTI1IG0gLTQ1LjIzODc1LDEzLjU3NjI1IGMgLTMuNjYzNzUsMCAtMy45OTg3NSwtMS40MTEyNSAtMy45OTg3NSwtNS4xMDg3NSAwLC0zLjY5NjI1IDAuMzM1LC01LjEwNzUgMy45OTg3NSwtNS4xMDc1IDMuNjYyNSwwIDQsMS40MTEyNSA0LDUuMTA3NSAwLDMuNjk3NSAtMC4zMzc1LDUuMTA4NzUgLTQsNS4xMDg3NSBtIDAsLTEzLjU3NjI1IGMgLTIuNjU1LDAgLTQuNjM3NSwwLjQ3IC02LjA0ODc1LDEuODQ4NzUgLTEuNDQ1LDEuMzc2MjUgLTEuNzQ3NSwzLjQ5Mzc1IC0xLjc0NzUsNi42MTg3NSAwLDMuMTI2MjUgMC4zMDI1LDUuMjQyNSAxLjc0NzUsNi42MiAxLjQxMTI1LDEuMzc4NzUgMy4zOTM3NSwxLjg0ODc1IDYuMDQ4NzUsMS44NDg3NSAyLjYyMTI1LDAgNC42Mzc1LC0wLjQ3IDYuMDUsLTEuODQ4NzUgMS40NDM3NSwtMS4zNzc1IDEuNzQ1LC0zLjQ5Mzc1IDEuNzQ1LC02LjYyIDAsLTMuMTI1IC0wLjMwMTI1LC01LjI0MjUgLTEuNzQ1LC02LjYxODc1IC0xLjQxMjUsLTEuMzc4NzUgLTMuNDI4NzUsLTEuODQ4NzUgLTYuMDUsLTEuODQ4NzUgbSAtMTYuMzkzNzUsMTMuNTc2MjUgYyAtMy4yNiwwIC00LjE2NzUsLTAuOTc1IC00LjE2NzUsLTUuMDczNzUgMCwtNC4xMDEyNSAwLjkwNzUsLTUuMTQyNSA0LjE2NzUsLTUuMTQyNSAyLjgyMjUsMCAzLjQyNzUsMS4zMSAzLjQyNzUsNS4xNDI1IDAsMy44MyAtMC42MDUsNS4wNzM3NSAtMy40Mjc1LDUuMDczNzUgbSAwLjYwNSwtMTMuNTc2MjUgYyAtMS43NDg3NSwtMC4wMzM4IC0zLjczLDAuMzY4NzUgLTUuMTA4NzUsMS41Nzg3NSBsIDAsLTEuMjggLTMuNDI3NSwwIDAsMjEuNjcyNSAzLjc5NzUsMCAwLC02LjQ4MTI1IGMgMS4xMDg3NSwxLjE3NzUgMi41MiwxLjQ0NjI1IDQuMzAxMjUsMS40NDYyNSA2LjM0ODc1LDAgNy4wNTM3NSwtNC40NyA3LjA1Mzc1LC04LjQzMzc1IDAsLTUuMjEgLTAuNzcyNSwtOC40MzYyNSAtNi42MTYyNSwtOC41MDI1IiAvPg0KICAgIDxwYXRoIGlkPSJwYXRoMzYiIHN0eWxlPSJmaWxsOiNlMzJkMjI7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiIGQ9Im0gMTU2LjkyMjUsNDc0LjY1ODggYyAtMC4zNzg3NSw0Ljc4ODc1IC00LjM4MjUsOC41NTc1IC05LjI2ODc1LDguNTU3NSAtNC44ODYyNSwwIC04Ljg5LC0zLjc2ODc1IC05LjI2ODc1LC04LjU1NzUgbCAtMTcuMTI3NSwwIGMgMC4zOTEyNSw5LjkyODc1IDguNTU4NzUsMTcuODU4NzUgMTguNTgzNzUsMTcuODU4NzUgMTAuMDIzNzUsMCAxOC4xOTI1LC03LjkzIDE4LjU4Mzc1LC0xNy44NTg3NSBsIC0xLjUwMjUsMCB6IiAvPg0KICAgIDxwYXRoIGlkPSJwYXRoNDAiIHN0eWxlPSJmaWxsOiNiY2JkYmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiIGQ9Im0gMTM4LjM4NSw0NzMuMTcwOCBjIDAuMzc4NzUsLTQuNzg4NzUgNC4zODI1LC04LjU1NzUgOS4yNjg3NSwtOC41NTc1IDQuODg2MjUsMCA4Ljg5LDMuNzY4NzUgOS4yNjg3NSw4LjU1NzUgbCAxLjUwMjUsMCBjIC0wLjM5MTI1LC05LjkyODc1IC04LjU2LC0xNy44NTg3NSAtMTguNTgzNzUsLTE3Ljg1ODc1IC0xMC4wMjUsMCAtMTguMTkyNSw3LjkzIC0xOC41ODM3NSwxNy44NTg3NSBsIDE3LjEyNzUsMCB6IiAvPg0KICA8L2c+DQo8L3N2Zz4='/>";
+      genericHeader = $"<tr style='{m0}'>
+              <td height='8' style='{darkBg}{tdCss}{m0}'>
+              </td>
+          </tr>
+          <tr>
+              <td style='{tdCss}'>
+                  <table width='{w100}' align='center'>
+                      <tr>
+                          <td style='{tdCss}{columnCss}' class='column'>{postenB64}</td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>";
+      genericTitles = $"<tr>
+              <td style='{w25}'>
+                  <h3 style='{textCSS}'>Område:</h3>
+              </td>
+              <td style='{w75}'>
+                  <h3 style='{textCSS}'>Info:</h3>
+              </td>
+          </tr>";
+      htmlStart = $"<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+          <html xmlns='http://www.w3.org/1999/xhtml'>
+          <head>
+          <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+          <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+          <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+          <title>Rapport | Group</title>
+          </head>
+          <body style='{bodyCss}'>
+              <center style='{m0}'>
+                  <table style='{tableCss}{mainCss}'>
+                      <!-- TOP BORDER -->{genericHeader}";
+      htmlAfterHeaderBeforeContent = $"<tr>
+                          <td style='{tdCss}'>
+                              <table style='{tableCss}{w100}'>
+                                  <tr>
+                                      <td style='{tdCss}' class='reports-content'>
+                                          <!-- Repeatable content sections -->
+                                          <table style='{tableCss}{w100}' class='rColumn'>
+                                              <tr>
+                                                  <td style='{tdCss}' class='padding'>
+                                                      <table style='{tableCss}{w100}'>";
+      htmlAfterContentSomethingStart = $"</table>
+                                                  </td>
+                                              </tr>
+                                          </table>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </td>
+                      </tr>";
+      htmlAfterContentSomethingEnd = $"<tr style='{m0}'>
+                          <td height='8' style='{darkBg}{tdCss}{m0}'>
+                          </td>
+                      </tr>
+                  </table>
+              </center>
+          </body>
+      </html>";
+    OnStart: |-
+      =Set(CurrentTime, Now());
+      Set(logo ,JSON(LogoImage.Image,JSONFormat.IncludeBinaryData));
+      Set(postenImage ,JSON(PostenImage.Image,JSONFormat.IncludeBinaryData));
+    Theme: =PowerAppsTheme

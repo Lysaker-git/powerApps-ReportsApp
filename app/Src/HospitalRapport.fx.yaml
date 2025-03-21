@@ -1,0 +1,488 @@
+"HospitalRapport As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    BackgroundImage: =
+    ImagePosition: =ImagePosition.Fill
+
+    Image2_1 As image:
+        Height: =1136
+        Image: ='Anders+Nord_Post+Norway_Brand+Identity_17'
+        ImagePosition: =ImagePosition.Fill
+        Transparency: =0.9
+        Width: =640
+        ZIndex: =1
+
+    Canvas1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =1136
+        Width: =Parent.Width
+        ZIndex: =2
+
+        DataCard1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1036
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            HospitalHeader As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Hospital Overlevering"
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+            AvkastLabelHA As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: ="Hvordan ser Avkast ut?"
+                Width: =560
+                X: =40
+                Y: =110
+                ZIndex: =2
+
+            AvkastInputHA As text:
+                Default: =""
+                Height: =70
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =560
+                X: =40
+                Y: =180
+                ZIndex: =3
+
+            SkrivingLabelHA As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: ="Hvordan går det på Skriving?"
+                Width: =560
+                X: =40
+                Y: =268
+                ZIndex: =4
+
+            SkrivingInputHA As text:
+                Default: =""
+                Height: =70
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =560
+                X: =40
+                Y: =338
+                ZIndex: =5
+
+            ManglendeLabelHANumber As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: ="Manglende"
+                Width: =169
+                X: =40
+                Y: =408
+                ZIndex: =6
+
+            ManglendeInputHANumber As text:
+                Align: =Align.Center
+                Default: =""
+                Format: =TextFormat.Number
+                Height: =70
+                Size: =21
+                Width: =169
+                X: =40
+                Y: =478
+                ZIndex: =7
+
+            SkrivingLabelHANumber As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: ="Skriving"
+                Width: =169
+                X: =235
+                Y: =408
+                ZIndex: =8
+
+            SkrivingInputHANumber As text:
+                Align: =Align.Center
+                Default: =""
+                Format: =TextFormat.Number
+                Height: =70
+                Size: =21
+                Width: =169
+                X: =235
+                Y: =478
+                ZIndex: =9
+
+            UtlLabelHANumber As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: ="Utleverte"
+                Width: =169
+                X: =431
+                Y: =408
+                ZIndex: =10
+
+            UtlInputHANumber As text:
+                Align: =Align.Center
+                Default: =""
+                Format: =TextFormat.Number
+                Height: =70
+                Size: =21
+                Width: =169
+                X: =431
+                Y: =478
+                ZIndex: =11
+
+            CheckLabelHA As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Kryss av det som er gjort:"
+                Width: =560
+                X: =40
+                Y: =773
+                ZIndex: =12
+
+            TommeCheckHA As checkbox:
+                FontWeight: =FontWeight.Semibold
+                Height: =85
+                Size: =21
+                Text: ="Hentet Tomme"
+                Width: =280
+                X: =39
+                Y: =843
+                ZIndex: =13
+
+            HeisCheckHA As checkbox:
+                FontWeight: =FontWeight.Semibold
+                Height: =85
+                Size: =21
+                Text: ="Kjørt Heis"
+                Width: =280
+                X: =319
+                Y: =843
+                ZIndex: =14
+
+            BurCheckHA As checkbox:
+                FontWeight: =FontWeight.Semibold
+                Height: =85
+                Size: =21
+                Text: ="Byttet Bur"
+                Width: =280
+                X: =39
+                Y: =928
+                ZIndex: =15
+
+            BaljeCheckHA As checkbox:
+                FontWeight: =FontWeight.Semibold
+                Height: =85
+                Size: =21
+                Text: ="Fedex retur Kjørt"
+                Width: =280
+                X: =319
+                Y: =928
+                ZIndex: =16
+
+            DiverseLabelHA As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Andre Notater:"
+                Width: =560
+                X: =40
+                Y: =548
+                ZIndex: =17
+
+            DiverseInputHA As text:
+                Default: =""
+                Height: =155
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =560
+                X: =40
+                Y: =618
+                ZIndex: =18
+
+    Icon1_1 As icon.BackArrow:
+        Color: =RGBA(0, 0, 0, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(ScreenTransition.UnCoverRight)
+        X: =536
+        Y: =33
+        ZIndex: =3
+
+    Button1_3 As button:
+        BorderThickness: =0
+        Color: =RGBA(123, 193, 68, 1)
+        Fill: =RGBA(0, 47, 25, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+        OnSelect: |-
+            =UpdateContext({vPopUp: true})
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =32
+        Text: ="SEND MAIL"
+        Width: =560
+        X: =43
+        Y: =1036
+        ZIndex: =4
+
+    Group1_1 As group:
+        Height: =5
+        Width: =5
+        X: =3
+        Y: =60
+        ZIndex: =8
+
+        HtmlText2_1 As htmlViewer:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Height: =1136
+            HtmlText: |-
+                ="<div style='
+                    background-color:rgba(255,255,255,0.8);
+                    height: 1125px;
+                    display: grid;
+                    place-content: center;
+                '>
+                <p style='margin: auto auto 0 auto'>Sende e-post?</p>
+                <p style='margin: 0 auto 0 auto'>Send mail?</p>
+                </div>"
+            Size: =21
+            Visible: =vPopUp
+            Width: =637
+            X: =3
+            ZIndex: =5
+
+        Button1_5 As button:
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+                =ClearCollect(
+                    HANumbersCollection,
+                    {
+                        Title: SkrivingLabelHANumber.Text,
+                        Content: SkrivingInputHANumber.Text
+                    },
+                    {
+                        Title: ManglendeLabelHANumber.Text,
+                        Content: ManglendeInputHANumber.Text
+                    },
+                    {
+                        Title: UtlLabelHANumber.Text,
+                        Content: UtlInputHANumber.Text
+                    }
+                );
+                ClearCollect(
+                    CheckListCollection,
+                    {
+                        Title: TommeCheckHA.Text,
+                        Content: If(TommeCheckHA.Value,"Ja","Nei")
+                    },
+                    {
+                        Title: BurCheckHA.Text,
+                        Content: If(BurCheckHA.Value,"Ja","Nei")
+                    },
+                    {
+                        Title: HeisCheckHA.Text,
+                        Content: If(HeisCheckHA.Value,"Ja","Nei")
+                    },
+                    {
+                        Title: BaljeCheckHA.Text,
+                        Content: If(BaljeCheckHA.Value,"Ja","Nei")
+                    }
+                );
+                ClearCollect(
+                    HARawCollectionMail,
+                    {
+                        Title: "Avkast",
+                        Content: AvkastInputHA.Text
+                    },
+                    {
+                        Title: "Skriving",
+                        Content: SkrivingInputHA.Text
+                    },
+                    {
+                        Title: "Diverse",
+                        Content: DiverseInputHA.Text
+                    },
+                    {
+                        Title: "Numbers",
+                        Content: Concat(
+                            HANumbersCollection,
+                            Concatenate($"{ThisRecord.Title}: {ThisRecord.Content}"),
+                            "<br>"
+                        )
+                    },
+                    {
+                        Title: "Checklist",
+                        Content: Concat(
+                            CheckListCollection,
+                            Concatenate($"{ThisRecord.Title}: {ThisRecord.Content}"),
+                            "<br>"
+                        )
+                    }
+                );
+                Patch(
+                    hospitalDB,
+                    Defaults(hospitalDB),
+                    {
+                        Avkast: AvkastInputHA.Text,
+                        Skriving: SkrivingInputHA.Text,
+                        Numbers: Concat(
+                            HANumbersCollection,
+                            Concatenate($"{ThisRecord.Title} {ThisRecord.Content}"),
+                            " - "
+                        ),
+                        Checklist: Concat(
+                            CheckListCollection,
+                            Concatenate($"{ThisRecord.Title} {ThisRecord.Content}"),
+                            " - "
+                        ),
+                        Navn: Navn,
+                        Group: Gruppe,
+                        Timestamp: Tid,
+                        Shift: Shift
+                    }
+                );
+                Set(
+                    supervisorHeader,
+                    $"<tr style='{headerCss}{darkBg}'>
+                            <td>
+                                <h1 style='{textLight} font-weight: bolder;'>Hospital {Shift}</h1>
+                            </td>
+                        </tr>
+                "
+                );
+                If(
+                    Not(IsEmpty(HARawCollectionMail)),
+                    Set(
+                        hospitalBodyHTML,
+                        Concatenate(
+                            genericTitles,
+                            Concat(
+                                HARawCollectionMail,
+                                Concatenate(
+                                    $"
+                                        <tbody style='{contentBg}'>
+                                            <tr>
+                                                <td style='{tdCss}'>
+                                                    <h4 style='{textCSS}'>{Title}</h4>
+                                                </td>
+                                                <td style='{tdCss}'>
+                                                    <p style='{textCSS}'>{Content}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
+                                                <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
+                                            </tr>
+                                        </tbody>
+                                    "
+                                )
+                            )
+                        )
+                    )
+                );
+                Set(
+                    FullBodyHostpial,
+                    $"
+                    {htmlStart}
+                
+                    {supervisorHeader}
+                
+                    {htmlAfterHeaderBeforeContent}
+                
+                    {hospitalBodyHTML}
+                
+                    {htmlAfterContentSomethingStart}
+                
+                    {htmlAfterContentSomethingEnd}
+                    "
+                );
+                Set(
+                    RecipientsHA,
+                    Concat(
+                        ClearCollect(
+                            EmailCollection,
+                            Filter(
+                                RecipientsTable,
+                                HARapport = "True"
+                            ).Mail
+                        ),
+                        Mail & ";"
+                    )
+                );
+                Office365Outlook.SendEmailV2(
+                    //TestRecipients,
+                    RecipientsHA,
+                    "Hospital Overlevering",
+                    FullBodyHostpial,
+                    {
+                        Importance: FontWeight.Normal,
+                        IsHtml: true,
+                        ReplyTo: "haider.zulifqar@posten.no",
+                        Cc: "robin.lysaker@posten.no"
+                    }
+                );
+                Navigate(
+                    SucessScreen,
+                    ScreenTransition.CoverRight
+                )
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="JA"
+            Visible: =vPopUp
+            Width: =250
+            X: =43
+            Y: =711
+            ZIndex: =6
+
+        Button1_4 As button:
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+                =UpdateContext({vPopUp: false})
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="NEI"
+            Visible: =vPopUp
+            Width: =250
+            X: =353
+            Y: =711
+            ZIndex: =7
+
