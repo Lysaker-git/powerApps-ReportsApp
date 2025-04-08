@@ -986,7 +986,7 @@
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
-                Height: =178
+                Height: =270
                 Mode: =TextMode.MultiLine
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -996,7 +996,7 @@
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Visible: =false
-                Width: =44
+                Width: =98
                 X: =30
                 Y: =B3SørLabel.Y + B3SørLabel.Height + 5
                 ZIndex: =2
@@ -1032,6 +1032,26 @@
                 Wrap: =false
                 Y: =B3SørLabel.Y
                 ZIndex: =4
+
+            B3SørContentSG As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                MaxLength: =500
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =142
+                X: =354
+                Y: =263
+                ZIndex: =14
 
             "'Bur/paller Group_1' As group":
                 Height: =5
@@ -1166,6 +1186,17 @@
                     Y: =175
                     ZIndex: =13
 
+            PåLagerLabelSGSør As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Height: =65
+                Size: =21
+                Text: ="StykkGods"
+                Width: =177
+                Wrap: =false
+                X: =148
+                Y: =268
+                ZIndex: =15
+
         B3NordContainer As typedDataCard.textualMultiLineEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="ByggTreNord"
@@ -1173,7 +1204,7 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,ByggTreNord)
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =B3NordLabel.Height + B3NordContent.Height + 50
+            Height: =B3SørContainer.Height
             Required: =false
             Update: =B3NordContent.Text
             Visible: =If(showFields=3||showFields=-1,true,false)
@@ -1251,7 +1282,7 @@
             B3NordSørContentBur As label:
                 Height: =82
                 Size: =21
-                Text: =B3NordContentBurPri.Text + B3NordContentPallerPri.Text + B3SørContentBurPri.Text + B3SørContentPallerPri.Text
+                Text: =1
                 Visible: =false
                 Width: =62
                 X: =40
@@ -1392,14 +1423,45 @@
                     ZIndex: =12
 
             B3NordSørContentPaller As label:
-                Height: =82
+                Height: =129
                 Size: =21
                 Text: =B3NordContentBurUpri.Text + B3NordContentPallerUpri.Text + B3SørContentPallerUpri.Text + B3SørContentPallerUpri.Text
                 Visible: =false
-                Width: =62
+                Width: =182
                 X: =40
                 Y: =121
                 ZIndex: =14
+
+            B3NordContentSG As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                MaxLength: =500
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =142
+                X: =351
+                Y: =250
+                ZIndex: =15
+
+            PåLagerLabel_13 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Height: =65
+                Size: =21
+                Text: ="StykkGods"
+                Width: =177
+                Wrap: =false
+                X: =145
+                Y: =255
+                ZIndex: =16
 
         OverliggContainer As typedDataCard.blankCard:
             BorderStyle: =BorderStyle.Solid
@@ -4568,12 +4630,21 @@
                         Content: LosseDetWasteContent.Text
                     },
                     {
-                        Title: GjenståendePallLabel.Text,
-                        Content: Concatenate("B2: ", GjenståendePallContent.Text, "<br/> B3: ", GjenståendePallContentB3.Text)
+                        Title: "Gjenstående",
+                        Content: Concatenate(
+                            "B2: ", 
+                            GjenståendePallContent.Text, 
+                            "<br/> B3: "
+                            , GjenståendePallContentB3.Text
+                        )
                     },
                     {
-                        Title: B3Label.Text,
-                        Content: Concatenate("Pri: ", B3NordSørContentBur.Text, "<br/> Upri: ", B3NordSørContentPaller.Text)
+                        Title: "B3 Nord",
+                        Content: $"Bur Pri: {B3NordContentBurPri.Text} <br/> Bur Upri: {B3NordContentBurUpri.Text} <br/> Paller Pri: {B3NordContentPallerPri.Text} <br/> Paller Upri: {B3NordContentPallerUpri.Text} <br/> SG: {B3NordContentSG.Text}"
+                    },
+                    {
+                        Title: "B3 Sør",
+                        Content: $"Bur Pri: {B3SørContentBurPri.Text} <br/> Bur Upri: {B3SørContentBurUpri.Text} <br/> Paller Pri: {B3SørContentPallerPri.Text} <br/> Paller Upri: {B3SørContentPallerUpri.Text} <br/> SG: {B3SørContentSG.Text}"
                     },
                     {
                         Title: AnkomstLabel.Text,

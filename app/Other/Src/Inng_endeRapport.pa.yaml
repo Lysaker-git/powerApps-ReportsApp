@@ -992,7 +992,7 @@ Screens:
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
                         Font: =Font.'Open Sans'
-                        Height: =178
+                        Height: =270
                         HoverBorderColor: =RGBA(0, 18, 107, 1)
                         HoverFill: =RGBA(186, 202, 226, 1)
                         Mode: =TextMode.MultiLine
@@ -1003,7 +1003,7 @@ Screens:
                         RadiusTopRight: =0
                         Tooltip: =Parent.DisplayName
                         Visible: =false
-                        Width: =44
+                        Width: =98
                         X: =30
                         Y: =B3SørLabel.Y + B3SørLabel.Height + 5
                   - ErrorMessage17:
@@ -1175,6 +1175,38 @@ Screens:
                         Wrap: =false
                         X: =145
                         Y: =175
+                  - B3SørContentSG:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Font: =Font.'Open Sans'
+                        Format: =TextFormat.Number
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        MaxLength: =500
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =10
+                        RadiusBottomRight: =10
+                        RadiusTopLeft: =10
+                        RadiusTopRight: =10
+                        Tooltip: =Parent.DisplayName
+                        Width: =142
+                        X: =354
+                        Y: =263
+                  - PåLagerLabelSGSør:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =65
+                        Text: ="StykkGods"
+                        Width: =177
+                        Wrap: =false
+                        X: =148
+                        Y: =268
             - B3NordContainer:
                 Control: TypedDataCard@1.0.6
                 Variant: ClassicTextualMultilineEdit
@@ -1183,7 +1215,7 @@ Screens:
                   DataField: ="ByggTreNord"
                   Default: =ThisItem.ByggTreNord
                   DisplayName: =DataSourceInfo([@Table4],DataSourceInfo.DisplayName,ByggTreNord)
-                  Height: =B3NordLabel.Height + B3NordContent.Height + 50
+                  Height: =B3SørContainer.Height
                   Required: =false
                   Update: =B3NordContent.Text
                   Visible: =If(showFields=3||showFields=-1,true,false)
@@ -1399,7 +1431,7 @@ Screens:
                         BorderColor: =RGBA(0, 18, 107, 1)
                         Font: =Font.'Open Sans'
                         Height: =82
-                        Text: =B3NordContentBurPri.Text + B3NordContentPallerPri.Text + B3SørContentBurPri.Text + B3SørContentPallerPri.Text
+                        Text: =1
                         Visible: =false
                         Width: =62
                         X: =40
@@ -1409,12 +1441,44 @@ Screens:
                       Properties:
                         BorderColor: =RGBA(0, 18, 107, 1)
                         Font: =Font.'Open Sans'
-                        Height: =82
+                        Height: =129
                         Text: =B3NordContentBurUpri.Text + B3NordContentPallerUpri.Text + B3SørContentPallerUpri.Text + B3SørContentPallerUpri.Text
                         Visible: =false
-                        Width: =62
+                        Width: =182
                         X: =40
                         Y: =121
+                  - B3NordContentSG:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Font: =Font.'Open Sans'
+                        Format: =TextFormat.Number
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        MaxLength: =500
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =10
+                        RadiusBottomRight: =10
+                        RadiusTopLeft: =10
+                        RadiusTopRight: =10
+                        Tooltip: =Parent.DisplayName
+                        Width: =142
+                        X: =351
+                        Y: =250
+                  - PåLagerLabel_13:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =65
+                        Text: ="StykkGods"
+                        Width: =177
+                        Wrap: =false
+                        X: =145
+                        Y: =255
             - OverliggContainer:
                 Control: TypedDataCard@1.0.6
                 Variant: BlankCard
@@ -4685,12 +4749,21 @@ Screens:
                       Content: LosseDetWasteContent.Text
                   },
                   {
-                      Title: GjenståendePallLabel.Text,
-                      Content: Concatenate("B2: ", GjenståendePallContent.Text, "<br/> B3: ", GjenståendePallContentB3.Text)
+                      Title: "Gjenstående",
+                      Content: Concatenate(
+                          "B2: ", 
+                          GjenståendePallContent.Text, 
+                          "<br/> B3: "
+                          , GjenståendePallContentB3.Text
+                      )
                   },
                   {
-                      Title: B3Label.Text,
-                      Content: Concatenate("Pri: ", B3NordSørContentBur.Text, "<br/> Upri: ", B3NordSørContentPaller.Text)
+                      Title: "B3 Nord",
+                      Content: $"Bur Pri: {B3NordContentBurPri.Text} <br/> Bur Upri: {B3NordContentBurUpri.Text} <br/> Paller Pri: {B3NordContentPallerPri.Text} <br/> Paller Upri: {B3NordContentPallerUpri.Text} <br/> SG: {B3NordContentSG.Text}"
+                  },
+                  {
+                      Title: "B3 Sør",
+                      Content: $"Bur Pri: {B3SørContentBurPri.Text} <br/> Bur Upri: {B3SørContentBurUpri.Text} <br/> Paller Pri: {B3SørContentPallerPri.Text} <br/> Paller Upri: {B3SørContentPallerUpri.Text} <br/> SG: {B3SørContentSG.Text}"
                   },
                   {
                       Title: AnkomstLabel.Text,
