@@ -4546,7 +4546,7 @@ Screens:
               ClearCollect(
                   ArrivalSortCollection,
                   {
-                      Title: "Samlet Enheter",
+                      Title: "Totalt Gjenstående",
                       Content: Concatenate("Bur: ", BurSamlet.Text, "<br/> Paller: ", PallerSamlet.Text)
                   },
                   {
@@ -4558,11 +4558,7 @@ Screens:
                       Content: LøsUpriContent.Text
                   },
                   {
-                      Title: Concatenate(
-                          LosseButton.Text,
-                          " ",
-                          LosseGenLabel.Text
-                      ),
+                      Title: "Tipp B2 (Bur og Paller)",
                       Content: Concatenate("Bur: ", LosseGenContentBur.Text, "<br/> Paller: ", LosseGenContentPaller.Text)
                   },
                   {

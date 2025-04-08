@@ -13,6 +13,7 @@
     "AppCreationSource": "AppFromScratch",
     "AppDescription": "Report System for LSO Maskinell",
     "AppPreviewFlagsMap": {
+      "adaptivepaging": false,
       "aibuilderserviceenrollment": false,
       "allowmultiplescreensincanvaspages": false,
       "appinsightserrortracing": false,

@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2025-02-24T16:31:37.0020000Z",
+      "LastChangedTimeString": "2025-03-10T22:01:52.7530000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -21,6 +21,8 @@
       "{ModerationStatus}": "Content approval status",
       "{Name}": "Name",
       "{Path}": "Folder path",
+      "{SensitivityLabelId}": "Sensitivity Label Id",
+      "{SensitivityLabelName}": "Sensitivity Label Display Name",
       "{Thumbnail}": "Thumbnail",
       "{TriggerWindowEndToken}": "Trigger Window End Token",
       "{TriggerWindowStartToken}": "Trigger Window Start Token",
