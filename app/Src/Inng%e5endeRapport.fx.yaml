@@ -20,7 +20,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =99
+            Height: =250
             Width: =640
             X: =0
             Y: =0
@@ -33,9 +33,28 @@
                 Size: =25
                 Text: ="Status Produksjon"
                 Width: =560
-                X: =40
-                Y: =40
+                X: =39
+                Y: =6
                 ZIndex: =1
+
+            Gjenstående18Input As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Width: =560
+                X: =39
+                Y: =170
+                ZIndex: =2
+
+            Gjenstående18Label As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Gjenstående paller ankommet før 18:00"
+                Width: =560
+                X: =39
+                Y: =100
+                ZIndex: =3
 
         LøsBtnContainer As typedDataCard.blankCard:
             BorderColor: =
@@ -4428,6 +4447,10 @@
                     {
                         Title: "Totalt Gjenstående",
                         Content: Concatenate("Bur: ", BurSamlet.Text, "<br/> Paller: ", PallerSamlet.Text)
+                    },
+                    {
+                        Title: Gjenstående18Label.Text,
+                        Content: Gjenstående18Input.Text
                     },
                     {
                         Title: LøsPriLabel.Text,
