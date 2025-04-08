@@ -1,7 +1,7 @@
 {
   "ClientPerFileChecksums": {
     ".gitignore": "C8_VaC8EcEG56Ufcy1DFyC8Ky19iV9xSsXMDIAcmF2GTj8=",
-    "AppCheckerResult.sarif": "C8_TE8fkAFqyjLQhXMAyECSDWaYwiscp0LYQsBXegNILyM=",
+    "AppCheckerResult.sarif": "C8_4GyZ5NHBvDdDgWo3/3BdYtHs9Qm88MT9RSuirKo4uqo=",
     "Assets\\Images\\0001.png": "C8_Iv9tp0sfSqbOjVvUdx4li3nxtLY8fH/pyjpmpCcQpw4=",
     "Assets\\Images\\0002.png": "C8_XlKjOl/0Ww47rBnu0lH6ZtqqgVpi04RqTXHtVIh6suU=",
     "Assets\\Images\\99a62266-6aaf-427e-99d1-6cd8352f1bdd.jpg": "C8_PPDXsmdqLBoHBNGxMtFUPwgQsWIC9me9ZPaVosMSnPQ=",
@@ -11,7 +11,7 @@
     "Controls\\1.json": "C8_qF4PxTfP/muFTgqlT0u2W0y0wsPVn4hqdqrIA7Yvl9g=",
     "Controls\\120.json": "C8_nGO6g0dZwe3zXxM+QZG2EbRaZ+wSxnZ+eTyBoeAaP+A=",
     "Controls\\126.json": "C8_0IXshntw3uYL2QH1hXL8zDJ9CJKcv/+p3GygCiZMqMQ=",
-    "Controls\\160.json": "C8_tTjO3BectAFRnTD0srRpKvOCbvt2cHlSuWQNRbSg2fg=",
+    "Controls\\160.json": "C8_9gB2Xeh/4wrRAKQhJOnrZixfoNdl4vKt7N46djkwqhE=",
     "Controls\\4.json": "C8_3ANU9430WScMrxaWriWdVDSi1xWIpZDCWcFtS1fMIDQ=",
     "Controls\\459.json": "C8_bSSxreQA4D0LV5st5h3Xdfpn8MRHXakMfr4Kzy2Lnno=",
     "Controls\\481.json": "C8_4jllKEcel00r++cRFIlA+El2N6SV+88wQ9CkyLIP95o=",
@@ -21,7 +21,7 @@
     "Controls\\537.json": "C8_MopzYk70V3YT2rX2p3RgiBIgbKCcW3fcc6cjN43Cl0U=",
     "Controls\\549.json": "C8_12/ib5Bq+GRn/TNvHhfjgA4anSu/T9qSIb73nGH8CB8=",
     "Controls\\576.json": "C8_qj3YEGE8X7yHpAj9RYxHYK2RqHJOQT9IuCW8Y7hJADc=",
-    "Header.json": "C8_x0UnQs+ePy95KXQvMYcQJdla5JuCpWbwfo+guTQOIAQ=",
+    "Header.json": "C8_AOJGje25zUJtYUmsTW/dm7E1V9zZaxvOiYcu0QP2Z/o=",
     "Properties.json": "C8_PKkV5zFXnrmVIU3ZcJEPQJ3lqbowpgN1oUsnG2I18y4=",
     "References\\DataSources.json": "C8_KpfDfUM6LJ75VprRiP1377IA4gFWhTs6CvfLeKhEeG8=",
     "References\\ModernThemes.json": "C8_KDQJ/3t27vgKx25iCQB/PGqxkWE34ZB7Eyb+RxNxY0k=",
@@ -34,7 +34,7 @@
     "Src\\App.pa.yaml": "C8_+wEWlJ4InaQ+YxG8rFxSKmFbG3RSKy46LiHLtlHZloY=",
     "Src\\HospitalRapport.pa.yaml": "C8_azJ72+UJxk/DtbU23QNnB3h8fsTQ1pXtk7OauERKtKw=",
     "Src\\HovedRapport.pa.yaml": "C8_56fHG8WJFusVftAcDzYhOjiFiRz1NW9qTiLGYuK+Z3w=",
-    "Src\\Inng_endeRapport.pa.yaml": "C8_osisi2rZzBy/Jn2fqnTnDn2TIqIK2TDviHTlyFGIItU=",
+    "Src\\Inng_endeRapport.pa.yaml": "C8_1grg9LXzL18rc9zc0QlBBKF2faxaG92NhIwEYLTUCoA=",
     "Src\\MailListScreen.pa.yaml": "C8_C0uYuI725wlcZHXPp2Wxz1YazAOg+Z8pCO8yJelJ9FE=",
     "Src\\ManglendeBilerInng_ende.pa.yaml": "C8_lKm/o3cgX1jCJgy3/gZAKv8TpomDzIb8NgeKNCJW7VM=",
     "Src\\OverliggInng_ende.pa.yaml": "C8_y6eenQ8hIRkDy7q5rAZbsc1NRI10PnTyImH0TcWIqFA=",
@@ -44,5 +44,5 @@
     "Src\\Screen2.pa.yaml": "C8_JmXyrvt8ZEoc+C4DDNBuQtVs0IpN3TcdLD+MaLDWEeY=",
     "Src\\SucessScreen.pa.yaml": "C8_Hd9q9UWf3IhdR4ulsKxtRM8UcEocLAbWciPPEArO7Zg="
   },
-  "ClientStampedChecksum": "C8_r7WSwExAloEEiLWf4CtgxOcWwuFsW5J8cX6Npje98Nk="
+  "ClientStampedChecksum": "C8_6SN51iHWKYI9yLZVuYQx1WPJhwzJViWwwKTK1mupIeo="
 }

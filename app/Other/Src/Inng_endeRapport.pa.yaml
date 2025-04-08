@@ -4481,6 +4481,35 @@ Screens:
                         Text: ="Add image or file:"
                         X: =40
                         Y: =14
+            - ProdData:
+                Control: TypedDataCard@1.0.6
+                Variant: BlankCard
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Y: =53
+                Children:
+                  - Label11:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Bold
+                        Text: ="Produksjons Update"
+                        X: =48
+                        Y: =6
+                  - ProdDataInput:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Default: =""
+                        Font: =Font.'Open Sans'
+                        Height: =118
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        Mode: =TextMode.MultiLine
+                        X: =48
+                        Y: =76
       - Label9:
           Control: Label@2.5.1
           Properties:
@@ -4563,6 +4592,10 @@ Screens:
               =// Set Variables for all fields
               ClearCollect(
                   ArrivalSortCollection,
+                  {
+                      Title: "Produsert og annet Tavle-Info:",
+                      Content: ProdDataInput.Text
+                  },
                   {
                       Title: "Totalt Gjenstående",
                       Content: Concatenate("Bur: ", BurSamlet.Text, "<br/> Paller: ", PallerSamlet.Text)

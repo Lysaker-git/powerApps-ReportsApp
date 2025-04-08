@@ -16,6 +16,37 @@
         Y: =120
         ZIndex: =5
 
+        ProdData As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =225
+            Width: =640
+            X: =0
+            Y: =53
+            ZIndex: =1
+
+            Label11 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Produksjons Update"
+                Width: =560
+                X: =48
+                Y: =6
+                ZIndex: =1
+
+            ProdDataInput As text:
+                Default: =""
+                Height: =118
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =560
+                X: =48
+                Y: =76
+                ZIndex: =2
+
         StatusContainer As typedDataCard.blankCard:
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -4444,6 +4475,10 @@
                 =// Set Variables for all fields
                 ClearCollect(
                     ArrivalSortCollection,
+                    {
+                        Title: "Produsert og annet Tavle-Info:",
+                        Content: ProdDataInput.Text
+                    },
                     {
                         Title: "Totalt Gjenstående",
                         Content: Concatenate("Bur: ", BurSamlet.Text, "<br/> Paller: ", PallerSamlet.Text)
