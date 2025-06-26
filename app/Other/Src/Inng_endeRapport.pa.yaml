@@ -1,9 +1,8 @@
 # ************************************************************************************************
-# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
-# Content may be incomplete and subject to change.
-# This file is read-only and should only be used to review changes made within Power Apps Studio.
-# This file isn't used when loading the app. External editing, merging and conflict resolution are
-# not supported.
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
 # 
 # For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
 # ************************************************************************************************
@@ -22,7 +21,7 @@ Screens:
             Transparency: =0.9
             Width: =640
       - EditForm1:
-          Control: Form@2.4.2
+          Control: Form@2.4.4
           Variant: Classic
           Layout: Vertical
           Properties:
@@ -34,11 +33,13 @@ Screens:
             Y: =120
           Children:
             - StatusContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =250
+                  X: =0
+                  Y: =0
                 Children:
                   - StatusLabel:
                       Control: Label@2.5.1
@@ -70,12 +71,13 @@ Screens:
                         X: =39
                         Y: =100
             - LøsBtnContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =
                   Fill: =Color.Transparent
                   Height: =LøslastButton.Height + 5
+                  X: =0
                   Y: =1
                 Children:
                   - LøslastButton:
@@ -105,7 +107,7 @@ Screens:
                         Text: ="Løslast"
                         Width: =Parent.Width
             - LøsPriContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualMultilineEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -115,10 +117,12 @@ Screens:
                   Required: =false
                   Update: =LøsPriContent.Text
                   Visible: =If(showFields=1||showFields=-1,true,false)
+                  X: =0
                   Y: =2
                 Children:
                   - LøsPriLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -132,6 +136,7 @@ Screens:
                         Y: =10
                   - LøsPriContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -153,6 +158,7 @@ Screens:
                         Y: =LøsPriLabel.Y + LøsPriLabel.Height + 5
                   - ErrorMessage3:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -173,6 +179,7 @@ Screens:
                         Y: =LøsPriContent.Y + LøsPriContent.Height
                   - StarVisible3:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -185,7 +192,7 @@ Screens:
                         Wrap: =false
                         Y: =LøsPriLabel.Y
             - LøsUpriContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualMultilineEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -196,10 +203,12 @@ Screens:
                   Required: =false
                   Update: =LøsUpriContent.Text
                   Visible: =If(showFields=1||showFields=-1,true,false)
+                  X: =0
                   Y: =3
                 Children:
                   - LøsUpriLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -213,6 +222,7 @@ Screens:
                         Y: =10
                   - LøsUpriContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -234,6 +244,7 @@ Screens:
                         Y: =LøsUpriLabel.Y + LøsUpriLabel.Height + 5
                   - ErrorMessage4:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -254,6 +265,7 @@ Screens:
                         Y: =LøsUpriContent.Y + LøsUpriContent.Height
                   - StarVisible4:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -266,12 +278,13 @@ Screens:
                         Wrap: =false
                         Y: =LøsUpriLabel.Y
             - LosseBtnContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 0, 0, 0)
                   Fill: =Color.Transparent
                   Height: =75
+                  X: =0
                   Y: =4
                 Children:
                   - LosseButton:
@@ -302,7 +315,7 @@ Screens:
                         Text: ="Losseområdet"
                         Width: =Parent.Width
             - LosseGenContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -314,10 +327,12 @@ Screens:
                   Required: =false
                   Update: =LosseGenContentBur.Text
                   Visible: =If(showFields=2||showFields=-1,true,false)
+                  X: =0
                   Y: =5
                 Children:
                   - LosseGenLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -332,6 +347,7 @@ Screens:
                         Y: =10
                   - LosseGenContentBur:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -352,6 +368,7 @@ Screens:
                         Y: =LosseGenLabel.Y + LosseGenLabel.Height + 5
                   - ErrorMessage5:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -372,6 +389,7 @@ Screens:
                         Y: =LosseGenContentBur.Y + LosseGenContentBur.Height
                   - StarVisible5:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -404,12 +422,13 @@ Screens:
                         X: =332
                         Y: =63
             - LossDetContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =LosseDetButton.Height + 30
                   Visible: =If(showFields=2||showFields=-1,true,false)
+                  X: =0
                   Y: =6
                 Children:
                   - LosseDetButton:
@@ -431,7 +450,7 @@ Screens:
                         Width: =Parent.Width - 80
                         X: =40
             - LosseDetPriContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -443,10 +462,12 @@ Screens:
                   Required: =false
                   Update: =LosseDetPriContent.Text
                   Visible: =If(showDetFields=1||showDetFields=-1,true,false)
+                  X: =0
                   Y: =7
                 Children:
                   - LosseDetPriLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -460,6 +481,7 @@ Screens:
                         Y: =27
                   - LosseDetPriContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -480,6 +502,7 @@ Screens:
                         Y: =LosseDetPriLabel.Y + LosseDetPriLabel.Height + 5
                   - ErrorMessage6:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -500,6 +523,7 @@ Screens:
                         Y: =LosseDetPriContent.Y + LosseDetPriContent.Height
                   - StarVisible6:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -767,11 +791,12 @@ Screens:
                         X: =350
                         Y: =229
             - GjenståendeContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =LøsBtnContainer.Height
+                  X: =0
                   Y: =8
                 Children:
                   - GjenståendeButton:
@@ -796,7 +821,7 @@ Screens:
                         Text: ="Gjenstående fra forrige skift"
                         Width: =Parent.Width
             - GjenståendePallContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -808,10 +833,12 @@ Screens:
                   Required: =false
                   Update: =GjenståendePallContent.Text
                   Visible: =If(showFields=10||showFields=-1,true,false)
+                  X: =0
                   Y: =9
                 Children:
                   - GjenståendePallLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -825,6 +852,7 @@ Screens:
                         Y: =10
                   - GjenståendePallContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -845,6 +873,7 @@ Screens:
                         Y: =115
                   - ErrorMessage21:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -865,6 +894,7 @@ Screens:
                         Y: =GjenståendePallContent.Y + GjenståendePallContent.Height
                   - StarVisible21:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -923,12 +953,13 @@ Screens:
                         X: =30
                         Y: =214
             - B3Container:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Fill: =Color.Transparent
                   Height: =LøslastButton.Height + 5
+                  X: =0
                   Y: =10
                 Children:
                   - B3Button:
@@ -958,7 +989,7 @@ Screens:
                         Text: ="B3 (Nord og Sør)"
                         Width: =Parent.Width
             - B3SørContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualMultilineEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -969,10 +1000,12 @@ Screens:
                   Required: =false
                   Update: =B3SørContent.Text
                   Visible: =If(showFields=3||showFields=-1,true,false)
+                  X: =0
                   Y: =11
                 Children:
                   - B3SørLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -986,6 +1019,7 @@ Screens:
                         Y: =10
                   - B3SørContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -1008,6 +1042,7 @@ Screens:
                         Y: =B3SørLabel.Y + B3SørLabel.Height + 5
                   - ErrorMessage17:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1028,6 +1063,7 @@ Screens:
                         Y: =B3SørContent.Y + B3SørContent.Height
                   - StarVisible17:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1208,7 +1244,7 @@ Screens:
                         X: =148
                         Y: =268
             - B3NordContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualMultilineEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -1219,10 +1255,12 @@ Screens:
                   Required: =false
                   Update: =B3NordContent.Text
                   Visible: =If(showFields=3||showFields=-1,true,false)
+                  X: =0
                   Y: =12
                 Children:
                   - B3NordLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1236,6 +1274,7 @@ Screens:
                         Y: =10
                   - B3NordContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -1258,6 +1297,7 @@ Screens:
                         Y: =B3NordLabel.Y + B3NordLabel.Height + 5
                   - ErrorMessage16:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1278,6 +1318,7 @@ Screens:
                         Y: =B3NordContent.Y + B3NordContent.Height
                   - StarVisible16:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1480,11 +1521,12 @@ Screens:
                         X: =145
                         Y: =255
             - OverliggContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =LøsBtnContainer.Height
+                  X: =0
                   Y: =13
                 Children:
                   - OverliggButton:
@@ -1509,12 +1551,13 @@ Screens:
                         Text: ="Overligg"
                         Width: =Parent.Width
             - OverliggContainerOne:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =614
                   Visible: =If(showFields=4||showFields=-1,true,false)
+                  X: =0
                   Y: =14
                 Children:
                   - OverliggFraLabel:
@@ -1680,11 +1723,12 @@ Screens:
                         X: =320
                         Y: =20
             - AnkomstBilContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =AnkomstBilHeader.Height + 50
+                  X: =0
                   Y: =15
                 Children:
                   - AnkomstBilHeader:
@@ -1699,11 +1743,12 @@ Screens:
                         X: =36
                         Y: =27
             - AnkomstContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =LøsBtnContainer.Height
+                  X: =0
                   Y: =16
                 Children:
                   - AnkomstButton:
@@ -1728,7 +1773,7 @@ Screens:
                         Text: ="Ankomster"
                         Width: =Parent.Width
             - AnkomstContentContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualMultilineEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -1739,10 +1784,12 @@ Screens:
                   Required: =false
                   Update: =AnkomstContent.Text
                   Visible: =If(showFields=5||showFields=-1,true,false)
+                  X: =0
                   Y: =17
                 Children:
                   - AnkomstLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1756,6 +1803,7 @@ Screens:
                         Y: =10
                   - AnkomstContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -1777,6 +1825,7 @@ Screens:
                         Y: =AnkomstLabel.Y + AnkomstLabel.Height + 5
                   - ErrorMessage24:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1797,6 +1846,7 @@ Screens:
                         Y: =AnkomstContent.Y + AnkomstContent.Height
                   - StarVisible24:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1809,11 +1859,12 @@ Screens:
                         Wrap: =false
                         Y: =AnkomstLabel.Y
             - ManglerBilerContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =LøsBtnContainer.Height
+                  X: =0
                   Y: =18
                 Children:
                   - ManglerBilerButton:
@@ -1838,7 +1889,7 @@ Screens:
                         Text: ="Manglende Biler"
                         Width: =Parent.Width
             - ManglerBilRegContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -1849,10 +1900,12 @@ Screens:
                   Required: =false
                   Update: =ManglerBilRegContent.Text
                   Visible: =If(showFields=6||showFields=-1,true,false)
+                  X: =0
                   Y: =19
                 Children:
                   - ManglerBilRegLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1866,6 +1919,7 @@ Screens:
                         Y: =10
                   - ManglerBilRegContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -1886,6 +1940,7 @@ Screens:
                         Y: =ManglerBilRegLabel.Y + ManglerBilRegLabel.Height + 5
                   - ErrorMessage26:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1906,6 +1961,7 @@ Screens:
                         Y: =ManglerBilRegContent.Y + ManglerBilRegContent.Height
                   - StarVisible26:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1930,7 +1986,7 @@ Screens:
                         Width: =206
                         X: =404
             - ManglerBilTurContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -1941,10 +1997,12 @@ Screens:
                   Required: =false
                   Update: =ManglerBilTurContent.Text
                   Visible: =If(showFields=6||showFields=-1,true,false)
+                  X: =0
                   Y: =20
                 Children:
                   - ManglerBilTurLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1958,6 +2016,7 @@ Screens:
                         Y: =10
                   - ManglerBilTurContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -1978,6 +2037,7 @@ Screens:
                         Y: =ManglerBilTurLabel.Y + ManglerBilTurLabel.Height + 5
                   - ErrorMessage25:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1998,6 +2058,7 @@ Screens:
                         Y: =ManglerBilTurContent.Y + ManglerBilTurContent.Height
                   - StarVisible25:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2010,7 +2071,7 @@ Screens:
                         Wrap: =false
                         Y: =ManglerBilTurLabel.Y
             - ManglerBilKommContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualMultilineEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -2021,10 +2082,12 @@ Screens:
                   Required: =false
                   Update: =ManglerBilKommContent.Text
                   Visible: =If(showFields=6||showFields=-1,true,false)
+                  X: =0
                   Y: =21
                 Children:
                   - ManglerBilKommLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2038,6 +2101,7 @@ Screens:
                         Y: =10
                   - ManglerBilKommContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -2059,6 +2123,7 @@ Screens:
                         Y: =ManglerBilKommLabel.Y + ManglerBilKommLabel.Height + 5
                   - ErrorMessage28:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2079,6 +2144,7 @@ Screens:
                         Y: =ManglerBilKommContent.Y + ManglerBilKommContent.Height
                   - StarVisible28:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2138,11 +2204,12 @@ Screens:
                         X: =30
                         Y: =226
             - LagerHeaderContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =129
+                  X: =0
                   Y: =22
                 Children:
                   - LagerHeader:
@@ -2157,7 +2224,7 @@ Screens:
                         X: =40
                         Y: =40
             - PåLagerContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -2169,10 +2236,12 @@ Screens:
                   MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, PåLager)
                   Required: =false
                   Update: =PåLagerContentPallerPri.Text
+                  X: =0
                   Y: =23
                 Children:
                   - PåLagerLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Color: =RGBA(255, 255, 255, 1)
@@ -2185,6 +2254,7 @@ Screens:
                         Y: =12
                   - PåLagerContentPallerPri:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Group: Bur/paller Group
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
@@ -2207,6 +2277,7 @@ Screens:
                         Y: =60
                   - ErrorMessage29:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2227,6 +2298,7 @@ Screens:
                         Y: =PåLagerContentPallerPri.Y + PåLagerContentPallerPri.Height
                   - StarVisible29:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2379,11 +2451,12 @@ Screens:
                         X: =49
                         Y: =148
             - OpplastetContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =LøsBtnContainer.Height
+                  X: =0
                   Y: =24
                 Children:
                   - OpplastetButton:
@@ -2409,7 +2482,7 @@ Screens:
                         Width: =Parent.Width
                         Y: =5
             - OpplastetByggContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -2421,10 +2494,12 @@ Screens:
                   Required: =false
                   Update: =OpplastetByggContent.Text
                   Visible: =If(showFields=7||showFields=-1,true,false)
+                  X: =0
                   Y: =25
                 Children:
                   - OpplastetByggLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2438,6 +2513,7 @@ Screens:
                         Y: =10
                   - OpplastetByggContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -2458,6 +2534,7 @@ Screens:
                         Y: =OpplastetByggLabel.Y + OpplastetByggLabel.Height + 5
                   - ErrorMessage32:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2478,6 +2555,7 @@ Screens:
                         Y: =OpplastetByggContent.Y + OpplastetByggContent.Height
                   - StarVisible32:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2490,7 +2568,7 @@ Screens:
                         Wrap: =false
                         Y: =OpplastetByggLabel.Y
             - OpplastetNCContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -2501,10 +2579,12 @@ Screens:
                   Required: =false
                   Update: =OpplastetNCContent.Text
                   Visible: =If(showFields=7||showFields=-1,true,false)
+                  X: =0
                   Y: =26
                 Children:
                   - OpplastetNCLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2518,6 +2598,7 @@ Screens:
                         Y: =10
                   - OpplastetNCContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -2538,6 +2619,7 @@ Screens:
                         Y: =OpplastetNCLabel.Y + OpplastetNCLabel.Height + 5
                   - ErrorMessage31:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2558,6 +2640,7 @@ Screens:
                         Y: =OpplastetNCContent.Y + OpplastetNCContent.Height
                   - StarVisible31:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2570,7 +2653,7 @@ Screens:
                         Wrap: =false
                         Y: =OpplastetNCLabel.Y
             - OpplastetLagerContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -2582,10 +2665,12 @@ Screens:
                   Required: =false
                   Update: =OpplastetLagerContent.Text
                   Visible: =If(showFields=7||showFields=-1,true,false)
+                  X: =0
                   Y: =27
                 Children:
                   - OpplastetLagerLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2599,6 +2684,7 @@ Screens:
                         Y: =10
                   - OpplastetLagerContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -2619,6 +2705,7 @@ Screens:
                         Y: =OpplastetLagerLabel.Y + OpplastetLagerLabel.Height + 5
                   - ErrorMessage30:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2639,6 +2726,7 @@ Screens:
                         Y: =OpplastetLagerContent.Y + OpplastetLagerContent.Height
                   - StarVisible30:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2651,11 +2739,12 @@ Screens:
                         Wrap: =false
                         Y: =OpplastetLagerLabel.Y
             - DiverseContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =137
+                  X: =0
                   Y: =28
                 Children:
                   - DiverseButton:
@@ -2670,7 +2759,7 @@ Screens:
                         X: =40
                         Y: =40
             - SkaddeContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 IsLocked: true
                 Properties:
@@ -2682,10 +2771,12 @@ Screens:
                   MaxLength: =DataSourceInfo([@Table4], DataSourceInfo.MaxLength, Skadde)
                   Required: =false
                   Update: =SkaddeContent.Text
+                  X: =0
                   Y: =29
                 Children:
                   - SkaddeLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Color: =RGBA(255, 255, 255, 1)
@@ -2698,6 +2789,7 @@ Screens:
                         Y: =21
                   - SkaddeContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -2718,6 +2810,7 @@ Screens:
                         Y: =10
                   - ErrorMessage1:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2738,6 +2831,7 @@ Screens:
                         Y: =SkaddeContent.Y + SkaddeContent.Height
                   - StarVisible1:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2750,11 +2844,12 @@ Screens:
                         Wrap: =false
                         Y: =SkaddeLabel.Y
             - KunderContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =LøsBtnContainer.Height
+                  X: =0
                   Y: =30
                 Children:
                   - KunderButton:
@@ -2780,7 +2875,7 @@ Screens:
                         Width: =Parent.Width
                         Y: =5
             - BCContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -2791,10 +2886,12 @@ Screens:
                   Required: =false
                   Update: =BCContent.Text
                   Visible: =If(showFields=8||showFields=-1,true,false)
+                  X: =0
                   Y: =31
                 Children:
                   - BCLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2808,6 +2905,7 @@ Screens:
                         Y: =GLSLabel.Y
                   - BCContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -2829,6 +2927,7 @@ Screens:
                         Y: =GLSContent.Y
                   - ErrorMessage14:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2849,6 +2948,7 @@ Screens:
                         Y: =BCContent.Y + BCContent.Height
                   - StarVisible14:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2874,7 +2974,7 @@ Screens:
                         X: =GLSbox.X
                         Y: =GLSbox.Y
             - GLSContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -2885,10 +2985,12 @@ Screens:
                   Required: =false
                   Update: =GLSContent.Text
                   Visible: =If(showFields=8||showFields=-1,true,false)
+                  X: =0
                   Y: =32
                 Children:
                   - GLSLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Color: =RGBA(0, 18, 107, 1)
@@ -2901,6 +3003,7 @@ Screens:
                         Y: =21
                   - GLSContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -2921,6 +3024,7 @@ Screens:
                         Y: =10
                   - ErrorMessage2:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2941,6 +3045,7 @@ Screens:
                         Y: =GLSContent.Y + GLSContent.Height
                   - StarVisible2:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2966,7 +3071,7 @@ Screens:
                         X: =200
                         Y: =5
             - UPSContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -2977,10 +3082,12 @@ Screens:
                   Required: =false
                   Update: =UPSContent.Text
                   Visible: =If(showFields=8||showFields=-1,true,false)
+                  X: =0
                   Y: =33
                 Children:
                   - UPSLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -2994,6 +3101,7 @@ Screens:
                         Y: =GLSLabel.Y
                   - UPSContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -3015,6 +3123,7 @@ Screens:
                         Y: =GLSContent.Y
                   - ErrorMessage34:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3035,6 +3144,7 @@ Screens:
                         Y: =UPSContent.Y + UPSContent.Height
                   - StarVisible34:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3060,7 +3170,7 @@ Screens:
                         X: =GLSbox.X
                         Y: =GLSbox.Y
             - MaskeContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -3071,10 +3181,12 @@ Screens:
                   Required: =false
                   Update: =MaskeContent.Text
                   Visible: =If(showFields=8||showFields=-1,true,false)
+                  X: =0
                   Y: =34
                 Children:
                   - MaskeLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3088,6 +3200,7 @@ Screens:
                         Y: =GLSLabel.Y
                   - MaskeContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -3109,6 +3222,7 @@ Screens:
                         Y: =GLSContent.Y
                   - ErrorMessage15:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3129,6 +3243,7 @@ Screens:
                         Y: =MaskeContent.Y + MaskeContent.Height
                   - StarVisible15:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3154,7 +3269,7 @@ Screens:
                         X: =GLSbox.X
                         Y: =GLSbox.Y
             - SdFsContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -3165,10 +3280,12 @@ Screens:
                   Required: =false
                   Update: =SdFsContent.Text
                   Visible: =If(showFields=8||showFields=-1,true,false)
+                  X: =0
                   Y: =35
                 Children:
                   - SdFsLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3182,6 +3299,7 @@ Screens:
                         Y: =GLSLabel.Y
                   - SdFsContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -3203,6 +3321,7 @@ Screens:
                         Y: =GLSContent.Y
                   - ErrorMessage18:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3223,6 +3342,7 @@ Screens:
                         Y: =SdFsContent.Y + SdFsContent.Height
                   - StarVisible18:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3248,7 +3368,7 @@ Screens:
                         X: =GLSbox.X
                         Y: =GLSbox.Y
             - StaplesContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -3259,10 +3379,12 @@ Screens:
                   Required: =false
                   Update: =StaplesContent.Text
                   Visible: =If(showFields=8||showFields=-1,true,false)
+                  X: =0
                   Y: =36
                 Children:
                   - StaplesLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3276,6 +3398,7 @@ Screens:
                         Y: =GLSLabel.Y
                   - StaplesContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -3297,6 +3420,7 @@ Screens:
                         Y: =GLSContent.Y
                   - ErrorMessage23:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3317,6 +3441,7 @@ Screens:
                         Y: =StaplesContent.Y + StaplesContent.Height
                   - StarVisible23:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3342,7 +3467,7 @@ Screens:
                         X: =GLSbox.X
                         Y: =GLSbox.Y
             - TechdataContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -3353,10 +3478,12 @@ Screens:
                   Required: =false
                   Update: =TechdataContent.Text
                   Visible: =If(showFields=8||showFields=-1,true,false)
+                  X: =0
                   Y: =37
                 Children:
                   - TechdataLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3370,6 +3497,7 @@ Screens:
                         Y: =GLSLabel.Y
                   - TechdataContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -3391,6 +3519,7 @@ Screens:
                         Y: =GLSContent.Y
                   - ErrorMessage27:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3411,6 +3540,7 @@ Screens:
                         Y: =TechdataContent.Y + TechdataContent.Height
                   - StarVisible27:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3436,7 +3566,7 @@ Screens:
                         X: =GLSbox.X
                         Y: =GLSbox.Y
             - VidaXLContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -3447,10 +3577,12 @@ Screens:
                   Required: =false
                   Update: =VidaXLContent.Text
                   Visible: =If(showFields=8||showFields=-1,true,false)
+                  X: =0
                   Y: =38
                 Children:
                   - VidaXLLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3464,6 +3596,7 @@ Screens:
                         Y: =GLSLabel.Y
                   - VidaXLContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -3485,6 +3618,7 @@ Screens:
                         Y: =GLSContent.Y
                   - ErrorMessage35:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3505,6 +3639,7 @@ Screens:
                         Y: =VidaXLContent.Y + VidaXLContent.Height
                   - StarVisible35:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3530,7 +3665,7 @@ Screens:
                         X: =GLSbox.X
                         Y: =GLSbox.Y
             - ZalandoContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -3541,10 +3676,12 @@ Screens:
                   Required: =false
                   Update: =ZalandoContent.Text
                   Visible: =If(showFields=8||showFields=-1,true,false)
+                  X: =0
                   Y: =39
                 Children:
                   - ZalandoLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3558,6 +3695,7 @@ Screens:
                         Y: =GLSLabel.Y
                   - ZalandoContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -3579,6 +3717,7 @@ Screens:
                         Y: =GLSContent.Y
                   - ErrorMessage36:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3599,6 +3738,7 @@ Screens:
                         Y: =ZalandoContent.Y + ZalandoContent.Height
                   - StarVisible36:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3624,7 +3764,7 @@ Screens:
                         X: =GLSbox.X
                         Y: =GLSbox.Y
             - RandOneContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -3635,10 +3775,12 @@ Screens:
                   Required: =false
                   Update: =RandOneContent.Text
                   Visible: =If(showFields=8||showFields=-1,true,false)
+                  X: =0
                   Y: =40
                 Children:
                   - RandOneContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -3660,6 +3802,7 @@ Screens:
                         Y: =GLSContent.Y
                   - ErrorMessage37:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3705,7 +3848,7 @@ Screens:
                         X: =GLSLabel.X
                         Y: =GLSLabel.Y
             - RandTwoContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -3717,10 +3860,12 @@ Screens:
                   Required: =false
                   Update: =RandTwoContent.Text
                   Visible: =If(showFields=8||showFields=-1,true,false)
+                  X: =0
                   Y: =41
                 Children:
                   - RandTwoContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -3742,6 +3887,7 @@ Screens:
                         Y: =GLSContent.Y
                   - ErrorMessage38:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3787,11 +3933,12 @@ Screens:
                         X: =GLSLabel.X
                         Y: =GLSLabel.Y
             - AnnetButtonContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =LøsBtnContainer.Height
+                  X: =0
                   Y: =42
                 Children:
                   - AnnetButton:
@@ -3817,7 +3964,7 @@ Screens:
                         Width: =Parent.Width
                         Y: =5
             - AvvikContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -3828,10 +3975,12 @@ Screens:
                   Required: =false
                   Update: =AvvikContent.Text
                   Visible: =If(showFields=9||showFields=-1,true,false)
+                  X: =0
                   Y: =43
                 Children:
                   - AvvikLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3845,6 +3994,7 @@ Screens:
                         Y: =10
                   - AvvikContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -3865,6 +4015,7 @@ Screens:
                         Y: =AvvikLabel.Y + AvvikLabel.Height + 5
                   - ErrorMessage40:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3885,6 +4036,7 @@ Screens:
                         Y: =AvvikContent.Y + AvvikContent.Height
                   - StarVisible40:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3897,7 +4049,7 @@ Screens:
                         Wrap: =false
                         Y: =AvvikLabel.Y
             - TollLagerContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -3908,10 +4060,12 @@ Screens:
                   Required: =false
                   Update: =TollLagerContent.Text
                   Visible: =If(showFields=9||showFields=-1,true,false)
+                  X: =0
                   Y: =44
                 Children:
                   - TollLagerLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3925,6 +4079,7 @@ Screens:
                         Y: =10
                   - TollLagerContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -3945,6 +4100,7 @@ Screens:
                         Y: =TollLagerLabel.Y + TollLagerLabel.Height + 5
                   - ErrorMessage46:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3965,6 +4121,7 @@ Screens:
                         Y: =TollLagerContent.Y + TollLagerContent.Height
                   - StarVisible46:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3977,7 +4134,7 @@ Screens:
                         Wrap: =false
                         Y: =TollLagerLabel.Y
             - NestenulykkerContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -3988,10 +4145,12 @@ Screens:
                   Required: =false
                   Update: =NestenulykkerContent.Text
                   Visible: =If(showFields=9||showFields=-1,true,false)
+                  X: =0
                   Y: =45
                 Children:
                   - NestenulykkerLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4005,6 +4164,7 @@ Screens:
                         Y: =10
                   - NestenulykkerContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -4025,6 +4185,7 @@ Screens:
                         Y: =NestenulykkerLabel.Y + NestenulykkerLabel.Height + 5
                   - ErrorMessage45:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4045,6 +4206,7 @@ Screens:
                         Y: =NestenulykkerContent.Y + NestenulykkerContent.Height
                   - StarVisible45:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4057,7 +4219,7 @@ Screens:
                         Wrap: =false
                         Y: =NestenulykkerLabel.Y
             - LBSkiltContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -4069,10 +4231,12 @@ Screens:
                   Required: =false
                   Update: =LBSkiltContent.Text
                   Visible: =If(showFields=9||showFields=-1,true,false)
+                  X: =0
                   Y: =46
                 Children:
                   - LBSkiltLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4086,6 +4250,7 @@ Screens:
                         Y: =10
                   - LBSkiltContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -4106,6 +4271,7 @@ Screens:
                         Y: =LBSkiltLabel.Y + LBSkiltLabel.Height + 5
                   - ErrorMessage44:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4126,6 +4292,7 @@ Screens:
                         Y: =LBSkiltContent.Y + LBSkiltContent.Height
                   - StarVisible44:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4138,7 +4305,7 @@ Screens:
                         Wrap: =false
                         Y: =LBSkiltLabel.Y
             - KippContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -4150,10 +4317,12 @@ Screens:
                   Required: =false
                   Update: =KippContent.Text
                   Visible: =If(showFields=9||showFields=-1,true,false)
+                  X: =0
                   Y: =47
                 Children:
                   - KippLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4167,6 +4336,7 @@ Screens:
                         Y: =10
                   - KippContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -4187,6 +4357,7 @@ Screens:
                         Y: =KippLabel.Y + KippLabel.Height + 5
                   - ErrorMessage43:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4207,6 +4378,7 @@ Screens:
                         Y: =KippContent.Y + KippContent.Height
                   - StarVisible43:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4219,7 +4391,7 @@ Screens:
                         Wrap: =false
                         Y: =KippLabel.Y
             - AnnetContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -4231,10 +4403,12 @@ Screens:
                   Required: =false
                   Update: =AnnetContent.Text
                   Visible: =If(showFields=9||showFields=-1,true,false)
+                  X: =0
                   Y: =48
                 Children:
                   - AnnetLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4248,6 +4422,7 @@ Screens:
                         Y: =10
                   - AnnetContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -4268,6 +4443,7 @@ Screens:
                         Y: =AnnetLabel.Y + AnnetLabel.Height + 5
                   - ErrorMessage39:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4288,6 +4464,7 @@ Screens:
                         Y: =AnnetContent.Y + AnnetContent.Height
                   - StarVisible39:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4300,7 +4477,7 @@ Screens:
                         Wrap: =false
                         Y: =AnnetLabel.Y
             - ForsinkelserContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -4312,10 +4489,12 @@ Screens:
                   Required: =false
                   Update: =ForsinkelserContent.Text
                   Visible: =If(showFields=9||showFields=-1,true,false)
+                  X: =0
                   Y: =49
                 Children:
                   - ForsinkelserLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4329,6 +4508,7 @@ Screens:
                         Y: =10
                   - ForsinkelserContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -4351,6 +4531,7 @@ Screens:
                         Y: =ForsinkelserLabel.Y + ForsinkelserLabel.Height + 5
                   - ErrorMessage42:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4371,6 +4552,7 @@ Screens:
                         Y: =ForsinkelserContent.Y + ForsinkelserContent.Height
                   - StarVisible42:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4383,7 +4565,7 @@ Screens:
                         Wrap: =false
                         Y: =ForsinkelserLabel.Y
             - DriftContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: ClassicTextualEdit
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
@@ -4395,10 +4577,12 @@ Screens:
                   Required: =false
                   Update: =DriftContent.Text
                   Visible: =If(showFields=9||showFields=-1,true,false)
+                  X: =0
                   Y: =50
                 Children:
                   - DriftLabel:
                       Control: Label@2.5.1
+                      MetadataKey: FieldName
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4412,6 +4596,7 @@ Screens:
                         Y: =10
                   - DriftContent:
                       Control: Classic/TextInput@2.3.2
+                      MetadataKey: FieldValue
                       Properties:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =Parent.Default
@@ -4434,6 +4619,7 @@ Screens:
                         Y: =DriftLabel.Y + DriftLabel.Height + 5
                   - ErrorMessage41:
                       Control: Label@2.5.1
+                      MetadataKey: ErrorMessage
                       Properties:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4454,6 +4640,7 @@ Screens:
                         Y: =DriftContent.Y + DriftContent.Height
                   - StarVisible41:
                       Control: Label@2.5.1
+                      MetadataKey: FieldRequired
                       Properties:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 1)
@@ -4466,12 +4653,13 @@ Screens:
                         Wrap: =false
                         Y: =DriftLabel.Y
             - DataCard2:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Height: =195
                   Visible: =If(showFields=9||showFields=-1,true,false)
+                  X: =0
                   Y: =51
                 Children:
                   - MouseTraoLabel:
@@ -4508,10 +4696,11 @@ Screens:
                         X: =30
                         Y: =69
             - AttachmentContainer:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
+                  X: =0
                   Y: =52
                 Children:
                   - AttachmentContent:
@@ -4546,10 +4735,11 @@ Screens:
                         X: =40
                         Y: =14
             - ProdData:
-                Control: TypedDataCard@1.0.6
+                Control: TypedDataCard@1.0.7
                 Variant: BlankCard
                 Properties:
                   BorderColor: =RGBA(0, 18, 107, 1)
+                  X: =0
                   Y: =53
                 Children:
                   - Label11:
