@@ -4695,6 +4695,50 @@ Screens:
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =69
+            - VIPpåGulv:
+                Control: TypedDataCard@1.0.7
+                Variant: BlankCard
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Visible: =If(showFields=9||showFields=-1,true,false)
+                  X: =0
+                  Y: =51
+                Children:
+                  - VIPpåGulvLabel:
+                      Control: Label@2.5.1
+                      Properties:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =48
+                        Text: ="VIP på Gulvet:"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =16
+                  - VIPpåGulvContent:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        Default: =Parent.DataField
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Font: =Font.'Open Sans'
+                        Height: =121
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        MaxLength: =120
+                        Mode: =TextMode.MultiLine
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =69
             - AttachmentContainer:
                 Control: TypedDataCard@1.0.7
                 Variant: BlankCard
@@ -5069,6 +5113,10 @@ Screens:
                   {
                       Title: MouseTraoLabel.Text,
                       Content: MouseTrapContent.Text
+                  },
+                  {
+                      Title: VIPpåGulvLabel.Text,
+                      Content: VIPpåGulvContent.Text
                   }
               );
               /*This will initiate the ArrivalFinalCollection as an Collection*/
