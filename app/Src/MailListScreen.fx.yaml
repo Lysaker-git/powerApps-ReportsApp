@@ -1,0 +1,484 @@
+"MailListScreen As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =894
+        Items: =Sort(Search(RecipientsTable,FilterInputMailList.Text,Name),Name,SortOrder.Ascending)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =208
+        Y: =150
+        ZIndex: =1
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(26, 26, 26, 1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledColor: =RGBA(119, 119, 119, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(loader, true);Set(userVar, ThisItem.ID); Set(buttonVarMails, true); Set(startTimerVar, false); Set(startTimerVar, true)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =562
+            Y: =75
+            ZIndex: =4
+
+        Separator4 As rectangle:
+            BorderColor: =RGBA(0, 0, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle2 As rectangle:
+            Height: =Parent.TemplateHeight - Separator4.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Label7 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Name
+            Width: =462
+            X: =150
+            Y: =16
+            ZIndex: =7
+
+        Label7_1 As label:
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Name:"
+            Width: =107
+            X: =23
+            Y: =16
+            ZIndex: =8
+
+        Label7_2 As label:
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.Mail
+            Width: =427
+            X: =150
+            Y: =86
+            ZIndex: =9
+
+        Label7_3 As label:
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Mail:"
+            Width: =107
+            X: =23
+            Y: =86
+            ZIndex: =10
+
+        Label7_4 As label:
+            Height: =45
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Reports:"
+            Width: =127
+            X: =23
+            Y: =135
+            ZIndex: =11
+
+        Label7_5 As label:
+            Height: =45
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: |-
+                =Concat(
+                    Filter(
+                        [
+                            If(ThisItem.HARapport = "True", "HA", Blank()),
+                            If(ThisItem.OVRapport = "True", "Overvåker", Blank()),
+                            If(ThisItem.NCRapport = "True", "NC", Blank()),
+                            If(ThisItem.LPGRapport = "True", "LPG", Blank()),
+                            If(ThisItem.HPGRapport = "True", "HPG", Blank()),
+                            If(ThisItem.InnRaport = "True", "Inngående", Blank())
+                        ],
+                        !IsBlank(Value)
+                    ),
+                    Value,
+                    ", "
+                )
+            Width: =427
+            X: =150
+            Y: =135
+            ZIndex: =12
+
+        Rectangle5 As rectangle:
+            BorderColor: =RGBA(214, 223, 238, 1)
+            Fill: =RGBA(227, 234, 243, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =640
+            Y: =200
+            ZIndex: =13
+
+    Icon7 As icon.BackArrow:
+        Height: =45
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        Width: =47
+        X: =576
+        Y: =18
+        ZIndex: =2
+
+    FilterInputMailList As text:
+        Default: =
+        Height: =70
+        Size: =21
+        Width: =605
+        X: =18
+        Y: =75
+        ZIndex: =3
+
+    Label4 As label:
+        Height: =70
+        Size: =21
+        Text: ="Search for person"
+        Width: =560
+        X: =15
+        Y: =15
+        ZIndex: =4
+
+    Button7 As button:
+        Height: =70
+        OnSelect: =Set(editVisible, true);Set(userVar, ""); Set(newID, GUID());Set(buttonVarMails, true)
+        Size: =24
+        Text: ="Add a new person"
+        Width: =640
+        Y: =1066
+        ZIndex: =5
+
+    Button9 As button:
+        DisplayMode: |-
+            =If(
+                Or(
+                    userVar = "",
+                    buttonVarMails = false
+                ),
+                DisplayMode.Disabled,
+                DisplayMode.Edit
+            )
+        Height: =70
+        OnSelect: |-
+            =Set(
+                buttonVarMails,
+                false
+            );
+            Set(
+                loader,
+                true
+            );
+            If(
+                !IsBlank(userVar),
+                RemoveIf(
+                    RecipientsTable,
+                    ID = userVar
+                )
+            );
+            Set(
+                editVisible,
+                false
+            );
+            Refresh(RecipientsTable);
+            Set(
+                loader,
+                false
+            )
+        Size: =24
+        Text: ="Remove"
+        Visible: =editVisible
+        Width: =195
+        X: =378
+        Y: =850
+        ZIndex: =18
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =18
+
+        Rectangle3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(241, 244, 249, 1)
+            Height: =657
+            Visible: =editVisible
+            Width: =566
+            X: =39
+            Y: =387
+            ZIndex: =6
+
+        NameInputMails As text:
+            Default: =If(Or(userVar = "", IsBlank(userVar)), "Enter Name", LookUp(RecipientsTable,ID = userVar,Name))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Height: =70
+            Size: =21
+            Visible: =editVisible
+            Width: =399
+            X: =72
+            Y: =415
+            ZIndex: =7
+
+        MailinputMails As text:
+            Default: =If(Or(userVar = "", IsBlank(userVar)), "Enter Name", LookUp(RecipientsTable,ID = userVar,Mail))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Height: =70
+            Size: =21
+            Tooltip: =If(Or(userVar = "", IsBlank(userVar)), "Enter Name", LookUp(RecipientsTable,ID = userVar,Mail))
+            Visible: =editVisible
+            Width: =503
+            X: =73
+            Y: =506
+            ZIndex: =8
+
+        HACheckMails As checkbox:
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,HARapport)="False", false ,LookUp(RecipientsTable,ID=userVar,HARapport)="True", true ))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Height: =85
+            Size: =21
+            Text: ="HA"
+            Visible: =editVisible
+            Width: =158
+            X: =73
+            Y: =590
+            ZIndex: =9
+
+        NCCheckMails As checkbox:
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,NCRapport)="False", false ,LookUp(RecipientsTable,ID=userVar,NCRapport)="True", true ))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Height: =85
+            Size: =21
+            Text: ="NC"
+            Visible: =editVisible
+            Width: =158
+            X: =241
+            Y: =590
+            ZIndex: =10
+
+        LPGCheckMails As checkbox:
+            Default: |-
+                =If(
+                    userVar = "",
+                    false,
+                    If(
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            LPGRapport
+                        ) = "False",
+                        false,
+                        LookUp(
+                            RecipientsTable,
+                            ID = userVar,
+                            LPGRapport
+                        ) = "True",
+                        true
+                    )
+                )
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Height: =85
+            Size: =21
+            Text: ="LPG"
+            Visible: =editVisible
+            Width: =158
+            X: =418
+            Y: =590
+            ZIndex: =11
+
+        HPGCheckMails As checkbox:
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,HPGRapport)="False", false ,LookUp(RecipientsTable,ID=userVar,HPGRapport)="True", true ))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Height: =85
+            Size: =21
+            Text: ="HPG"
+            Visible: =editVisible
+            Width: =158
+            X: =73
+            Y: =792
+            ZIndex: =12
+
+        OVCheckMails As checkbox:
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,OVRapport)="False", false ,LookUp(RecipientsTable,ID=userVar,OVRapport)="True", true ))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Height: =85
+            Size: =21
+            Text: ="Overvåker"
+            Visible: =editVisible
+            Width: =234
+            X: =338
+            Y: =693
+            ZIndex: =13
+
+        InnCheckMails As checkbox:
+            Default: =If(Or(userVar = "", IsBlank(userVar)), false ,If(LookUp(RecipientsTable,ID=userVar,InnRaport)="False", false ,LookUp(RecipientsTable,ID=userVar,InnRaport)="True", true ))
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Height: =85
+            Size: =21
+            Text: ="Inngående"
+            Visible: =editVisible
+            Width: =234
+            X: =68
+            Y: =693
+            ZIndex: =14
+
+        Label5 As label:
+            Align: =Align.Center
+            Color: =RGBA(167, 182, 203, 1)
+            Height: =38
+            Size: =14
+            Text: =If(Or(userVar = "", IsBlank(userVar)), newID , LookUp(RecipientsTable,ID = userVar,ID))
+            Visible: =editVisible
+            Width: =503
+            X: =73
+            Y: =1006
+            ZIndex: =15
+
+        Button8 As button:
+            DisplayMode: =If(buttonVarMails = false, DisplayMode.Disabled, DisplayMode.Edit)
+            Height: =70
+            OnSelect: |
+                =Set(
+                    buttonVarMails,
+                    false
+                );
+                Set(
+                    loader,
+                    true
+                );
+                /*
+                 * Function: Validate and Patch Email Data
+                 * Description: This function validates the email format of the input, and based on the user variable,
+                 *              either creates a new record or updates an existing record in the RecipientsTable.
+                 * Parameters:
+                 *   - MailinputMails.Text: The email input to be validated.
+                 *   - userVar: A variable to determine if the record is new or existing.
+                 *   - NameInputMails.Text: The name input to be patched.
+                 *   - HACheckMails.Value, NCCheckMails.Value, LPGCheckMails.Value, InnCheckMails.Value, OVRapport.Value, HPGRapport.Value: Various report check values to be patched.
+                 *   - newID: The ID for the new record.
+                 * Returns: 
+                 *   - Notifies the user if the email is invalid.
+                 *   - Patches the RecipientsTable with the provided data if the email is valid.
+                 */
+                If(
+                    IsMatch(
+                        MailinputMails.Text,
+                        "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    ),
+                    If(
+                        userVar = "",
+                        Patch(
+                            RecipientsTable,
+                            Defaults(RecipientsTable),
+                            {
+                                Name: NameInputMails.Text,
+                                Mail: MailinputMails.Text,
+                                HARapport: HACheckMails.Value,
+                                NCRapport: NCCheckMails.Value,
+                                LPGRapport: LPGCheckMails.Value,
+                                InnRaport: InnCheckMails.Value,
+                                OVRapport: OVCheckMails.Value,
+                                HPGRapport: HPGCheckMails.Value,
+                                ID: newID
+                            }
+                        ),
+                        Patch(
+                            RecipientsTable,
+                            LookUp(
+                                RecipientsTable,
+                                ID = userVar
+                            ),
+                            {
+                                Name: NameInputMails.Text,
+                                Mail: MailinputMails.Text,
+                                HARapport: HACheckMails.Value,
+                                NCRapport: NCCheckMails.Value,
+                                LPGRapport: LPGCheckMails.Value,
+                                InnRaport: InnCheckMails.Value,
+                                OVRapport: OVCheckMails.Value,
+                                HPGRapport: HPGCheckMails.Value
+                            }
+                        )
+                    ),
+                    Notify(
+                        "Invalid E-mail",
+                        NotificationType.Error
+                    )
+                );
+                Set(
+                    loader,
+                    false
+                );
+                Set(
+                    editVisible,
+                    false
+                );
+                Refresh(RecipientsTable);
+            Size: =24
+            Text: ="Save   "
+            Visible: =editVisible
+            Width: =502
+            X: =73
+            Y: =936
+            ZIndex: =16
+
+        Icon8 As icon.CancelBadge:
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(editVisible, false)
+            Visible: =editVisible
+            X: =512
+            Y: =415
+            ZIndex: =17
+
+    Rectangle4 As rectangle:
+        Height: =191
+        Visible: =loader
+        Width: =260
+        X: =190
+        Y: =543
+        ZIndex: =19
+
+    Image5 As image:
+        Height: =140
+        Image: ='90-ring'
+        Visible: =loader
+        Width: =140
+        X: =250
+        Y: =565
+        ZIndex: =20
+
+    timerMails As timer:
+        AutoPause: =false
+        DisplayMode: =DisplayMode.View
+        Duration: =3500
+        Height: =36
+        OnTimerEnd: =Set(loader, false); Set(editVisible, true); timerMails.Reset
+        Start: =startTimerVar
+        Visible: =false
+        Width: =280
+        X: =276
+        Y: =22
+        ZIndex: =21
+

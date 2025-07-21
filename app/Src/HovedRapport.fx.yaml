@@ -1,0 +1,1729 @@
+"HovedRapport As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    Canvas2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        ZIndex: =3
+
+        DataCard3 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =95
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label1 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Hovedpostgang Rapport"
+                Width: =400
+                X: =104
+                Y: =16
+                ZIndex: =1
+
+            Icon1 As icon.BackArrow:
+                Icon: =Icon.BackArrow
+                OnSelect: =Back(ScreenTransition.UnCoverRight)
+                X: =550
+                Y: =19
+                ZIndex: =2
+
+            Radio1 As radio:
+                Align: =Align.Center
+                Height: =93
+                Items: =["Dag", "Kveld", "Natt"]
+                Layout: =Layout.Horizontal
+                Size: =21
+                Width: =496
+                X: =66
+                Y: =99
+                ZIndex: =3
+
+        DataCard4 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =Button1_3.Fill
+            Height: =74
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =2
+
+            Button5 As button:
+                Color: =Button1_3.Color
+                Fill: =Button1_3.Fill
+                Height: =70
+                OnSelect: =If(hovedFields=1,Set(hovedFields,0),Set(hovedFields,1))
+                Size: =24
+                Text: ="Destinasjoner"
+                Width: =640
+                ZIndex: =1
+
+        FredrikstadCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(FredrikstadCheck.Value = true, FredriskstadLabel.Height + FredrikstadInput.Height + 40, FredriskstadLabel.Height + 40)
+            Visible: =If(hovedFields=1,true,false)
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =3
+
+            FredriskstadLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Fredrikstad"
+                Width: =200
+                X: =23
+                Y: =13
+                ZIndex: =1
+
+            FredrikstadCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =547
+                ZIndex: =2
+
+            FredrikstadInput As text:
+                Default: ="Text input"
+                Height: =70
+                Size: =21
+                Visible: =If(FredrikstadCheck.Value = true, true, false)
+                Width: =582
+                X: =23
+                Y: =If(FredrikstadCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        DrammenCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(237, 237, 237, 1)
+            Height: =If(DrammenCheck.Value = true, DrammenLabel.Height + DrammenInput.Height + 40, DrammenLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =4
+
+            DrammenLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Drammen"
+                Width: =200
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            DrammenCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            DrammenInput As text:
+                Default: ="Text input"
+                Height: =70
+                Size: =21
+                Visible: =If(DrammenCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(DrammenCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        StokkeCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(StokkeCheck.Value = true, StokkeLabel.Height + StokkeInput.Height + 40, StokkeLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =5
+
+            StokkeLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Stokke"
+                Width: =200
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            StokkeCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            StokkeInput As text:
+                Default: ="Text input"
+                Height: =70
+                Size: =21
+                Visible: =If(StokkeCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(StokkeCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        StatusCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(241, 244, 249, 1)
+            Height: =100
+            Visible: =true
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =6
+
+            StatusLabelHoved As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =30
+                Text: ="Status Destinasjoner"
+                Width: =560
+                X: =50
+                Y: =18
+                ZIndex: =1
+
+        FordeCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =DrammenCard.Fill
+            Height: =If(FordeCheck.Value = true, FordeLabel.Height + FordeInput.Height + 40, FordeLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =7
+
+            FordeLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Førde og Sogndal"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            FordeCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            FordeInput As text:
+                Default: ="Text input"
+                Height: =70
+                Size: =21
+                Visible: =If(FordeCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(FordeCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        AlesundCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(AlesundCheck.Value = true, AlesundLabel.Height + AlesundInput.Height + 40, AlesundLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =7
+            ZIndex: =8
+
+            AlesundLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Ålesund"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            AlesundCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            AlesundInput As text:
+                Default: ="Text input"
+                Height: =70
+                Size: =21
+                Visible: =If(AlesundCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(AlesundCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        BergenCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =DrammenCard.Fill
+            Height: =If(BergenCheck.Value = true, BergenLabel.Height + BergenInput.Height + 40, BergenLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =8
+            ZIndex: =9
+
+            BergenLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Bergen"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            BergenCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            BergenInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(BergenCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(BergenCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        NarvikCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(NarvikCheck.Value = true, NarvikLabel.Height + NarvikInput.Height + 40, NarvikLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =9
+            ZIndex: =10
+
+            NarvikLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Narvik"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            NarvikCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            NarvikInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(NarvikCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(NarvikCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        AltaCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =DrammenCard.Fill
+            Height: =If(AltaCheck.Value = true, AltaLabel.Height + AltaInput.Height + 40, AltaLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =10
+            ZIndex: =11
+
+            AltaLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Alta"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            AltaCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            AltaInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(AltaCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(AltaCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        KristiansandCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(KristiansandCheck.Value = true, KristiansandLabel.Height + KristiansandInput.Height + 40, KristiansandLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =11
+            ZIndex: =12
+
+            KristiansandLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Kristiansand"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            KristiansandCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            KristiansandInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(KristiansandCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(KristiansandCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        HaugesundCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =DrammenCard.Fill
+            Height: =If(HaugesundCheck.Value = true, HaugesundLabel.Height + HaugesundInput.Height + 40, HaugesundLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =12
+            ZIndex: =13
+
+            HaugesundLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Haugesund"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            HaugesundCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            HaugesundInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(HaugesundCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(HaugesundCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        MoldeCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(MoldeCheck.Value = true, MoldeLabel.Height + MoldeInput.Height + 40, MoldeLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =13
+            ZIndex: =14
+
+            MoldeLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Molde"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            MoldeCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            MoldeInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(MoldeCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(MoldeCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        StavangerCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =DrammenCard.Fill
+            Height: =If(StavangerCheck.Value = true, StavangerLabel.Height + StavangerInput.Height + 40, StavangerLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =14
+            ZIndex: =15
+
+            StavangerLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Molde"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            StavangerCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            StavangerInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(StavangerCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(StavangerCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        TrondheimCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(TrondheimCheck.Value = true, TrondheimLabel.Height + TrondheimInput.Height + 40, TrondheimLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =15
+            ZIndex: =16
+
+            TrondheimLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Trondheim"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            TrondheimCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            TrondheimInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(TrondheimCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(TrondheimCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        HamarCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =DrammenCard.Fill
+            Height: =If(HamarCheck.Value = true, HamarLabel.Height + HamarInput.Height + 40, HamarLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =16
+            ZIndex: =17
+
+            HamarLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Hamar"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            HamarCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            HamarInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(HamarCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(HamarCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        TanaCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(TanaCheck.Value = true, TanaLabel.Height + TanaInput.Height + 40, TanaLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =17
+            ZIndex: =18
+
+            TanaLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Tana"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            TanaCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            TanaInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(TanaCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(TanaCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        TromsøCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =DrammenCard.Fill
+            Height: =If(TromsøCheck.Value = true, TromsøLabel.Height + TromsøInput.Height + 40, TromsøLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =18
+            ZIndex: =19
+
+            TromsøLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Tromsø"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            TromsøCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            TromsøInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(TromsøCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(TromsøCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        FauskeCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(FauskeCheck.Value = true, FauskeLabel.Height + FauskeInput.Height + 40, FauskeLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =19
+            ZIndex: =20
+
+            FauskeLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Fauske"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            FauskeCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            FauskeInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(FauskeCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(FauskeCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        MoiranaCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =DrammenCard.Fill
+            Height: =If(MoiranaCheck.Value = true, MoiranaLabel.Height + MoiranaInput.Height + 40, MoiranaLabel.Height + 40)
+            Visible: =FredrikstadCard.Visible
+            Width: =640
+            X: =0
+            Y: =20
+            ZIndex: =21
+
+            MoiranaLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Mo i Rana"
+                Width: =350
+                X: =FredriskstadLabel.X
+                Y: =FredriskstadLabel.Y
+                ZIndex: =1
+
+            MoiranaCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =FredrikstadCheck.X
+                Y: =FredrikstadCheck.Y
+                ZIndex: =2
+
+            MoiranaInput As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =If(MoiranaCheck.Value = true, true, false)
+                Width: =582
+                X: =FredrikstadInput.X
+                Y: =If(MoiranaCheck.Value = true, 90,0)
+                ZIndex: =3
+
+        BpxCardHoved As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =300
+            Width: =640
+            X: =0
+            Y: =22
+            ZIndex: =22
+
+            BpxCardLabel As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: ="BPX / Ekspress"
+                Width: =Parent.Width - 50 
+                X: =23
+                Y: =28
+                ZIndex: =1
+
+            BpxCardSendtCehck As checkbox:
+                Height: =85
+                Size: =21
+                Text: =""
+                Width: =75
+                X: =538
+                Y: =90
+                ZIndex: =2
+
+            BpxCardAvvikContent As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Width: =450
+                X: =163
+                Y: =195
+                ZIndex: =3
+
+            BpxCardSendtLabel As label:
+                Height: =70
+                Size: =21
+                Text: ="Er alt BPX sendt? (Kryss av for JA)"
+                Width: =Parent.Width - 50
+                X: =23
+                Y: =98
+                ZIndex: =4
+
+            BpxCardAvvikLabel As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Avvik:"
+                Width: =130
+                X: =23
+                Y: =195
+                ZIndex: =5
+
+        AndreCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =StatusCard.Fill
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =21
+            ZIndex: =23
+
+            AndreLabel As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =30
+                Text: ="Andre Punkter"
+                Width: =560
+                X: =46
+                Y: =18
+                ZIndex: =1
+
+        EtterfyllingCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =DrammenCard.Fill
+            Height: =530
+            Width: =640
+            X: =0
+            Y: =23
+            ZIndex: =24
+
+            Label6 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: ="Etterfyllinger"
+                Width: =560
+                X: =40
+                Y: =15
+                ZIndex: =1
+
+            TextInput2 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Width: =560
+                X: =40
+                Y: =155
+                ZIndex: =2
+
+            TextInput2_1 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Width: =560
+                X: =40
+                Y: =300
+                ZIndex: =3
+
+            Button6 As button:
+                Fill: =HovedButton.Fill
+                Height: =70
+                Size: =24
+                Text: ="Add to List"
+                Width: =280
+                X: =40
+                Y: =395
+                ZIndex: =4
+
+            Button6_1 As button:
+                Fill: =HovedButton.Fill
+                Height: =70
+                Size: =24
+                Text: ="View List"
+                Width: =230
+                X: =370
+                Y: =395
+                ZIndex: =5
+
+            Label6_1 As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Område:"
+                Width: =560
+                X: =40
+                Y: =98
+                ZIndex: =6
+
+            Label6_2 As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Info:"
+                Width: =560
+                X: =40
+                Y: =243
+                ZIndex: =7
+
+        KippenCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0,0,0,0)
+            Height: =400
+            Width: =640
+            X: =0
+            Y: =24
+            ZIndex: =25
+
+            KippenCardTitle As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: ="Kipp"
+                Width: =560
+                X: =40
+                Y: =20
+                ZIndex: =1
+
+            KippenCardContent As text:
+                Default: =""
+                Height: =189
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =560
+                X: =40
+                Y: =147
+                ZIndex: =2
+
+            KippenCardLabel As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Kipp: (VBH, Modul, Tralle)"
+                Width: =560
+                X: =40
+                Y: =77
+                ZIndex: =3
+
+        RyddighetCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: |
+                =StatusCard.Fill
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =25
+            ZIndex: =26
+
+            AndreLabel_1 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Ryddighet"
+                Width: =560
+                X: =38
+                Y: =16
+                ZIndex: =1
+
+        CheckboxTitleCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =600  
+            Width: =640
+            X: =0
+            Y: =26
+            ZIndex: =27
+
+            SikerhetsnettCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: ="Er sikkerthetsnett rullet?"
+                Width: =450
+                X: =34
+                Y: =22
+                ZIndex: =4
+
+            MousetrapCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: ="Mousetrap under avkast?"
+                Width: =450
+                X: =34
+                Y: =107
+                ZIndex: =5
+
+            FyllingsgradCheck As checkbox:
+                Height: =85
+                Size: =21
+                Text: ="Fyllingsgrad sjekket?"
+                Width: =450
+                X: =34
+                Y: =192
+                ZIndex: =6
+
+            AviikCheckLabel As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Avvik: (Lavt lastet)"
+                Width: =560
+                X: =34
+                Y: =402
+                ZIndex: =7
+
+            AvikCheckContent As text:
+                Default: =""
+                Height: =107
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =560
+                X: =34
+                Y: =472
+                ZIndex: =8
+
+            SikerhetsnettCheck_1 As checkbox:
+                Height: =85
+                Size: =21
+                Text: ="Er PDA på plass? "
+                Width: =450
+                X: =34
+                Y: =277
+                ZIndex: =9
+
+    HovedButton As button:
+        Fill: =RGBA(0, 47, 25, 1)
+        Height: =72
+        OnSelect: |-
+            =UpdateContext({vPopUpHoved: true})
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: ="Send Report"
+        Width: =640
+        Y: =1064
+        ZIndex: =4
+
+    Group1_3 As group:
+        Height: =5
+        Width: =5
+        X: =3
+        Y: =60
+        ZIndex: =8
+
+        HtmlText2_3 As htmlViewer:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Height: =1136
+            HtmlText: |-
+                ="<div style='
+                    background-color:rgba(255,255,255,0.95);
+                    height: 1125px;
+                    display: grid;
+                    place-content: center;
+                '>
+                <p style='margin: auto auto 0 auto'>Sende e-post?</p>
+                <p style='margin: 0 auto 0 auto'>Send mail?</p>
+                </div>"
+            Size: =21
+            Visible: =vPopUpHoved
+            Width: =637
+            X: =3
+            ZIndex: =5
+
+        Button1_8 As button:
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+                =// Set Variables for all fields
+                ClearCollect(
+                    HovedSortCollection,
+                    {
+                        Title: "BPX (Express)",
+                        Content: Concatenate(
+                            "Er BPX sendt",
+                            "? ",
+                            If(BpxCardSendtCehck.Value = true, "Ja", "Nei"),
+                            " - ",
+                            If(BpxCardAvvikContent.Text = "", "", BpxCardAvvikLabel.Text),
+                            If(BpxCardAvvikContent.Text = "", "", BpxCardAvvikContent.Text)
+                        )
+                    },
+                    {
+                        Title: KippenCardLabel.Text,
+                        Content: KippenCardContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseGenLabel.Text
+                        ),
+                        Content: LosseGenContentBur.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetUPriLabel.Text
+                        ),
+                        Content: LosseDetUPriContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetPriLabel.Text
+                        ),
+                        Content: LosseDetPriContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferOneLabel.Text
+                        ),
+                        Content: LosseDetBufferOneContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferTwoLabel.Text
+                        ),
+                        Content: LosseDetBufferTwoContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferThreeLabel.Text
+                        ),
+                        Content: LosseDetBufferThreeContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            "Buffer ",
+                            LosseDetBufferFourLabel.Text
+                        ),
+                        Content: LosseDetBufferFourContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetPortLabel.Text
+                        ),
+                        Content: LosseDetPortContent.Text
+                    },
+                    {
+                        Title: Concatenate(
+                            LosseButton.Text,
+                            " ",
+                            LosseDetWasteLabel.Text
+                        ),
+                        Content: LosseDetWasteContent.Text
+                    },
+                    {
+                        Title: B3SørLabel.Text,
+                        Content: B3SørContent.Text
+                    },
+                    {
+                        Title: B3NordLabel.Text,
+                        Content: B3NordContent.Text
+                    },
+                    {
+                        Title: GjenståendeButton.Text,
+                        Content: Concatenate(
+                            GjenståendePallLabelB2.Text,
+                            ": ",
+                            GjenståendePallContent.Text,
+                            " - ",
+                            GjenståendePallLabelB3.Text,
+                            ": ",
+                            GjenståendePallContentB3.Text
+                        )
+                    },
+                    {
+                        Title: AnkomstLabel.Text,
+                        Content: AnkomstContent.Text
+                    },
+                    {
+                        Title: PåLagerLabel.Text,
+                        Content: PåLagerContentPallerPri.Text
+                    },
+                    {
+                        Title: OpplastetByggLabel.Text,
+                        Content: OpplastetByggContent.Text
+                    },
+                    {
+                        Title: OpplastetNCLabel.Text,
+                        Content: OpplastetNCContent.Text
+                    },
+                    {
+                        Title: OpplastetLagerLabel.Text,
+                        Content: OpplastetLagerContent.Text
+                    },
+                    {
+                        Title: SkaddeLabel.Text,
+                        Content: SkaddeContent.Text
+                    },
+                    {
+                        Title: BCLabel.Text,
+                        Content: BCContent.Text,
+                        Checkbox: BCBox.Value
+                    },
+                    {
+                        Title: GLSLabel.Text,
+                        Content: GLSContent.Text,
+                        Checkbox: GLSbox.Value
+                    },
+                    {
+                        Title: UPSLabel.Text,
+                        Content: UPSContent.Text,
+                        Checkbox: UPSBox.Value
+                    },
+                    {
+                        Title: MaskeLabel.Text,
+                        Content: MaskeContent.Text,
+                        Checkbox: MaskeBox.Value
+                    },
+                    {
+                        Title: SdFsLabel.Text,
+                        Content: SdFsContent.Text,
+                        Checkbox: SdFsBox.Value
+                    },
+                    {
+                        Title: StaplesLabel.Text,
+                        Content: StaplesContent.Text,
+                        Checkbox: StaplesBox.Value
+                    },
+                    {
+                        Title: TechdataLabel.Text,
+                        Content: TechdataContent.Text,
+                        Checkbox: TechdataBox.Value
+                    },
+                    {
+                        Title: VidaXLLabel.Text,
+                        Content: VidaXLContent.Text,
+                        Checkbox: VidaXLBox.Value
+                    },
+                    {
+                        Title: ZalandoLabel.Text,
+                        Content: ZalandoContent.Text,
+                        Checkbox: ZalandoBox.Value
+                    },
+                    {
+                        Title: RandOneLabel.Text,
+                        Content: RandOneContent.Text,
+                        Checkbox: RandOneBox.Value
+                    },
+                    {
+                        Title: RandTwoLabel.Text,
+                        Content: RandTwoContent.Text,
+                        Checkbox: RandTwoBox.Value
+                    },
+                    {
+                        Title: AvvikLabel.Text,
+                        Content: AvvikContent.Text
+                    },
+                    {
+                        Title: TollLagerLabel.Text,
+                        Content: TollLagerContent.Text
+                    },
+                    {
+                        Title: NestenulykkerLabel.Text,
+                        Content: NestenulykkerContent.Text
+                    },
+                    {
+                        Title: LBSkiltLabel.Text,
+                        Content: LBSkiltContent.Text
+                    },
+                    {
+                        Title: KippLabel.Text,
+                        Content: KippContent.Text
+                    },
+                    {
+                        Title: AnnetLabel.Text,
+                        Content: AnnetContent.Text
+                    },
+                    {
+                        Title: ForsinkelserLabel.Text,
+                        Content: ForsinkelserContent.Text
+                    },
+                    {
+                        Title: DriftLabel.Text,
+                        Content: DriftContent.Text
+                    },
+                    {
+                        Title: MouseTraoLabel.Text,
+                        Content: MouseTrapContent.Text
+                    }
+                );
+                /*This will initiate the ArrivalFinalCollection as an Collection*/
+                ClearCollect(
+                    ArrivalFinalCollection,
+                    {
+                        Title: Blank(),
+                        Content: Blank(),
+                        Checkbox: Blank()
+                    }
+                );
+                ClearCollect(
+                    varCollection,
+                    {var: false}
+                );
+                /*This will clear the ArrivalFinalCollection Collection*/
+                Clear(ArrivalFinalCollection);
+                /*Loops through the ArrivalSortCollection collection and appends Title, Content and if present Checkbox*/
+                ForAll(
+                    ArrivalSortCollection,
+                    If(
+                        And(
+                            Not(ThisRecord.Content = ""),
+                            Not(ThisRecord.Checkbox)
+                        ),//IF Content IS NOT empty AND IF checkbox IS NOT false
+                        Collect(
+                            ArrivalFinalCollection,
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content
+                            }
+                        ),
+                        Or(
+                            Not(ThisRecord.Content = ""),
+                            ThisRecord.Checkbox
+                        ),//IF content IS NOT empty OR IF checkbox IS true
+                        Collect(
+                            ArrivalFinalCollection,
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content,
+                                Checkbox: If(
+                                    ThisRecord.Checkbox = false,
+                                    "",
+                                    "OK"
+                                )
+                            }
+                        );
+                        /*Updates if its used Checkboxes during the report*/
+                UpdateIf(
+                            varCollection,
+                            var = false,
+                            {var: true}
+                        );
+                    )
+                );
+                ForAll(
+                    ArrivalFinalCollection,
+                    If(
+                        And(
+                            Not(ThisRecord.Content = ""),
+                            Not(ThisRecord.Checkbox)
+                        ),//IF Content IS NOT empty AND IF checkbox IS NOT true
+                        Patch(
+                            InngåendeDB,
+                            Defaults(InngåendeDB),
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content,
+                                Name: Navn,
+                                Group: Gruppe,
+                                //Tid: Tid,
+                                Shift: Shift
+                            }
+                        ),
+                        Or(
+                            Not(ThisRecord.Content = ""),
+                            ThisRecord.Checkbox
+                        ),//IF content IS NOT empty OR IF checkbox IS true
+                        Patch(
+                            InngåendeDB,
+                            Defaults(InngåendeDB),
+                            {
+                                Title: ThisRecord.Title,
+                                Content: ThisRecord.Content,
+                                Checkbox: ThisRecord.Checkbox,
+                                Name: Navn,
+                                Group: Gruppe,
+                                //Tid: Tid,
+                                Shift: Shift
+                            }
+                        )
+                    )
+                );
+                /*Checking if there is input on ArrivalFinalCollection Collection - and makes the arrivalsBodyHTML*/
+                If(
+                    Not(IsEmpty(ArrivalFinalCollection)),//IF ArrivalFinalCollection IS NOT empty then..
+                    If(
+                        Boolean(
+                            Concat(
+                                varCollection,
+                                Concatenate(var)
+                            )
+                        ) = true,
+                        Set(
+                            arrivalsBodyHTML,
+                            Concatenate(
+                                genericTitles,
+                                Concat(
+                                    ArrivalFinalCollection,
+                                    Concatenate(
+                                        $"
+                                            <tr style='{contentBg}'>
+                                                <td style='{tdCss}'>
+                                                    <h4 style='{textCSS}'>{Title}</h4>
+                                                </td>
+                                                <td style='{tdCss}'>
+                                                    <p style='{textCSS}'>{Content}</p>
+                                                    <p style='{textCSS}'>{Checkbox}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
+                                                <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
+                                            </tr>
+                                        "
+                                    )
+                                )
+                            )
+                        ),
+                        Set(
+                            arrivalsBodyHTML,
+                            Concatenate(
+                                genericTitles,
+                                Concat(
+                                    ArrivalFinalCollection,
+                                    Concatenate(
+                                        $"<tbody style='{contentBg}'>
+                                            <tr>
+                                                <td style='{tdCss}'>
+                                                    <h4 style='{textCSS}'>{Title}</h4>
+                                                </td>
+                                                <td style='{tdCss}'>
+                                                    <p style='{textCSS}'>{Content}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25} {whiteBg} {height5}'></td>
+                                                <td style='{tdCss} {w75} {whiteBg} {height5}'></td>
+                                            </tr>
+                                        </tbody>"
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    Set(
+                        arrivalsBodyHTML,
+                        ""
+                    )
+                );
+                If(
+                    IsEmpty(OverliggItems),//If OverliggItems IS empty then...
+                    Set(
+                        overliggHTML,
+                        ""
+                    ),
+                    Set(
+                        overliggHTML,
+                        Concatenate(
+                            $"<tr style='{darkBg}'>
+                            <td style='{tdCss}'>
+                                <h2 style='{textLight}'>Overligg</h2>
+                            </td>
+                        </tr>
+                        ",
+                            Concat(
+                                OverliggItems,
+                                Concatenate(
+                                    $"<tr>
+                                    <td style='{tdCss}'>
+                                        <table style='{tableCss} {w100} {oColCss}' class='oColumn'>
+                                            <tr>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Fra:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>VBH:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Port:</h4></td>
+                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Plasser:</h4></td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Fra}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{VBH}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Port}</p></td>
+                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Plasser}</p></td>
+                                            </tr>
+                                        </table>
+                                        <table style='{tableCss} {w100} {oColCss}' class='oColumn'>
+                                            <tr>
+                                                <td style='{tdCss} {w100}'><h4 style='{textCSS}'>Info</h4></td>
+                                            </tr>
+                                            <tr>
+                                                <td style='{tdCss} {w100}'><p style='{textCSS}'>{Info}</p></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style='{tdCss} {darkBg} {height5}'>
+                                    </td>
+                                </tr>"
+                                )
+                            )
+                        )
+                    )
+                );
+                If(
+                    IsEmpty(ManglerBilerCollection),// IF ManglerBilderBollection IS empty then..
+                    Set(
+                        missingCarHTML,
+                        ""
+                    ),
+                    Set(
+                        missingCarHTML,
+                        Concatenate(
+                            $"<tr style='{darkBg}'>
+                                <td style='{tdCss}'>
+                                    <h2 style='{textLight}'>Manglende Biler</h2>
+                                </td>
+                            </tr>",
+                            Concat(
+                                ManglerBilerCollection,
+                                Concatenate(
+                                    $"<tr>
+                                        <td style='{tdCss}'>
+                                            <table style='{w100}{tableCss}'>
+                                                <tr>
+                                                    <td style='{tdCss}' class='padding'>
+                                                        <table style='{tableCss} {oColCss} {w100}' class='content oColumn'>
+                                                            <tr>
+                                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Reg. nummer:</h4></td>
+                                                                <td style='{tdCss} {w25}'><h4 style='{textCSS}'>Bil Tur:</h4></td>
+                                                                <td style='{tdCss} {w50}'><h4 style='{textCSS}'>Kommerntar:</h4></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Reg}</p></td>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Tur}</p></td>
+                                                                <td style='{tdCss} {w25}'><p style='{textCSS}'>{Kommentar}</p></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style='{tdCss} {darkBg} {height5}'>
+                                        </td>
+                                    </tr>"
+                                )
+                            )
+                        )
+                    )
+                );
+                //Header of the mail
+                Set(
+                    arrivalsHeader,
+                    $"
+                        <tr style='{headerCss} {darkBg}'>
+                            <td style='{tdCss}'>
+                                <h1 style='{textLight} font-weight: bolder;'>Inngående {Shift}</h1>
+                            </td>
+                        </tr>
+                    "
+                );
+                Set(
+                    arrivalsBody,
+                    $"
+                    {htmlStart}
+                    {arrivalsHeader}
+                    {htmlAfterHeaderBeforeContent}
+                    {arrivalsBodyHTML}
+                    {htmlAfterContentSomethingStart}
+                    {overliggHTML}
+                    {missingCarHTML}
+                    {htmlAfterContentSomethingEnd}
+                    "
+                );
+                /*
+                Office365Outlook.SendEmailV2(
+                    //TestRecipients,
+                    RecipientsInngående,
+                    "Overlevering",
+                    arrivalsBody,
+                    {
+                        Importance: FontWeight.Normal,
+                        IsHtml: true,
+                        Cc: TestRecipients,
+                        Attachments: AddColumns(
+                            RenameColumns(
+                                AttachmentContent.Attachments,
+                                "Value",
+                                "ContentBytes"
+                            ),
+                            "@odata.type",
+                            ""
+                        )
+                    }
+                );
+                Navigate(
+                    SucessScreen,
+                    ScreenTransition.CoverRight
+                )
+                */
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="JA"
+            Visible: =vPopUpHoved
+            Width: =250
+            X: =43
+            Y: =710
+            ZIndex: =6
+
+        Button1_9 As button:
+            BorderThickness: =0
+            Color: =RGBA(123, 193, 68, 1)
+            Fill: =RGBA(0, 47, 25, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            HoverFill: =ColorFade(RGBA(0,100,58,1), -20%)
+            OnSelect: |-
+                =UpdateContext({vPopUpHoved: false})
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =32
+            Text: ="NEI"
+            Visible: =vPopUpHoved
+            Width: =250
+            X: =353
+            Y: =710
+            ZIndex: =7
+
